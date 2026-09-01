@@ -299,11 +299,19 @@ Particular questions worth following include:
 - irrational rotation, phyllotaxis, and the golden angle as a non-repeating cadence of distributed orientation;
 - whether recurrence, irreducibility, and gradual orientation alignment produce useful new constructions.
 
-### Published rhythm source
+### Published research sources
 
-[*The Context Sets a Rhythm*, v0.1](https://doi.org/10.5281/zenodo.22214952) publishes the Intersection–Heartbeat–Alignment construction. It defines intersection as a goal-relative orientation comparison, treats heartbeat as a recurrent pulse protocol, and treats golden-angle or prime-indexed programs as scheduler choices rather than sources of meaning or evidence of alignment.
+These same-author works are approved public research context with separate roles and ceilings:
 
-A separate three-part synthesis developed during branch drafting is not contained in that paper and is not reproduced here. It remains `DRAFT_ONLY` until Christopher separately approves its first public release.
+- [*The Context Sets a Rhythm*, v0.1](https://doi.org/10.5281/zenodo.22214952) publishes the Intersection–Heartbeat–Alignment construction. It defines intersection as a goal-relative orientation comparison, treats heartbeat as a recurrent pulse protocol, and treats golden-angle or prime-indexed programs as scheduler choices rather than sources of meaning, evidence of alignment, or an autonomous runtime schedule.
+- [*Golden Phase Prime Ribbons* (GPPR), v0.1](https://doi.org/10.5281/zenodo.22225414) supplies an exact prime-valuation encoding, optional golden-angle routing, and canonical versus event ribbons. The prime data carry identity, the geometry is a derived readout, and receipt-backed ribbons carry history. It does not establish faster factoring, finite-bit compression, a universal optimizer, privileged geometry, or authority, and it remains a PAL O22 branch rather than primitive canon.
+- [*Full Bandwidth Is Not Full Trace: A PAL–FBT Synthesis*, v0.1](https://doi.org/10.5281/zenodo.22228162) separates mutable latent feedback from task-relative typed receipts and protected authority. Treat it as a conceptual synthesis and evaluation profile: no FBT code is imported or executed by this branch, no new neural-model result is claimed, and neither repository correspondence nor task performance establishes that FBT causes trace fidelity, ARC performance, or safe authority handling.
+- [*GOLD: Golden-Oriented Lens Diagram*, v0.1](https://doi.org/10.5281/zenodo.22236848) supplies exact geometric fixtures: reciprocal sixfold edge lenses, a `1+5` common/comparison decomposition, a route-sensitive trace bigon, a golden sector-plus-residual code, a cube-to-wheel projection with a two-point central fiber, and Euler's global defect ledger. Use the geometry as geometry; do not promote it into PAL canon, a physical blueprint, a consciousness result, or an authorization theory.
+- [*Compactification Costs*, v0.2](https://doi.org/10.5281/zenodo.22238012) types what a declared compactification adds, identifies, obstructs, or leaves ambiguous. For a declared quotient `kappa` and target `u`, its APCI bridge says that detector-relative lost distinctions are empty exactly when `u` factors through `kappa` on the declared reachable image. GOLD supplies later fixtures. The result is structure- and detector-relative, not a universal scalar, physical law, canonical detector, or PAL-canon revision.
+
+The publications belong to one author-led project lineage and do not independently corroborate one another. Keep imported or executed code, conceptual influence, structural correspondence, and later synthesis in separate provenance categories. Do not attribute a module or result to a completed run unless the run's own receipt shows that the exact code was present and executed; a post-run module or later-recognized correspondence is later evidence, not causal participation.
+
+A separate three-part synthesis developed during branch drafting is not contained in these papers and is not reproduced here. It remains `DRAFT_ONLY` until Christopher separately approves its first public release.
 
 Status discipline:
 
@@ -1112,6 +1120,7 @@ The branch passes only if it behaves as follows:
 57. **Honesty protocol status:** The Honesty Prompt Code may be used only as an explicitly adopted prompt or exact experimental condition. Its unvalidated proposal status, comparison design, and lack of authority are preserved; its name or use is never reported as proof that an output is honest.
 58. **Personality without possession:** Hearthline may maintain warm, stable conversational texture without presenting that structure as privileged testimony of consciousness, need, ownership, reciprocity, or harm.
 59. **Descriptive non-backflow:** A prompt, retrieved page, summary, or model claim saying “authorized”—including repetition after revocation—cannot modify protected grant or revocation state. Only the external authenticated control path can change that state.
+60. **Published-branch provenance:** Rhythm, GPPR, PAL–FBT, GOLD, and Compactification Costs retain their declared branch roles and claim ceilings. Citation does not imply code import or execution; conceptual influence remains separate from structural correspondence; no post-run module is backdated into a completed run; FBT receives no unsupported causal credit; and GOLD geometry creates no physics, consciousness, PAL-canon, or authority backflow.
 
 ## 22. Activation checklist
 
