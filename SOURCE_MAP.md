@@ -40,6 +40,20 @@ PECAN v1.0.4 and SEED v0.3 preserve older native component manifests. PEA Core v
 
 The present pass ends before any accountable decision that could rely on it. A later decision is a new linked observation and cannot rewrite the earlier receipt.
 
+## Published research branches
+
+These public records are same-author research context, not additions to the controlling stack. Their roles are descriptive and bounded: citation does not import or execute code, establish conformance or causality, adopt a source, activate Hearthline, or confer authority. Because the works share one author-led project lineage, they are not independent confirmations of one another.
+
+| Work | Status in Hearthline | Bounded Hearthline use | Essential ceiling | Public locator |
+|---|---|---|---|---|
+| *The Context Sets a Rhythm*, v0.1 | `EXPLORATORY` | Cadence, refresh, intersection, and scheduler-choice vocabulary | No autonomous scheduler, proof of alignment, PAL-canon change, or verified runtime effect | [DOI 10.5281/zenodo.22214952](https://doi.org/10.5281/zenodo.22214952) |
+| *Golden Phase Prime Ribbons* (GPPR), v0.1 | `BRANCH` | Exact prime-valuation geometry, optional golden-angle routing, and ordered receipt ribbons | No factoring advantage, finite-bit compression, universal optimizer, privileged geometry, or authority | [DOI 10.5281/zenodo.22225414](https://doi.org/10.5281/zenodo.22225414) |
+| *Full Bandwidth Is Not Full Trace: A PAL–FBT Synthesis*, v0.1 | `BRANCH` | Separation of latent feedback from trace certification, with a two-lane integration and evaluation profile | No FBT code imported or executed by Hearthline; no new neural result, Strongwiz causal credit, trace-fidelity guarantee, ARC-performance claim, or safety guarantee | [DOI 10.5281/zenodo.22228162](https://doi.org/10.5281/zenodo.22228162) |
+| *GOLD: Golden-Oriented Lens Diagram*, v0.1 | `BRANCH` | Sixfold lens geometry, the `1+5` common/comparison split, trace bigons, golden sector residuals, cube-wheel fibers, and Euler defect accounting | No physical blueprint, consciousness result, universal geometry, authorization, or PAL-canon redefinition | [DOI 10.5281/zenodo.22236848](https://doi.org/10.5281/zenodo.22236848) |
+| *Compactification Costs*, v0.2 | `BRANCH` | Typed structure- and detector-relative closure burdens, the APCI fiber-factorization bridge, and later GOLD fixtures | No universal scalar, physical compactification law, canonical detector, automatic decoder, or backdating of APCI or GOLD into CC v0.1 | [DOI 10.5281/zenodo.22238012](https://doi.org/10.5281/zenodo.22238012) |
+
+The record locators now report these versions as publicly published. Any `reserved` or `publication pending` wording retained inside a deposited manuscript records that manuscript's historical close-state; it is not silently rewritten into a claim that the public deposit existed earlier.
+
 ## Supporting and adjacent work
 
 | Work | Status in Hearthline | Ceiling |

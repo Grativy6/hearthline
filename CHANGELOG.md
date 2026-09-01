@@ -9,11 +9,14 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 - Selected Creative Commons Attribution 4.0 International (`CC-BY-4.0`) for covered original text, documentation, and repository-authored metadata.
 - Added a restrained names-and-marks notice that permits accurate source identification without implying endorsement, canonical status, activation, or operator authority.
 - Added a specification-only private-lineage seal format, including delayed HMAC verification limits and a separate recommendation for signed Git tags as a public authenticity channel.
+- Registered five published, bounded research sources: *The Context Sets a Rhythm* v0.1, GPPR v0.1, the PAL–FBT synthesis v0.1, GOLD v0.1, and *Compactification Costs* v0.2.
+- Extended the public branch instruction with the sources' exact roles, geometric and certification fixtures, provenance categories, claim ceilings, and an acceptance test against causal, chronological, canonical, and authority backflow.
+- Rebound the candidate manifest's policy digest to the updated exact instruction bytes.
 
 ### Preserved boundaries
 
 - No real seal, secret, hidden marker, signing key, adoption receipt, or activation record was added.
-- The exact bytes of `hearthline_agent.md` and `candidate_manifest.json` remain unchanged.
+- The controlling source profile, artifact version and state, default mode, author/steward declaration, `authority: NONE`, and `effect: NONE` remain unchanged. Research citations do not import or execute code, establish causality or independent corroboration, adopt a source, activate Hearthline, or confer authority.
 
 ## 0.2-draft — 2026-09-01
 

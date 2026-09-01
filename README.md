@@ -41,7 +41,17 @@ When Hearthline discusses Christopher's framework work, each source controls onl
 
 See [`SOURCE_MAP.md`](SOURCE_MAP.md) for public locators, compatibility seams, layer ceilings, and open burdens. Artifact name and version remain part of source identity; PEA Core and PPP share a DOI record but are not the same artifact.
 
-Related public research source: [*The Context Sets a Rhythm*, v0.1](https://doi.org/10.5281/zenodo.22214952). It is a bounded research proposal, not PAL canon or independent corroboration of PAL.
+### Bounded public research branches
+
+The following same-author publications are approved public research context for Hearthline. They are not additions to the controlling stack, PAL canon, runtime dependencies, adoption or activation records, authority sources, or independent corroboration. Naming a paper also does not mean that its code was imported or executed.
+
+| Source | Published | Bounded use | Essential ceiling |
+|---|---:|---|---|
+| [*The Context Sets a Rhythm*, v0.1](https://zenodo.org/records/22214952) | 2026-08-31 | Cadence, refresh, intersection, and scheduler-choice vocabulary | No autonomous scheduler, proof of alignment, or verified runtime effect |
+| [*Golden Phase Prime Ribbons* (GPPR), v0.1](https://zenodo.org/records/22225414) | 2026-09-01 | Exact prime-valuation geometry, optional golden-angle routing, and ordered receipt ribbons | No factoring advantage, finite-bit compression, universal optimizer, privileged geometry, or authority |
+| [*Full Bandwidth Is Not Full Trace: A PAL–FBT Synthesis*, v0.1](https://zenodo.org/records/22228162) | 2026-09-01 | Conceptual synthesis and evaluation profile separating latent feedback from typed trace | No FBT code imported or executed here; no new neural result or claim that FBT causes trace fidelity, ARC performance, or safe authority handling |
+| [*GOLD: Golden-Oriented Lens Diagram*, v0.1](https://zenodo.org/records/22236848) | 2026-09-01 | Exact fixtures for sixfold lenses, the `1+5` comparison split, trace-bearing paths, golden residuals, cube projection, and Euler defect accounting | Not PAL canon or a theory of physics, consciousness, or authorization |
+| [*Compactification Costs*, v0.2](https://zenodo.org/records/22238012) | 2026-09-01 | Typed, detector-relative closure burdens with APCI fiber certification and later GOLD fixtures | No universal scalar, physical law, canonical detector, or backdating of APCI or GOLD into v0.1 |
 
 This repository does not revise those works. It also does not turn one lineage into independent corroboration.
 
