@@ -1,0 +1,16 @@
+# This public repository must not receive operational or secret material.
+.env
+.env.*
+secrets/
+private/
+runtime/
+state/
+receipts/
+logs/
+/control_state.json
+/authorization.json
+/platform_reference/
+*.pem
+*.key
+*.p12
+*.pfx
