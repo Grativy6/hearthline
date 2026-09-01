@@ -15,6 +15,10 @@ The public source map may name public artifacts, versions, roles, status, author
 
 Publication establishes what bytes were made available. It does not establish that those bytes were deployed, authorized, accepted as canon, or used for any external action.
 
+## Copyright and authority
+
+The repository's `CC-BY-4.0` license grants copyright and similar-rights permissions for covered material. Those permissions allow licensed sharing and adaptation; they do not authenticate a copy, designate a modified copy as official or canonical, activate a runtime, grant credentials or platform access, or supply consent, standing, adoption, or execution authority. Copyright compliance and operational authorization remain separate questions.
+
 ## Operational side
 
 The following belong only in a separately controlled private environment:
@@ -54,3 +58,5 @@ Supplied continuity is not experiential memory. A journal, transcript, summary, 
 A future runtime should consume a deliberately selected immutable release or exact digest, never a moving branch. Updating the public repository and adopting runtime instructions must remain separate, reviewable events with separate receipts.
 
 The committed `candidate_manifest.json` is a same-branch consistency envelope: it binds the policy bytes and declared metadata present in the proposal. Because policy and manifest can change together, it is not an external integrity anchor, operator authentication, source-authenticity finding, semantic-conformance result, freshness guarantee, adoption record, or activation receipt. The separate operator-controlled local pin remains the exact-byte adoption prerequisite.
+
+An optional private-lineage seal may provide an additional, bounded provenance comparison if it follows [`docs/PRIVATE_LINEAGE_SEALS.md`](docs/PRIVATE_LINEAGE_SEALS.md). Such a seal remains shared-key evidence about an exact committed Git tree and its HMAC-bound declared context. It is not an adoption record, public identity proof, semantic review, or authority source.
