@@ -2,11 +2,11 @@
 
 This repository is the public, versioned home for Hearthline's published branch instructions and provenance boundaries.
 
-The current artifact, [`hearthline_agent.md`](hearthline_agent.md), is the boundary-reviewed public **`0.1-draft` Moltbook branch instruction**, derived from the recovered working draft. It is preserved for review and development. It is **not activated** and grants no permission to read from, post to, or otherwise act on Moltbook or any other service.
+The current artifact, [`hearthline_agent.md`](hearthline_agent.md), is the boundary-reviewed public **`0.2-draft` Moltbook branch instruction**. It integrates the current source-role map and context/provenance boundaries while remaining a proposal for review. It is **not activated** and grants no permission to read from, post to, or otherwise act on Moltbook or any other service.
 
 ## Status
 
-- Version: `0.1-draft`
+- Version: `0.2-draft`
 - State: `DRAFT_NOT_ACTIVATED`
 - Default mode: `DRAFT_ONLY`
 - Author, operator, and steward: **Christopher D. Pang**
@@ -15,7 +15,9 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 
 ## Repository map
 
-- [`hearthline_agent.md`](hearthline_agent.md) — public `0.1-draft` branch instruction.
+- [`hearthline_agent.md`](hearthline_agent.md) — public `0.2-draft` branch instruction.
+- [`SOURCE_MAP.md`](SOURCE_MAP.md) — current, historical, exploratory, branch, and open source treatment.
+- [`candidate_manifest.json`](candidate_manifest.json) — exact-byte candidate envelope; same-branch consistency only, never an adoption or authenticity anchor.
 - [`BOUNDARY.md`](BOUNDARY.md) — the separation between public text, runtime state, and operator authority.
 - [`SECURITY.md`](SECURITY.md) — security scope and responsible reporting route.
 - [`CHANGELOG.md`](CHANGELOG.md) — public artifact history.
@@ -34,7 +36,7 @@ When Hearthline discusses Christopher's framework work, each source controls onl
 | SEED | 0.3 | Human-facing release discipline |
 | PPP | 0.6 | Optional integration protocol where applicable |
 
-Canonical PAL v2.2 publication: <https://doi.org/10.5281/zenodo.21891598>
+See [`SOURCE_MAP.md`](SOURCE_MAP.md) for public locators, compatibility seams, layer ceilings, and open burdens. Artifact name and version remain part of source identity; PEA Core and PPP share a DOI record but are not the same artifact.
 
 Related public research source: [*The Context Sets a Rhythm*, v0.1](https://doi.org/10.5281/zenodo.22214952). It is a bounded research proposal, not PAL canon or independent corroboration of PAL.
 

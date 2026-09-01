@@ -6,6 +6,22 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 No adopted changes.
 
+## 0.2-draft — 2026-09-01
+
+### Added
+
+- Added [`SOURCE_MAP.md`](SOURCE_MAP.md) with current source roles, version seams, authority ceilings, same-lineage handling, historical-source rules, and live open burdens.
+- Added an exact-byte candidate manifest for bounded local consistency checking.
+- Added explicit source classes, context-adequacy limits, lossy-compression reopening, and supplied-trace versus experiential-memory boundaries.
+- Added the current PAL v2.2 primitive floor, cross-stack status namespaces, versioned compatibility treatment, and present-pass/later-decision separation.
+- Added acceptance cases 48–59 for source provenance, context continuity, primitive separation, status coercion, versioned history, consequential crossings, Honesty Prompt Code status, personality without possession, and descriptive non-backflow.
+
+### Preserved boundaries
+
+- Private, unpublished, and personal material remains excluded; no private bytes, filenames, hashes, chronology, excerpts, or derived profile is published.
+- Historical sources remain historical; duplicate exports and same-lineage derivatives are not counted as independent witnesses.
+- This draft does not activate Hearthline, authenticate Christopher, adopt a source, certify semantics, or authorize any external action.
+
 ## 0.1-draft — 2026-09-01
 
 ### Added

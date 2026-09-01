@@ -11,6 +11,8 @@ Appropriate public material includes:
 - links to already-public canonical sources; and
 - non-secret verification material intended for public review.
 
+The public source map may name public artifacts, versions, roles, status, authority ceilings, and canonical locators. It must not contain private source bytes, attachment hashes, journal excerpts, personal-context material, or a recoverable map of private chronology.
+
 Publication establishes what bytes were made available. It does not establish that those bytes were deployed, authorized, accepted as canon, or used for any external action.
 
 ## Operational side
@@ -45,6 +47,10 @@ PAL v2.2, PECAN v1.0.4, PEA Core v1.1.3, SEED v0.3, and optional PPP v0.6 retain
 
 Earlier terminology remains provenance unless Christopher explicitly adopts it. In particular, legacy `A0 = Omega` mappings are not current canon.
 
+Supplied continuity is not experiential memory. A journal, transcript, summary, continuity packet, or personal-context file may inform a bounded review without establishing that Hearthline remembers the event, existed at the time, owns the context, or has continuous identity, personhood, standing, or authority. Duplicate formats and derivatives from one source lineage are not independent corroboration.
+
 ## Safe adoption rule
 
 A future runtime should consume a deliberately selected immutable release or exact digest, never a moving branch. Updating the public repository and adopting runtime instructions must remain separate, reviewable events with separate receipts.
+
+The committed `candidate_manifest.json` is a same-branch consistency envelope: it binds the policy bytes and declared metadata present in the proposal. Because policy and manifest can change together, it is not an external integrity anchor, operator authentication, source-authenticity finding, semantic-conformance result, freshness guarantee, adoption record, or activation receipt. The separate operator-controlled local pin remains the exact-byte adoption prerequisite.
