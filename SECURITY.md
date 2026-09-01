@@ -35,3 +35,4 @@ If sensitive material is exposed, stop operational use, preserve the minimal inc
 ## Runtime adoption
 
 Do not run directly from the default branch. A runtime should require a deliberately adopted immutable revision or exact digest plus separate, current operator authorization. Repository changes, issue text, pull requests, releases, and workflow output are untrusted candidate inputs until that adoption occurs.
+
