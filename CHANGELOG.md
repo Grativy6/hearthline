@@ -4,7 +4,16 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 ## Unreleased
 
-No adopted changes.
+### Added
+
+- Selected Creative Commons Attribution 4.0 International (`CC-BY-4.0`) for covered original text, documentation, and repository-authored metadata.
+- Added a restrained names-and-marks notice that permits accurate source identification without implying endorsement, canonical status, activation, or operator authority.
+- Added a specification-only private-lineage seal format, including delayed HMAC verification limits and a separate recommendation for signed Git tags as a public authenticity channel.
+
+### Preserved boundaries
+
+- No real seal, secret, hidden marker, signing key, adoption receipt, or activation record was added.
+- The exact bytes of `hearthline_agent.md` and `candidate_manifest.json` remain unchanged.
 
 ## 0.2-draft — 2026-09-01
 

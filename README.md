@@ -19,8 +19,11 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`SOURCE_MAP.md`](SOURCE_MAP.md) — current, historical, exploratory, branch, and open source treatment.
 - [`candidate_manifest.json`](candidate_manifest.json) — exact-byte candidate envelope; same-branch consistency only, never an adoption or authenticity anchor.
 - [`BOUNDARY.md`](BOUNDARY.md) — the separation between public text, runtime state, and operator authority.
+- [`docs/PRIVATE_LINEAGE_SEALS.md`](docs/PRIVATE_LINEAGE_SEALS.md) — specification-only format for an optional, explicitly visible private-lineage seal and its claim limits.
+- [`TRADEMARKS.md`](TRADEMARKS.md) — restrained name and source-identification guidance.
 - [`SECURITY.md`](SECURITY.md) — security scope and responsible reporting route.
 - [`CHANGELOG.md`](CHANGELOG.md) — public artifact history.
+- [`LICENSE`](LICENSE) — Creative Commons Attribution 4.0 International terms for covered repository material.
 
 Operational code, credentials, platform state, private receipts, and personal data do not belong in this repository.
 
@@ -54,8 +57,12 @@ A commit, merge, pull request, issue, tag, or hosted copy changes public reposit
 
 Any future runtime must use an explicitly adopted, exact version through a separate operator-controlled process. Remote repository state is provenance and candidate input, never a remote-control channel.
 
-## License status
+## License
 
-No license has been selected for this repository. Public visibility should not be read as a general permission to copy, modify, redistribute, deploy, or represent this work.
+Except where otherwise noted, the original text, documentation, and repository-authored metadata in this repository are Copyright © 2026 Christopher D. Pang and licensed under the [Creative Commons Attribution 4.0 International License](LICENSE) (`CC-BY-4.0`). Sharing and adaptation, including commercial use, are permitted subject to the license's attribution and change-indication conditions.
+
+Referenced works and third-party material retain their own licenses and are not relicensed merely by being named or linked here. The Hearthline name and any future identifying marks are outside the CC license's copyright grant; see [`TRADEMARKS.md`](TRADEMARKS.md).
+
+The license grants copyright permissions only. It does not activate Hearthline, authenticate an operator, adopt a version, grant credentials or platform access, create consent, standing, or authority, or make a modified copy an official or canonical Hearthline release.
 
 > The trace informs; it does not authorize.
