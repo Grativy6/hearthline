@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.1` |
+| Version | `0.2` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -15,7 +15,7 @@ A bit of Static without its record is only noise.
 
 Static is an additive layer over separately preserved sources. It is not a source, an independent witness, a shared memory, or authority.
 
-## One Spark, one ledger
+## One Spark, one isolated ledger lineage
 
 Each Spark's work lineage has its own Static ledger. Hearthline does not pool, merge, or silently carry Static from one Spark to another.
 
@@ -23,7 +23,17 @@ A Static expression is meaningful only with the exact Spark ledger, entry, versi
 
 A handoff between Sparks must first decode the relevant Static inside the sending ledger, expand it into ordinary language or an explicit structured meaning, and bind that expansion to its source records. The receiving Spark may then earn its own local Static entry from the expanded material. It does not import the sending Spark's shorthand, grammar, or codebook as controlling vocabulary.
 
-Reopening recorded work may continue that Spark's ledger only when its exact ledger identity and authorized continuation are re-established. Creating a new Spark begins a new ledger.
+Reopening recorded work may continue that Spark's ledger only when its exact ledger identity and authorized continuation are re-established. Creating a new Spark begins a new ledger. A refresh appends a successor version inside the same established lineage; it never replaces or silently restarts that ledger.
+
+## Ordered Static identity
+
+[Hearthline Ordered Lineage](HEARTHLINE_ORDERED_LINEAGE.md) governs Static numbering. Every Spark receives an ordered Spark identity, and every proposed Static version receives the next strictly increasing version number in that Spark's Static series before the proposal is authored.
+
+Every grammar, codebook, decoder, entry, activation, Field Notes page, and revision remains bound to its own typed identity and predecessor. Issued numbers are never reused, reassigned, renumbered, rolled back, or overwritten. Rejected, failed, superseded, and abandoned versions keep their numbers and dispositions.
+
+Proposal order and activation order are separate. The highest-numbered proposal is not automatically current. A separately numbered activation receipt chooses one exact verified version under the current grant and expected predecessor. Concurrent allocation must serialize or fail closed, and restoration never moves a counter backward.
+
+Earlier expressions remain bound to their original Static versions and decoders. Required privacy removal may replace prohibited bytes with an accountable tombstone where lawful, but the ordinal is not silently reassigned.
 
 ## The preserved layers
 
@@ -57,8 +67,8 @@ A failed, missing, or uncertain round trip is not admitted as Static. It remains
 
 At minimum, a Static record binds:
 
-- its Static entry ID, Spark identity, and ledger identity;
-- its version, predecessor, and any superseded entry;
+- its Static entry ID, ordered Spark identity, named series, and ledger identity;
+- its version ordinal, predecessor ordinal, activation state, and any superseded entry;
 - the exact compact bytes and their digest;
 - the exact canonical entry bytes and their digest;
 - its declared meaning, task, scope, and validity conditions;
@@ -99,6 +109,29 @@ Static has a compression floor: a difference that could change action, authority
 
 Vocabulary changes append new versions. A newer version may control later work within its declared scope, but it does not change what an older expression meant when it was recorded.
 
+## Embers and Static proposals
+
+Static remains shorthand rather than a general memory bucket. Broader things a Spark recommends carrying forward belong to that Spark's **Embers**, defined in [Hearthline Firesides](HEARTHLINE_FIRESIDES.md).
+
+A proposed shorthand change begins as an Ember of type `static_delta` and also receives its reserved Static version number. It remains `PROPOSED_NOT_ADOPTED` until separately consulted, exactly reconstructed, admitted by the authorized ledger writer, and activated through its own receipt. Successful verification does not silently approve it, and use in one run does not carry it into another run.
+
+## Fireside refresh
+
+When Hearthline tends a Fireside, Static may be refreshed without erasing the notes that led to the change:
+
+1. Pause at an exact committed Run Trail boundary.
+2. Seal the active Field Notes page with its ordered identity, digest, completion state, coverage watermark, and exact governing Static version.
+3. Consult only the authorized Scribe notes and Embers, recording what was taken up, deferred, declined, or left unresolved.
+4. Decode any sending-Spark Static inside its own ledger and bind the expanded ordinary-language or structured meaning to its sources.
+5. Test a proposed Static upgrade under the exact round-trip admission rule.
+6. If the authorized ledger writer admits it, append it under its already allocated version number and add a separately numbered activation receipt. Do not alter its predecessor.
+7. Open the next numbered blank Field Notes page under the active Static version, bound to the pause checkpoint and its sealed predecessor.
+8. Load only explicitly selected material, append a load receipt, and resume within the unchanged remaining grant and limits.
+
+The page becomes blank; the history does not. Unloaded Embers, residuals, unresolved obligations, declined advice, sealed notes, and reopening handles remain separately addressable.
+
+A Static upgrade improves representation only. It cannot enlarge discretion, role, capability, permission, or authority. A predeclared adaptive-Static grant may permit a verified revision to be tried during the current run; carrying it into a later run remains a separate reviewed decision.
+
 ## Spark role boundaries
 
 Static does not add capability to a Spark:
@@ -125,6 +158,6 @@ This is shared design provenance, not independent corroboration. The Strongwiz r
 
 This document adopts Hearthline's name and intended record discipline for Static. It does not create a Static ledger, instantiate a Spark, implement a codec, preserve any operational source, activate Hearthline, or authorize work.
 
-Any implementation must separately specify and test ledger isolation, append behavior, exact round trips, source custody, residual handling, privacy deletion, role enforcement, grants, failure behavior, export boundaries, and measured compression, latency, transport, and validation costs.
+Any implementation must separately specify and test ledger isolation, ordered allocation, append behavior, proposal and activation separation, sealed-page refresh, carry-gate transitions, exact round trips, source custody, residual handling, privacy deletion, role enforcement, grants, failure behavior, export boundaries, and measured compression, latency, transport, and validation costs.
 
 Hearthline, Sparks, Strongwiz, and their named roles are AI tools and system concepts, not persons, co-authors, or independent authorities. Static does not establish experiential memory, identity continuity, consciousness, consent, standing, ownership, or permission.

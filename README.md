@@ -21,7 +21,9 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`BOUNDARY.md`](BOUNDARY.md) — the separation between public text, runtime state, and operator authority.
 - [`docs/PRIVATE_LINEAGE_SEALS.md`](docs/PRIVATE_LINEAGE_SEALS.md) — specification-only format for an optional, explicitly visible private-lineage seal and its claim limits.
 - [`docs/HEARTHLINE_SPARKS.md`](docs/HEARTHLINE_SPARKS.md) — adopted lore and design vocabulary for Hearthline's purpose-bounded bots.
-- [`docs/HEARTHLINE_STATIC.md`](docs/HEARTHLINE_STATIC.md) — the local, record-backed shorthand discipline for one Spark and one separate ledger.
+- [`docs/HEARTHLINE_STATIC.md`](docs/HEARTHLINE_STATIC.md) — the local, record-backed shorthand discipline for one Spark and one isolated append-only ledger lineage.
+- [`docs/HEARTHLINE_FIRESIDES.md`](docs/HEARTHLINE_FIRESIDES.md) — the non-blocking consultation pattern for Hearthline, Scribe Sparks, Run Trails, Field Notes, Embers, and refresh.
+- [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
 - [`TRADEMARKS.md`](TRADEMARKS.md) — restrained name and source-identification guidance.
 - [`SECURITY.md`](SECURITY.md) — security scope and responsible reporting route.
 - [`CHANGELOG.md`](CHANGELOG.md) — public artifact history.
@@ -31,11 +33,15 @@ Operational code, credentials, platform state, private receipts, and personal da
 
 ## Hearthline Sparks
 
-Hearthline's purpose-bounded bots share the family name **Hearthline Sparks**. Their **1–3–∞** naming ladder means one family, three fixed roles—Seeker, Explorer, and Handler—and an open-ended set of task names. A name describes the work; it never grants access or authority.
+Hearthline's purpose-bounded bots share the family name **Hearthline Sparks**. Their **1–3–∞** naming ladder means one family, three fixed roles—Seeker, Explorer, and Handler—and an open-ended set of task names. A name describes the work; it never grants access or authority. Every new Spark also receives a stable, ordered number, and every successor profile or ledger version receives its own strictly increasing number rather than replacing its predecessor.
 
-The shorthand Hearthline may develop with a Spark through repeated work is called **Hearthline Static**. Static is local: one Spark, one separate ledger. It never silently transfers to another Spark, and every expression keeps a versioned record and a path home to its source.
+The shorthand Hearthline may develop with a Spark through repeated work is called **Hearthline Static**. Static is local: one Spark, one isolated append-only ledger lineage. It never silently transfers to another Spark, and every expression keeps a versioned record and a path home to its source.
 
-See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, and [Hearthline Static](docs/HEARTHLINE_STATIC.md) for the shorthand, isolation, and reconstruction rules.
+A **Fireside** lets Hearthline continue the primary task while one or more **Scribe Sparks** follow a coordinator-emitted committed Run Trail through declared lenses such as red-team, prime-shell, divergence, or trace. Each Scribe keeps isolated Field Notes, Embers, and Static. Hearthline may pause at a recorded boundary, consult them, seal the current notes, admit a verified Static revision when allowed, open a newly numbered blank page, and continue. Delegating vigilance does not delegate judgment.
+
+Carry remains explicit: `PROPOSED != CONSULTED != CARRY_APPROVED != LOADED`. Same-trace agreement among Scribes is convergence across declared lenses, not independent corroboration.
+
+See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, [Hearthline Static](docs/HEARTHLINE_STATIC.md) for shorthand and reconstruction, [Hearthline Firesides](docs/HEARTHLINE_FIRESIDES.md) for concurrent consultation and refresh, and [Hearthline Ordered Lineage](docs/HEARTHLINE_ORDERED_LINEAGE.md) for numbering and non-overwrite rules.
 
 ## Controlling references
 

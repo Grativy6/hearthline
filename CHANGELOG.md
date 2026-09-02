@@ -6,8 +6,10 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 ### Added
 
-- Adopted **Hearthline Static** as the local shorthand Hearthline may develop with one Spark through repeated work: one Spark, one separate ledger, no silent cross-Spark transfer, and a versioned path from every expression back to preserved source records.
-- Expanded **Hearthline Sparks** to version `0.2` with the per-Spark Static boundary and role-specific ledger ceilings.
+- Adopted **Hearthline Firesides** version `0.1`: Hearthline may continue the primary task while declared-lens Scribe Sparks follow a coordinator-emitted committed Run Trail, keep isolated Field Notes and Embers, and remain available for bounded consultation and refresh.
+- Adopted **Hearthline Ordered Lineage** version `0.1`: every Spark and every successor profile, Static version, Field Notes page, Ember, run, event, manifest, activation, and load receipt receives a scoped ordered number that is never reused, reassigned, renumbered, or overwritten.
+- Expanded **Hearthline Static** to version `0.2` with general carry kept in Embers, separated proposal and activation order, and the Fireside refresh cycle: seal predecessor notes, consult, verify, append, open a fresh numbered page, and resume.
+- Expanded **Hearthline Sparks** to version `0.3` with Firesides, Scribe jobs and declared lenses, separate task and note completion, ordered Spark identity, and same-trace convergence boundaries.
 - Adopted **Hearthline Sparks** as lore and design vocabulary: one family, three fixed access roles (Seeker, Explorer, Handler), and an open-ended task-naming space; documented the separate model, Spark, and Strongwiz layers.
 - Selected Creative Commons Attribution 4.0 International (`CC-BY-4.0`) for covered original text, documentation, and repository-authored metadata.
 - Added a restrained names-and-marks notice that permits accurate source identification without implying endorsement, canonical status, activation, or operator authority.
@@ -18,8 +20,10 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 ### Preserved boundaries
 
-- Static creates no shared memory, global codebook, codec, runtime, cross-Spark inheritance, capability, grant, or authority. Exact reversal, source-backed retrieval, and lossy summary remain distinct claims; deletion and redaction obligations are not defeated by provenance.
-- The Sparks vocabulary creates no running worker, capability, grant, activation, self-replication, or Strongwiz integration. Roles are ceilings, and names are not permissions.
+- Fireside creates no runtime, autonomous worker, shared memory, permission, or authority. Scribe is a job under one existing Spark role; delegating vigilance does not delegate judgment, and same-trace Scribe agreement is not independent corroboration.
+- Static creates no global codebook, codec, cross-Spark inheritance, capability, grant, or authority. A Static upgrade changes representation only; exact reversal, source-backed retrieval, and lossy summary remain distinct claims.
+- Ordered numbering establishes scoped allocation order only—not rank, truth, quality, identity continuity, personhood, or authority. The non-overwrite rule does not defeat lawful deletion or redaction; accountable tombstones and narrowed claims remain required where applicable.
+- The Sparks vocabulary creates no running worker, capability, grant, activation, self-replication, or Strongwiz integration. Roles are ceilings, lenses narrow attention, and names and numbers are not permissions.
 - No real seal, secret, hidden marker, signing key, adoption receipt, or activation record was added.
 - The controlling source profile, artifact version and state, default mode, author/steward declaration, `authority: NONE`, and `effect: NONE` remain unchanged. Research citations do not import or execute code, establish causality or independent corroboration, adopt a source, activate Hearthline, or confer authority.
 

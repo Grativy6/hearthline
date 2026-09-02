@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2` |
+| Version | `0.3` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -20,6 +20,10 @@ The name gives related work a shared home without pretending that every helper i
 3. **An open-ended naming space:** the job currently being carried, and—when Christopher chooses—the unique name of an important or long-lived Spark.
 
 Ordinary Sparks are named by job and role: **Repo Seeker**, **Spine Explorer**, **Package Handler**. A lasting Spark may later earn a unique name, but its role, job, source, and grant must remain visible in the trace.
+
+Every new Spark also receives the next ordered Spark number in its named registry—for example, `SPARK-000001`. Its display name may change or be reused; its ordered identity may not. Every identity-bearing change appends the next profile version under that Spark rather than rewriting the earlier profile.
+
+[Hearthline Ordered Lineage](HEARTHLINE_ORDERED_LINEAGE.md) defines the shared numbering, gap, successor, retirement, and non-overwrite rules.
 
 The infinity is poetic shorthand for open-ended names and work. It does not mean infinite running instances, self-replication, automatic promotion, unlimited concurrency, or authority.
 
@@ -37,9 +41,28 @@ These are consequence ceilings, not ranks that silently inherit one another. A H
 
 A Spark carries one declared role at a time. Changing roles, widening scope, or moving from proposal to mutation requires a new explicit grant. A name describes a Spark; it never authorizes one.
 
+## Firesides and Scribe Sparks
+
+A [**Hearthline Fireside**](HEARTHLINE_FIRESIDES.md) is a bounded consultation arrangement. Hearthline carries the primary task while one or more **Scribe Sparks** follow a coordinator-emitted, committed **Run Trail** through separately declared lenses.
+
+**Scribe** is a job, not a fourth role. Each Scribe remains a Seeker, Explorer, or Handler and gains no access, mutation ability, stop power, or authority from being asked to take notes.
+
+| Lens | Declared attention |
+|---|---|
+| **Red-team** | Challenges decisions, assumptions, crossings, and failure behavior |
+| **Prime-shell** | Locates declared load-bearing prime shells or analogous structural premises and identifies what depends on them |
+| **Divergence** | Prioritizes checks whose possible results separate the greatest number of live branches |
+| **Trace** | Watches provenance, source class, residuals, unresolved obligations, authority ceilings, and reopening paths |
+
+A lens narrows attention; it does not establish truth or priority. A Scribe warning remains advisory unless a separately predeclared stop condition applies.
+
+Each Scribe keeps separate **Field Notes**, **Embers**, and Static. Hearthline may pause at an exact Run Trail boundary, consult one or more Scribes, record what she took up, open a newly numbered blank notes page, and continue. The Scribes carry specialized vigilance; Hearthline retains the task judgment inside the unchanged grant.
+
+Scribes following the same Run Trail remain derivative analytic paths in one provenance lineage. Their agreement may be reported as convergence across declared lenses, never as independent corroboration, a vote, or a quorum.
+
 ## Hearthline Static
 
-[Hearthline Static](HEARTHLINE_STATIC.md) is local, versioned shorthand that Hearthline may develop with one Spark through repeated work. Each Spark has its own Static ledger. Hearthline does not pool or silently carry its vocabulary into another Spark: a handoff must expand the meaning and bind it to source records before a receiving Spark can form new local shorthand.
+[Hearthline Static](HEARTHLINE_STATIC.md) is local, versioned shorthand that Hearthline may develop with one Spark through repeated work. Each Spark has its own isolated, append-only Static ledger lineage. Hearthline does not pool or silently carry its vocabulary into another Spark: a handoff must expand the meaning and bind it to source records before a receiving Spark can form new local shorthand.
 
 Static changes none of the role ceilings. A Seeker may receive only brokered Static metadata within its existing aperture; an Explorer may inspect authorized records read-only; and a Handler may persist a Static record only under an explicit current grant naming that ledger and mutation. Static does not create shared memory, authority, or permission.
 
@@ -78,6 +101,6 @@ Reading content must not silently execute it. Opening a file does not authorize 
 
 This document adopts Hearthline's naming language. It does not instantiate a Spark, implement access controls, activate a runtime, or authorize delegated work.
 
-If Sparks become operational, the implementation must separately declare and test its role enforcement, task grants, custody, receipts, failure behavior, and revocation path. Until then, the names carry lore and design intent—not capability.
+If Sparks become operational, the implementation must separately declare and test its role enforcement, task grants, custody, receipts, failure behavior, revocation path, atomic ordered-identity allocation, crash-safe counter recovery, immutable sealed notes, carry-gate transitions, independent task and note status, and rejection of silent cross-Spark Static transfer. Until then, the names carry lore and design intent—not capability.
 
 Sparks and Strongwiz are AI tools, not persons, co-authors, or independent authorities. Their names do not establish consciousness, consent, ownership, standing, or permission.
