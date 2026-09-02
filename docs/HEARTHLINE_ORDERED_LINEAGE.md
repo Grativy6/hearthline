@@ -4,12 +4,12 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.3` |
+| Version | `0.4` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
-**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, and their receipts.
+**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, [Homes and Homecomings](HEARTHLINE_HOMECOMING.md), and their receipts.
 
 Its purpose is simple: every Spark and every new version receives an ordered number, and earlier work remains individually addressable. Correction, retirement, rejection, or replacement may change what governs later work; none silently makes an earlier record disappear.
 
@@ -25,6 +25,16 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 |---|---|---|
 | Spark | `SPARK-000001` | One named Spark registry |
 | Spark profile version | `SPARK-000001/PROFILE-000001` | That Spark's profile series |
+| Spark Home Record | `SPARK-000001/HOME-000001` | That Spark's Home series |
+| Spark Heartbeat Contract | `SPARK-000001/HEARTBEAT-000001` | That Spark's heartbeat-contract series |
+| Pulse Receipt | `SPARK-000001/HEARTBEAT-000001/PULSE-000001` | One pulse series within one heartbeat contract |
+| Suspension receipt | `SPARK-000001/SUSPENSION-000001` | That Spark's suspension series |
+| Resume receipt | `SPARK-000001/RESUME-000001` | That Spark's resume series |
+| Paired dispatch | `PAIR-000001` | One named paired-dispatch registry |
+| Homecoming | `SPARK-000001/HOMECOMING-000001` | That Spark's Homecoming series |
+| Homecoming Return Receipt | `SPARK-000001/HOMECOMING-000001/RETURN-000001` | One Homecoming's return series |
+| Homecoming Reconciliation Receipt | `SPARK-000001/HOMECOMING-000001/RECONCILIATION-000001` | One Homecoming's reconciliation series |
+| Homecoming Context-Close Receipt | `SPARK-000001/HOMECOMING-000001/CONTEXT-CLOSE-000001` | One Homecoming's context-close series |
 | Static version | `SPARK-000001/STATIC-000001` | That Spark's isolated Static lineage |
 | Static entry | `SPARK-000001/STATIC-000001/ENTRY-000001` | One Static version |
 | Field Notes page | `SPARK-000001/NOTES-000001` | That Spark's notes series |
@@ -38,6 +48,8 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Owl Scribe | `OWL-000001` | One named Owl registry |
 | Owl profile version | `OWL-000001/PROFILE-000001` | That Owl Scribe's profile series |
 | Owl character sheet | `OWL-000001/SHEET-000001` | That Owl Scribe's appearance-sheet series |
+| Hearth Perch | `OWL-000001/HEARTH-PERCH-000001` | That Owl Scribe's Home series |
+| Hearth Perch version | `OWL-000001/HEARTH-PERCH-000001/VERSION-000001` | One Hearth Perch's version series |
 | Perch | `OWL-000001/PERCH-000001` | That Owl Scribe's partition directory |
 | Perch version | `OWL-000001/PERCH-000001/VERSION-000001` | One Perch's version series |
 | Translation request | `OWL-000001/REQUEST-000001` | That Owl Scribe's request series |
@@ -66,9 +78,84 @@ A Spark may retain its stable Spark ordinal through profile versions when the ex
 
 Retiring a Spark appends a retirement record. Reopening may append a new profile version if the continuation requirements are met; it does not delete the retirement or pretend the interruption did not occur.
 
+## Home, heartbeat, and Homecoming identities
+
+Every dispatch pins one exact Home Record before work begins. That record
+binds the exact Spark and profile, coordinator or parent account, return lanes,
+audience, accepted bundle, reconciliation rule, retention boundary, and failure
+route. A Home change appends a successor record. It does not silently reroute an
+active Spark or merge two Spark lineages. Home metadata routes and constrains
+custody; it does not authorize return, disclosure, admission, or retention. A
+return revalidates those authorities and follows only an ordered authorized
+reroute-or-revocation chain from the dispatch-pinned record.
+
+A Paired Spark dispatch receives its pair number before either member begins.
+It binds exactly one Work Spark and one Ledger Scribe Spark, their separate
+profiles, roles, grants, Homes, heartbeat contracts, budgets, contexts, Static
+versions, and the shared Run Trail projection. The pair identifier links their
+returns; it does not make them one identity or let either allocate, authorize,
+or complete the other. Pairing is non-recursive: the Ledger Scribe does not
+receive another Ledger Scribe from this rule.
+
+Primary Work Spark dispatches use one paired dispatch by default. An authorized
+operator may predeclare an unpaired exception, which receives its own record and
+is ineligible for learned Static promotion or carry from that run.
+
+Every Spark Heartbeat Contract and every issued Pulse Receipt receives its own
+ordered identity, including liveness-only pulses. A Spark may propose a payload;
+only the canonical controller or store allocates and appends the receipt. A
+pulse records only declared liveness or material change, the timing assumption
+then in force, actual coverage, remaining limits, and the next reasoned boundary.
+Empty checks create no outward receipt unless the contract expressly requires a
+bounded liveness record. A cadence adjustment appends a successor heartbeat
+contract; it cannot alter scope, authority, expiry, time, action count, cost
+ceiling, or budget.
+
+Before a nonterminal blocker or no-due-work boundary enters
+`SPARK_SUSPENDED`, the canonical controller appends exactly one
+contract-bounded Pulse Receipt for that boundary. The Spark records no further
+task action until a valid Resume Receipt. A declared terminal blocker begins
+return. Missing the maximum pulse boundary records liveness as unknown and
+suspends or revokes according to the contract; it does not infer completion or
+silent continuation.
+
+Suspension and resume use separate ordered receipts. `SPARK_SUSPENDED` records
+the last committed boundary, next wake condition, dispatch-pinned Home and
+contract, consumed limits, and unresolved work. Resume revalidates the original
+grant, revocation state, Home, contract, and remaining limits, then the canonical
+controller preserves the consumed amounts in a successor receipt. It neither
+deletes the suspension nor creates renewed authority.
+
+Homecoming allocates its identity before return begins. The canonical controller
+then appends separate Return, Reconciliation, and Context-Close Receipts beneath
+that identity:
+
+`HOMECOMING:RETURNED != HOMECOMING:RECONCILED != HOMECOMING:CONTEXT_CLOSED`
+
+Arrival does not establish admission to the Home. Reconciliation revalidates the
+dispatch-pinned Home, current grant, recipient, disclosure, retention, expiry,
+revocation, and authorized reroute chain; it does not establish task success,
+carry approval, Static activation, or context closure. A separate Context-Close
+Receipt ends the active child context after reconciliation or an explicit
+terminal failure disposition. `HOMECOMING:CONTEXT_CLOSED` is not PAL or A15
+closure and does not erase artifacts, residuals, failures, external effects, or
+reopening handles. Partial, rejected, revoked, and unknown returns retain their
+identities and exact dispositions. An unknown Homecoming is reconciled under its
+existing identity and is never replayed automatically.
+
+Homecoming is not retirement. After a separate Context-Close Receipt, the Spark
+may later receive another authorized dispatch under an established
+continuation, while its earlier Homecoming and consumed limits remain
+historical. A replacement process that lacks the required continuation evidence
+begins under a new Spark identity.
+
 ## Static proposals and activations
 
-A candidate Static revision receives the next Static version ordinal when proposed. It does not wait for success to become historically visible.
+A same-lineage candidate Static revision receives the next Static version
+ordinal when proposed. A cross-Spark target-bound `static_delta` remains an
+Ember in its source Spark's lineage and receives no target version until the
+target ledger's authorized writer admits and allocates it after direction-bound
+carry. Neither waits for success to become historically visible.
 
 Its lifecycle may include distinct states such as:
 
@@ -92,7 +179,15 @@ The page becomes blank; the history does not. Sealed pages, incomplete pages, re
 
 ## Owl Scribe and Bridge Gloss identities
 
-Thulia's adopted public lore identity is `OWL-000001`, distinct from the Spark registry because Owl Scribe is a bounded custody and translation interface rather than a fourth Spark role. It is not evidence that an operational allocator, service, or model instance exists. Any model-assisted interpretive work behind that interface still receives its own Spark identity, role, profile, and grant.
+Thulia's adopted public lore identity is `OWL-000001`, with current design profile `OWL-000001/PROFILE-000002`, distinct from the Spark registry because Owl Scribe is a bounded custody and translation interface rather than a fourth Spark role. It is not evidence that an operational allocator, service, or model instance exists. Any model-assisted interpretive work behind that interface still receives its own Spark identity, role, profile, and grant.
+
+The Hearth Perch is Thulia's separately numbered Home series. It binds her own
+Owl Scribe return boundary and the dispatch-pinned roost index and version
+without becoming a shared Static Perch, global codebook, or authority source.
+Work Static returns unchanged to its source Perch; Scribe-authored target-bound
+proposals return first to the Scribe's source Perch; and Thulia's candidate
+custody and representation-side return payloads return to the Hearth Perch for
+canonical controller reconciliation.
 
 Each Perch identifies one partitioned Spark Static lineage. A new Perch version appends changes to its index, access path, reconstruction handles, or availability state without altering the earlier version. A Perch number never becomes a shared codebook identity.
 
@@ -122,7 +217,17 @@ When bytes must be removed, the system preserves the ordinal and an accountable 
 
 This document specifies names and invariants. It does not create a registry, allocator, Spark, Fireside, ledger, runtime, or adoption event.
 
-Any implementation must test atomic allocation, monotonic recovery, idempotent submission, gap preservation, immutable predecessor binding, separated proposal and activation series, cross-registry collision handling, Perch isolation, recipient-specific gloss delivery, sealed-page immutability, lawful tombstoning, and failure when the active version cannot be established.
+Any implementation must test atomic controller-owned allocation, monotonic
+recovery, idempotent submission, gap preservation, immutable predecessor
+binding, paired-dispatch allocation and explicit unpaired exceptions, separate
+pair identities, budgets, and Static references, dispatch-pinned Home binding,
+authorized reroutes, heartbeat and all-pulse ordering, blocker and missed-pulse
+behavior, suspension/resume preservation, returned/reconciled/context-closed
+separation, idempotent and unknown Homecoming reconciliation, separated
+proposal and activation series, source-owned target-bound deltas, cross-registry
+collision handling, Hearth Perch and Static Perch isolation, recipient-specific
+gloss delivery, sealed-page immutability, lawful tombstoning, and failure when
+the active version cannot be established.
 
 Ordered lineage preserves addressability. It does not manufacture memory, identity continuity, consciousness, consent, standing, permission, or authority.
 

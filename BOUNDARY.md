@@ -26,7 +26,8 @@ The following belong only in a separately controlled private environment:
 - API keys, tokens, cookies, recovery material, and account identifiers not intentionally public;
 - runtime control and authorization records;
 - operational credential-broker configuration, deployment topology, and private infrastructure details;
-- operational Static ledgers, Thulia roost and Perch indexes, Bridge Glosses, and their access, carry, and delivery receipts;
+- operational Static ledgers, Thulia roost, Hearth Perch and Spark-local Perch indexes, Bridge Glosses, and their access, carry, and delivery receipts;
+- operational Spark identities, Home Records, paired-dispatch state, Spark Heartbeat Contracts, Pulse Receipts, suspension/resume state, return bundles, and Homecoming Return, Reconciliation, and Context-Close Receipts;
 - private receipts, logs, conversation records, and unpublished work;
 - personal, behavioral, device, location, health, or biometric data; and
 - any learned template derived from such data.
