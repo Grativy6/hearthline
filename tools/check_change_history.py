@@ -119,8 +119,8 @@ def main() -> None:
             "latest block exceeds five bullets")
     require(len(WORD_RE.findall(block)) <= 120,
             "latest block exceeds 120 words")
-    require("[All public changes](CHANGELOG.md)" in block,
-            "latest block lacks the root-index link")
+    require(block.count("[All public changes](CHANGELOG.md)") == 1,
+            "latest block must contain exactly one root-index link")
 
     current_rows = parse_rows(INDEX, index)
     require(0 < len(current_rows) <= 25,
@@ -182,9 +182,12 @@ def main() -> None:
         for heading in REQUIRED_HEADINGS:
             require(heading in note, f"{target.name} lacks {heading}")
 
-    latest_match = FULL_RECORD_RE.search(block)
-    require(latest_match is not None, "latest block has no full-record link")
-    latest_target = relative_target(README, latest_match.group(1))
+    latest_matches = FULL_RECORD_RE.findall(block)
+    require(len(latest_matches) == 1,
+            "latest block must contain exactly one full-record link")
+    require(str(current_rows[0]["id"]) in block,
+            "latest block must name the newest change ID")
+    latest_target = relative_target(README, latest_matches[0])
     require(latest_target == Path(str(current_rows[0]["target"])),
             "README latest record must match the first current changelog row")
 

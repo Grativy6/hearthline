@@ -4,10 +4,23 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2` |
+| Version | `0.3` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
+
+## v0.3 clarification record
+
+Version `0.3` generalizes the representation transport rule to any
+representation-side return bundle, including one prepared by a Ledger Scribe or
+Thulia. Such a bundle carries the declared data available within its
+grant, and Homecoming custody cannot itself assign or alter result status. A
+Work Spark artifact may retain status established under its own declared
+evaluation rule.
+
+This correction preserves the narrower `0.2` record below rather than silently
+rewriting it. It changes no Spark, Fireside, Static, Ordered Lineage, or Thulia
+version and adds no implementation or authority.
 
 ## v0.2 clarification record
 
@@ -100,7 +113,7 @@ lineage:
 | Spark | Task center | Does not become |
 |---|---|---|
 | **Work Spark** | Observes, proposes, builds, checks, or otherwise carries the primary bounded job | Its own ledger authority or an unrestricted narrator of its work |
-| **Ledger Scribe Spark** | Follows only the committed projection it is granted, aligns externalized, committed, grant-filtered summaries with observable outcomes, preserves unmatched distinctions, and proposes candidate representation changes | Another action selector, hidden-reasoning reader, independent witness, carry approver, or Static activator |
+| **Ledger Scribe Spark** | Follows only the committed projection it is granted, aligns externalized, committed, grant-filtered summaries with observable terminal-state data, preserves unmatched distinctions, and proposes candidate representation changes | Another action selector, hidden-reasoning reader, independent witness, carry approver, or Static activator |
 
 **Ledger Scribe** is a job, not a fourth Spark role. Each member of the pair is
 still a Seeker, Explorer, or Handler under its own aperture and grant. Pairing
@@ -115,7 +128,7 @@ another Ledger Scribe.
 
 The pair shares a dispatch and Run Trail reference so their returns can be
 reconciled. The Ledger Scribe receives only the committed summaries, events,
-outcomes, and source projections named in its grant. It does not receive or
+terminal-state data, and source projections named in its grant. It does not receive or
 claim hidden chain-of-thought, private reasoning, omitted context, or authority
 merely because it travels beside the Work Spark.
 
@@ -288,9 +301,10 @@ is appended after reconciliation or an explicit terminal failure disposition.
 It is not PAL or A15 closure. None of those states establishes task success,
 carry approval, or Static activation.
 
-A Ledger Scribe's representation-side return carries only the declared data,
-provenance, transformations, bounds, coverage, negative constraints, and
-residuals available within its grant. `HOMECOMING:RETURNED` and
+A representation-side return bundle, including one prepared by a Ledger Scribe
+or Thulia, carries only the declared data, provenance,
+transformations, bounds, coverage, negative constraints, and residuals
+available within its grant. `HOMECOMING:RETURNED` and
 `HOMECOMING:RECONCILED` preserve custody facts; they do not by themselves
 classify or reclassify anything as evidence, a finding, a conclusion, or a
 result. A Work Spark may separately return an artifact whose status was

@@ -14,6 +14,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000003` | 2026-09-02 | `REPOSITORY_HISTORY_CORRECTION` | Generalize representation-side return to include bundles prepared by a Ledger Scribe or Thulia without assigning result status. | [Record](docs/changelog/2026-09-02-hlp-000003-generalize-representation-return.md) |
 | `HLP-000002` | 2026-09-02 | `REPOSITORY_HISTORY_PROMOTION` | Install bounded public history and keep representation-side custody distinct from result classification. | [Record](docs/changelog/2026-09-02-hlp-000002-bounded-repository-history.md) |
 | `HLP-000001` | 2026-09-02 | `HISTORY_BACKFILL` | Recover public repository history through Paired Sparks and Homecoming. | [Record](docs/changelog/2026-09-02-hlp-000001-pre-index-history.md) |
 
@@ -31,8 +32,9 @@ paths, and the next cohort begins here.
   conversations, prompts, hidden reasoning, private paths or identifiers,
   credentials, operational state, receipts, and redundant command output are
   excluded.
-- A Ledger Scribe's representation-side return may carry changed paths,
-  observations, checks, compatibility signals, and unresolveds as data.
+- A representation-side return bundle, including one prepared by a Ledger
+  Scribe or Thulia, may carry changed paths, observations, checks, compatibility
+  signals, and unresolveds as data.
   `RETURNED` and `RECONCILED` do not by themselves classify or reclassify it as
   evidence, a finding, a conclusion, a result, Static, or authority.
 - `REPOSITORY_HISTORY_PROMOTION` has effect `REPOSITORY_HISTORY_ONLY`. “Atomic

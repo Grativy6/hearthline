@@ -48,22 +48,24 @@ Contract** before dispatch. By default, each primary Work Spark travels in a
 **Paired Spark dispatch** with exactly one non-recursive Ledger Scribe Spark; an
 authorized predeclared unpaired exception is ineligible for learned Static carry.
 The Scribe follows only externalized, committed, grant-filtered summaries and
-outcomes, preserves residuals, and proposes a target-bound `static_delta` in its
-own lineage without selecting actions or writing the Work Spark's Static. Each
-Spark keeps its own identity, grant, budget, frozen Static reference, pulse, and
-Home. When no authorized action or authorized check is due, it suspends rather
-than busy-polls after exactly one controller-owned, contract-bounded Pulse
-Receipt for that boundary. The canonical controller appends separate Return,
-Reconciliation, and Context-Close Receipts at Homecoming. Cadence may adapt
+terminal-state data, preserves residuals, and proposes a target-bound
+`static_delta` in its own lineage without selecting actions or writing the Work
+Spark's Static. Each Spark keeps its own identity, grant, budget, frozen Static
+reference, pulse, and Home. When no authorized action or authorized check is
+due, it suspends rather than busy-polls after exactly one controller-owned,
+contract-bounded Pulse Receipt for that boundary. The canonical controller
+appends separate Return, Reconciliation, and Context-Close Receipts at
+Homecoming. Cadence may adapt
 inside its recorded bounds; scope, authority, and consumed limits may not.
 
-A Ledger Scribe's representation-side return carries the declared data,
-provenance, transformations, bounds, coverage, negative constraints, and
-residuals available within its grant. `RETURNED` and `RECONCILED` record
-custody only; they do not by themselves classify or reclassify anything as
-evidence, a finding, a conclusion, or a result. A Work Spark may separately
-return an artifact whose status was established under its task's declared
-evaluation rule; Homecoming preserves that status without creating it.
+A representation-side return bundle, including one prepared by a Ledger Scribe
+or Thulia, carries the declared data, provenance, transformations, bounds,
+coverage, negative constraints, and residuals available within its grant.
+`RETURNED` and `RECONCILED` record custody only;
+they do not by themselves classify or reclassify anything as evidence, a
+finding, a conclusion, or a result. A Work Spark may separately return an
+artifact whose status was established under its task's declared evaluation
+rule; Homecoming preserves that status without creating it.
 
 Carry remains explicit: `PROPOSED != CONSULTED != CARRY_APPROVED != LOADED`. Same-trace agreement among Scribes is convergence across declared lenses, not independent corroboration.
 
@@ -134,17 +136,15 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000002 — Bounded history and return-data clarification**
+**HLP-000003 — General representation-return clarification**
 
-- Added a capped change index and one frozen full record for each accepted
-  repository-history promotion.
-- Added a bounded public backfill through the Paired Sparks and Homecoming
-  integration.
-- Clarified that representation-side Homecoming carries declared data; custody
-  alone does not classify or reclassify it as a result.
-- Added a local structural check and kept history separate from runtime state,
-  policy adoption, activation, implementation, Static admission, and authority.
+- Generalized the custody rule from Ledger Scribe returns to every
+  representation-side bundle, including ones prepared by Thulia.
+- Replaced Scribe-side “outcomes” with terminal-state data while preserving any
+  Work Spark artifact status established under its task's evaluation rule.
+- Recorded the correction as a new frozen change instead of silently rewriting
+  `HLP-000002`.
 
-[Full change record](docs/changelog/2026-09-02-hlp-000002-bounded-repository-history.md) ·
+[Full change record](docs/changelog/2026-09-02-hlp-000003-generalize-representation-return.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
