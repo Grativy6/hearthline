@@ -10,6 +10,8 @@ logs/
 /control_state.json
 /authorization.json
 /platform_reference/
+__pycache__/
+*.py[cod]
 *.pem
 *.key
 *.p12

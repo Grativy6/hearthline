@@ -4,12 +4,27 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.1` |
+| Version | `0.2` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
-## Public integration record
+## v0.2 clarification record
+
+Version `0.2` makes the representation transport boundary explicit. A Ledger
+Scribe's representation-side return carries only the declared data, provenance,
+transformations, bounds, coverage, negative constraints, and residuals
+available within its grant. `RETURNED` and `RECONCILED` record custody only;
+they do not by themselves classify or reclassify anything as evidence, a
+finding, a conclusion, or a result. A Work Spark may separately return an
+artifact whose status was established under its task's declared evaluation
+rule; Homecoming preserves that status without creating it.
+
+This clarification changes no Spark, Fireside, Static, Ordered Lineage, or
+Thulia version; no implementation or authority is added. The `0.1` integration
+record remains below as history rather than being silently rewritten.
+
+## v0.1 public integration record
 
 | Artifact | Predecessor | This integration |
 |---|---|---|
@@ -273,6 +288,15 @@ is appended after reconciliation or an explicit terminal failure disposition.
 It is not PAL or A15 closure. None of those states establishes task success,
 carry approval, or Static activation.
 
+A Ledger Scribe's representation-side return carries only the declared data,
+provenance, transformations, bounds, coverage, negative constraints, and
+residuals available within its grant. `HOMECOMING:RETURNED` and
+`HOMECOMING:RECONCILED` preserve custody facts; they do not by themselves
+classify or reclassify anything as evidence, a finding, a conclusion, or a
+result. A Work Spark may separately return an artifact whose status was
+established under its task's declared evaluation rule; Homecoming preserves
+that status without creating it.
+
 Failure paths remain explicit:
 
 - `HOMECOMING:RETURNED_PARTIAL` means the bounded return arrived with named
@@ -286,7 +310,8 @@ Failure paths remain explicit:
 
 Homecoming is not synonymous with success. A Spark may come home with a failed
 test, a blocker, `NO_LEDGER_DELTA`, `LEDGER_DELTA_INCOMPLETE`,
-`LEDGER_COVERAGE_UNKNOWN`, a negative result, or an unresolved residual.
+`LEDGER_COVERAGE_UNKNOWN`, a recorded negative observation, an already-evaluated
+negative result, or an unresolved residual.
 `HOMECOMING:RECONCILED` may be recorded only when the named return bundle and
 dispatch-pinned Home version were durably matched after the required checks.
 Ambiguity is not cleaned up into a happy ending, and an unknown return is not
