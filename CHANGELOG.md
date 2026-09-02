@@ -6,6 +6,8 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 ### Added
 
+- Added **Thulia Character Sheet** version `0.1` (`OWL-000001/SHEET-000001`) as a lore-only presentation of her established profile, including a reproducible matte plumage palette, selective angle-dependent Northlight markings, temperament, mannerisms, voice, and illustration anchors. Owl Scribe behavior and operational boundaries remain unchanged.
+- Expanded **Hearthline Ordered Lineage** to version `0.3` with Thulia's ordered character-sheet series and an explicit rule that presentation successors cannot alter Owl Scribe behavior or the governing profile.
 - Adopted **Thulia** version `0.1`: Hearthline's pet owl and bounded Owl Scribe, with the expressly fictional lore taxon *Thuleglaux interpres*, a partitioned roost of Spark-local Static Perches, and numbered Bridge Glosses for authorized cross-Spark reconstruction.
 - Expanded **Hearthline Sparks** to version `0.4`, **Hearthline Static** to version `0.3`, **Hearthline Firesides** to version `0.2`, and **Hearthline Ordered Lineage** to version `0.2` to integrate Owl Scribe boundaries, direction-bound translation, Perch, request, gloss, and delivery numbering, and receiving-Spark-local readmission.
 - Adopted **Hearthline Firesides** version `0.1`: Hearthline may continue the primary task while declared-lens Scribe Sparks follow a coordinator-emitted committed Run Trail, keep isolated Field Notes and Embers, and remain available for bounded consultation and refresh.

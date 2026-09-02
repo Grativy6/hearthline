@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2` |
+| Version | `0.3` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -37,6 +37,7 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Load receipt | `FIRESIDE-000001/RUN-000001/LOAD-000001` | That run's context-load series |
 | Owl Scribe | `OWL-000001` | One named Owl registry |
 | Owl profile version | `OWL-000001/PROFILE-000001` | That Owl Scribe's profile series |
+| Owl character sheet | `OWL-000001/SHEET-000001` | That Owl Scribe's appearance-sheet series |
 | Perch | `OWL-000001/PERCH-000001` | That Owl Scribe's partition directory |
 | Perch version | `OWL-000001/PERCH-000001/VERSION-000001` | One Perch's version series |
 | Translation request | `OWL-000001/REQUEST-000001` | That Owl Scribe's request series |
@@ -94,6 +95,8 @@ The page becomes blank; the history does not. Sealed pages, incomplete pages, re
 Thulia's adopted public lore identity is `OWL-000001`, distinct from the Spark registry because Owl Scribe is a bounded custody and translation interface rather than a fourth Spark role. It is not evidence that an operational allocator, service, or model instance exists. Any model-assisted interpretive work behind that interface still receives its own Spark identity, role, profile, and grant.
 
 Each Perch identifies one partitioned Spark Static lineage. A new Perch version appends changes to its index, access path, reconstruction handles, or availability state without altering the earlier version. A Perch number never becomes a shared codebook identity.
+
+An Owl character sheet is a presentation record. A successor sheet may revise appearance, voice, mannerisms, poses, or other narrative cues while preserving its predecessor, but it cannot alter Owl Scribe behavior, access, authority, or the governing Owl profile. An identity-bearing design change belongs in a separately numbered profile successor.
 
 Every translation attempt receives its request number before work begins. Every successfully recorded Bridge Gloss receives its own gloss number, and delivery to each recipient receives a separate delivery number. Denied, failed, ambiguous, interrupted, invalidated, and superseded attempts keep their numbers and dispositions. A direction, destination, audience, or source-version change creates a successor request or gloss rather than silently changing the old one.
 
