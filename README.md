@@ -23,6 +23,7 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`docs/HEARTHLINE_SPARKS.md`](docs/HEARTHLINE_SPARKS.md) — adopted lore and design vocabulary for Hearthline's purpose-bounded bots.
 - [`docs/HEARTHLINE_STATIC.md`](docs/HEARTHLINE_STATIC.md) — the local, record-backed shorthand discipline for one Spark and one isolated append-only ledger lineage.
 - [`docs/HEARTHLINE_THULIA.md`](docs/HEARTHLINE_THULIA.md) — Thulia, Hearthline's pet owl and bounded Owl Scribe for partitioned Static custody and numbered Bridge Glosses.
+- [`docs/HEARTHLINE_HOMECOMING.md`](docs/HEARTHLINE_HOMECOMING.md) — declared Homes, paired Work and Ledger Scribe Sparks, task-shaped Spark Heartbeat Contracts, and trace-preserving Homecoming.
 - [`docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md) — Thulia's stable appearance, Northlight iridescence pattern, temperament, mannerisms, and illustration anchors.
 - [`docs/HEARTHLINE_FIRESIDES.md`](docs/HEARTHLINE_FIRESIDES.md) — the non-blocking consultation pattern for Hearthline, Scribe Sparks, Run Trails, Field Notes, Embers, and refresh.
 - [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
@@ -41,11 +42,35 @@ The shorthand Hearthline may develop with a Spark through repeated work is calle
 
 A **Fireside** lets Hearthline continue the primary task while one or more **Scribe Sparks** follow a coordinator-emitted committed Run Trail through declared lenses such as red-team, prime-shell, divergence, or trace. Each Scribe keeps isolated Field Notes, Embers, and Static. Hearthline may pause at a recorded boundary, consult them, seal the current notes, admit a verified Static revision when allowed, open a newly numbered blank page, and continue. Delegating vigilance does not delegate judgment.
 
+Every Spark also receives a declared **Home** and task-shaped **Spark Heartbeat
+Contract** before dispatch. By default, each primary Work Spark travels in a
+**Paired Spark dispatch** with exactly one non-recursive Ledger Scribe Spark; an
+authorized predeclared unpaired exception is ineligible for learned Static carry.
+The Scribe follows only externalized, committed, grant-filtered summaries and
+outcomes, preserves residuals, and proposes a target-bound `static_delta` in its
+own lineage without selecting actions or writing the Work Spark's Static. Each
+Spark keeps its own identity, grant, budget, frozen Static reference, pulse, and
+Home. When no authorized action or authorized check is due, it suspends rather
+than busy-polls after exactly one controller-owned, contract-bounded Pulse
+Receipt for that boundary. The canonical controller appends separate Return,
+Reconciliation, and Context-Close Receipts at Homecoming. Cadence may adapt
+inside its recorded bounds; scope, authority, and consumed limits may not.
+
 Carry remains explicit: `PROPOSED != CONSULTED != CARRY_APPROVED != LOADED`. Same-trace agreement among Scribes is convergence across declared lenses, not independent corroboration.
 
-**Thulia** is Hearthline's pet owl and Owl Scribe. She keeps every Spark's Static in its own numbered Perch. When one Spark needs to understand another, Thulia reconstructs selected shorthand inside the sending ledger and leaves a numbered, source-bound Bridge Gloss for the receiver. She never merges the ledgers or teaches either Spark the other's language.
+**Thulia** is Hearthline's pet owl and Owl Scribe. She keeps every Spark's Static
+in its own numbered Perch. When one Spark needs to understand another, Thulia
+reconstructs selected shorthand inside the sending ledger and leaves a numbered,
+source-bound Bridge Gloss for the receiver. For an authorized paired dispatch,
+her interface also binds the work and ledger paths to their separate Homes
+without dispatching or authorizing either Spark. Thulia returns to her own
+Hearth Perch; Work Static returns unchanged to the Work Spark's Perch; and a
+Scribe-authored target-bound delta returns first to the Scribe's Perch. Only a
+separate direction-bound carry and target-ledger admission may create a new
+target-local Static record. She never merges the ledgers or teaches either Spark
+the other's language.
 
-See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, [Hearthline Static](docs/HEARTHLINE_STATIC.md) for shorthand and reconstruction, [Thulia](docs/HEARTHLINE_THULIA.md) for the Owl Scribe and Bridge Gloss, [Hearthline Firesides](docs/HEARTHLINE_FIRESIDES.md) for concurrent consultation and refresh, and [Hearthline Ordered Lineage](docs/HEARTHLINE_ORDERED_LINEAGE.md) for numbering and non-overwrite rules.
+See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, [Hearthline Static](docs/HEARTHLINE_STATIC.md) for shorthand and reconstruction, [Thulia](docs/HEARTHLINE_THULIA.md) for the Owl Scribe and Bridge Gloss, [Paired Sparks and Homecoming](docs/HEARTHLINE_HOMECOMING.md) for return and pulse discipline, [Hearthline Firesides](docs/HEARTHLINE_FIRESIDES.md) for concurrent consultation and refresh, and [Hearthline Ordered Lineage](docs/HEARTHLINE_ORDERED_LINEAGE.md) for numbering and non-overwrite rules.
 
 ## Controlling references
 

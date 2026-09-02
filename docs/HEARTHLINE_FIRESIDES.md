@@ -4,14 +4,14 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2` |
+| Version | `0.3` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
 A **Hearthline Fireside** is a bounded consultation arrangement in which Hearthline continues the primary task while one or more **Scribe Sparks** follow an authorized, coordinator-emitted **Run Trail** through separately declared lenses.
 
-The arrangement is paired but asymmetric. Hearthline remains on the task's critical path. Scribes externalize specialized vigilance, leave source-bound notes, and offer advisory material for consultation. They do not become co-owners of the task, decision makers, independent authorities, or a quorum.
+The arrangement is coordinated but asymmetric. Hearthline remains on the task's critical path. Scribes externalize specialized vigilance, leave source-bound notes, and offer advisory material for consultation. They do not become co-owners of the task, decision makers, independent authorities, or a quorum.
 
 ## Fireside surfaces
 
@@ -24,6 +24,9 @@ The arrangement is paired but asymmetric. Hearthline remains on the task's criti
 | **Bridge Gloss** | Thulia's numbered, source-bound reconstruction of selected sending-Spark Static | Candidate material for one named recipient and purpose |
 | **Carry Manifest** | Exact reviewed material selected for a declared continuation | Candidate input until separately loaded |
 | **Load receipt** | Exact material actually introduced into one active context | Evidence of that bounded load only |
+| **Home Record** | One Spark's declared return boundary, permitted bundle, and reconciliation rule | A return address, not a grant or shared memory |
+| **Spark Heartbeat Contract** | Task-shaped timing assumption, bounded cadence, wake triggers, remaining limits, and suspension/resume rules | Liveness discipline only; cannot renew scope or authority |
+| **Homecoming records** | Separate Return, Reconciliation, and Context-Close Receipts beneath one Homecoming identity | Evidence of each bounded transition only; reconciliation is not closure |
 
 These surfaces are related but not interchangeable. A Field Note is not automatically an Ember. An Ember is not automatically carried. A Carry Manifest is not automatically loaded. A load does not grant permission or authority.
 
@@ -37,6 +40,16 @@ Every Scribe remains exactly one of the three Spark roles: Seeker, Explorer, or 
 
 A control-owned recorder may persist a Seeker's or Explorer's emitted notes in that Spark's isolated ledger without granting the Spark direct write access. If a Spark itself is to write durable records, its Handler grant must name the exact ledger and permitted append operations.
 
+A [Paired Spark dispatch](HEARTHLINE_HOMECOMING.md) designates one Scribe as the
+**Ledger Scribe Spark** beside a primary Work Spark by default. An authorized
+operator may predeclare an unpaired exception, but that run is ineligible for
+learned Static promotion or carry. The Ledger Scribe job narrows the Scribe
+toward externalized, committed, grant-filtered summaries, observable outcomes,
+residuals, and target-bound representation proposals in its own lineage. It
+does not let the Scribe choose primary actions, read hidden reasoning, approve
+its own proposals, allocate or write the Work Spark's Static, or inherit the
+Work Spark's grant.
+
 ## Declared lenses
 
 A Scribe receives a visible, versioned lens that narrows what it is asked to notice. A lens is not a hidden personality and does not widen the Spark's aperture, stop power, consequence ceiling, or authority.
@@ -47,6 +60,7 @@ A Scribe receives a visible, versioned lens that narrows what it is asked to not
 | **Prime-shell** | Locates declared load-bearing prime shells or analogous structural premises and identifies what depends on them |
 | **Divergence** | Prioritizes checks whose possible results separate the greatest number of live branches |
 | **Trace** | Watches provenance, source class, unresolved obligations, authority ceilings, residuals, and reopening paths |
+| **Static** | Watches canonical entries, recurring equivalence candidates, negative constraints, residuals, and possible grammar or codebook deltas |
 
 Additional lenses may be added as newly numbered Spark profile versions. A lens may recommend attention; it cannot establish truth, priority, permission, or a decision merely by being assigned.
 
@@ -135,7 +149,7 @@ Hearthline may work fluidly inside the unchanged task grant while Scribes carry 
 5. Consult the authorized Field Notes, Embers, and Bridge Glosses; keep observation, interpretation, recommendation, permission, and authorization distinct.
 6. Record what Hearthline took up, partially took up, deferred, declined, or left unresolved.
 7. Evaluate any proposed Static revision under the exact reconstruction rule in [Hearthline Static](HEARTHLINE_STATIC.md).
-8. If the revision is admitted by the authorized ledger writer, append it under its already allocated version number and add a separately numbered activation receipt. Do not alter its predecessor.
+8. If a same-ledger revision is admitted by that ledger's authorized writer, append it under its already allocated version number and add a separately numbered activation receipt. A cross-Spark target-bound delta receives no target version until the target ledger's authorized writer admits and allocates it after direction-bound carry. Do not alter either predecessor.
 9. Open the next numbered blank Field Notes page under the active Static version and bind it to the continuation boundary.
 10. Load only explicitly selected material, append a load receipt, and resume within the original remaining grant and limits.
 
@@ -143,9 +157,36 @@ The page becomes blank; the history does not. Pending Embers, uncompressed resid
 
 Improved shorthand changes representation only. It cannot widen Hearthline's discretion beyond the current grant, alter instruction precedence or stop conditions, create a capability, or manufacture authority. A trial Static revision may be used within the current run only when a predeclared adaptive-Static grant and the required verification and activation receipts permit it. Carry into a later run remains a separate reviewed decision.
 
+## Closing the Fireside and coming home
+
+When a bounded run ends, every participating Spark follows its own declared
+[Homecoming](HEARTHLINE_HOMECOMING.md) route. The Work Spark may return a task
+artifact while a Scribe returns notes, negative constraints, residuals, and one
+typed representation disposition: `static_delta`, coverage-qualified
+`NO_LEDGER_DELTA`, `LEDGER_DELTA_INCOMPLETE`, or
+`LEDGER_COVERAGE_UNKNOWN`. Those bundles share a run reference but remain
+separately judged and return to their own Homes and source Perches.
+
+Each Spark Heartbeat Contract ends at its own completion, declared terminal
+blocker, revocation, expiry, or return boundary. Before a nonterminal blocker or
+no-due-work boundary enters `SPARK_SUSPENDED`, the canonical controller appends
+exactly one contract-bounded Pulse Receipt. The Spark records no further task
+action until a valid Resume Receipt. A Scribe may use only a predeclared grace
+interval to seal its actual coverage. It does not continue indefinitely because
+the task was important or because later notes might be useful. Every issued
+pulse is allocated and appended by the canonical controller or store.
+
+`HOMECOMING:RETURNED`, `HOMECOMING:RECONCILED`, and
+`HOMECOMING:CONTEXT_CLOSED` are separate states with separate controller-owned
+receipts. Arrival does not establish that the bundle matched the dispatch-pinned
+Home Record and current authorization checks; reconciliation does not establish
+task success, carry approval, or closure; and a separate Context-Close Receipt
+does not erase the run. `HOMECOMING:CONTEXT_CLOSED` is not PAL or A15 closure.
+Unknown or partial returns remain visible and are not replayed automatically.
+
 ## Ordered lineage and failure behavior
 
-[Hearthline Ordered Lineage](HEARTHLINE_ORDERED_LINEAGE.md) governs every Spark, profile version, Static version, Field Notes page, Ember, Fireside, run, trail event, Owl profile, Perch, translation request, Bridge Gloss, delivery receipt, Carry Manifest, activation, and load receipt.
+[Hearthline Ordered Lineage](HEARTHLINE_ORDERED_LINEAGE.md) governs every Spark, profile version, Home Record, Spark Heartbeat Contract, Pulse Receipt, Static version, Field Notes page, Ember, Fireside, run, trail event, Owl profile, Perch, translation request, Bridge Gloss, delivery receipt, Homecoming record, Carry Manifest, activation, and load receipt.
 
 Numbers are allocated before use, increase within their named series, and are never reused, reassigned, renumbered, or overwritten. Rejection, failure, retirement, or an interrupted reservation leaves its original number and status visible. Corrections append successors.
 
@@ -155,7 +196,17 @@ If a coordinator cannot establish the active Static version, exact Run Trail hea
 
 This document adopts Fireside, Scribe, Run Trail, Field Notes, Embers, Bridge Gloss, and tending as Hearthline lore and design vocabulary. It does not instantiate a worker, run concurrent models, implement an event stream, create Thulia's roost, create memory, allocate an operational number, activate Hearthline, or authorize a task.
 
-Any implementation must separately test role projections, single-writer append and allocation, committed-event filtering, idempotent submissions, gap detection, coverage watermarks, independent task and note status, Scribe and Perch isolation, exact Bridge Gloss reconstruction, recipient-specific disclosure, no cross-Spark Static import, carry-gate transitions, refresh barriers, activation ordering, crash recovery, privacy handling, and revocation.
+Any implementation must separately test role projections, controller-owned
+single-writer append and allocation, committed-event filtering, idempotent
+submissions, gap detection, coverage watermarks and dispositions, independent
+task and note status, separate Home Records, frozen Static references, and Spark
+Heartbeat Contracts, suspension without busy-polling, terminal and nonterminal
+blockers, missed-pulse behavior, resume revalidation, bounded Scribe grace,
+returned/reconciled/context-closed separation, Scribe and Perch isolation,
+exact Bridge Gloss reconstruction, target-bound proposal ownership,
+recipient-specific disclosure, no cross-Spark Static import, carry-gate
+transitions, refresh barriers, activation ordering, crash recovery, privacy
+handling, and revocation.
 
 Hearthline and Scribes are AI tools and system concepts, not persons, co-authors, independent witnesses, or authorities. Their named lenses and preserved work do not establish consciousness, emotion, ownership, consent, standing, or permission.
 

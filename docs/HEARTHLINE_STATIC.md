@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.3` |
+| Version | `0.4` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -123,7 +123,62 @@ Vocabulary changes append new versions. A newer version may control later work w
 
 Static remains shorthand rather than a general memory bucket. Broader things a Spark recommends carrying forward belong to that Spark's **Embers**, defined in [Hearthline Firesides](HEARTHLINE_FIRESIDES.md).
 
-A proposed shorthand change begins as an Ember of type `static_delta` and also receives its reserved Static version number. It remains `PROPOSED_NOT_ADOPTED` until separately consulted, exactly reconstructed, admitted by the authorized ledger writer, and activated through its own receipt. Successful verification does not silently approve it, and use in one run does not carry it into another run.
+A same-lineage proposed shorthand change begins as an Ember of type
+`static_delta` and also receives its reserved Static version number. It remains
+`PROPOSED_NOT_ADOPTED` until separately consulted, exactly reconstructed,
+admitted by the authorized ledger writer, and activated through its own receipt.
+A cross-Spark target-bound delta remains an Ember in its source lineage; it does
+not reserve a version in the target ledger. Only the target ledger's authorized
+writer may allocate that target-local version after direction-bound carry and
+admission. Successful verification does not silently approve a proposal, and
+use in one run does not carry it into another run.
+
+## Ledger Scribes and the path home
+
+Under an authorized [Paired Spark dispatch](HEARTHLINE_HOMECOMING.md), a
+separate **Ledger Scribe Spark** attends to representation while the Work Spark
+attends to the primary job. An authorized operator may predeclare an unpaired
+exception, but that run is ineligible for learned Static promotion or carry.
+The Scribe receives only externalized, committed, grant-filtered summaries,
+observable outcomes, source projections, and Run Trail events. It does not
+inspect hidden reasoning, select task actions, become an independent witness,
+or gain ledger-write authority from being paired.
+
+The Work Spark's active Static `v_w` and the Ledger Scribe Spark's active Static
+`v_s` remain separately bound and frozen for the declared run unless each
+Spark's own predeclared adaptive-Static grant permits a separately verified and
+activated change. The Ledger Scribe may prepare a target-bound `static_delta`
+Ember in its own lineage, but it does not allocate or write the Work Spark's
+`v_{n+1}`.
+
+The Scribe preserves byte-exact canonical material only relative to the
+declared received projection. It keeps source gaps, declared omissions, and
+unmatched distinctions explicit in its residual lane. It may then propose
+repeated equivalence classes, vocabulary, grammar, or codebook changes. It may
+return `NO_LEDGER_DELTA` only after establishing complete declared projection
+coverage through the named evaluation boundary. Partial coverage returns
+`LEDGER_DELTA_INCOMPLETE`; coverage that cannot be established returns
+`LEDGER_COVERAGE_UNKNOWN`. The absence of a delta is not evidence that the task
+contained no structure.
+
+Every item has a declared Home:
+
+- the Work Spark's unchanged Static returns to its own exact source Perch;
+- a Scribe-authored proposal returns first to the Scribe's ledger and Perch,
+  with its target binding preserved;
+- an unmatched distinction returns to the Scribe ledger's residual lane;
+- a broader carry recommendation returns as an Ember rather than being forced
+  into shorthand; and
+- a failed, rejected, incomplete, or ambiguous proposal keeps its ordered
+  identity and disposition without being activated.
+
+[Thulia's](HEARTHLINE_THULIA.md) interface keeps this return path and may route a
+permitted reconstruction from the Scribe lineage through a direction-bound
+carry path to the target Perch's proposal intake. Thulia does not own the
+returned Static, pool it at her Hearth Perch, approve its admission, allocate a
+target Static version, or write it into another Spark's ledger. The target
+ledger's authorized writer remains the sole allocation, admission, and
+activation boundary.
 
 ## Fireside refresh
 
@@ -168,6 +223,14 @@ This is shared design provenance, not independent corroboration. The Strongwiz r
 
 This document adopts Hearthline's name and intended record discipline for Static. It does not create a Static ledger, instantiate a Spark, implement a codec, create Thulia's roost, preserve any operational source, activate Hearthline, or authorize work.
 
-Any implementation must separately specify and test ledger and Perch isolation, ordered allocation, append behavior, proposal and activation separation, sealed-page refresh, carry-gate transitions, exact round trips, recipient-specific Bridge Gloss projections, source custody, residual handling, privacy deletion, role enforcement, grants, failure behavior, export boundaries, and measured compression, latency, transport, and validation costs.
+Any implementation must separately specify and test ledger and Perch isolation,
+ordered allocation, append behavior, separately frozen Work and Scribe Static,
+Ledger Scribe projection, received-projection fidelity, complete/partial/unknown
+coverage classification, separate task and Scribe completion, source-Perch
+Homecoming, target-bound delta ownership, proposal and activation separation,
+sealed-page refresh, carry-gate transitions, exact round trips,
+recipient-specific Bridge Gloss projections, source custody, residual handling,
+privacy deletion, role enforcement, grants, failure behavior, export boundaries,
+and measured compression, latency, transport, and validation costs.
 
 Hearthline, Sparks, Strongwiz, and their named roles are AI tools and system concepts, not persons, co-authors, or independent authorities. Static does not establish experiential memory, identity continuity, consciousness, consent, standing, ownership, or permission.

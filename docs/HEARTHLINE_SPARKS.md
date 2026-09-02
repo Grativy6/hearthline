@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.4` |
+| Version | `0.5` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -60,6 +60,53 @@ Each Scribe keeps separate **Field Notes**, **Embers**, and Static. Hearthline m
 
 Scribes following the same Run Trail remain derivative analytic paths in one provenance lineage. Their agreement may be reported as convergence across declared lenses, never as independent corroboration, a vote, or a quorum.
 
+## Paired Sparks, Spark Heartbeat Contracts, and Homecoming
+
+[**Hearthline Paired Sparks and Homecoming**](HEARTHLINE_HOMECOMING.md)
+gives every dispatched Spark a declared Home, a task-shaped Spark Heartbeat
+Contract, and a bounded return route.
+
+Every primary Work Spark dispatch assigns a separate **Ledger Scribe Spark** to
+the representation boundary by default. An authorized operator may record an
+unpaired exception before dispatch, but that run is ineligible for learned
+Static promotion or carry. The Ledger Scribe follows only its externalized,
+committed, grant-filtered projection, aligns those summaries with observable
+outcomes, preserves residuals, and proposes target-bound representation changes
+in its own lineage. It does not select actions for the Work Spark, inspect
+hidden reasoning, approve carry, allocate or write the Work Spark's Static,
+activate Static, or become an independent witness. Pairing is non-recursive:
+the Ledger Scribe does not receive its own Ledger Scribe merely because it is
+also a Spark.
+
+Both members retain their own Spark identities, roles, grants, contexts,
+budgets, ledgers, frozen Static references, pulse cadences, and Homes. Pairing
+supplies a shared dispatch and Run Trail reference for reconciliation; it does
+not join them. A failed, incomplete, or coverage-unknown Scribe return blocks
+learned carry unless a stricter condition was predeclared; it does not silently
+invalidate or complete the Work Spark's separately judged artifact.
+
+Each Spark Heartbeat Contract records a reasoned timing assumption, bounded
+cadence, material-change and blocker triggers, remaining limits, suspension and
+resume rules, revocation, expiry, and Home. When no authorized action or
+authorized observation or check is due, the canonical controller appends exactly
+one contract-bounded Pulse Receipt for that boundary and the Spark suspends
+rather than busy-polling. The same rule applies to a nonterminal blocker. The
+Spark records no further task action until a valid Resume Receipt; a declared
+terminal blocker begins return. Every issued pulse has an ordered identity and
+is appended by the canonical controller or store, not by generated Spark
+output. Cadence may adapt inside the contract, but cannot renew or widen scope,
+capability, permission, authority, time, action count, or budget.
+
+At Homecoming, each Spark returns what it actually carries: artifacts, Field
+Notes, Embers, residuals, consumed limits, proposed receipt payloads, and its
+honest terminal state. A Ledger Scribe returns `static_delta`,
+coverage-qualified `NO_LEDGER_DELTA`, `LEDGER_DELTA_INCOMPLETE`, or
+`LEDGER_COVERAGE_UNKNOWN` to its own Home and source Perch. Homecoming is not
+synonymous with success, and it is not a claim that a completed process
+continues running. The canonical controller appends separate return,
+reconciliation, and context-close receipts; reconciliation does not close the
+child context automatically.
+
 ## Hearthline Static
 
 [Hearthline Static](HEARTHLINE_STATIC.md) is local, versioned shorthand that Hearthline may develop with one Spark through repeated work. Each Spark has its own isolated, append-only Static ledger lineage. Hearthline does not pool or silently carry its vocabulary into another Spark: a handoff must expand the meaning and bind it to source records before a receiving Spark can form new local shorthand.
@@ -109,6 +156,16 @@ Reading content must not silently execute it. Opening a file does not authorize 
 
 This document adopts Hearthline's naming language. It does not instantiate a Spark, implement access controls, activate a runtime, or authorize delegated work.
 
-If Sparks become operational, the implementation must separately declare and test its role enforcement, task grants, custody, receipts, failure behavior, revocation path, atomic ordered-identity allocation, crash-safe counter recovery, immutable sealed notes, carry-gate transitions, independent task and note status, Owl Scribe partition isolation, and rejection of silent cross-Spark Static transfer. Until then, the names carry lore and design intent—not capability.
+If Sparks become operational, the implementation must separately declare and
+test its role enforcement, task grants, custody, controller-owned receipts,
+failure behavior, revocation path, Home routing without authority, pulse bounds
+and identities, blocker suspension, missed-pulse behavior, resume revalidation,
+separate paired identities, budgets, and Static references, coverage-qualified
+ledger dispositions, idempotent Homecoming, unknown-return reconciliation,
+separate context-close receipts, atomic ordered-identity allocation, crash-safe
+counter recovery, immutable sealed notes, carry-gate transitions, independent
+task and note status, Owl Scribe partition isolation, and rejection of silent
+cross-Spark Static transfer. Until then, the names carry lore and design
+intent—not capability.
 
 Sparks and Strongwiz are AI tools, not persons, co-authors, or independent authorities. Their names do not establish consciousness, consent, ownership, standing, or permission.
