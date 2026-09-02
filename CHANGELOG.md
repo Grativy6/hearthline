@@ -6,6 +6,8 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 ### Added
 
+- Adopted **Hearthline Static** as the local shorthand Hearthline may develop with one Spark through repeated work: one Spark, one separate ledger, no silent cross-Spark transfer, and a versioned path from every expression back to preserved source records.
+- Expanded **Hearthline Sparks** to version `0.2` with the per-Spark Static boundary and role-specific ledger ceilings.
 - Adopted **Hearthline Sparks** as lore and design vocabulary: one family, three fixed access roles (Seeker, Explorer, Handler), and an open-ended task-naming space; documented the separate model, Spark, and Strongwiz layers.
 - Selected Creative Commons Attribution 4.0 International (`CC-BY-4.0`) for covered original text, documentation, and repository-authored metadata.
 - Added a restrained names-and-marks notice that permits accurate source identification without implying endorsement, canonical status, activation, or operator authority.
@@ -16,6 +18,7 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 ### Preserved boundaries
 
+- Static creates no shared memory, global codebook, codec, runtime, cross-Spark inheritance, capability, grant, or authority. Exact reversal, source-backed retrieval, and lossy summary remain distinct claims; deletion and redaction obligations are not defeated by provenance.
 - The Sparks vocabulary creates no running worker, capability, grant, activation, self-replication, or Strongwiz integration. Roles are ceilings, and names are not permissions.
 - No real seal, secret, hidden marker, signing key, adoption receipt, or activation record was added.
 - The controlling source profile, artifact version and state, default mode, author/steward declaration, `authority: NONE`, and `effect: NONE` remain unchanged. Research citations do not import or execute code, establish causality or independent corroboration, adopt a source, activate Hearthline, or confer authority.

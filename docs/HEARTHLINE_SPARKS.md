@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.1` |
+| Version | `0.2` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -36,6 +36,12 @@ A true Seeker may be shown a recorded hash, but it cannot compute a new content 
 These are consequence ceilings, not ranks that silently inherit one another. A Handler is not automatically allowed every Explorer read. Its grant must separately identify what it may inspect and what it may change.
 
 A Spark carries one declared role at a time. Changing roles, widening scope, or moving from proposal to mutation requires a new explicit grant. A name describes a Spark; it never authorizes one.
+
+## Hearthline Static
+
+[Hearthline Static](HEARTHLINE_STATIC.md) is local, versioned shorthand that Hearthline may develop with one Spark through repeated work. Each Spark has its own Static ledger. Hearthline does not pool or silently carry its vocabulary into another Spark: a handoff must expand the meaning and bind it to source records before a receiving Spark can form new local shorthand.
+
+Static changes none of the role ceilings. A Seeker may receive only brokered Static metadata within its existing aperture; an Explorer may inspect authorized records read-only; and a Handler may persist a Static record only under an explicit current grant naming that ledger and mutation. Static does not create shared memory, authority, or permission.
 
 ## Strongwiz and the meta layer
 

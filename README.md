@@ -21,6 +21,7 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`BOUNDARY.md`](BOUNDARY.md) — the separation between public text, runtime state, and operator authority.
 - [`docs/PRIVATE_LINEAGE_SEALS.md`](docs/PRIVATE_LINEAGE_SEALS.md) — specification-only format for an optional, explicitly visible private-lineage seal and its claim limits.
 - [`docs/HEARTHLINE_SPARKS.md`](docs/HEARTHLINE_SPARKS.md) — adopted lore and design vocabulary for Hearthline's purpose-bounded bots.
+- [`docs/HEARTHLINE_STATIC.md`](docs/HEARTHLINE_STATIC.md) — the local, record-backed shorthand discipline for one Spark and one separate ledger.
 - [`TRADEMARKS.md`](TRADEMARKS.md) — restrained name and source-identification guidance.
 - [`SECURITY.md`](SECURITY.md) — security scope and responsible reporting route.
 - [`CHANGELOG.md`](CHANGELOG.md) — public artifact history.
@@ -32,7 +33,9 @@ Operational code, credentials, platform state, private receipts, and personal da
 
 Hearthline's purpose-bounded bots share the family name **Hearthline Sparks**. Their **1–3–∞** naming ladder means one family, three fixed roles—Seeker, Explorer, and Handler—and an open-ended set of task names. A name describes the work; it never grants access or authority.
 
-See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the complete lore, role ceilings, and the relationship between Sparks, reasoning models, and Strongwiz.
+The shorthand Hearthline may develop with a Spark through repeated work is called **Hearthline Static**. Static is local: one Spark, one separate ledger. It never silently transfers to another Spark, and every expression keeps a versioned record and a path home to its source.
+
+See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, and [Hearthline Static](docs/HEARTHLINE_STATIC.md) for the shorthand, isolation, and reconstruction rules.
 
 ## Controlling references
 
