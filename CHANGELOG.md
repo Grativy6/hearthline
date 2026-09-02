@@ -6,6 +6,10 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 ### Added
 
+- Added **Thulia Character Sheet** version `0.2` (`OWL-000001/SHEET-000002`) as an appearance-only successor. It adopts the cute cartoon-animation construction, explicit front/back/right-profile/left-profile anatomy, the right-leg copper-band map, matte feather-boundary brows, expressive crest plumes, talking-beak shapes, and a six-field angle-dependent Northlight pattern comprising two crest plumes, two broken-gorget halves, and two shoulder commas.
+- Added **Hearthline Visual Index** version `0.1` and eight exact-byte visual assets: one supplied Hearthline reference and seven ordered Thulia images. The image lineage preserves the naturalistic portrait and sheet, cartoon expression study, both failed bilateral correction stages, the corrected bilateral animation reference, and the Hearthline–Thulia Fireside scene without overwriting the path between them.
+- Expanded **Hearthline Ordered Lineage** to version `0.4` with separate Hearthline and Owl `IMAGE` series, immutable image-byte identities, explicit retention of failed and superseded visual attempts, and separation between image order, appearance-sheet order, and profile order.
+- Added a Hearthline-and-Thulia collaboration scene showing Hearthline continuing the active task while Thulia offers one bounded numbered gloss beside physically separated ledger boxes. The scene is narrative illustration, not a runtime record or geometry authority.
 - Added **Thulia Character Sheet** version `0.1` (`OWL-000001/SHEET-000001`) as a lore-only presentation of her established profile, including a reproducible matte plumage palette, selective angle-dependent Northlight markings, temperament, mannerisms, voice, and illustration anchors. Owl Scribe behavior and operational boundaries remain unchanged.
 - Expanded **Hearthline Ordered Lineage** to version `0.3` with Thulia's ordered character-sheet series and an explicit rule that presentation successors cannot alter Owl Scribe behavior or the governing profile.
 - Adopted **Thulia** version `0.1`: Hearthline's pet owl and bounded Owl Scribe, with the expressly fictional lore taxon *Thuleglaux interpres*, a partitioned roost of Spark-local Static Perches, and numbered Bridge Glosses for authorized cross-Spark reconstruction.
@@ -24,6 +28,8 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 ### Preserved boundaries
 
+- Visual assets and character sheets are presentation records. Image generation, correction, publication, numbering, matching hashes, depicted gestures, or a preferred-reference status do not instantiate a system, activate Hearthline, prove a translation, create authority, or silently revise Thulia's Owl Scribe behavior.
+- `OWL-000001/SHEET-000001` and every imperfect image remain preserved. `SHEET-000002` controls only the appearance matters it explicitly revises; the six Northlight fields are visual regions rather than channels, signals, memories, permissions, or status indicators.
 - Thulia is affectionate lore and a bounded custody-and-translation interface, not a biological discovery, Spark, fourth role, shared memory, global codebook, carry approver, independent witness, or authority. A Bridge Gloss does not transfer a codebook or bypass recipient access, carry, admission, or activation rules.
 - Fireside creates no runtime, autonomous worker, shared memory, permission, or authority. Scribe is a job under one existing Spark role; delegating vigilance does not delegate judgment, and same-trace Scribe agreement is not independent corroboration.
 - Static creates no global codebook, codec, cross-Spark inheritance, capability, grant, or authority. A Static upgrade changes representation only; exact reversal, source-backed retrieval, and lossy summary remain distinct claims.

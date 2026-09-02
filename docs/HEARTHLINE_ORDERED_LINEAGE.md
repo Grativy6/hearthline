@@ -4,12 +4,12 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.3` |
+| Version | `0.4` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
-**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, and their receipts.
+**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, visual assets, and their receipts.
 
 Its purpose is simple: every Spark and every new version receives an ordered number, and earlier work remains individually addressable. Correction, retirement, rejection, or replacement may change what governs later work; none silently makes an earlier record disappear.
 
@@ -38,6 +38,8 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Owl Scribe | `OWL-000001` | One named Owl registry |
 | Owl profile version | `OWL-000001/PROFILE-000001` | That Owl Scribe's profile series |
 | Owl character sheet | `OWL-000001/SHEET-000001` | That Owl Scribe's appearance-sheet series |
+| Hearthline visual image | `HEARTHLINE/IMAGE-000001` | Hearthline's presentation-image series |
+| Owl visual image | `OWL-000001/IMAGE-000001` | That Owl character's visual-image series |
 | Perch | `OWL-000001/PERCH-000001` | That Owl Scribe's partition directory |
 | Perch version | `OWL-000001/PERCH-000001/VERSION-000001` | One Perch's version series |
 | Translation request | `OWL-000001/REQUEST-000001` | That Owl Scribe's request series |
@@ -98,6 +100,18 @@ Each Perch identifies one partitioned Spark Static lineage. A new Perch version 
 
 An Owl character sheet is a presentation record. A successor sheet may revise appearance, voice, mannerisms, poses, or other narrative cues while preserving its predecessor, but it cannot alter Owl Scribe behavior, access, authority, or the governing Owl profile. An identity-bearing design change belongs in a separately numbered profile successor.
 
+## Visual image identities
+
+A visual `IMAGE` record identifies one exact immutable image artifact. Any changed pixel content—including a crop, correction, mirror, recolor, relabeling, or regenerated attempt—receives the next ordinal in that image series. It does not overwrite the prior file or inherit its status silently.
+
+Image order is separate from `SHEET` and `PROFILE` order. A study, correction attempt, or narrative scene may illustrate a character sheet, but it cannot revise the written appearance record or the controlling Owl profile. Conformance and current-reference status are recorded separately from the image number.
+
+Earlier imperfect and superseded images remain addressable with their residuals. A failed laterality correction, omitted marking, or ambiguous view is preserved as evidence of the development path; the next correction receives a new number. Mirroring an image does not preserve anatomical identity unless every asymmetric feature and view label is reconstructed and the result is recorded as a new image.
+
+Existing external or generated images may be assigned ordered archival identities before repository publication. That retrospective registration records the source bytes and known production history; it does not claim the number was allocated before the image was originally made. Future registry-governed production should allocate the image ordinal before generation or mutation begins.
+
+The public image inventory, exact SHA-256 digests, statuses, uses, and residuals are recorded in the [Hearthline Visual Index](HEARTHLINE_VISUAL_INDEX.md).
+
 Every translation attempt receives its request number before work begins. Every successfully recorded Bridge Gloss receives its own gloss number, and delivery to each recipient receives a separate delivery number. Denied, failed, ambiguous, interrupted, invalidated, and superseded attempts keep their numbers and dispositions. A direction, destination, audience, or source-version change creates a successor request or gloss rather than silently changing the old one.
 
 A Bridge Gloss number records a derivative crossing only. It does not make the gloss true, exact beyond its declared reconstruction, loaded, adopted, authoritative, or independent of its sending ledger and sources.
@@ -122,7 +136,7 @@ When bytes must be removed, the system preserves the ordinal and an accountable 
 
 This document specifies names and invariants. It does not create a registry, allocator, Spark, Fireside, ledger, runtime, or adoption event.
 
-Any implementation must test atomic allocation, monotonic recovery, idempotent submission, gap preservation, immutable predecessor binding, separated proposal and activation series, cross-registry collision handling, Perch isolation, recipient-specific gloss delivery, sealed-page immutability, lawful tombstoning, and failure when the active version cannot be established.
+Any implementation must test atomic allocation, monotonic recovery, idempotent submission, gap preservation, immutable predecessor binding, separated proposal and activation series, cross-registry collision handling, Perch isolation, recipient-specific gloss delivery, sealed-page immutability, visual-byte immutability and digest binding, lawful tombstoning, and failure when the active version cannot be established.
 
 Ordered lineage preserves addressability. It does not manufacture memory, identity continuity, consciousness, consent, standing, permission, or authority.
 
