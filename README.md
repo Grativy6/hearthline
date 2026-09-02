@@ -20,12 +20,19 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`candidate_manifest.json`](candidate_manifest.json) — exact-byte candidate envelope; same-branch consistency only, never an adoption or authenticity anchor.
 - [`BOUNDARY.md`](BOUNDARY.md) — the separation between public text, runtime state, and operator authority.
 - [`docs/PRIVATE_LINEAGE_SEALS.md`](docs/PRIVATE_LINEAGE_SEALS.md) — specification-only format for an optional, explicitly visible private-lineage seal and its claim limits.
+- [`docs/HEARTHLINE_SPARKS.md`](docs/HEARTHLINE_SPARKS.md) — adopted lore and design vocabulary for Hearthline's purpose-bounded bots.
 - [`TRADEMARKS.md`](TRADEMARKS.md) — restrained name and source-identification guidance.
 - [`SECURITY.md`](SECURITY.md) — security scope and responsible reporting route.
 - [`CHANGELOG.md`](CHANGELOG.md) — public artifact history.
 - [`LICENSE`](LICENSE) — Creative Commons Attribution 4.0 International terms for covered repository material.
 
 Operational code, credentials, platform state, private receipts, and personal data do not belong in this repository.
+
+## Hearthline Sparks
+
+Hearthline's purpose-bounded bots share the family name **Hearthline Sparks**. Their **1–3–∞** naming ladder means one family, three fixed roles—Seeker, Explorer, and Handler—and an open-ended set of task names. A name describes the work; it never grants access or authority.
+
+See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the complete lore, role ceilings, and the relationship between Sparks, reasoning models, and Strongwiz.
 
 ## Controlling references
 
