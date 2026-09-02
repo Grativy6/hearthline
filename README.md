@@ -23,7 +23,10 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`docs/HEARTHLINE_SPARKS.md`](docs/HEARTHLINE_SPARKS.md) — adopted lore and design vocabulary for Hearthline's purpose-bounded bots.
 - [`docs/HEARTHLINE_STATIC.md`](docs/HEARTHLINE_STATIC.md) — the local, record-backed shorthand discipline for one Spark and one isolated append-only ledger lineage.
 - [`docs/HEARTHLINE_THULIA.md`](docs/HEARTHLINE_THULIA.md) — Thulia, Hearthline's pet owl and bounded Owl Scribe for partitioned Static custody and numbered Bridge Glosses.
-- [`docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md) — Thulia's stable appearance, Northlight iridescence pattern, temperament, mannerisms, and illustration anchors.
+- [`docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md) — preserved initial character sheet, `OWL-000001/SHEET-000001`.
+- [`docs/HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md) — current cartoon-animation appearance successor, with bilateral anatomy, expressive crests and brows, talking-beak construction, and six-field Northlight.
+- [`docs/HEARTHLINE_VISUAL_INDEX.md`](docs/HEARTHLINE_VISUAL_INDEX.md) — ordered image provenance, exact digests, uses, statuses, and preserved visual residuals.
+- [`assets/README.md`](assets/README.md) — visual-asset inventory and append-only naming convention.
 - [`docs/HEARTHLINE_FIRESIDES.md`](docs/HEARTHLINE_FIRESIDES.md) — the non-blocking consultation pattern for Hearthline, Scribe Sparks, Run Trails, Field Notes, Embers, and refresh.
 - [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
 - [`TRADEMARKS.md`](TRADEMARKS.md) — restrained name and source-identification guidance.
@@ -45,7 +48,15 @@ Carry remains explicit: `PROPOSED != CONSULTED != CARRY_APPROVED != LOADED`. Sam
 
 **Thulia** is Hearthline's pet owl and Owl Scribe. She keeps every Spark's Static in its own numbered Perch. When one Spark needs to understand another, Thulia reconstructs selected shorthand inside the sending ledger and leaves a numbered, source-bound Bridge Gloss for the receiver. She never merges the ledgers or teaches either Spark the other's language.
 
-See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, [Hearthline Static](docs/HEARTHLINE_STATIC.md) for shorthand and reconstruction, [Thulia](docs/HEARTHLINE_THULIA.md) for the Owl Scribe and Bridge Gloss, [Hearthline Firesides](docs/HEARTHLINE_FIRESIDES.md) for concurrent consultation and refresh, and [Hearthline Ordered Lineage](docs/HEARTHLINE_ORDERED_LINEAGE.md) for numbering and non-overwrite rules.
+See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, [Hearthline Static](docs/HEARTHLINE_STATIC.md) for shorthand and reconstruction, [Thulia](docs/HEARTHLINE_THULIA.md) for the Owl Scribe and Bridge Gloss, [Thulia's current animation sheet](docs/HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md) for appearance, [Hearthline Firesides](docs/HEARTHLINE_FIRESIDES.md) for concurrent consultation and refresh, and [Hearthline Ordered Lineage](docs/HEARTHLINE_ORDERED_LINEAGE.md) for numbering and non-overwrite rules.
+
+## Visual references
+
+- [`HEARTHLINE/IMAGE-000001`](assets/characters/hearthline/HEARTHLINE-IMAGE-000001-gremlin-hunter-reference-sheet.png) — Hearthline's supplied Gremlin Hunter reference sheet.
+- [`OWL-000001/IMAGE-000006`](assets/characters/thulia/OWL-000001-IMAGE-000006-bilateral-animation-reference.png) — Thulia's current corrected bilateral animation aid.
+- [`OWL-000001/IMAGE-000007`](assets/scenes/OWL-000001-IMAGE-000007-hearthline-thulia-fireside.png) — Hearthline and Thulia working together at the Fireside.
+
+The [Hearthline Visual Index](docs/HEARTHLINE_VISUAL_INDEX.md) preserves every earlier Thulia portrait, study, and correction stage with its own ordered number and residuals. Images illustrate the written records; they do not silently replace them.
 
 ## Controlling references
 
@@ -89,7 +100,7 @@ Any future runtime must use an explicitly adopted, exact version through a separ
 
 ## License
 
-Except where otherwise noted, the original text, documentation, and repository-authored metadata in this repository are Copyright © 2026 Christopher D. Pang and licensed under the [Creative Commons Attribution 4.0 International License](LICENSE) (`CC-BY-4.0`). Sharing and adaptation, including commercial use, are permitted subject to the license's attribution and change-indication conditions.
+Except where otherwise noted, the original text, documentation, visual artwork, and repository-authored metadata in this repository are Copyright © 2026 Christopher D. Pang and licensed under the [Creative Commons Attribution 4.0 International License](LICENSE) (`CC-BY-4.0`) to the extent copyright or similar rights subsist and Christopher holds the rights necessary to license them. Sharing and adaptation, including commercial use, are permitted subject to the license's attribution and change-indication conditions. The [visual index](docs/HEARTHLINE_VISUAL_INDEX.md) records the source and generation status of each published image.
 
 Referenced works and third-party material retain their own licenses and are not relicensed merely by being named or linked here. The Hearthline name and any future identifying marks are outside the CC license's copyright grant; see [`TRADEMARKS.md`](TRADEMARKS.md).
 
