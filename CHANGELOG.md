@@ -6,6 +6,8 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 ### Added
 
+- Adopted **Thulia** version `0.1`: Hearthline's pet owl and bounded Owl Scribe, with the expressly fictional lore taxon *Thuleglaux interpres*, a partitioned roost of Spark-local Static Perches, and numbered Bridge Glosses for authorized cross-Spark reconstruction.
+- Expanded **Hearthline Sparks** to version `0.4`, **Hearthline Static** to version `0.3`, **Hearthline Firesides** to version `0.2`, and **Hearthline Ordered Lineage** to version `0.2` to integrate Owl Scribe boundaries, direction-bound translation, Perch, request, gloss, and delivery numbering, and receiving-Spark-local readmission.
 - Adopted **Hearthline Firesides** version `0.1`: Hearthline may continue the primary task while declared-lens Scribe Sparks follow a coordinator-emitted committed Run Trail, keep isolated Field Notes and Embers, and remain available for bounded consultation and refresh.
 - Adopted **Hearthline Ordered Lineage** version `0.1`: every Spark and every successor profile, Static version, Field Notes page, Ember, run, event, manifest, activation, and load receipt receives a scoped ordered number that is never reused, reassigned, renumbered, or overwritten.
 - Expanded **Hearthline Static** to version `0.2` with general carry kept in Embers, separated proposal and activation order, and the Fireside refresh cycle: seal predecessor notes, consult, verify, append, open a fresh numbered page, and resume.
@@ -20,6 +22,7 @@ This file records changes to Hearthline's public instruction artifacts. It does 
 
 ### Preserved boundaries
 
+- Thulia is affectionate lore and a bounded custody-and-translation interface, not a biological discovery, Spark, fourth role, shared memory, global codebook, carry approver, independent witness, or authority. A Bridge Gloss does not transfer a codebook or bypass recipient access, carry, admission, or activation rules.
 - Fireside creates no runtime, autonomous worker, shared memory, permission, or authority. Scribe is a job under one existing Spark role; delegating vigilance does not delegate judgment, and same-trace Scribe agreement is not independent corroboration.
 - Static creates no global codebook, codec, cross-Spark inheritance, capability, grant, or authority. A Static upgrade changes representation only; exact reversal, source-backed retrieval, and lossy summary remain distinct claims.
 - Ordered numbering establishes scoped allocation order only—not rank, truth, quality, identity continuity, personhood, or authority. The non-overwrite rule does not defeat lawful deletion or redaction; accountable tombstones and narrowed claims remain required where applicable.

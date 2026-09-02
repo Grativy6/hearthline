@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2` |
+| Version | `0.3` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -21,7 +21,7 @@ Each Spark's work lineage has its own Static ledger. Hearthline does not pool, m
 
 A Static expression is meaningful only with the exact Spark ledger, entry, version, and scope recorded for it. The same expression in two ledgers does not imply the same meaning. Sharing a role, job name, model, or task type does not join the ledgers.
 
-A handoff between Sparks must first decode the relevant Static inside the sending ledger, expand it into ordinary language or an explicit structured meaning, and bind that expansion to its source records. The receiving Spark may then earn its own local Static entry from the expanded material. It does not import the sending Spark's shorthand, grammar, or codebook as controlling vocabulary.
+A handoff between Sparks must first decode the relevant Static inside the sending ledger, expand it into ordinary language or an explicit structured meaning, and bind that expansion to its source records. [Thulia, Hearthline's Owl Scribe](HEARTHLINE_THULIA.md), names the bounded interface for performing and recording that crossing through a numbered Bridge Gloss. The receiving Spark may then earn its own local Static entry from the expanded material. It does not import the sending Spark's shorthand, grammar, or codebook as controlling vocabulary.
 
 Reopening recorded work may continue that Spark's ledger only when its exact ledger identity and authorized continuation are re-established. Creating a new Spark begins a new ledger. A refresh appends a successor version inside the same established lineage; it never replaces or silently restarts that ledger.
 
@@ -91,6 +91,16 @@ Later revisions cannot reinterpret earlier entries. An old entry is always decod
 
 There is no global Static decoder or shared dictionary across Sparks. Every lookup names one Spark ledger and one version.
 
+## Thulia and Bridge Glosses
+
+Thulia keeps a partitioned **roost** of numbered **Perches**, one for each separately governed Spark Static lineage. A Perch binds the exact ledger identity, available versions, reconstruction materials, access projection, and availability state. Shared custody infrastructure does not create shared lineage, shared context, or a shared codebook.
+
+When an authorized recipient needs material expressed in another Spark's Static, the source expression is decoded under its exact sending ledger and version. The resulting canonical expansion, sources, uncertainty, residuals, audience, and omissions are recorded in a numbered **Bridge Gloss**. That gloss is a derivative handoff record, not Static, a new source, or independent corroboration.
+
+Every request is direction-bound. A gloss from Spark A to Spark B does not authorize or imply a reverse crossing, a different recipient, or access to either ledger beyond the named projection. The receiving Spark does not receive the sending codebook merely because it receives a gloss.
+
+If exact reconstruction cannot be established, no exact Bridge Gloss is produced. Any permitted lossy summary remains separately labeled and does not claim to decode the Static.
+
 ## Nothing is silently overwritten
 
 Each new expression adds a record. Each correction, refinement, or grammar extension adds a new version linked to its predecessor and states what it supersedes. Earlier bytes and meanings remain historical rather than being rewritten to agree with the newest version.
@@ -156,8 +166,8 @@ This is shared design provenance, not independent corroboration. The Strongwiz r
 
 ## Lore and implementation boundary
 
-This document adopts Hearthline's name and intended record discipline for Static. It does not create a Static ledger, instantiate a Spark, implement a codec, preserve any operational source, activate Hearthline, or authorize work.
+This document adopts Hearthline's name and intended record discipline for Static. It does not create a Static ledger, instantiate a Spark, implement a codec, create Thulia's roost, preserve any operational source, activate Hearthline, or authorize work.
 
-Any implementation must separately specify and test ledger isolation, ordered allocation, append behavior, proposal and activation separation, sealed-page refresh, carry-gate transitions, exact round trips, source custody, residual handling, privacy deletion, role enforcement, grants, failure behavior, export boundaries, and measured compression, latency, transport, and validation costs.
+Any implementation must separately specify and test ledger and Perch isolation, ordered allocation, append behavior, proposal and activation separation, sealed-page refresh, carry-gate transitions, exact round trips, recipient-specific Bridge Gloss projections, source custody, residual handling, privacy deletion, role enforcement, grants, failure behavior, export boundaries, and measured compression, latency, transport, and validation costs.
 
 Hearthline, Sparks, Strongwiz, and their named roles are AI tools and system concepts, not persons, co-authors, or independent authorities. Static does not establish experiential memory, identity continuity, consciousness, consent, standing, ownership, or permission.

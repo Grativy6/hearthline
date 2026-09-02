@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.3` |
+| Version | `0.4` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -66,6 +66,14 @@ Scribes following the same Run Trail remain derivative analytic paths in one pro
 
 Static changes none of the role ceilings. A Seeker may receive only brokered Static metadata within its existing aperture; an Explorer may inspect authorized records read-only; and a Handler may persist a Static record only under an explicit current grant naming that ledger and mutation. Static does not create shared memory, authority, or permission.
 
+## Thulia, the Owl Scribe
+
+[**Thulia**](HEARTHLINE_THULIA.md) is Hearthline's pet owl and bounded **Owl Scribe**. She keeps each Spark's Static lineage in its own numbered Perch and prepares numbered, source-bound Bridge Glosses when an authorized handoff requires one Spark's shorthand to be reconstructed for another.
+
+Owl Scribe is not a Scribe Spark, a fourth role, or a lens. Thulia does not merge ledgers, create a global codebook, investigate the primary task, approve carry, or grant access. Any model-assisted work behind the Owl Scribe interface still occurs under one declared Spark role and current grant; canonical custody, numbering, and writes remain control-owned.
+
+A Bridge Gloss expands sending-Spark Static inside its original ledger. The receiving Spark may inspect the permitted gloss and later earn its own local Static through the ordinary proposal, verification, and activation process. It never imports the sending Spark's shorthand directly.
+
 ## Strongwiz and the meta layer
 
 [Strongwiz](https://github.com/Grativy6/strongwiz) is a model-neutral, general-purpose operating layer: a laboratory body around whichever AI model is assigned to reason through difficult work.
@@ -101,6 +109,6 @@ Reading content must not silently execute it. Opening a file does not authorize 
 
 This document adopts Hearthline's naming language. It does not instantiate a Spark, implement access controls, activate a runtime, or authorize delegated work.
 
-If Sparks become operational, the implementation must separately declare and test its role enforcement, task grants, custody, receipts, failure behavior, revocation path, atomic ordered-identity allocation, crash-safe counter recovery, immutable sealed notes, carry-gate transitions, independent task and note status, and rejection of silent cross-Spark Static transfer. Until then, the names carry lore and design intent—not capability.
+If Sparks become operational, the implementation must separately declare and test its role enforcement, task grants, custody, receipts, failure behavior, revocation path, atomic ordered-identity allocation, crash-safe counter recovery, immutable sealed notes, carry-gate transitions, independent task and note status, Owl Scribe partition isolation, and rejection of silent cross-Spark Static transfer. Until then, the names carry lore and design intent—not capability.
 
 Sparks and Strongwiz are AI tools, not persons, co-authors, or independent authorities. Their names do not establish consciousness, consent, ownership, standing, or permission.

@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.1` |
+| Version | `0.2` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -21,6 +21,7 @@ The arrangement is paired but asymmetric. Hearthline remains on the task's criti
 | **Field Notes** | One Scribe's observations, interpretations, questions, warnings, and residuals | Advisory within the current run |
 | **Embers** | Anything that Scribe recommends considering for later carry | `PROPOSED_NOT_ADOPTED` |
 | **Static** | That Spark's isolated, versioned, reversible shorthand | Governs only records that name its exact active version |
+| **Bridge Gloss** | Thulia's numbered, source-bound reconstruction of selected sending-Spark Static | Candidate material for one named recipient and purpose |
 | **Carry Manifest** | Exact reviewed material selected for a declared continuation | Candidate input until separately loaded |
 | **Load receipt** | Exact material actually introduced into one active context | Evidence of that bounded load only |
 
@@ -89,6 +90,14 @@ Several Scribes may follow the same Run Trail through different lenses. Their se
 
 Agreement among Scribes using the same trail, source lineage, model family, prompt ancestry, or coordinating process is reported as **convergence across declared lenses**, not independent corroboration, a vote, or a quorum. Disagreement remains visible for Hearthline or the authorized reviewer to examine.
 
+## Thulia at the Fireside
+
+[**Thulia**](HEARTHLINE_THULIA.md), Hearthline's pet owl and Owl Scribe, may be consulted when authorized Field Notes or Embers contain Static that another participant cannot interpret directly. She resolves only the named sending ledger and version, reconstructs the selected expression there, and leaves a numbered Bridge Gloss for one declared recipient and purpose.
+
+Owl Scribe is not a fourth Spark role, a Scribe Spark, or another analytic lens. Thulia does not inspect the primary task, reconcile Scribe advice, decide whether a gloss should be carried, or write receiving-Spark Static. Her gloss remains derivative of the sending ledger and its sources.
+
+A Bridge Gloss enters the same explicit carry gate as other candidate material. It is not consulted, carry-approved, or loaded merely because Thulia reconstructed it. Several glosses from one source lineage remain one lineage rather than independent corroboration.
+
 ## Field Notes and Embers
 
 Field Notes are current-run working records. Each newly opened page receives the next ordered notes number and binds the Scribe, lens and profile version, Fireside and run, authorized trail view, opening boundary, governing Static version, and predecessor page.
@@ -122,12 +131,13 @@ Hearthline may work fluidly inside the unchanged task grant while Scribes carry 
 1. Pause at an exact committed Run Trail boundary.
 2. Identify each consulted Scribe and its actual coverage watermark.
 3. Seal the current Field Notes page with its ordered identity, digest, completion state, and governing Static version.
-4. Consult the authorized Field Notes and Embers; keep observation, interpretation, recommendation, permission, and authorization distinct.
-5. Record what Hearthline took up, partially took up, deferred, declined, or left unresolved.
-6. Evaluate any proposed Static revision under the exact reconstruction rule in [Hearthline Static](HEARTHLINE_STATIC.md).
-7. If the revision is admitted by the authorized ledger writer, append it under its already allocated version number and add a separately numbered activation receipt. Do not alter its predecessor.
-8. Open the next numbered blank Field Notes page under the active Static version and bind it to the continuation boundary.
-9. Load only explicitly selected material, append a load receipt, and resume within the original remaining grant and limits.
+4. Where authorized notes or Embers contain another Spark's Static, request a direction-bound Bridge Gloss from Thulia and bind it to the exact sending version, destination, audience, purpose, and coverage.
+5. Consult the authorized Field Notes, Embers, and Bridge Glosses; keep observation, interpretation, recommendation, permission, and authorization distinct.
+6. Record what Hearthline took up, partially took up, deferred, declined, or left unresolved.
+7. Evaluate any proposed Static revision under the exact reconstruction rule in [Hearthline Static](HEARTHLINE_STATIC.md).
+8. If the revision is admitted by the authorized ledger writer, append it under its already allocated version number and add a separately numbered activation receipt. Do not alter its predecessor.
+9. Open the next numbered blank Field Notes page under the active Static version and bind it to the continuation boundary.
+10. Load only explicitly selected material, append a load receipt, and resume within the original remaining grant and limits.
 
 The page becomes blank; the history does not. Pending Embers, uncompressed residuals, declined advice, incomplete notes, and reopening handles remain separately addressable.
 
@@ -135,7 +145,7 @@ Improved shorthand changes representation only. It cannot widen Hearthline's dis
 
 ## Ordered lineage and failure behavior
 
-[Hearthline Ordered Lineage](HEARTHLINE_ORDERED_LINEAGE.md) governs every Spark, profile version, Static version, Field Notes page, Ember, Fireside, run, trail event, Carry Manifest, activation, and load receipt.
+[Hearthline Ordered Lineage](HEARTHLINE_ORDERED_LINEAGE.md) governs every Spark, profile version, Static version, Field Notes page, Ember, Fireside, run, trail event, Owl profile, Perch, translation request, Bridge Gloss, delivery receipt, Carry Manifest, activation, and load receipt.
 
 Numbers are allocated before use, increase within their named series, and are never reused, reassigned, renumbered, or overwritten. Rejection, failure, retirement, or an interrupted reservation leaves its original number and status visible. Corrections append successors.
 
@@ -143,9 +153,9 @@ If a coordinator cannot establish the active Static version, exact Run Trail hea
 
 ## Lore and implementation boundary
 
-This document adopts Fireside, Scribe, Run Trail, Field Notes, Embers, and tending as Hearthline lore and design vocabulary. It does not instantiate a worker, run concurrent models, implement an event stream, create memory, allocate a number, activate Hearthline, or authorize a task.
+This document adopts Fireside, Scribe, Run Trail, Field Notes, Embers, Bridge Gloss, and tending as Hearthline lore and design vocabulary. It does not instantiate a worker, run concurrent models, implement an event stream, create Thulia's roost, create memory, allocate an operational number, activate Hearthline, or authorize a task.
 
-Any implementation must separately test role projections, single-writer append and allocation, committed-event filtering, idempotent submissions, gap detection, coverage watermarks, independent task and note status, Scribe isolation, no cross-Spark Static import, carry-gate transitions, refresh barriers, activation ordering, crash recovery, privacy handling, and revocation.
+Any implementation must separately test role projections, single-writer append and allocation, committed-event filtering, idempotent submissions, gap detection, coverage watermarks, independent task and note status, Scribe and Perch isolation, exact Bridge Gloss reconstruction, recipient-specific disclosure, no cross-Spark Static import, carry-gate transitions, refresh barriers, activation ordering, crash recovery, privacy handling, and revocation.
 
 Hearthline and Scribes are AI tools and system concepts, not persons, co-authors, independent witnesses, or authorities. Their named lenses and preserved work do not establish consciousness, emotion, ownership, consent, standing, or permission.
 
