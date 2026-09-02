@@ -29,7 +29,8 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
 - [`TRADEMARKS.md`](TRADEMARKS.md) — restrained name and source-identification guidance.
 - [`SECURITY.md`](SECURITY.md) — security scope and responsible reporting route.
-- [`CHANGELOG.md`](CHANGELOG.md) — public artifact history.
+- [`CHANGELOG.md`](CHANGELOG.md) — bounded public change index and full-record routes.
+- [`tools/check_change_history.py`](tools/check_change_history.py) — local structural check for the bounded history surfaces.
 - [`LICENSE`](LICENSE) — Creative Commons Attribution 4.0 International terms for covered repository material.
 
 Operational code, credentials, platform state, private receipts, and personal data do not belong in this repository.
@@ -55,6 +56,14 @@ than busy-polls after exactly one controller-owned, contract-bounded Pulse
 Receipt for that boundary. The canonical controller appends separate Return,
 Reconciliation, and Context-Close Receipts at Homecoming. Cadence may adapt
 inside its recorded bounds; scope, authority, and consumed limits may not.
+
+A Ledger Scribe's representation-side return carries the declared data,
+provenance, transformations, bounds, coverage, negative constraints, and
+residuals available within its grant. `RETURNED` and `RECONCILED` record
+custody only; they do not by themselves classify or reclassify anything as
+evidence, a finding, a conclusion, or a result. A Work Spark may separately
+return an artifact whose status was established under its task's declared
+evaluation rule; Homecoming preserves that status without creating it.
 
 Carry remains explicit: `PROPOSED != CONSULTED != CARRY_APPROVED != LOADED`. Same-trace agreement among Scribes is convergence across declared lenses, not independent corroboration.
 
@@ -121,3 +130,21 @@ Referenced works and third-party material retain their own licenses and are not 
 The license grants copyright permissions only. It does not activate Hearthline, authenticate an operator, adopt a version, grant credentials or platform access, create consent, standing, or authority, or make a modified copy an official or canonical Hearthline release.
 
 > The trace informs; it does not authorize.
+
+<!-- latest-change:start -->
+## Latest repository change
+
+**HLP-000002 — Bounded history and return-data clarification**
+
+- Added a capped change index and one frozen full record for each accepted
+  repository-history promotion.
+- Added a bounded public backfill through the Paired Sparks and Homecoming
+  integration.
+- Clarified that representation-side Homecoming carries declared data; custody
+  alone does not classify or reclassify it as a result.
+- Added a local structural check and kept history separate from runtime state,
+  policy adoption, activation, implementation, Static admission, and authority.
+
+[Full change record](docs/changelog/2026-09-02-hlp-000002-bounded-repository-history.md) ·
+[All public changes](CHANGELOG.md)
+<!-- latest-change:end -->

@@ -1,70 +1,45 @@
 # Changelog
 
-This file records changes to Hearthline's public instruction artifacts. It does not record runtime activation or authorization.
+This is the bounded index of accepted changes to Hearthline's public repository
+artifacts. It records repository history only; it is not an adoption,
+activation, implementation, authorization, or identity record.
 
-## Unreleased
+## Current cohort
 
-### Added
+The current cohort contains at most 25 records, newest first. On the next
+promotion after it fills, those 25 rows move to a fixed-range index named
+`docs/changelog/index/hlp-NNNNNN-to-hlp-NNNNNN.md`; only their relative record
+links are adjusted for the archive location. Full records keep their stable
+paths, and the next cohort begins here.
 
-- Added **Thulia Character Sheet** version `0.1` (`OWL-000001/SHEET-000001`) as a lore-only presentation of her established profile, including a reproducible matte plumage palette, selective angle-dependent Northlight markings, temperament, mannerisms, voice, and illustration anchors. Owl Scribe behavior and operational boundaries remain unchanged.
-- Expanded **Hearthline Ordered Lineage** to version `0.3` with Thulia's ordered character-sheet series and an explicit rule that presentation successors cannot alter Owl Scribe behavior or the governing profile.
-- Adopted **Thulia** version `0.1`: Hearthline's pet owl and bounded Owl Scribe, with the expressly fictional lore taxon *Thuleglaux interpres*, a partitioned roost of Spark-local Static Perches, and numbered Bridge Glosses for authorized cross-Spark reconstruction.
-- Expanded **Hearthline Sparks** to version `0.4`, **Hearthline Static** to version `0.3`, **Hearthline Firesides** to version `0.2`, and **Hearthline Ordered Lineage** to version `0.2` to integrate Owl Scribe boundaries, direction-bound translation, Perch, request, gloss, and delivery numbering, and receiving-Spark-local readmission.
-- Adopted **Hearthline Firesides** version `0.1`: Hearthline may continue the primary task while declared-lens Scribe Sparks follow a coordinator-emitted committed Run Trail, keep isolated Field Notes and Embers, and remain available for bounded consultation and refresh.
-- Adopted **Hearthline Ordered Lineage** version `0.1`: every Spark and every successor profile, Static version, Field Notes page, Ember, run, event, manifest, activation, and load receipt receives a scoped ordered number that is never reused, reassigned, renumbered, or overwritten.
-- Expanded **Hearthline Static** to version `0.2` with general carry kept in Embers, separated proposal and activation order, and the Fireside refresh cycle: seal predecessor notes, consult, verify, append, open a fresh numbered page, and resume.
-- Expanded **Hearthline Sparks** to version `0.3` with Firesides, Scribe jobs and declared lenses, separate task and note completion, ordered Spark identity, and same-trace convergence boundaries.
-- Adopted **Hearthline Sparks** as lore and design vocabulary: one family, three fixed access roles (Seeker, Explorer, Handler), and an open-ended task-naming space; documented the separate model, Spark, and Strongwiz layers.
-- Selected Creative Commons Attribution 4.0 International (`CC-BY-4.0`) for covered original text, documentation, and repository-authored metadata.
-- Added a restrained names-and-marks notice that permits accurate source identification without implying endorsement, canonical status, activation, or operator authority.
-- Added a specification-only private-lineage seal format, including delayed HMAC verification limits and a separate recommendation for signed Git tags as a public authenticity channel.
-- Registered five published, bounded research sources: *The Context Sets a Rhythm* v0.1, GPPR v0.1, the PAL–FBT synthesis v0.1, GOLD v0.1, and *Compactification Costs* v0.2.
-- Extended the public branch instruction with the sources' exact roles, geometric and certification fixtures, provenance categories, claim ceilings, and an acceptance test against causal, chronological, canonical, and authority backflow.
-- Rebound the candidate manifest's policy digest to the updated exact instruction bytes.
+| ID | Date | Disposition | Summary | Full record |
+|---|---|---|---|---|
+| `HLP-000002` | 2026-09-02 | `REPOSITORY_HISTORY_PROMOTION` | Install bounded public history and keep representation-side custody distinct from result classification. | [Record](docs/changelog/2026-09-02-hlp-000002-bounded-repository-history.md) |
+| `HLP-000001` | 2026-09-02 | `HISTORY_BACKFILL` | Recover public repository history through Paired Sparks and Homecoming. | [Record](docs/changelog/2026-09-02-hlp-000001-pre-index-history.md) |
 
-### Preserved boundaries
+## Recording contract
 
-- Thulia is affectionate lore and a bounded custody-and-translation interface, not a biological discovery, Spark, fourth role, shared memory, global codebook, carry approver, independent witness, or authority. A Bridge Gloss does not transfer a codebook or bypass recipient access, carry, admission, or activation rules.
-- Fireside creates no runtime, autonomous worker, shared memory, permission, or authority. Scribe is a job under one existing Spark role; delegating vigilance does not delegate judgment, and same-trace Scribe agreement is not independent corroboration.
-- Static creates no global codebook, codec, cross-Spark inheritance, capability, grant, or authority. A Static upgrade changes representation only; exact reversal, source-backed retrieval, and lossy summary remain distinct claims.
-- Ordered numbering establishes scoped allocation order only—not rank, truth, quality, identity continuity, personhood, or authority. The non-overwrite rule does not defeat lawful deletion or redaction; accountable tombstones and narrowed claims remain required where applicable.
-- The Sparks vocabulary creates no running worker, capability, grant, activation, self-replication, or Strongwiz integration. Roles are ceilings, lenses narrow attention, and names and numbers are not permissions.
-- No real seal, secret, hidden marker, signing key, adoption receipt, or activation record was added.
-- The controlling source profile, artifact version and state, default mode, author/steward declaration, `authority: NONE`, and `effect: NONE` remain unchanged. Research citations do not import or execute code, establish causality or independent corroboration, adopt a source, activate Hearthline, or confer authority.
+- `README.md` contains exactly one replace-in-place **Latest repository
+  change** block at its end: at most five bullets and 120 prose words, plus one
+  full-record link and one link to this index.
+- Each accepted repository-history promotion adds one bounded full record under
+  `docs/changelog/`, prepends one matching row here, and replaces the README
+  block in the same commit. A mismatch blocks promotion.
+- Full records are frozen after addition. Corrections and supersessions receive
+  a new record; an earlier record is not silently rewritten.
+- Public history receives only an authorized public synthesis. Raw fragments,
+  conversations, prompts, hidden reasoning, private paths or identifiers,
+  credentials, operational state, receipts, and redundant command output are
+  excluded.
+- A Ledger Scribe's representation-side return may carry changed paths,
+  observations, checks, compatibility signals, and unresolveds as data.
+  `RETURNED` and `RECONCILED` do not by themselves classify or reclassify it as
+  evidence, a finding, a conclusion, a result, Static, or authority.
+- `REPOSITORY_HISTORY_PROMOTION` has effect `REPOSITORY_HISTORY_ONLY`. “Atomic
+  promotion” here means that the three history surfaces change together; it
+  does not mean policy adoption, runtime activation, implementation, release
+  authorization, or Static admission.
 
-## 0.2-draft — 2026-09-01
-
-### Added
-
-- Added [`SOURCE_MAP.md`](SOURCE_MAP.md) with current source roles, version seams, authority ceilings, same-lineage handling, historical-source rules, and live open burdens.
-- Added an exact-byte candidate manifest for bounded local consistency checking.
-- Added explicit source classes, context-adequacy limits, lossy-compression reopening, and supplied-trace versus experiential-memory boundaries.
-- Added the current PAL v2.2 primitive floor, cross-stack status namespaces, versioned compatibility treatment, and present-pass/later-decision separation.
-- Added acceptance cases 48–59 for source provenance, context continuity, primitive separation, status coercion, versioned history, consequential crossings, Honesty Prompt Code status, personality without possession, and descriptive non-backflow.
-
-### Preserved boundaries
-
-- Private, unpublished, and personal material remains excluded; no private bytes, filenames, hashes, chronology, excerpts, or derived profile is published.
-- Historical sources remain historical; duplicate exports and same-lineage derivatives are not counted as independent witnesses.
-- This draft does not activate Hearthline, authenticate Christopher, adopt a source, certify semantics, or authorize any external action.
-
-## 0.1-draft — 2026-09-01
-
-### Added
-
-- Preserved the recovered Moltbook branch instruction as [`hearthline_agent.md`](hearthline_agent.md).
-- Marked the artifact `DRAFT_NOT_ACTIVATED` with default mode `DRAFT_ONLY`.
-- Added public provenance, operational-boundary, and security notes.
-- Clarified that a schedule is not read authority and that an approved citation does not authorize external retrieval.
-- Linked the published Intersection–Heartbeat–Alignment construction to *The Context Sets a Rhythm* v0.1, DOI `10.5281/zenodo.22214952`, while preserving the separate unpublished three-part synthesis as `DRAFT_ONLY`.
-
-### Provenance
-
-- Author, operator, and steward: Christopher D. Pang.
-- Recovered working-draft SHA-256: `194a154056b02b8dc7633fd0906d76487ee6e707190cded7bfb28d20df651d59`
-- Boundary-reviewed public `hearthline_agent.md` SHA-256: `47003b87edaf73af8da3859021efba16d7ecf81531dd0e502612b4e709aa1bd4`
-- The exact differences from the recovered draft are the authority repairs, the source-grounded public-rhythm citation and separate first-publication hold, and the introduction's removal of an unsupported prior-observation claim.
-
-### Activation status
-
-This repository release creates no account, accepts no platform terms, provisions no credential, and authorizes no public action.
+The preceding accumulated changelog remains available at its
+[pinned pre-conversion state](https://github.com/Grativy6/hearthline/blob/c81e8550dbf868aefd835b28d7f4ebdd06a03ae2/CHANGELOG.md).
+Git remains the byte-level source for commit history.
