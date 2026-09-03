@@ -4,10 +4,20 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.3` |
+| Version | `0.4` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
+
+## v0.4 open-objective-window successor
+
+Version `0.4` adds a controller-owned **open objective window**: one bounded
+exchange may admit new, separately identified objectives while another Spark is
+honestly suspended. Objectives may return out of order into one eventual public
+response without merging their grants, ledgers, budgets, statuses, receipts, or
+Homes. A heartbeat marks an interruptible evidence boundary; it does not keep
+the exchange open or become a scheduler. Versions `0.1` through `0.3` remain
+historical records below.
 
 ## v0.3 clarification record
 
@@ -196,6 +206,56 @@ summary, outcome, residual, and Static-delta boundaries. Their pulses may be
 coalesced by the coordinator for a concise outward update, but neither Spark
 borrows the other's clock or claim of coverage.
 
+## Open objective windows
+
+An open objective window is a controller-owned exchange record, not a Spark and
+not a shared task context. It binds the root exchange, controller, outer host
+lifecycle, admitted objective identities, audience, aggregation projection,
+accept/replace/cancel rule, maximum aperture, and closing rule. The host or
+controller may keep that window available; a Pulse Receipt does not keep it
+open, wake a process, extend a response deadline, or schedule work by itself.
+
+Every admitted objective keeps its own objective identity, Spark or Creature
+identity, task grant, budget, ledger, Home, Static binding, Heartbeat Contract,
+suspension/resume chain, and Homecoming. Adding objective B while objective A is
+suspended does not edit A, borrow A's remaining limits, or let either objective
+inherit the other's authority. A later message is classified under the frozen
+window rule as an addition, replacement, cancellation, or clarification; an
+uncertain classification stops for controller resolution rather than silently
+erasing or widening work.
+
+Returns may arrive out of order. The controller appends each objective's return
+and reconciliation under that objective's original lineage, then derives a
+public aggregation view by reference. That view is not another evidence ledger
+and does not upgrade any result. Every objective-set snapshot keeps two typed
+fields separate: `homecoming_custody_state` records return, reconciliation, and
+context-close transitions; `objective_disposition` records task state under the
+objective's owning evaluation rule. `HOMECOMING:RECONCILED` never fills or
+changes `objective_disposition`.
+
+A response window may close when every admitted objective has an explicit
+objective disposition or handoff such as `OBJECTIVE:BLOCKED`,
+`OBJECTIVE:CANCELLED`, `OBJECTIVE:LEFT_OPEN`, or `OBJECTIVE:UNKNOWN`, together
+with its separately recorded custody state or last suspension reference. A
+rule-established terminal result retains that rule's own namespace rather than
+being renamed by the window. Closing the public response does not pretend that
+a deliberately open objective completed, and losing the host window does not
+erase its last durable suspension receipt.
+
+A minimal future conformance scenario is:
+
+1. dispatch A, record its bounded pulse, and suspend A at a declared blocker;
+2. admit B and C under new objective and Spark/Creature identities;
+3. return C, then B, preserving their separate Homecomings;
+4. revalidate and resume A under A's original limits, then return A; and
+5. close one aggregation response against an exact objective-set snapshot.
+
+The scenario passes only if the return order does not choose authority or
+status, no objective reads or mutates another's private ledger, no consumed
+limit is restored, no Homecoming custody state manufactures task status, and no
+provider or environment effect is duplicated. It is a prospective test design,
+not a claim that Hearthline or this workspace has implemented or passed it.
+
 ## Static comes home
 
 [Hearthline Static](HEARTHLINE_STATIC.md) remains source-local throughout a
@@ -341,8 +401,8 @@ produced by the bounded task.
 
 ## Prospective evaluation boundary
 
-Paired dispatch, task-shaped heartbeat contracts, and representation-side
-Homecoming remain design proposals. A future implementation must test them
+Paired dispatch, task-shaped heartbeat contracts, open objective windows, and
+representation-side Homecoming remain design proposals. A future implementation must test them
 prospectively, including preregistered equal-budget comparisons with and without
 a Ledger Scribe, task overhead, round-trip fidelity relative to the received
 projection, residual preservation, transfer performance, failure recovery,
@@ -352,7 +412,8 @@ complete declared coverage.
 ## Lore and implementation boundary
 
 This document adopts Home, Home Record, Paired Spark dispatch, Work Spark,
-Ledger Scribe Spark, Spark Heartbeat Contract, Pulse Receipt, Homecoming,
+Ledger Scribe Spark, Spark Heartbeat Contract, Pulse Receipt, open objective
+window, objective-set snapshot, Homecoming,
 Return Receipt, Reconciliation Receipt, Context-Close Receipt, and Hearth Perch
 as Hearthline lore and design vocabulary.
 Paired dispatch is non-recursive: the Ledger Scribe does not receive another
@@ -369,7 +430,9 @@ revalidation, revocation, expiry, non-renewal of authority, independent task
 and Scribe status, coverage-qualified `NO_LEDGER_DELTA`, source-lineage Static
 ownership, single-writer target admission, residual return, idempotent
 Homecoming, unknown-return reconciliation, separate close receipts, crash
-recovery, privacy handling, and closure.
+recovery, objective admission while another objective is suspended, out-of-order
+return, aggregation by reference, host-window loss, no cross-objective grant or
+budget inheritance, privacy handling, and closure.
 
 Hearthline, Thulia, and Sparks remain AI tool and system concepts. Homecoming is
 not privileged testimony of consciousness, emotion, death, survival,

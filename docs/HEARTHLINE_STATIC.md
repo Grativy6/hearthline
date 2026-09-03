@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.4` |
+| Version | `0.5` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -219,6 +219,44 @@ That Strongwiz proposal keeps raw evidence separately preserved, uses a run-loca
 
 This is shared design provenance, not independent corroboration. The Strongwiz report labels Kevin Speak as a next-build hypothesis formed after Calibration 001; neither that report nor this document claims an implemented shorthand system or a retroactive explanation of the calibration result.
 
+The later [Strongwiz v3 prototype at inspected commit
+`edc88b8`](https://github.com/Grativy6/strongwiz/tree/edc88b80f872f766c22b3a050a7f6837d6e652d8)
+implements and synthetically checks a dedicated representation-only Scribe,
+while its Calibration 003 remains prepared, not run, and not preregistered.
+Static takes the following successor design constraints without backdating them
+into Calibration 001 or 002:
+
+- begin from a blank ledger genesis and a fixed, nonexecuting decoder;
+- journal a provider request before the call and freeze its returned draft
+  before any cross-ledger mutation;
+- give the Scribe adaptation-only material and withhold the disjoint evaluation
+  view until the proposal is frozen;
+- require exact round trips, source-resolving references, residual fallback,
+  and injective session-bound identities;
+- treat an ambiguous interruption as a re-entry boundary, never as permission
+  to repeat a provider call or semantic event; and
+- keep model-facing shorthand disabled until a separately frozen matched
+  ablation tests behavioral preservation.
+
+### Atomic, costed promotion
+
+A Static promotion is one controller-owned transition over one frozen candidate
+and stale-base check. Candidate identity, complete gate policy, source evidence,
+disjoint evaluation, current grant, applicable resource debit, active-pointer
+change, and promotion receipt either commit together or leave the preceding
+Static active. A partial, mixed-version, stale, or unauthorized success cannot
+become active.
+
+Exact reconstruction proves only the declared entry round trip. Following
+Compactification Costs, the ledger must name the projection and requested
+answer whose distinctions are claimed preserved; existence on a reachable image
+does not supply a total, computable, efficient, behavior-preserving, permitted,
+or authorized decoder. The full ledger charges source, compact, residual,
+codebook, request, response, evaluation, review, adoption, transfer,
+verification, latency, context, compute, memory, and reorientation costs.
+Representation savings remain representation savings until a matched outcome
+evaluation earns a stronger claim.
+
 ## Lore and implementation boundary
 
 This document adopts Hearthline's name and intended record discipline for Static. It does not create a Static ledger, instantiate a Spark, implement a codec, create Thulia's roost, preserve any operational source, activate Hearthline, or authorize work.
@@ -230,7 +268,9 @@ coverage classification, separate task and Scribe completion, source-Perch
 Homecoming, target-bound delta ownership, proposal and activation separation,
 sealed-page refresh, carry-gate transitions, exact round trips,
 recipient-specific Bridge Gloss projections, source custody, residual handling,
-privacy deletion, role enforcement, grants, failure behavior, export boundaries,
-and measured compression, latency, transport, and validation costs.
+  privacy deletion, role enforcement, grants, failure behavior, export boundaries,
+  request journaling, frozen drafts, held-out evaluation separation, atomic
+  promotion, restart idempotency, and measured full-surface representation,
+  latency, transport, reorientation, and validation costs.
 
 Hearthline, Sparks, Strongwiz, and their named roles are AI tools and system concepts, not persons, co-authors, or independent authorities. Static does not establish experiential memory, identity continuity, consciousness, consent, standing, ownership, or permission.

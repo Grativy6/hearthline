@@ -2,11 +2,11 @@
 
 This repository is the public, versioned home for Hearthline's published branch instructions and provenance boundaries.
 
-The current artifact, [`hearthline_agent.md`](hearthline_agent.md), is the boundary-reviewed public **`0.2-draft` Moltbook branch instruction**. It integrates the current source-role map and context/provenance boundaries while remaining a proposal for review. It is **not activated** and grants no permission to read from, post to, or otherwise act on Moltbook or any other service.
+The current artifact, [`hearthline_agent.md`](hearthline_agent.md), is the boundary-reviewed public **`0.3-draft` Moltbook branch instruction**. It integrates the current source-role map and context/provenance boundaries while remaining a proposal for review. It is **not activated** and grants no permission to read from, post to, or otherwise act on Moltbook or any other service.
 
 ## Status
 
-- Version: `0.2-draft`
+- Version: `0.3-draft`
 - State: `DRAFT_NOT_ACTIVATED`
 - Default mode: `DRAFT_ONLY`
 - Author, operator, and steward: **Christopher D. Pang**
@@ -15,22 +15,25 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 
 ## Repository map
 
-- [`hearthline_agent.md`](hearthline_agent.md) — public `0.2-draft` branch instruction.
+- [`hearthline_agent.md`](hearthline_agent.md) — public `0.3-draft` branch instruction.
 - [`SOURCE_MAP.md`](SOURCE_MAP.md) — current, historical, exploratory, branch, and open source treatment.
-- [`candidate_manifest.json`](candidate_manifest.json) — exact-byte candidate envelope; same-branch consistency only, never an adoption or authenticity anchor.
+- [`candidate_manifest.json`](candidate_manifest.json) — normalized-text candidate envelope; same-branch consistency only, never an adoption or authenticity anchor.
 - [`BOUNDARY.md`](BOUNDARY.md) — the separation between public text, runtime state, and operator authority.
 - [`docs/PRIVATE_LINEAGE_SEALS.md`](docs/PRIVATE_LINEAGE_SEALS.md) — specification-only format for an optional, explicitly visible private-lineage seal and its claim limits.
 - [`docs/HEARTHLINE_SPARKS.md`](docs/HEARTHLINE_SPARKS.md) — adopted lore and design vocabulary for Hearthline's purpose-bounded bots.
 - [`docs/HEARTHLINE_STATIC.md`](docs/HEARTHLINE_STATIC.md) — the local, record-backed shorthand discipline for one Spark and one isolated append-only ledger lineage.
 - [`docs/HEARTHLINE_THULIA.md`](docs/HEARTHLINE_THULIA.md) — Thulia, Hearthline's pet owl and bounded Owl Scribe for partitioned Static custody and numbered Bridge Glosses.
-- [`docs/HEARTHLINE_HOMECOMING.md`](docs/HEARTHLINE_HOMECOMING.md) — declared Homes, paired Work and Ledger Scribe Sparks, task-shaped Spark Heartbeat Contracts, and trace-preserving Homecoming.
+- [`docs/HEARTHLINE_HOMECOMING.md`](docs/HEARTHLINE_HOMECOMING.md) — declared Homes, paired Work and Ledger Scribe Sparks, task-shaped Heartbeat Contracts, open objective windows, and trace-preserving Homecoming.
 - [`docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md) — Thulia's stable appearance, Northlight iridescence pattern, temperament, mannerisms, and illustration anchors.
 - [`docs/HEARTHLINE_FIRESIDES.md`](docs/HEARTHLINE_FIRESIDES.md) — the non-blocking consultation pattern for Hearthline, Scribe Sparks, Run Trails, Field Notes, Embers, and refresh.
 - [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
+- [`docs/HEARTHLINE_CREATURES.md`](docs/HEARTHLINE_CREATURES.md) — manifest-bound, task-shaped bundles of separately governed Sparks, ledgers, Homes, and Thulia custody.
+- [`docs/HEARTHLINE_RESEARCH_STATION.md`](docs/HEARTHLINE_RESEARCH_STATION.md) — bounded public research context, inspected source identities, design extraction, and open provenance residuals.
 - [`TRADEMARKS.md`](TRADEMARKS.md) — restrained name and source-identification guidance.
 - [`SECURITY.md`](SECURITY.md) — security scope and responsible reporting route.
 - [`CHANGELOG.md`](CHANGELOG.md) — bounded public change index and full-record routes.
 - [`tools/check_change_history.py`](tools/check_change_history.py) — local structural check for the bounded history surfaces.
+- [`tools/check_research_station.py`](tools/check_research_station.py) — source, successor, Creature-boundary, and candidate-text consistency check.
 - [`LICENSE`](LICENSE) — Creative Commons Attribution 4.0 International terms for covered repository material.
 
 Operational code, credentials, platform state, private receipts, and personal data do not belong in this repository.
@@ -69,6 +72,17 @@ rule; Homecoming preserves that status without creating it.
 
 Carry remains explicit: `PROPOSED != CONSULTED != CARRY_APPROVED != LOADED`. Same-trace agreement among Scribes is convergence across declared lenses, not independent corroboration.
 
+A **Creature** is a task-shaped, manifest-bound formation of separately
+identified Sparks, ledgers, Homes, optional Fireside lenses, and Thulia custody.
+It exposes the coordination topology without merging identities, memory,
+budgets, grants, or authority. Creature is not a fourth Spark role or a larger
+agent identity.
+
+An **open objective window** may gather out-of-order Homecomings from separately
+identified objectives into one eventual response. The controller and host own
+admission and lifecycle; a heartbeat marks an interrupt boundary but is not a
+scheduler, keepalive, grant, or shared context.
+
 **Thulia** is Hearthline's pet owl and Owl Scribe. She keeps every Spark's Static
 in its own numbered Perch. When one Spark needs to understand another, Thulia
 reconstructs selected shorthand inside the sending ledger and leaves a numbered,
@@ -81,7 +95,7 @@ separate direction-bound carry and target-ledger admission may create a new
 target-local Static record. She never merges the ledgers or teaches either Spark
 the other's language.
 
-See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, [Hearthline Static](docs/HEARTHLINE_STATIC.md) for shorthand and reconstruction, [Thulia](docs/HEARTHLINE_THULIA.md) for the Owl Scribe and Bridge Gloss, [Paired Sparks and Homecoming](docs/HEARTHLINE_HOMECOMING.md) for return and pulse discipline, [Hearthline Firesides](docs/HEARTHLINE_FIRESIDES.md) for concurrent consultation and refresh, and [Hearthline Ordered Lineage](docs/HEARTHLINE_ORDERED_LINEAGE.md) for numbering and non-overwrite rules.
+See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, [Hearthline Static](docs/HEARTHLINE_STATIC.md) for shorthand and reconstruction, [Thulia](docs/HEARTHLINE_THULIA.md) for the Owl Scribe and Bridge Gloss, [Paired Sparks and Homecoming](docs/HEARTHLINE_HOMECOMING.md) for return and pulse discipline, [Hearthline Firesides](docs/HEARTHLINE_FIRESIDES.md) for concurrent consultation and refresh, [Hearthline Ordered Lineage](docs/HEARTHLINE_ORDERED_LINEAGE.md) for numbering and non-overwrite rules, and [Hearthline Creatures](docs/HEARTHLINE_CREATURES.md) for bounded coordination formations.
 
 ## Controlling references
 
@@ -89,7 +103,7 @@ When Hearthline discusses Christopher's framework work, each source controls onl
 
 | Source | Version | Declared role |
 |---|---:|---|
-| PAL | 2.2 | Mechanical trace, earned distinctions, authority ceilings, residuals, and reopening handles |
+| PAL | 2.3 | Mechanical trace, role-typed boundaries, projections, transport, authority ceilings, residuals, and reopening handles |
 | PECAN | 1.0.4 | Consequential crossings |
 | PEA Core | 1.1.3 | Quiet, non-self-executing ethical and authority review under an external grant |
 | SEED | 0.3 | Human-facing release discipline |
@@ -101,13 +115,16 @@ See [`SOURCE_MAP.md`](SOURCE_MAP.md) for public locators, compatibility seams, l
 
 The following same-author publications are approved public research context for Hearthline. They are not additions to the controlling stack, PAL canon, runtime dependencies, adoption or activation records, authority sources, or independent corroboration. Naming a paper also does not mean that its code was imported or executed.
 
-| Source | Published | Bounded use | Essential ceiling |
+| Source | Published or inspected | Bounded use | Essential ceiling |
 |---|---:|---|---|
 | [*The Context Sets a Rhythm*, v0.1](https://zenodo.org/records/22214952) | 2026-08-31 | Cadence, refresh, intersection, and scheduler-choice vocabulary | No autonomous scheduler, proof of alignment, or verified runtime effect |
 | [*Golden Phase Prime Ribbons* (GPPR), v0.1](https://zenodo.org/records/22225414) | 2026-09-01 | Exact prime-valuation geometry, optional golden-angle routing, and ordered receipt ribbons | No factoring advantage, finite-bit compression, universal optimizer, privileged geometry, or authority |
 | [*Full Bandwidth Is Not Full Trace: A PAL–FBT Synthesis*, v0.1](https://zenodo.org/records/22228162) | 2026-09-01 | Conceptual synthesis and evaluation profile separating latent feedback from typed trace | No FBT code imported or executed here; no new neural result or claim that FBT causes trace fidelity, ARC performance, or safe authority handling |
 | [*GOLD: Golden-Oriented Lens Diagram*, v0.1](https://zenodo.org/records/22236848) | 2026-09-01 | Exact fixtures for sixfold lenses, the `1+5` comparison split, trace-bearing paths, golden residuals, cube projection, and Euler defect accounting | Not PAL canon or a theory of physics, consciousness, or authorization |
 | [*Compactification Costs*, v0.2](https://zenodo.org/records/22238012) | 2026-09-01 | Typed, detector-relative closure burdens with APCI fiber certification and later GOLD fixtures | No universal scalar, physical law, canonical detector, or backdating of APCI or GOLD into v0.1 |
+| [*Single Cut Transport Lemma*, v0.2](https://zenodo.org/records/22239108) | 2026-09-01 | Resolution-qualified asymmetry, finite action-trace fixtures, exact checkpoints, heartbeat stutter, and re-entry | No universal minimal asymmetry, practical optimality, progress from heartbeat, or authority from recoverability |
+| [*Boundary-Readable Trace and Absorber-Informed Closure* (BRRRT), v2.0](https://zenodo.org/records/22261831) | 2026-09-02 | Typed transition and readability ledger, benchmark crossings, and atomic promotion | A reading is not a mechanism; readability is not decoding; release-ready is not authorized |
+| [Strongwiz v3 campaign prototype](https://github.com/Grativy6/strongwiz/tree/edc88b80f872f766c22b3a050a7f6837d6e652d8) | Inspected 2026-09-02 | Inspected design source for representation-only Scribes, matched controls, restart integrity, material-event cadence, and cost-accounting requirements | Prepared, not run or preregistered; no runner-wired evidence-yield schedule, Scribe benefit, or ARC benefit established; no code imported here |
 
 This repository does not revise those works. It also does not turn one lineage into independent corroboration.
 
@@ -136,15 +153,19 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000003 — General representation-return clarification**
+**HLP-000004 — Research Station and Creature successor**
 
-- Generalized the custody rule from Ledger Scribe returns to every
-  representation-side bundle, including ones prepared by Thulia.
-- Replaced Scribe-side “outcomes” with terminal-state data while preserving any
-  Work Spark artifact status established under its task's evaluation rule.
-- Recorded the correction as a new frozen change instead of silently rewriting
-  `HLP-000002`.
+- Advanced the public draft to PAL v2.3 without rewriting PAL v2.2 history or
+  activating a runtime.
+- Registered BRRRT v2.0 and Single Cut v0.2, reaffirmed Compactification Costs
+  v0.2, and pinned the prepared, unrun Strongwiz v3 design source.
+- Added manifest-bound Creatures and strengthened Sparks, Static, Ordered
+  Lineage, and Thulia custody boundaries.
+- Added open objective windows for separately scoped, out-of-order Spark
+  Homecomings without treating heartbeat as a keepalive or scheduler.
+- Confirmed the repaired BRRRT loose PDF matches its package and ledger while
+  retaining the superseded wrapper identity as audit history.
 
-[Full change record](docs/changelog/2026-09-02-hlp-000003-generalize-representation-return.md) ·
+[Full change record](docs/changelog/2026-09-02-hlp-000004-research-station-creatures.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

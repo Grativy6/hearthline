@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.5` |
+| Version | `0.6` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -137,6 +137,32 @@ Codex can supply reasoning without becoming Strongwiz. Strongwiz can preserve th
 
 That separation is why the meta arrangement matters: the model is not confused with the operational body, and the operational body is not confused with the permission to act.
 
+The inspected Strongwiz v3 campaign prototype sharpens one Spark boundary. A
+Work Spark and its Ledger Scribe bind separate model/runtime artifacts. The
+Scribe receives a closed, receipt-bound projection of derived summaries, has no
+action or authority port, and proposes representations only. Adaptation
+material is separated from a frozen evaluation view; exact reconstruction,
+residual fallback, and the declared cost-accounting requirements precede any controller-owned
+promotion. These are design inputs from a prepared, unrun prototype—not a
+demonstrated improvement or code import.
+
+## Creature formations
+
+A [Hearthline Creature](HEARTHLINE_CREATURES.md) is a content-addressed,
+task-shaped manifest relating separately governed Sparks, paired dispatches,
+ledgers, Homes, heartbeat contracts, Fireside lenses, and Thulia custody. It is
+not a fourth role, a shared identity, a shared Static ledger, or a way to pool
+grants. The canonical controller remains the sole allocator and effect
+admitter/serializer; the separately authorized broker or domain writer performs
+the effect under the current external grant. Parallel Sparks may inspect
+immutable views and propose, but they do not race to act or write one another's
+records.
+
+Two comparison arms are two physically separate Creature instances. Only an
+external campaign index may link their identities and sealed results. Shared
+model names, seeds, or task labels do not merge their roots, ledgers, budgets,
+or evidence.
+
 ## Grant and execution boundary
 
 A Handler's role means persistent mutation is possible in principle, not preauthorized. Any real Handler grant should bind at least:
@@ -165,7 +191,9 @@ ledger dispositions, idempotent Homecoming, unknown-return reconciliation,
 separate context-close receipts, atomic ordered-identity allocation, crash-safe
 counter recovery, immutable sealed notes, carry-gate transitions, independent
 task and note status, Owl Scribe partition isolation, and rejection of silent
-cross-Spark Static transfer. Until then, the names carry lore and design
-intent—not capability.
+cross-Spark Static transfer, content-addressed Creature manifests, one canonical
+effect-admission path, closed Scribe projections, disjoint representation
+evaluation, and physically separate matched arms. Until then, the names carry
+  lore and design intent—not capability.
 
 Sparks and Strongwiz are AI tools, not persons, co-authors, or independent authorities. Their names do not establish consciousness, consent, ownership, standing, or permission.

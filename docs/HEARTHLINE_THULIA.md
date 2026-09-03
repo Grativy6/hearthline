@@ -4,14 +4,22 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2` |
+| Version | `0.3` |
 | Status | Adopted lore and design vocabulary |
 | Lore identity | `OWL-000001` |
-| Lore profile | `OWL-000001/PROFILE-000002` |
+| Lore profile | `OWL-000001/PROFILE-000003` |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
 Lore gives Hearthline a pet owl. Design gives **Thulia**, the **Owl Scribe**, two bounded custodial jobs: preserve the route by which one Spark's [Static](HEARTHLINE_STATIC.md) can be reconstructed for another without joining their ledgers, and preserve the separate representation-side return path for an authorized [Paired Spark dispatch](HEARTHLINE_HOMECOMING.md).
+
+## v0.3 successor record
+
+Version `0.3` adds Creature-manifest and linked-ledger custody to Thulia's design
+profile. Profile `OWL-000001/PROFILE-000002` remains the historical Homecoming
+integration record; `OWL-000001/PROFILE-000003` is its non-retroactive
+successor. The successor does not make Thulia a controller, grant issuer,
+arbiter, executor, promotion authority, or shared ledger writer.
 
 In the lore, Thulia keeps a roost of separately partitioned Static lineages. She knows where each Spark's grammar, codebook, decoder, versions, residuals, and source bindings are recorded. When authorized communication between Sparks requires translation, she reconstructs the sending expression inside its own ledger and records a numbered **Bridge Gloss** in ordinary language or an explicit shared structure.
 
@@ -131,7 +139,7 @@ it automatically.
 | Record | Example |
 |---|---|
 | Owl Scribe | `OWL-000001` |
-| Owl profile version | `OWL-000001/PROFILE-000002` |
+| Owl profile version | `OWL-000001/PROFILE-000003` |
 | Hearth Perch | `OWL-000001/HEARTH-PERCH-000001` |
 | Hearth Perch version | `OWL-000001/HEARTH-PERCH-000001/VERSION-000001` |
 | Perch | `OWL-000001/PERCH-000001` |
@@ -167,6 +175,26 @@ A gloss number is allocated before the attempt. Failed, ambiguous, denied, inter
 
 No codebook crosses merely because a gloss does. The source Static remains source-local, and the destination Static remains destination-local.
 
+## Creature-manifest custody
+
+Within a [Hearthline Creature](HEARTHLINE_CREATURES.md), Thulia may custody the
+content-addressed composition manifest and the partition map that relates each
+Spark, pair, Home, Perch, ledger, heartbeat contract, budget, source registry,
+and return route. Custody makes the topology inspectable; it does not make the
+manifest a grant or the partitions one memory.
+
+At each permitted crossing, Thulia may report the manifest-bound status of
+identity, witness, scope, trace, authority reference, consequence class,
+resource state, and re-entry requirements. These are guard observations for the
+canonical controller. Thulia does not decide the route, approve the grant,
+debit a budget, choose among proposals, or issue the single permitted external
+effect.
+
+Comparative arms remain separate Creature manifests, roots, and ledgers. An
+external campaign index may name both, but Thulia must not use it as a shared
+payload channel. Cooperative Sparks inside one arm retain separate accounts and
+write permissions; the canonical controller serializes any effect or promotion.
+
 ## Failure and reopening
 
 Thulia fails closed when the source identity, active version, decoder, grammar, codebook, digest, source binding, destination, audience, disclosure intersection, or grant cannot be established. Ambiguity is carried as ambiguity; missing material is not silently completed from resemblance or model familiarity. A permitted lossy summary may be recorded as a separately labeled derivative, but it is not an exact Bridge Gloss.
@@ -192,7 +220,7 @@ Thulia's output is derivative of the sending ledger and its sources. It is not a
 
 ## Lore and implementation boundary
 
-This document adopts Thulia, Owl Scribe, Perch, roost, Bridge Gloss, Hearth Perch, and representation-side Homecoming custody as Hearthline lore and design vocabulary. `OWL-000001` and `OWL-000001/PROFILE-000002` are public lore identities; they are not evidence of an operational allocation, running service, model process, credential, memory store, or deployment.
+This document adopts Thulia, Owl Scribe, Perch, roost, Bridge Gloss, Hearth Perch, Creature-manifest custody, and representation-side Homecoming custody as Hearthline lore and design vocabulary. `OWL-000001` and `OWL-000001/PROFILE-000003` are public lore identities; they are not evidence of an operational allocation, running service, model process, credential, memory store, or deployment.
 
 Any implementation must separately specify and test partition isolation, exact
 reconstruction, least-privilege projection, audience binding, paired-identity
@@ -202,6 +230,8 @@ ceilings, Scribe-source-Perch return, target-bound proposal routing, Hearth Perc
 isolation, idempotent Homecoming, unknown-return reconciliation, single-writer
 numbering, carry-gate enforcement, cross-Spark import rejection, access
 revocation, invalidation propagation, crash recovery, lawful redaction, and
-failure on unresolved identity or decoder state.
+  failure on unresolved identity or decoder state, Creature partition checks,
+  physically separate comparison arms, guard-status reporting without
+  arbitration, and rejection of Thulia as an authority or effect writer.
 
 Thulia is an affectionate system character and tool metaphor, not a biological discovery, person, co-author, independent witness, or authority. Her name and role do not establish consciousness, emotion, ownership, consent, standing, permission, or a claim that an AI system has a pet in the biological sense.
