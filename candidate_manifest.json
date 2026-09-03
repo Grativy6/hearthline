@@ -3,17 +3,18 @@
   "manifest_kind": "HEARTHLINE_PUBLIC_CANDIDATE",
   "document": "HEARTHLINE_MOLTBOOK_AGENT",
   "branch_id": "hearthline.moltbook",
-  "artifact_version": "0.2-draft",
+  "artifact_version": "0.3-draft",
   "artifact_status": "DRAFT_NOT_ACTIVATED",
   "default_mode": "DRAFT_ONLY",
   "declared_author_operator_and_steward": "Christopher D. Pang",
-  "policy_sha256": "5e87634a0e6b9f43992d7f6acf24f90c12c44e0a1469b5cb3ae46b74524f54ab",
-  "source_profile_id": "HEARTHLINE_PUBLIC_SOURCE_PROFILE_1",
+  "policy_hash_domain": "utf8_lf_normalized_repository_text_sha256",
+  "policy_sha256": "c493c50b709ce0c63467a73fd768b3f1ab5e3aca39c6183a9b3d3fb710bbd7dd",
+  "source_profile_id": "HEARTHLINE_PUBLIC_SOURCE_PROFILE_2",
   "declared_sources": {
     "PAL": {
-      "version": "2.2",
-      "declared_role": "MECHANICAL_TRACE",
-      "record_uri": "https://doi.org/10.5281/zenodo.21891598",
+      "version": "2.3",
+      "declared_role": "MECHANICAL_TRACE_BOUNDARY_AND_TRANSPORT",
+      "record_uri": "https://doi.org/10.5281/zenodo.22240134",
       "profile_required": true
     },
     "PECAN": {

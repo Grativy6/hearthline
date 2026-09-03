@@ -4,12 +4,12 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.4` |
+| Version | `0.5` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
-**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, [Homes and Homecomings](HEARTHLINE_HOMECOMING.md), and their receipts.
+**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, [Creatures](HEARTHLINE_CREATURES.md), Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, [Homes and Homecomings](HEARTHLINE_HOMECOMING.md), and their receipts.
 
 Its purpose is simple: every Spark and every new version receives an ordered number, and earlier work remains individually addressable. Correction, retirement, rejection, or replacement may change what governs later work; none silently makes an earlier record disappear.
 
@@ -31,6 +31,16 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Suspension receipt | `SPARK-000001/SUSPENSION-000001` | That Spark's suspension series |
 | Resume receipt | `SPARK-000001/RESUME-000001` | That Spark's resume series |
 | Paired dispatch | `PAIR-000001` | One named paired-dispatch registry |
+| Open objective window | `WINDOW-000001` | One controller-owned exchange registry |
+| Admitted objective | `WINDOW-000001/OBJECTIVE-000001` | That window's objective-admission series |
+| Objective-set snapshot | `WINDOW-000001/SET-000001` | That window's immutable membership/disposition series |
+| Aggregation close | `WINDOW-000001/CLOSE-000001` | That window's public-response close series |
+| Creature | `CREATURE-000001` | One named Creature registry |
+| Creature profile | `CREATURE-000001/PROFILE-000001` | That Creature's manifest-successor series |
+| Creature dispatch | `CREATURE-000001/DISPATCH-000001` | That Creature's dispatch series |
+| Creature checkpoint | `CREATURE-000001/CHECKPOINT-000001` | That Creature's checkpoint series |
+| Campaign | `CAMPAIGN-000001` | One external comparison-campaign registry |
+| Campaign arm | `CAMPAIGN-000001/ARM-000001` | One physically isolated Creature arm |
 | Homecoming | `SPARK-000001/HOMECOMING-000001` | That Spark's Homecoming series |
 | Homecoming Return Receipt | `SPARK-000001/HOMECOMING-000001/RETURN-000001` | One Homecoming's return series |
 | Homecoming Reconciliation Receipt | `SPARK-000001/HOMECOMING-000001/RECONCILIATION-000001` | One Homecoming's reconciliation series |
@@ -149,6 +159,23 @@ continuation, while its earlier Homecoming and consumed limits remain
 historical. A replacement process that lacks the required continuation evidence
 begins under a new Spark identity.
 
+An open objective window receives its identity before the first objective is
+admitted. Every addition, replacement, cancellation, clarification, return,
+reconciliation, and explicit `OBJECTIVE:LEFT_OPEN` disposition appends a
+successor objective-set snapshot; it never rewrites membership in place. Each admitted
+objective points to its own Spark or Creature identity and independent grant,
+budget, ledger, heartbeat, Home, and Homecoming chain. Completion order does not
+allocate identity, priority, authority, or result status.
+
+An aggregation close binds one exact objective-set snapshot and references each
+objective's separately typed `homecoming_custody_state` and
+`objective_disposition`. It may assemble one audience-facing response, but it
+does not merge source ledgers, let Homecoming custody assign task status, or
+turn `OBJECTIVE:BLOCKED`, `OBJECTIVE:UNKNOWN`, or `OBJECTIVE:LEFT_OPEN` into
+completion. A heartbeat cannot append a new objective, keep the host window
+alive, or allocate the close receipt; those are controller and host-lifecycle
+operations.
+
 ## Static proposals and activations
 
 A same-lineage candidate Static revision receives the next Static version
@@ -179,7 +206,7 @@ The page becomes blank; the history does not. Sealed pages, incomplete pages, re
 
 ## Owl Scribe and Bridge Gloss identities
 
-Thulia's adopted public lore identity is `OWL-000001`, with current design profile `OWL-000001/PROFILE-000002`, distinct from the Spark registry because Owl Scribe is a bounded custody and translation interface rather than a fourth Spark role. It is not evidence that an operational allocator, service, or model instance exists. Any model-assisted interpretive work behind that interface still receives its own Spark identity, role, profile, and grant.
+Thulia's adopted public lore identity is `OWL-000001`, with current design profile `OWL-000001/PROFILE-000003`, distinct from the Spark registry because Owl Scribe is a bounded custody and translation interface rather than a fourth Spark role. It is not evidence that an operational allocator, service, or model instance exists. Any model-assisted interpretive work behind that interface still receives its own Spark identity, role, profile, and grant.
 
 The Hearth Perch is Thulia's separately numbered Home series. It binds her own
 Owl Scribe return boundary and the dispatch-pinned roost index and version
@@ -196,6 +223,27 @@ An Owl character sheet is a presentation record. A successor sheet may revise ap
 Every translation attempt receives its request number before work begins. Every successfully recorded Bridge Gloss receives its own gloss number, and delivery to each recipient receives a separate delivery number. Denied, failed, ambiguous, interrupted, invalidated, and superseded attempts keep their numbers and dispositions. A direction, destination, audience, or source-version change creates a successor request or gloss rather than silently changing the old one.
 
 A Bridge Gloss number records a derivative crossing only. It does not make the gloss true, exact beyond its declared reconstruction, loaded, adopted, authoritative, or independent of its sending ledger and sources.
+
+## Creature and campaign identities
+
+A Creature identity names one frozen composition boundary. Its profile binds the
+exact member Sparks, paired dispatches, model/runtime artifacts, source lock,
+grants, budgets, Homes, heartbeat contracts, ledger partitions, Thulia profile,
+evaluation rule, stop conditions, and return routes. Changing any identity-
+bearing field appends a successor Creature profile; it does not mutate a running
+manifest.
+
+A strategy replacement or materially changed composition is a `SUCCESSOR`; an
+experimental fork is a `CHILD`; and a same-identity record update that preserves
+its declared continuation is a `VERSION`. These relationships do not merge
+evidence or authority.
+
+Matched experimental arms receive different Creature and arm identities and
+physically separate ledgers. Their external campaign index may bind comparable
+fields and sealed results by reference only. It is not a shared payload store,
+decoder, grant, budget, or source of cross-arm context. A cooperative Creature
+may contain several advisory Sparks under separate accounts, but one canonical
+controller serializes allocation, promotion, and external effects.
 
 ## Concurrency and crash behavior
 
@@ -226,8 +274,10 @@ behavior, suspension/resume preservation, returned/reconciled/context-closed
 separation, idempotent and unknown Homecoming reconciliation, separated
 proposal and activation series, source-owned target-bound deltas, cross-registry
 collision handling, Hearth Perch and Static Perch isolation, recipient-specific
-gloss delivery, sealed-page immutability, lawful tombstoning, and failure when
-the active version cannot be established.
+gloss delivery, sealed-page immutability, lawful tombstoning, Creature profile
+succession, physically isolated campaign arms, campaign-index noninterference,
+one canonical effect-admission and serialization path, and failure when the
+active version cannot be established.
 
 Ordered lineage preserves addressability. It does not manufacture memory, identity continuity, consciousness, consent, standing, permission, or authority.
 

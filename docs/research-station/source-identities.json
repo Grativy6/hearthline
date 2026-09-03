@@ -1,0 +1,273 @@
+{
+  "schema": "hearthline.research-station.sources.v1",
+  "recorded_date": "2026-09-02",
+  "status": "RESEARCH_CONTEXT_ONLY",
+  "steward": "Christopher D. Pang",
+  "source_text_is_authorization": false,
+  "shared_author_lineage_is_independent_corroboration": false,
+  "code_imported_or_executed_by_hearthline": false,
+  "sources": [
+    {
+      "source_id": "pal-v2.3",
+      "source_kind": "author_release",
+      "title": "PAL v2.3 — Primitive Axiom Layers",
+      "version": "2.3",
+      "publication_date": "2026-09-02",
+      "persistent_id": "https://doi.org/10.5281/zenodo.22240134",
+      "license": "CC-BY-4.0",
+      "hearthline_status": "CURRENT",
+      "bounded_use": "Mechanical trace, role-typed boundaries, declared work projections, exact checkpoint transport, immutable grant epochs, authority ceilings, residuals, and reopening.",
+      "authority_ceiling": "The five PAL faces retain separate roles. Registration and bounded software checks do not establish full conformance, truth, independent corroboration, adoption outside this draft, or external authority.",
+      "inspected_artifact_hash_domain": "local_file_bytes_as_inspected",
+      "inspected_artifacts": [
+        {
+          "filename": "PAL_v2.3_Full_Release_Package.zip",
+          "bytes": 39389175,
+          "sha256": "5b133741d43ece584caffab1285af8804bfac6699894e92e2e08436b3b337bf1",
+          "zenodo_md5": "56b648301da363fc41fa85fc45efdac9"
+        },
+        {
+          "filename": "PAL_v2.3_Mechanical_Structural_Spine.docx",
+          "sha256": "e9517b17278b72995f22469d825a62ad9a47d3a151089684f3d4c3ef96e4e9a2"
+        },
+        {
+          "filename": "PAL_v2.3-M_Mathematical_Realization_Atlas.docx",
+          "sha256": "c053292376363edd6fc743f0f2e31e3bb3850edc78ade3a289bbb07e7e8452c5"
+        },
+        {
+          "filename": "PAL_v2.3-L_Obligation_and_Decision_Ledger.docx",
+          "sha256": "694449304139c642c5112f9e41f3b41848a652fc7d12b9a60450bf5e776f704b"
+        },
+        {
+          "filename": "PAL_v2.3-T_Conformance_Tests.docx",
+          "sha256": "bf79d3a76ef71d6946704be551488bdfe2c062231f4a0c1a85bb51b203fe4b89"
+        },
+        {
+          "filename": "PAL_v2.3-C_Compatibility_Note.docx",
+          "sha256": "57bd5432c6a0a4474c781f918e60e1fcf3f1b80119bfdc317bf6c17bbbc80f07"
+        }
+      ]
+    },
+    {
+      "source_id": "brrrt-v2.0",
+      "source_kind": "public_review_preprint",
+      "title": "Boundary-Readable Trace and Absorber-Informed Closure",
+      "version": "2.0",
+      "publication_date": "2026-09-02",
+      "persistent_id": "https://doi.org/10.5281/zenodo.22261831",
+      "license": "CC-BY-4.0",
+      "hearthline_status": "BRANCH",
+      "bounded_use": "Typed transition tracking across release, retention, transformation, transport, readability, benchmark crossing, and atomic promotion boundaries.",
+      "authority_ceiling": "A reading is not a mechanism, readability is not decoding, and verification without an external grant is release-ready at most. BRRRT is not a physics proof, universal decay law, complete ontology, or authority engine.",
+      "artifact_identity_status": "RESOLVED_LIVE_RECORD_CANONICAL_MATCH",
+      "artifact_identity_resolution": "Live Zenodo metadata and a fresh download on 2026-09-02 report the separately deposited PDF at 1251146 bytes with SHA-256 f9e699ad4a8541506ecc6678c3296bdf4fbe4dd249a0dd6759c7fd0d22837e0a, matching the package-internal PDF and release SHA ledger.",
+      "live_record_updated": "2026-09-02T20:50:52.461828-04:00",
+      "inspected_artifact_hash_domain": "local_file_or_package_member_bytes_as_labeled",
+      "inspected_artifacts": [
+        {
+          "filename": "Boundary_Readable_Trace_and_Absorber_Informed_Closure_v2.0_BRRRT_Zenodo_Package.zip",
+          "bytes": 3441780,
+          "sha256": "162ed2b2478ca5bb824c82bf69b8c787054ed4d43be03d5d48aa803872e0a338",
+          "zenodo_md5": "100d2d4788ef2641214b21dc503bab10"
+        },
+        {
+          "filename": "Boundary_Readable_Trace_and_Absorber_Informed_Closure_v2.0_BRRRT.pdf",
+          "variant": "current_live_separately_deposited_file",
+          "bytes": 1251146,
+          "sha256": "f9e699ad4a8541506ecc6678c3296bdf4fbe4dd249a0dd6759c7fd0d22837e0a",
+          "zenodo_md5": "79462822b3895d2e02d0aff26279a8af"
+        },
+        {
+          "filename": "Boundary_Readable_Trace_and_Absorber_Informed_Closure_v2.0_BRRRT.pdf",
+          "variant": "release_package_internal_file",
+          "bytes": 1251146,
+          "sha256": "f9e699ad4a8541506ecc6678c3296bdf4fbe4dd249a0dd6759c7fd0d22837e0a",
+          "checksum_ledger_scope": "package_internal"
+        },
+        {
+          "filename": "Boundary_Readable_Trace_and_Absorber_Informed_Closure_v2.0_BRRRT.pdf",
+          "variant": "superseded_c2pa_wrapped_loose_file_observed_before_live_replacement",
+          "bytes": 1276294,
+          "sha256": "806d7cda4ffb186d21f7797917c99c22ff29452af12de36aa597ed37fe4d3236",
+          "historical_zenodo_md5": "a5a394137bad6386e2967206f6b70318",
+          "current_live_record": false
+        },
+        {
+          "filename": "Boundary_Readable_Trace_and_Absorber_Informed_Closure_v2.0_BRRRT.docx",
+          "sha256": "84c74bed8d710f9d3f7057b95e2dcc0c4067c56aa07a7869f8f71bbf298ac890",
+          "zenodo_md5": "f23b131f41089530fecdf192ec95bc5d"
+        }
+      ]
+    },
+    {
+      "source_id": "single-cut-transport-v0.2",
+      "source_kind": "author_manuscript_and_verification_bundle",
+      "title": "Single Cut Transport Lemma",
+      "version": "0.2",
+      "publication_date": "2026-09-01",
+      "persistent_id": "https://doi.org/10.5281/zenodo.22239108",
+      "license": "CC-BY-4.0",
+      "hearthline_status": "BRANCH",
+      "bounded_use": "Resolution-qualified asymmetry, finite ordered-pair fixtures, action-bit trace lift, exact checkpoint capsules, work-projected heartbeat stutter, and receipt-bounded re-entry.",
+      "authority_ceiling": "The finite fixtures do not prove arbitrary-finite correctness, practical sorting optimality, progress from heartbeat emission, external success, or authority from recoverability.",
+      "inspected_artifact_hash_domain": "local_file_bytes_as_inspected",
+      "inspected_artifacts": [
+        {
+          "filename": "Single_Cut_Transport_Lemma_v0.2.pdf",
+          "bytes": 1057853,
+          "sha256": "e4b038d4a5e0f638d400af8610fb91373be2a22ec7bebbdb41a4061f85574b57",
+          "zenodo_md5": "cca59379416ca3e136b0a17c84d4ef23"
+        },
+        {
+          "filename": "Single_Cut_Transport_Lemma_v0.2.docx",
+          "bytes": 962488,
+          "sha256": "e01c6b9969322660dc211d2f49cb5150a53f213c17656217dd20aae67fbfa434",
+          "zenodo_md5": "283c185138c573a06bfadf7661a81cc0"
+        },
+        {
+          "filename": "SCT_v0.2_verification_bundle.zip",
+          "bytes": 8710,
+          "sha256": "dbd4c1f9b916842522b842e3bc57084b02a95a923d68db562a996cd61adda4c8",
+          "zenodo_md5": "e0f07bcf402e6b7cb016b13e09ce2912"
+        }
+      ]
+    },
+    {
+      "source_id": "compactification-costs-v0.2",
+      "source_kind": "author_manuscript",
+      "title": "Compactification Costs: A Typed Framework for Extension, Boundary, Identification, and Ambiguity",
+      "version": "0.2",
+      "publication_date": "2026-09-01",
+      "persistent_id": "https://doi.org/10.5281/zenodo.22238012",
+      "license": "CC-BY-4.0",
+      "hearthline_status": "BRANCH",
+      "bounded_use": "Detector-relative lost distinctions, reachable-image factorization, decoder and totalization seams, extension ambiguity, refinement, side information, and typed representation costs.",
+      "authority_ceiling": "No universal scalar, canonical detector, automatic total decoder, physical compactification law, theory of consciousness, or authority follows from factorization.",
+      "inspected_artifact_hash_domain": "local_file_bytes_as_inspected",
+      "inspected_artifacts": [
+        {
+          "filename": "Compactification_Costs_v0.2.pdf",
+          "bytes": 1335698,
+          "sha256": "94c70d478111c27c46b826ab6e5c2eb24ecbb621bb52bd8ab1c9ac4943688994",
+          "zenodo_md5": "a0467eeb0f9ef5aa77c5a794f8fc4ef0"
+        },
+        {
+          "filename": "Compactification_Costs_v0.2.docx",
+          "bytes": 1278224,
+          "sha256": "3390f47f361c980e2d7e7a111b633118b6b51cb64a6f8ab1098465baa63eb554",
+          "zenodo_md5": "a3798cbdf20173f86844ee66222a6172"
+        }
+      ]
+    },
+    {
+      "source_id": "strongwiz-v3-prototype",
+      "source_kind": "software_design_prototype",
+      "title": "Strongwiz v3 campaign prototype",
+      "version": "0.4.0.dev0",
+      "inspection_date": "2026-09-02",
+      "repository_commit_date": "2026-09-02",
+      "persistent_id": "https://github.com/Grativy6/strongwiz/tree/edc88b80f872f766c22b3a050a7f6837d6e652d8",
+      "license": "CC-BY-4.0",
+      "hearthline_status": "EXPLORATORY",
+      "inspection_status": "PINNED_DESIGN_SOURCE",
+      "repository_commit": "edc88b80f872f766c22b3a050a7f6837d6e652d8",
+      "repository_tree": "18dd76355decdf8b1e98fff7dffeac222c0b3aa2",
+      "implementation_freeze_commit": "300fd0b9ae1183e582bb834e17ff02bf80189fd8",
+      "implementation_freeze_tree": "bb61230e0eacdaff42b8f9d6f2a7abf7b0efaf55",
+      "prototype_status": "PREPARED_NOT_RUN_NOT_PREREGISTERED",
+      "source_registry_ref": "055bfbef1e5b0191ef84e266f1c8f888c58def5428113d8b262f0baa8b95dd9a",
+      "source_registry_scope_residual": "The Strongwiz semantic registry reference identifies its own 14-entry source registry. It includes PAL v2.3 and an older Single Cut source, but not this intake's BRRRT v2.0, Single Cut v0.2 record, or Compactification Costs v0.2. Those works are not backdated into Strongwiz v3 development provenance.",
+      "version_identity_residual": "Package metadata at the inspected head declares 0.4.0.dev0 and pre-alpha status, while CITATION.cff still declares 0.2.0 and NOTICE.md still describes v0.2. This registry uses the package version and preserves the conflict rather than treating 0.4 as a tagged release.",
+      "distribution_scope_residual": "The reproducible wheel and source distribution contain the general Strongwiz kernel, not the repository-local calibration_003 harness. Installing the built package alone does not install or reproduce Calibration 003.",
+      "upstream_portability_residual": "Strongwiz's semantic source-registry reference is stable, but one receipt's raw registry-file SHA-256 is LF-Git-blob-specific while ordinary Windows checkout conversion changes the raw bytes. Current CI validates the semantic registry. The local README's exact-lock full-test recipe also omits the optional calibration dependencies that CI installs explicitly.",
+      "verification_evidence": {
+        "head_ci_run": "https://github.com/Grativy6/strongwiz/actions/runs/33696382045",
+        "head_ci_commit": "edc88b80f872f766c22b3a050a7f6837d6e652d8",
+        "head_ci_result": "SUCCESS",
+        "core_v3_tests_passed": 51,
+        "ubuntu_full_tests_passed": 449,
+        "windows_full_tests_passed": 449,
+        "claim_ceiling": "Commit-bound development verification only; not Calibration 003 execution, ARC evidence, or Scribe-effect evidence. Frozen implementation-receipt counts and current-head CI counts are separate apertures."
+      },
+      "bounded_use": "Conceptual design evidence for representation-only scribes, matched controls, reference-normalized ledger design, material-event heartbeats, exact restart boundaries, evidence-yield gate and curriculum design, and representation-cost requirements.",
+      "authority_ceiling": "No Strongwiz code is imported or executed by Hearthline. The prototype has not shown that a scribe improves compression, reasoning, action efficiency, or ARC progress, and no Hearthline component participated in its prior calibrations.",
+      "inspected_artifact_hash_domain": "git_blob_bytes_at_repository_commit",
+      "inspected_artifacts": [
+        {
+          "filename": "docs/calibrations/003-strongwiz-v3-pal23-scribe.md",
+          "sha256": "dffda989417f6245db32da3756426805e29f14b111cf60444e99cbfe1b87c712"
+        },
+        {
+          "filename": "docs/pal-v2.3-profile.md",
+          "sha256": "7a43a807262437ddeb55831045e75f309e853d2a4d21f9563fdc187b73a7388c"
+        },
+        {
+          "filename": "docs/scribe.md",
+          "sha256": "4d41c381da487c4a28076e5bf6943c9b821132f20b79c37b6ede66f704e1541e"
+        },
+        {
+          "filename": "docs/architecture.md",
+          "sha256": "ebbdbd05821e14552086dca44314c9d05304b2c5b1ed6624a8d7851110b759b7"
+        },
+        {
+          "filename": "docs/receipts/v0.4.0-dev-verification.json",
+          "sha256": "546370565a9cd6d460247b1ee3f53f0df22777ad4795398aa3848677ba93f6c1"
+        },
+        {
+          "filename": "docs/receipts/v0.4.0-dev-reproducible-build.json",
+          "sha256": "db6878167fa1a75549cc595b78273a14bd489049fe24557cdc4e00967ecf8ccd"
+        }
+      ]
+    },
+    {
+      "source_id": "gppr-v0.1",
+      "source_kind": "public_research_branch",
+      "title": "Golden Phase Prime Ribbons",
+      "version": "0.1",
+      "persistent_id": "https://doi.org/10.5281/zenodo.22225414",
+      "hearthline_status": "BRANCH",
+      "bounded_use": "Exact prime-valuation identity encoding, optional golden-angle routing, and separate canonical versus event receipt ribbons.",
+      "authority_ceiling": "No factoring advantage, finite-bit compression, universal optimizer, privileged geometry, ARC effect, or authority."
+    },
+    {
+      "source_id": "context-rhythm-v0.1",
+      "source_kind": "public_research_branch",
+      "title": "The Context Sets a Rhythm",
+      "version": "0.1",
+      "persistent_id": "https://doi.org/10.5281/zenodo.22214952",
+      "hearthline_status": "EXPLORATORY",
+      "bounded_use": "Replaceable cadence, refresh, intersection, and scheduler-choice vocabulary.",
+      "authority_ceiling": "No autonomous scheduler, proof of alignment, or verified runtime effect."
+    },
+    {
+      "source_id": "full-bandwidth-not-full-trace-v0.1",
+      "source_kind": "public_research_branch",
+      "title": "Full Bandwidth Is Not Full Trace: A PAL–FBT Synthesis",
+      "version": "0.1",
+      "persistent_id": "https://doi.org/10.5281/zenodo.22228162",
+      "hearthline_status": "BRANCH",
+      "bounded_use": "Separation of mutable latent feedback from typed trace and protected authority.",
+      "authority_ceiling": "No FBT code or weights are imported, and no causal trace-fidelity, ARC-performance, or safety result is claimed."
+    },
+    {
+      "source_id": "gold-v0.1",
+      "source_kind": "public_research_branch",
+      "title": "GOLD: Golden-Oriented Lens Diagram",
+      "version": "0.1",
+      "persistent_id": "https://doi.org/10.5281/zenodo.22236848",
+      "hearthline_status": "BRANCH",
+      "bounded_use": "The 1+5 common/comparison lens split, trace-bearing paths, angular residuals, cube-wheel fibers, and global defect accounting.",
+      "authority_ceiling": "No physical blueprint, consciousness result, universal geometry, PAL-canon change, or authority."
+    },
+    {
+      "source_id": "context-map-v1.0",
+      "source_kind": "public_research_branch",
+      "title": "The Context Draws a Map",
+      "version": "1.0",
+      "persistent_id": "https://doi.org/10.5281/zenodo.21831000",
+      "hearthline_status": "EXPLORATORY",
+      "bounded_use": "Local context maps, route distinctions, and reopening handles.",
+      "authority_ceiling": "A supplied context map is not independent evidence, complete world adequacy, experiential memory, or authority."
+    }
+  ]
+}
