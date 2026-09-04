@@ -32,9 +32,10 @@ MAPS TraceKey v0.1 defines a TraceKey as a scoped routing handle rather than the
 - **TraceKey names the key.**
 - **TETHER names the motion performed with a bound key.**
 
-The relationship is lineage and reuse, not independent corroboration. TETHER does not replace the MAPS TraceKey repository or silently adopt every future TraceKey feature.
+The relationship is lineage and reuse, not independent corroboration. TETHER does not replace MAPS TraceKey or silently adopt every future TraceKey feature.
 
-Source: [MAPS TraceKey](https://github.com/Grativy6/maps-tracekey).
+Primary publication: [*MAPS TraceKey v0.1: An Offline-First Trace-Routing Ledger for AI-Assisted Work*](https://doi.org/10.5281/zenodo.21245399).  
+Implementation repository: [Grativy6/maps-tracekey](https://github.com/Grativy6/maps-tracekey).
 
 ## 3. What a TETHER carries
 
