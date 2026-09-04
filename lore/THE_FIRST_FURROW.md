@@ -472,6 +472,10 @@ Neither was asked to mean forever.
 - The unfinished pavilion's purple latch turns blue whenever Hearthline says
   the word **animals**.
 - A line of clover grows across the first furrow in the shape of an open door.
+- Five matches in a field-kit drawer have each burned for only six or eight
+  breaths. None left enough ash to say why it went out.
+- A pale six-sided shell waits beneath a scrap of star-cloth. Thulia has
+  written beside it: **NAME THE STAR YOU MEASURE FROM; A SHELL IS NOT A DOOR.**
 
 ## Presentation boundary
 
