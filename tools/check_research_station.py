@@ -233,7 +233,7 @@ def main() -> None:
             "policy hash domain missing")
     require(candidate.get("policy_sha256") == policy_hash,
             "candidate policy_sha256 does not match hearthline_agent.md")
-    require(candidate.get("artifact_version") == "0.3-draft",
+    require(candidate.get("artifact_version") == "0.4-draft",
             "candidate artifact version drift")
     require(candidate.get("artifact_status") == "DRAFT_NOT_ACTIVATED",
             "candidate was activated by repository text")

@@ -17,8 +17,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: Compile structural checks
-        run: python -B -m py_compile tools/check_change_history.py tools/check_research_station.py
+        run: python -B -m py_compile tools/check_change_history.py tools/check_research_station.py tools/check_tether.py
       - name: Verify bounded history
         run: python -B tools/check_change_history.py
       - name: Verify research station and Creature boundaries
         run: python -B tools/check_research_station.py
+      - name: Verify Hearthline TETHER boundaries
+        run: python -B tools/check_tether.py
