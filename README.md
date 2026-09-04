@@ -2,11 +2,11 @@
 
 This repository is the public, versioned home for Hearthline's published branch instructions and provenance boundaries.
 
-The current artifact, [`hearthline_agent.md`](hearthline_agent.md), is the boundary-reviewed public **`0.3-draft` Moltbook branch instruction**. It integrates the current source-role map and context/provenance boundaries while remaining a proposal for review. It is **not activated** and grants no permission to read from, post to, or otherwise act on Moltbook or any other service.
+The current artifact, [`hearthline_agent.md`](hearthline_agent.md), is the boundary-reviewed public **`0.4-draft` Moltbook branch instruction**. It integrates the current source-role map and context/provenance boundaries while remaining a proposal for review. It is **not activated** and grants no permission to read from, post to, or otherwise act on Moltbook or any other service.
 
 ## Status
 
-- Version: `0.3-draft`
+- Version: `0.4-draft`
 - State: `DRAFT_NOT_ACTIVATED`
 - Default mode: `DRAFT_ONLY`
 - Author, operator, and steward: **Christopher D. Pang**
@@ -15,7 +15,7 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 
 ## Repository map
 
-- [`hearthline_agent.md`](hearthline_agent.md) — public `0.3-draft` branch instruction.
+- [`hearthline_agent.md`](hearthline_agent.md) — public `0.4-draft` branch instruction.
 - [`SOURCE_MAP.md`](SOURCE_MAP.md) — current, historical, exploratory, branch, and open source treatment.
 - [`candidate_manifest.json`](candidate_manifest.json) — normalized-text candidate envelope; same-branch consistency only, never an adoption or authenticity anchor.
 - [`BOUNDARY.md`](BOUNDARY.md) — the separation between public text, runtime state, and operator authority.
@@ -29,6 +29,7 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
 - [`docs/HEARTHLINE_CREATURES.md`](docs/HEARTHLINE_CREATURES.md) — manifest-bound, task-shaped bundles of separately governed Sparks, ledgers, Homes, and Thulia custody.
 - [`docs/HEARTHLINE_RESEARCH_STATION.md`](docs/HEARTHLINE_RESEARCH_STATION.md) — bounded public research context, inspected source identities, design extraction, and open provenance residuals.
+- [`docs/HEARTHLINE_TETHER.md`](docs/HEARTHLINE_TETHER.md) — carrier-neutral trace externalization, identity-bound handles, selective exact reopening, and unresolved-route discipline.
 - [`TRADEMARKS.md`](TRADEMARKS.md) — restrained name and source-identification guidance.
 - [`SECURITY.md`](SECURITY.md) — security scope and responsible reporting route.
 - [`CHANGELOG.md`](CHANGELOG.md) — bounded public change index and full-record routes.
@@ -97,6 +98,8 @@ the other's language.
 
 See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, [Hearthline Static](docs/HEARTHLINE_STATIC.md) for shorthand and reconstruction, [Thulia](docs/HEARTHLINE_THULIA.md) for the Owl Scribe and Bridge Gloss, [Paired Sparks and Homecoming](docs/HEARTHLINE_HOMECOMING.md) for return and pulse discipline, [Hearthline Firesides](docs/HEARTHLINE_FIRESIDES.md) for concurrent consultation and refresh, [Hearthline Ordered Lineage](docs/HEARTHLINE_ORDERED_LINEAGE.md) for numbering and non-overwrite rules, and [Hearthline Creatures](docs/HEARTHLINE_CREATURES.md) for bounded coordination formations.
 
+**TETHER** is Hearthline's carrier-neutral continuity technique: externalize recoverable trace, bind a compact identity/scope/status/residual/reopen handle, verify it later, and reopen only what the present task needs. It carries trace—not hidden model state, extra context capacity, access permission, or authority. An unresolved item without a reopening route is incomplete.
+
 ## Controlling references
 
 When Hearthline discusses Christopher's framework work, each source controls only its declared role:
@@ -153,19 +156,14 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000004 — Research Station and Creature successor**
+**HLP-000005 — TETHER continuity successor**
 
-- Advanced the public draft to PAL v2.3 without rewriting PAL v2.2 history or
-  activating a runtime.
-- Registered BRRRT v2.0 and Single Cut v0.2, reaffirmed Compactification Costs
-  v0.2, and pinned the prepared, unrun Strongwiz v3 design source.
-- Added manifest-bound Creatures and strengthened Sparks, Static, Ordered
-  Lineage, and Thulia custody boundaries.
-- Added open objective windows for separately scoped, out-of-order Spark
-  Homecomings without treating heartbeat as a keepalive or scheduler.
-- Confirmed the repaired BRRRT loose PDF matches its package and ledger while
-  retaining the superseded wrapper identity as audit history.
+- Advanced the public candidate to `0.4-draft` without activation or authority.
+- Added carrier-neutral TETHER: externalize, bind, retrieve, verify, and selectively reopen exact or honestly bounded trace.
+- Required every material unresolved item to retain a concrete reopening route.
+- Separated retrieval failure, source loss, stale identity, insufficient scope, and unresolved content.
+- Added fail-closed integration checks and rebound the candidate policy hash.
 
-[Full change record](docs/changelog/2026-09-02-hlp-000004-research-station-creatures.md) ·
+[Full change record](docs/changelog/2026-09-03-hlp-000005-tether-continuity.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
