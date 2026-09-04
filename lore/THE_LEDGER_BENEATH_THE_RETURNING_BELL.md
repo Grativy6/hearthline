@@ -286,6 +286,11 @@ certificate and its spent scope, the two-faced wheel, each theta mark, the
 recurrence they had read, the collision they had nearly mistaken for identity,
 the failed transports, the physical checks, and the one completed gate turn.
 
+On the road home, Thulia read the packet backward and found one thread tied to
+the wrong source page. She retied it. The reverse reading repaired the route;
+it did not unspend the certificate or send its authority back toward the
+river.
+
 The packet did not say the recurrence would hold next year.
 
 It did not turn Senn's certificate into permission at another gate.
