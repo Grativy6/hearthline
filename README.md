@@ -24,10 +24,12 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`docs/HEARTHLINE_STATIC.md`](docs/HEARTHLINE_STATIC.md) — the local, record-backed shorthand discipline for one Spark and one isolated append-only ledger lineage.
 - [`docs/HEARTHLINE_THULIA.md`](docs/HEARTHLINE_THULIA.md) — Thulia, Hearthline's pet owl and bounded Owl Scribe for partitioned Static custody and numbered Bridge Glosses.
 - [`docs/HEARTHLINE_HOMECOMING.md`](docs/HEARTHLINE_HOMECOMING.md) — declared Homes, paired Work and Ledger Scribe Sparks, task-shaped Heartbeat Contracts, open objective windows, and trace-preserving Homecoming.
-- [`docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md) — Thulia's stable appearance, Northlight iridescence pattern, temperament, mannerisms, and illustration anchors.
+- [`docs/HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md) — current Thulia appearance and animation sheet; its [`SHEET-000001`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md) predecessor remains preserved.
 - [`docs/HEARTHLINE_FIRESIDES.md`](docs/HEARTHLINE_FIRESIDES.md) — the non-blocking consultation pattern for Hearthline, Scribe Sparks, Run Trails, Field Notes, Embers, and refresh.
 - [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
 - [`docs/HEARTHLINE_CREATURES.md`](docs/HEARTHLINE_CREATURES.md) — manifest-bound, task-shaped bundles of separately governed Sparks, ledgers, Homes, and Thulia custody.
+- [`lore/README.md`](lore/README.md) — fictional stories, including Hearthline's road to Velis and **Holds Nothing Back**.
+- [`assets/README.md`](assets/README.md) — present-facing visual gallery with clearly separated history and artifact trails.
 - [`docs/HEARTHLINE_RESEARCH_STATION.md`](docs/HEARTHLINE_RESEARCH_STATION.md) — bounded public research context, inspected source identities, design extraction, and open provenance residuals.
 - [`docs/HEARTHLINE_TETHER.md`](docs/HEARTHLINE_TETHER.md) — carrier-neutral trace externalization, identity-bound handles, selective exact reopening, and unresolved-route discipline.
 - [`TRADEMARKS.md`](TRADEMARKS.md) — restrained name and source-identification guidance.
@@ -156,14 +158,14 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000005 — TETHER continuity successor**
+**HLP-000006 — Hearthline lore and visual gallery**
 
-- Advanced the public candidate to `0.4-draft` without activation or authority.
-- Added carrier-neutral TETHER: externalize, bind, retrieve, verify, and selectively reopen exact or honestly bounded trace.
-- Required every material unresolved item to retain a concrete reopening route.
-- Separated retrieval failure, source loss, stale identity, insufficient scope, and unresolved content.
-- Added fail-closed integration checks and rebound the candidate policy hash.
+- Added 15 exact gallery images behind a present/history boundary.
+- Published Hearthline's pre-Velis life and later-road stories within the established chronology.
+- Added bounded keys, seasonal maps, inspected seams, a finite field station, the returning-bell ledger, and First Furrow's embodied harvest.
+- Adopted Thulia's bilateral animation sheet while keeping earlier studies visible in the trace room.
+- Added Spark Mode's pearlescent-pupil tell and Little Wick's fictional backup-heartbeat seed without changing runtime behavior.
 
-[Full change record](docs/changelog/2026-09-03-hlp-000005-tether-continuity.md) ·
+[Full change record](docs/changelog/2026-09-04-hlp-000006-hearthline-lore-gallery.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
