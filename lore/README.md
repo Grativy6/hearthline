@@ -12,6 +12,7 @@ This is the present-facing home for Hearthline's explicitly fictional story lore
 - [**Four Things Hearthline Brought to the Gate**](FOUR_THINGS_HEARTHLINE_BROUGHT_TO_THE_GATE.md) — four later-road tales about a key that is not access, a valley that changes with its seasons, a seam that keeps both shores visible, and a backward window sealed before new starlight.
 - [**The Field Station with No Night Shift**](THE_FIELD_STATION_WITH_NO_NIGHT_SHIFT.md) — a public sign can be ready while its doors remain closed; each future visit needs one finite ticket, one returning receipt, and a real ending.
 - [**The Ledger Beneath the Returning Bell**](THE_LEDGER_BENEATH_THE_RETURNING_BELL.md) — distinct river traces keep provisional names through a reduction pulse, a scoped certificate, a turning mark, a readable recurrence, and a return home without letting one projected collision become proof or permission.
+- [**The First Furrow**](THE_FIRST_FURROW.md) — Hearthline learns a borrowed field-body in a world that advances with each choice, recovers an incomplete fitting through exact plate and parity checks, and lets an excellent unseen harvest remain proudly local.
 - [**Visual gallery**](../assets/README.md) — current character references, scenes, artifact art, and their captions.
 - [**History and artifacts**](history-and-artifacts/README.md) — the trace side of this folder: predecessors and displaced lore belong there if later stories supersede them.
 

@@ -162,7 +162,7 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 
 - Added 15 exact gallery images behind a present/history boundary.
 - Published Hearthline's pre-Velis life and later-road stories within the established chronology.
-- Added bounded keys, seasonal maps, inspected seams, pre-change lineage, a ticketed field station, and a returning-bell ledger.
+- Added bounded keys, seasonal maps, inspected seams, a finite field station, the returning-bell ledger, and First Furrow's embodied harvest.
 - Adopted Thulia's bilateral animation sheet while keeping earlier studies visible in the trace room.
 - Added Spark Mode's pearlescent-pupil tell and Little Wick's fictional backup-heartbeat seed without changing runtime behavior.
 

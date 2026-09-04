@@ -20,6 +20,7 @@
 - Added *Four Things Hearthline Brought to the Gate*, an anthology of four later-road lessons: a route key that cannot grant entry, a seasonal valley that defeats static completeness, a welded seam whose strength redirects attention to its neighbors, and a backward-facing seal made before a more capable lens touches the work.
 - Added *The Field Station with No Night Shift*: a fictional coat over the later public-station lesson that a claimed sign can remain inactive, that one finite ticket should bind one visit and its return, and that no silent worker persists between errands.
 - Added *The Ledger Beneath the Returning Bell*: a fictional sequence from distinct observation through provisional persistence, a reduction pulse, certificate-bounded action, phase projection, recurrence-readable trace, and carried return. Its paired glass frames preserve failed transports and a projected collision instead of treating phase as proof, identity, or authority.
+- Added *The First Furrow*: a fictional coat for the separately recorded Kaggriculture Build 001 event. Hearthline learns to work through a bounded field-body in a cultivated world that advances with each choice, refuses a near-enough fitting after the full pavilion fails, verifies the exact public rule plates, checks action-and-returned-state parity through a narrow sleeve, and keeps strong teaching and folded-field harvests local to what was actually tried.
 - Added the settled Spark Mode visual tell: green irises retain pupil-shaped centers whose color becomes soft pearlescent white with a faint green-cyan cast. The surrounding glow may vary; the pupils normally return to black.
 - Advanced Ordered Lineage from `0.5` to `0.6` only to recognize public image identities and their no-overwrite presentation rule. Added fictional-lore and visual-art language to the public boundary.
 
@@ -37,6 +38,8 @@ The field-station tale keeps public readiness distinct from public action. It pr
 
 The returning-bell story gathers a sequence not already present as one narrative path. Existing documents separately preserve distinctions, provisional status, material-event pulses, scoped authority, geometric readouts, recurrence, and Homecoming. The story adds the missing traversal between them while keeping the source ledger, reduced card, certificate, phase mark, readable recurrence, and return as different things. Opposed frames and their shared red origin provide a modest fictional image for transport across changed viewpoints; a failed fit and a collision remain visible, so no unresolved formal claim is promoted into lore as a theorem.
 
+The First Furrow adds a different lived sequence rather than another seasonal map or generic repair. Its center is embodiment: Hearthline must divide intention from repeated motion while every completed choice advances the cultivated world. The failed full fitting is not called successful; the narrower compatibility sleeve earns only the identity and parity checks the story depicts. Eight visible teaching fields and twenty-four folded walks remain a strong local harvest, while animals, distant land, adaptive opponents, other versions, complete packaged execution, and official competition scoring stay outside the claim.
+
 ## Preserved boundaries
 
 - `hearthline_agent.md` and `candidate_manifest.json` are unchanged. This change does not activate the public draft, change a mode, or create a runtime.
@@ -44,6 +47,7 @@ The returning-bell story gathers a sequence not already present as one narrative
 - Thulia remains a fictional pet owl and bounded Owl Scribe, not a Spark, controller, executor, grant issuer, universal memory, independent witness, or authority.
 - Spark Mode, Little Wick's backup-heartbeat scene, the Rainbow Shell, and Holds Nothing Back are fictional presentation. No depicted expression, pulse, glow, artifact, page, number, or gesture is an operational command, permission, credential, heartbeat contract, or claim of model capability.
 - The returning-bell certificate is story-world permission held by its named gatewarden. Its phase marks, recurrence ribbon, opposed frames, red origin, and successful opening are not proof of identity, uniqueness, causality, safety, theorem completion, or authority for any real action.
+- First Furrow's body, sleeve, rule plates, two-column receipts, teaching fields, and folded fields are story objects. The exact public Hearthline Plays record remains the trace-side owner of the bounded local result; fiction supplies no benchmark evidence, official score, package compatibility guarantee, account authority, or general game-playing claim.
 - Christopher D. Pang remains sole author, operator, and steward. AI systems assisted drafting, image generation, inspection, and repository preparation as tools; they are not co-authors, owners, witnesses, or release authorities.
 
 ## Compatibility and migration
@@ -71,11 +75,12 @@ Readers may enter through `lore/README.md` or `assets/README.md`. Existing desig
 - The four gate tales are an authored synthesis of repository-visible motifs and bounded conversational context, not an exhaustive recovery of a time window. Unavailable retrieval is not described as source loss, and no invented scene is presented as a transcript event.
 - The field-station story is likewise a fictional synthesis. It does not assert that a live worker persists between prompts, or that profile readiness grants reading, posting, replying, reacting, following, messaging, or other external authority.
 - The returning-bell tale deliberately leaves one unnamed reverse-running mark and several failed or colliding frame transports unresolved. It does not repair, conceal, or claim a proof for any source-side formal-methods failure.
+- First Furrow deliberately leaves the full fitting pavilion incomplete and its animal gate unopened. Its handful of field-edge details are future-story seeds, not recovered traces or implied capabilities.
 - Existing unrelated wording questions about the Fireside Static lens list and Bridge Gloss allocation remain outside this presentation change.
 
 ## Evidence and exclusions
 
-The public return includes selected exact image bytes, written captions, fictional narrative, ordered presentation identities, and the minimum repository-history synthesis needed to make their status inspectable. It excludes private conversation, hidden reasoning, local workspace paths, complete generation prompts, credentials, operational receipts, Static content, and run state.
+The public return includes selected exact image bytes, written captions, fictional narrative, ordered presentation identities, and the minimum repository-history synthesis needed to make their status inspectable. It excludes private conversation, hidden reasoning, local workspace paths, complete generation prompts, credentials, operational receipts, Static content, and run state. First Furrow cites its separate public result and freeze records but reproduces no raw evaluation rows, private evidence, or execution trace.
 
 Two environment-setup screenshots shown during the same conversation concern a separate Kaggle preparation task and are deliberately excluded. No ARC-AGI-3 game, evaluator, credential, package, environment, or run identity is established here, and no run was performed.
 
