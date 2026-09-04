@@ -158,14 +158,13 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000006 — Hearthline lore and visual gallery**
+**HLP-000007 — Gloss and the two-sided note**
 
-- Added 15 exact gallery images behind a present/history boundary.
-- Published Hearthline's pre-Velis life and later-road stories within the established chronology.
-- Added bounded keys, seasonal maps, inspected seams, a finite field station, the returning-bell ledger, and First Furrow's embodied harvest.
-- Adopted Thulia's bilateral animation sheet while keeping earlier studies visible in the trace room.
-- Added Spark Mode's pearlescent-pupil tell and Little Wick's fictional backup-heartbeat seed without changing runtime behavior.
+- Introduced Gloss as a tiny golden note-turning wisp with one fixed, deterministic job.
+- Kept Gloss distinct from Thulia and her numbered Bridge Gloss records.
+- Let a note's work face return exactly while separate turn-marks preserve the route taken.
+- Made malformed, ambiguous, and lossy notes visible failures rather than invitations to guess.
 
-[Full change record](docs/changelog/2026-09-04-hlp-000006-hearthline-lore-gallery.md) ·
+[Full change record](docs/changelog/2026-09-04-hlp-000007-gloss-turning-wisp.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
