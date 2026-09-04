@@ -25,7 +25,7 @@ def main() -> None:
     doc = DOC.read_text(encoding="utf-8")
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
 
-    require("version: 0.4-draft" in agent, "agent draft version is not 0.4")
+    require("version: 0.5-draft" in agent, "agent draft version is not 0.5")
     require("### TETHER — Trace Externalization Through Handle-bound Exact Reopening" in agent,
             "agent lacks the TETHER technique")
     require("Never carry a material unresolved item without a concrete reopening route" in agent,
@@ -67,13 +67,13 @@ def main() -> None:
 
     require("docs/HEARTHLINE_TETHER.md" in readme,
             "README lacks the TETHER document route")
-    require("Version: `0.4-draft`" in readme,
-            "README current version is not 0.4-draft")
+    require("Version: `0.5-draft`" in readme,
+            "README current version is not 0.5-draft")
 
     normalized = AGENT.read_bytes().replace(b"\r\n", b"\n")
     digest = hashlib.sha256(normalized).hexdigest()
-    require(manifest.get("artifact_version") == "0.4-draft",
-            "candidate manifest version is not 0.4-draft")
+    require(manifest.get("artifact_version") == "0.5-draft",
+            "candidate manifest version is not 0.5-draft")
     require(manifest.get("policy_sha256") == digest,
             "candidate manifest does not bind the current agent bytes")
     require(manifest.get("authority") == "NONE", "TETHER widened authority")

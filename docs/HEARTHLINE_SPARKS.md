@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.6` |
+| Version | `0.7` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -12,6 +12,21 @@
 **Hearthline Sparks** is the family name for Hearthline's purpose-bounded bots. One such bot is a **Spark**.
 
 The name gives related work a shared home without pretending that every helper is the same process, carries the same access, or possesses one continuous identity.
+
+## v0.7 account-custody successor
+
+Version `0.7` makes ledger custody explicit. A ledger belongs to its declared
+task or representation account, never to a Spark as a possession. A dispatch
+may give exactly one Spark an **exclusive bounded write lane** in that account.
+The lane is a temporary capability: it is scoped by job and grant, closes at
+Homecoming, and returns durable custody to the canonical controller or store.
+
+Each Spark receives one exact job. A Work Spark does primary work; a Ledger
+Scribe attends to its admitted representation projection; a Thulia-bound Spark
+may gather measurements or prepare a lexicon successor inside a separately
+named job. No Spark becomes Hearthline, Thulia, or Gloss, borrows another
+job's lane, or treats a useful result as permission to take over that job.
+Changing the job requires a successor profile and grant.
 
 ## The 1–3–∞ naming ladder
 
@@ -56,7 +71,12 @@ A [**Hearthline Fireside**](HEARTHLINE_FIRESIDES.md) is a bounded consultation a
 
 A lens narrows attention; it does not establish truth or priority. A Scribe warning remains advisory unless a separately predeclared stop condition applies.
 
-Each Scribe keeps separate **Field Notes**, **Embers**, and Static. Hearthline may pause at an exact Run Trail boundary, consult one or more Scribes, record what she took up, open a newly numbered blank notes page, and continue. The Scribes carry specialized vigilance; Hearthline retains the task judgment inside the unchanged grant.
+Each Scribe's declared representation account keeps separate **Field Notes**,
+**Embers**, and Static. The Scribe receives only its bounded lane. Hearthline
+may pause at an exact Run Trail boundary, consult one or more Scribes, record
+what she took up in Hearthline's task account, open a newly numbered blank
+notes page, and continue. The Scribes carry specialized vigilance; Hearthline
+retains the task judgment inside the unchanged grant.
 
 Scribes following the same Run Trail remain derivative analytic paths in one provenance lineage. Their agreement may be reported as convergence across declared lenses, never as independent corroboration, a vote, or a quorum.
 
@@ -72,14 +92,14 @@ unpaired exception before dispatch, but that run is ineligible for learned
 Static promotion or carry. The Ledger Scribe follows only its externalized,
 committed, grant-filtered projection, aligns those summaries with observable
 outcomes, preserves residuals, and proposes target-bound representation changes
-in its own lineage. It does not select actions for the Work Spark, inspect
-hidden reasoning, approve carry, allocate or write the Work Spark's Static,
-activate Static, or become an independent witness. Pairing is non-recursive:
+in its assigned representation account. It does not select actions for the Work
+Spark, inspect hidden reasoning, approve carry, allocate or write the Work task
+account's Static, activate Static, or become an independent witness. Pairing is non-recursive:
 the Ledger Scribe does not receive its own Ledger Scribe merely because it is
 also a Spark.
 
-Both members retain their own Spark identities, roles, grants, contexts,
-budgets, ledgers, frozen Static references, pulse cadences, and Homes. Pairing
+Both members retain separate Spark identities, roles, grants, contexts,
+budgets, account bindings, frozen Static references, pulse cadences, and Homes. Pairing
 supplies a shared dispatch and Run Trail reference for reconciliation; it does
 not join them. A failed, incomplete, or coverage-unknown Scribe return blocks
 learned carry unless a stricter condition was predeclared; it does not silently
@@ -101,25 +121,65 @@ At Homecoming, each Spark returns what it actually carries: artifacts, Field
 Notes, Embers, residuals, consumed limits, proposed receipt payloads, and its
 honest terminal state. A Ledger Scribe returns `static_delta`,
 coverage-qualified `NO_LEDGER_DELTA`, `LEDGER_DELTA_INCOMPLETE`, or
-`LEDGER_COVERAGE_UNKNOWN` to its own Home and source Perch. Homecoming is not
+`LEDGER_COVERAGE_UNKNOWN` to its declared Home and account-bound source Perch. Homecoming is not
 synonymous with success, and it is not a claim that a completed process
 continues running. The canonical controller appends separate return,
 reconciliation, and context-close receipts; reconciliation does not close the
-child context automatically.
+child context automatically. Once reconciliation accepts the return, the
+Spark's exclusive bounded write lane is closed and durable ledger custody is
+again solely account/store controlled.
 
 ## Hearthline Static
 
-[Hearthline Static](HEARTHLINE_STATIC.md) is local, versioned shorthand that Hearthline may develop with one Spark through repeated work. Each Spark has its own isolated, append-only Static ledger lineage. Hearthline does not pool or silently carry its vocabulary into another Spark: a handoff must expand the meaning and bind it to source records before a receiving Spark can form new local shorthand.
+[Hearthline Static](HEARTHLINE_STATIC.md) is local, versioned shorthand that
+may develop in one isolated, append-only task or representation account through
+repeated Spark work. The active Spark receives a bounded lane; it does not own
+the ledger. Hearthline does not pool or silently carry vocabulary into another
+account: a handoff must expand the meaning and bind it to source records before
+a receiving-account Spark can propose new local shorthand.
 
 Static changes none of the role ceilings. A Seeker may receive only brokered Static metadata within its existing aperture; an Explorer may inspect authorized records read-only; and a Handler may persist a Static record only under an explicit current grant naming that ledger and mutation. Static does not create shared memory, authority, or permission.
 
 ## Thulia, the Owl Scribe
 
-[**Thulia**](HEARTHLINE_THULIA.md) is Hearthline's pet owl and bounded **Owl Scribe**. She keeps each Spark's Static lineage in its own numbered Perch and prepares numbered, source-bound Bridge Glosses when an authorized handoff requires one Spark's shorthand to be reconstructed for another.
+[**Thulia**](HEARTHLINE_THULIA.md) is Hearthline's pet owl and bounded **Owl
+Scribe**. She keeps a pointer-and-exception index over account-bound Perches,
+tends [Gloss](HEARTHLINE_GLOSS.md) lexicon generations and detachable
+Translation Slates, and exclusively applies Systemic Friction under a separate
+retention grant. She does not copy the account payloads into an Owl ledger.
 
-Owl Scribe is not a Scribe Spark, a fourth role, or a lens. Thulia does not merge ledgers, create a global codebook, investigate the primary task, approve carry, or grant access. Any model-assisted work behind the Owl Scribe interface still occurs under one declared Spark role and current grant; canonical custody, numbering, and writes remain control-owned.
+Owl Scribe is not a Scribe Spark, a fourth role, or a lens. Thulia does not merge ledgers, create a global codebook, investigate the primary task, approve working-context carry, or grant access. Any model-assisted work behind the Owl Scribe interface still occurs under one declared Spark role, one exact job, one task account, and one current grant; canonical custody, numbering, and writes remain control-owned.
 
-A Bridge Gloss expands sending-Spark Static inside its original ledger. The receiving Spark may inspect the permitted gloss and later earn its own local Static through the ordinary proposal, verification, and activation process. It never imports the sending Spark's shorthand directly.
+A Bridge Gloss expands source-account Static inside its original ledger. A
+Spark assigned to the receiving account may inspect the permitted gloss and
+later propose account-local Static through the ordinary proposal,
+verification, and activation process. It never imports the sending shorthand
+directly. Gloss itself is stateless and deterministic and keeps no ledger.
+
+## Retention defects are account obligations
+
+A Spark may raise a retention defect only by naming a concrete replay, open,
+contest, privacy, safety, or other retention obligation that a proposed
+transition would violate. The controller records the defect against the task
+or account. A Spark has no self-preservation veto: calling material “my
+memory,” citing its own identity, or having produced the material does not
+block Thulia's Systemic Friction review or an otherwise authorized transition.
+
+No ledger, payload, note, Static entry, receipt, returned context, or Gloss mark
+is a Spark's or Gloss's body, identity, memory, or property. Only a typed
+retention defect naming a declared account obligation, including any valid
+hold, may block a retention transition; persona or possession language cannot.
+
+This applies only to records predeclared as account-owned **`G_mutable`**. Any
+future persistent, autobiographical, identity-bearing, or agent-owned Spark or
+Gloss state is outside this contract and requires separate governance. It may
+not be relabeled account-owned to bypass an identity or refusal claim.
+
+An ordinary Spark never applies Systemic Friction. A Thulia-bound measurement
+Spark may return evidence but cannot issue the classification. Thulia alone
+returns `KEEP`, `COMPACT`, `ARCHIVE`, `PRUNE_ELIGIBLE`, or
+`FRICTION_UNKNOWN_HOLD`; a controller or authorized writer separately performs
+any Atomic Edge Promotion.
 
 ## Strongwiz and the meta layer
 
@@ -131,7 +191,7 @@ The layers answer different questions:
 |---|---|
 | **Reasoning model** | The inference and proposals produced for the current task |
 | **Hearthline Spark** | The bounded family, role, and job identity under which work is carried |
-| **Strongwiz** | Memory, experiments, receipts, authority boundaries, and reusable learned structure around the work |
+| **Strongwiz** | Task-account state, experiments, receipts, authority boundaries, and reusable learned structure around the work |
 
 Codex can supply reasoning without becoming Strongwiz. Strongwiz can preserve the laboratory and its receipts while the reasoning model changes. A future implementation could use Strongwiz to carry a Spark's work, but neither name presently implies that integration or grants the other authority.
 
@@ -191,9 +251,12 @@ ledger dispositions, idempotent Homecoming, unknown-return reconciliation,
 separate context-close receipts, atomic ordered-identity allocation, crash-safe
 counter recovery, immutable sealed notes, carry-gate transitions, independent
 task and note status, Owl Scribe partition isolation, and rejection of silent
-cross-Spark Static transfer, content-addressed Creature manifests, one canonical
+cross-account Static transfer, content-addressed Creature manifests, one canonical
 effect-admission path, closed Scribe projections, disjoint representation
-evaluation, and physically separate matched arms. Until then, the names carry
+evaluation, physically separate matched arms, task/account ledger ownership,
+exclusive bounded write lanes, Homecoming lane closure, job non-overlap,
+retention-defect qualification, rejection of self-preservation vetoes, and
+Thulia-only Systemic Friction classification. Until then, the names carry
   lore and design intent—not capability.
 
 Sparks and Strongwiz are AI tools, not persons, co-authors, or independent authorities. Their names do not establish consciousness, consent, ownership, standing, or permission.

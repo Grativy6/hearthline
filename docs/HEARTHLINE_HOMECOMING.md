@@ -4,10 +4,26 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.4` |
+| Version | `0.5` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
+
+## v0.5 account-custody successor
+
+Version `0.5` distinguishes a Spark's temporary work lane from durable ledger
+custody. Every ledger belongs to its declared task, representation, or
+translation account. A dispatch may grant one Spark an exclusive
+bounded write lane; reconciliation closes that lane and returns custody to the
+canonical controller or store. The Spark may report a retention defect tied to
+a concrete replay or open obligation, but it has no self-preservation veto over
+account-owned records.
+
+The successor also keeps Thulia, Gloss, and Hearthline distinct. Thulia indexes
+and routes custody and alone applies Systemic Friction under its separate grant;
+[Gloss](HEARTHLINE_GLOSS.md) performs stateless deterministic turns through a
+detachable translation-account slate; Hearthline remains the primary
+orchestrator and records received offers in its task account.
 
 ## v0.4 open-objective-window successor
 
@@ -107,12 +123,12 @@ against the dispatch-pinned Home Record. It must not substitute a latest or
 actual ordered authorized reroute and revocation chain evaluated at return; the
 immutable Home Record is not rewritten with those later facts.
 
-Every dispatched Spark carries its own exact `home_ref` naming the full ordered
+Every dispatched Spark carries an exact `home_ref` naming the full ordered
 Home Record, not a mutable label such as “current,” “parent,” or “where this
 started.”
 
 Shared infrastructure does not create a shared Home. Two Sparks returning to
-one coordinator retain separate identities, ledgers, grants, Home Records, and
+one coordinator retain separate identities, account ledgers, grants, Home Records, and
 Homecoming record series.
 
 ## Paired dispatch
@@ -122,7 +138,7 @@ lineage:
 
 | Spark | Task center | Does not become |
 |---|---|---|
-| **Work Spark** | Observes, proposes, builds, checks, or otherwise carries the primary bounded job | Its own ledger authority or an unrestricted narrator of its work |
+| **Work Spark** | Observes, proposes, builds, checks, or otherwise carries the primary bounded job through one exclusive bounded task-account lane | Ledger ownership, another job's lane, or an unrestricted narration of its work |
 | **Ledger Scribe Spark** | Follows only the committed projection it is granted, aligns externalized, committed, grant-filtered summaries with observable terminal-state data, preserves unmatched distinctions, and proposes candidate representation changes | Another action selector, hidden-reasoning reader, independent witness, carry approver, or Static activator |
 
 **Ledger Scribe** is a job, not a fourth Spark role. Each member of the pair is
@@ -142,9 +158,9 @@ terminal-state data, and source projections named in its grant. It does not rece
 claim hidden chain-of-thought, private reasoning, omitted context, or authority
 merely because it travels beside the Work Spark.
 
-The pair also binds two separate frozen Static references: one for the Work
-Spark and one for the Ledger Scribe. Neither Spark writes, versions, or silently
-adopts the other's Static.
+The pair also binds two separate frozen Static references: one in the Work task
+account and one in the Ledger Scribe representation account. Neither Spark
+writes, versions, or silently adopts the other account's Static.
 
 The Work Spark may finish when its own task boundary is reached even if the
 Ledger Scribe is incomplete. The Scribe may receive a predeclared bounded grace
@@ -258,17 +274,19 @@ not a claim that Hearthline or this workspace has implemented or passed it.
 
 ## Static comes home
 
-[Hearthline Static](HEARTHLINE_STATIC.md) remains source-local throughout a
-paired dispatch. The Work Spark's active Static version `v_w` and the Ledger
-Scribe Spark's active Static version `v_s` are separately bound and frozen for
-the declared run unless their own predeclared adaptive-Static grants permit a
-separately verified and activated revision.
+[Hearthline Static](HEARTHLINE_STATIC.md) remains source-account-local
+throughout a paired dispatch. The Work task account's active Static version
+`v_w` and the Ledger Scribe representation account's active Static version
+`v_s` are separately bound and frozen for the declared run unless their
+predeclared adaptive-Static grants permit a separately verified and activated
+revision.
 
 The Ledger Scribe preserves byte-exact canonical material only relative to the
 externalized, committed, grant-filtered projection it actually received. Source
 gaps and declared omissions remain explicit. From that projection it may create
-a target-bound `static_delta` Ember in its own Scribe lineage. It does not build,
-allocate, or return a Work Spark Static version `v_{n+1}`, and repetition by the
+a target-bound `static_delta` Ember in its assigned representation-account
+lineage. It does not build, allocate, or return a Work-account Static version
+`v_{n+1}`, and repetition by the
 Work Spark is not independent evidence.
 
 The representation return uses one typed disposition:
@@ -285,24 +303,27 @@ At Homecoming:
 1. the Work Spark returns its artifact, proposed task-receipt payload,
    unresolved obligations, and actual terminal state;
 2. the Ledger Scribe returns its coverage watermark, Field Notes, one typed
-   representation disposition, negative constraints, and residuals to its own
-   Home and source Perch;
-3. the Work Spark's Static returns unchanged to its own source Perch, while any
-   Scribe-authored target-bound delta remains in the Scribe lineage;
+   representation disposition, negative constraints, and residuals to its
+   declared Home and representation-account source Perch;
+3. the Work task account's Static returns unchanged to that account's source
+   Perch, while any Scribe-authored target-bound delta remains in the assigned
+   representation account;
 4. Thulia may route a permitted reconstruction through the direction-bound
    carry path to the target Perch's proposal intake, never directly into the
    target ledger;
 5. an authorized reviewer may test exact round-trip reconstruction and decide
    what is eligible for bounded carry; and
-6. only the target ledger's authorized writer may then allocate, append, and
-   separately activate its own successor Static version for later work.
+6. only the target account's authorized writer may then allocate, append, and
+   separately activate a successor Static version for later work; and
+7. reconciliation closes both exclusive bounded Spark write lanes and returns
+   durable ledger custody to their canonical account stores.
 
 No candidate Static floats free after the task. Scribe-authored artifacts and
-residuals return to the Scribe's source-local ledger and Perch. A target-bound
-delta retains that Scribe lineage until a separately authorized, direction-bound
+residuals return to the assigned representation-account ledger and Perch. A target-bound
+delta retains that account lineage until a separately authorized, direction-bound
 carry and admission creates a new target-local record with its provenance. A
 rejected, incomplete, or ambiguous proposal retains its ordered identity and
-disposition. A later Spark receives only material that passed its own carry,
+disposition. A later Spark receives only material that passed the account's carry,
 admission, activation, and load route.
 
 ## Thulia's Hearth Perch
@@ -315,7 +336,7 @@ records their Homes and return routes, and preserves the representation-side
 handoff.
 
 Thulia also has a Home: her **Hearth Perch**, the declared return boundary for
-her own Owl Scribe work. It is separate from every Spark-local Static Perch. A
+bounded Owl Scribe work. It is separate from every account-local Static Perch. A
 Bridge Gloss, Home map, or Scribe return may pass through her bounded custody,
 but its content remains attributed and bound to its source lineage and governed
 by its named audience and grant.
@@ -328,9 +349,16 @@ does not attest arrival or closure, keep an extra pooled copy, make a global
 codebook, approve carry, activate Static, or turn custody into authority.
 
 If Thulia's bounded custody work is model-assisted, that work is instantiated
-under its own declared Spark identity, grant, Spark Heartbeat Contract, and
-Hearth Perch Home. It does not borrow the Work Spark's or Ledger Scribe Spark's
-pulse, persistence budget, context, or authority.
+under a distinct Spark identity, exact job, grant, Spark Heartbeat Contract,
+and task-account write lane returning to the Hearth Perch. It does not borrow
+the Work Spark's or Ledger Scribe Spark's pulse, persistence budget, context,
+or authority, and it does not retain account custody after reconciliation.
+
+Thulia's roost keeps partitioned pointers and exceptions, not returned payload
+copies. Hearthline-facing offer and load records remain in Hearthline's task
+account. Gloss lexicon generations and compact turn marks remain on the
+translation account's detachable slate. None becomes a second Hearth Perch
+ledger.
 
 ## Homecoming states
 
@@ -360,6 +388,19 @@ the end of the active child context only when a separate Context-Close Receipt
 is appended after reconciliation or an explicit terminal failure disposition.
 It is not PAL or A15 closure. None of those states establishes task success,
 carry approval, or Static activation.
+
+Reconciliation also closes the returned Spark's exclusive bounded account
+write lane. It does not give the Spark a continuing claim over the ledger. A
+retention concern returns as a typed defect naming the exact replay, open,
+contest, privacy, safety, or other account obligation at risk. “Preserve my
+memory” is not a retention defect or self-preservation veto. Only Thulia may
+apply Systemic Friction; any resulting Atomic Edge Promotion remains a separate
+controller- or authorized-writer effect.
+
+No returned artifact, note, ledger entry, receipt, context, or mark is modeled
+as a Spark's or Gloss's body, identity, memory, or property. Only a typed
+retention defect naming a declared account obligation, including any valid
+hold, may block the retention transition.
 
 A representation-side return bundle, including one prepared by a Ledger Scribe
 or Thulia, carries only the declared data, provenance,
@@ -427,12 +468,14 @@ projection, separate pair identities, budgets, and frozen Static references,
 Home routing without authority, pulse identity and controller-only append,
 bounded blocker handling, missed-pulse behavior, quiet suspension, resume
 revalidation, revocation, expiry, non-renewal of authority, independent task
-and Scribe status, coverage-qualified `NO_LEDGER_DELTA`, source-lineage Static
-ownership, single-writer target admission, residual return, idempotent
+and Scribe status, coverage-qualified `NO_LEDGER_DELTA`, task/account Static
+custody, exclusive bounded Spark write lanes and their reconciliation-time
+closure, single-writer target admission, residual return, idempotent
 Homecoming, unknown-return reconciliation, separate close receipts, crash
 recovery, objective admission while another objective is suspended, out-of-order
 return, aggregation by reference, host-window loss, no cross-objective grant or
-budget inheritance, privacy handling, and closure.
+budget inheritance, privacy handling, replay/open-qualified retention defects,
+rejection of self-preservation vetoes, and closure.
 
 Hearthline, Thulia, and Sparks remain AI tool and system concepts. Homecoming is
 not privileged testimony of consciousness, emotion, death, survival,

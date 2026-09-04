@@ -14,6 +14,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000008` | 2026-09-04 | `ROLE_CUSTODY_SUCCESSOR` | Separate Hearthline orchestration, Thulia custody and Systemic Friction, stateless Gloss translation, account-owned ledgers, and bounded Spark write lanes. | [Record](docs/changelog/2026-09-04-hlp-000008-thulia-gloss-systemic-friction.md) |
 | `HLP-000007` | 2026-09-04 | `LORE_SUCCESSOR` | Introduce Gloss, the little turning wisp whose note-local Circuit Garden returns an exact work face without erasing the separately carried route. | [Record](docs/changelog/2026-09-04-hlp-000007-gloss-turning-wisp.md) |
 | `HLP-000006` | 2026-09-04 | `LORE_AND_VISUAL_SUCCESSOR` | Publish Hearthline's visual gallery, pre-Velis history, artifact lore, and distinct later-road lessons including the finite field station, returning-bell ledger, and First Furrow. | [Record](docs/changelog/2026-09-04-hlp-000006-hearthline-lore-gallery.md) |
 | `HLP-000005` | 2026-09-03 | `TETHER_CONTINUITY_SUCCESSOR` | Add carrier-neutral, handle-bound exact reopening and require unresolved items to retain a route home. | [Record](docs/changelog/2026-09-03-hlp-000005-tether-continuity.md) |

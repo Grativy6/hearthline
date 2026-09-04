@@ -18,6 +18,18 @@ AGENT_PATH = ROOT / "hearthline_agent.md"
 RESEARCH_DOC = ROOT / "docs" / "HEARTHLINE_RESEARCH_STATION.md"
 CREATURE_DOC = ROOT / "docs" / "HEARTHLINE_CREATURES.md"
 HOMECOMING_DOC = ROOT / "docs" / "HEARTHLINE_HOMECOMING.md"
+FIRESIDES_DOC = ROOT / "docs" / "HEARTHLINE_FIRESIDES.md"
+SPARKS_DOC = ROOT / "docs" / "HEARTHLINE_SPARKS.md"
+STATIC_DOC = ROOT / "docs" / "HEARTHLINE_STATIC.md"
+THULIA_DOC = ROOT / "docs" / "HEARTHLINE_THULIA.md"
+GLOSS_DOC = ROOT / "docs" / "HEARTHLINE_GLOSS.md"
+ORDERED_DOC = ROOT / "docs" / "HEARTHLINE_ORDERED_LINEAGE.md"
+VISUAL_DOC = ROOT / "docs" / "HEARTHLINE_VISUAL_INDEX.md"
+THULIA_SHEET_DOC = ROOT / "docs" / "HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md"
+CHARACTERS_README = ROOT / "assets" / "characters" / "README.md"
+THULIA_SHEET_000002_SHA256 = (
+    "9080ca86547a8924e980e5339a8b45f6fce7bddb3a050115d4ddae19603b4650"
+)
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 COMMIT_RE = re.compile(r"^[0-9a-f]{40}$")
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
@@ -233,7 +245,7 @@ def main() -> None:
             "policy hash domain missing")
     require(candidate.get("policy_sha256") == policy_hash,
             "candidate policy_sha256 does not match hearthline_agent.md")
-    require(candidate.get("artifact_version") == "0.4-draft",
+    require(candidate.get("artifact_version") == "0.5-draft",
             "candidate artifact version drift")
     require(candidate.get("artifact_status") == "DRAFT_NOT_ACTIVATED",
             "candidate was activated by repository text")
@@ -269,13 +281,14 @@ def main() -> None:
         "not a second ledger",
         "Pulse Receipt",
         "no action port",
+        "Partitioned pointers to statuses",
     ):
         require(phrase in creature_words, f"Creature boundary missing: {phrase}")
 
     homecoming_text = HOMECOMING_DOC.read_text(encoding="utf-8")
     homecoming_words = " ".join(homecoming_text.split())
-    require("| Version | `0.4` |" in homecoming_text,
-            "Homecoming objective-window successor version missing")
+    require("| Version | `0.5` |" in homecoming_text,
+            "Homecoming account-custody successor version missing")
     for phrase in (
         "open objective window",
         "Returns may arrive out of order",
@@ -286,14 +299,178 @@ def main() -> None:
         "no Homecoming custody state manufactures task status",
         "no provider or environment effect is duplicated",
         "not a claim that Hearthline or this workspace has implemented or passed it",
+        "No returned artifact, note, ledger entry, receipt, context, or mark is modeled as a Spark's or Gloss's body, identity, memory, or property",
     ):
         require(phrase in homecoming_words,
                 f"objective-window boundary missing: {phrase}")
+
+    gloss_text = GLOSS_DOC.read_text(encoding="utf-8")
+    gloss_words = " ".join(gloss_text.split())
+    for phrase in (
+        "Mechanism class | `STATELESS_DETERMINISTIC`",
+        "history_reads: 0",
+        "Routine translation never consults an earlier turn",
+        "detachable **Translation Slate**",
+        "replaceable interface belonging to the declared translation account",
+        "It is not Gloss's body, mind, memory, property, or identity",
+        "There is no second Gloss history ledger behind it",
+        "Neither a note, mark, lexicon record, nor slate is Gloss's body, identity, memory, or property",
+        "That rule applies only to records predeclared as account-owned **`G_mutable`**",
+        "may not be relabeled account-owned to evade an identity or refusal claim",
+        "Gloss never applies **Systemic Friction**",
+        "`PRUNE_ELIGIBLE` is not deletion authority",
+    ):
+        require(phrase in gloss_words, f"Gloss boundary missing: {phrase}")
+
+    thulia_text = THULIA_DOC.read_text(encoding="utf-8")
+    thulia_words = " ".join(thulia_text.split())
+    for phrase in (
+        "| Version | `0.4` |",
+        "`OWL-000001/PROFILE-000004`",
+        "### No-three-ledger rule",
+        "partitioned pointer and exception registry",
+        "Thulia therefore has no Hearthline-offer ledger",
+        "Only Thulia applies Systemic Friction",
+        "no self-preservation veto",
+        "No ledger, payload, Static entry, note, receipt, returned context, or Gloss mark is modeled as a Spark's or Gloss's body, identity, memory, or property",
+        "Only a typed retention defect naming a declared account obligation, including any valid hold, may block a retention transition",
+        "Its closed domain is **`G_mutable`**: records explicitly declared account-owned before the review",
+        "Out-of-domain material fails scope before classification and cannot receive `PRUNE_ELIGIBLE`",
+        "The classification and effect receipt remain distinct",
+        "does not make it PAL canon",
+    ):
+        require(phrase in thulia_words, f"Thulia boundary missing: {phrase}")
+
+    sparks_text = SPARKS_DOC.read_text(encoding="utf-8")
+    sparks_words = " ".join(sparks_text.split())
+    for phrase in (
+        "A ledger belongs to its declared task or representation account",
+        "exclusive bounded write lane",
+        "Each Spark receives one exact job",
+        "closes at Homecoming",
+        "A Spark has no self-preservation veto",
+        "No ledger, payload, note, Static entry, receipt, returned context, or Gloss mark is a Spark's or Gloss's body, identity, memory, or property",
+        "This applies only to records predeclared as account-owned **`G_mutable`**",
+        "may not be relabeled account-owned to bypass an identity or refusal claim",
+        "An ordinary Spark never applies Systemic Friction",
+    ):
+        require(phrase in sparks_words, f"Spark custody boundary missing: {phrase}")
+
+    static_text = STATIC_DOC.read_text(encoding="utf-8")
+    static_words = " ".join(static_text.split())
+    for phrase in (
+        "Each Static ledger belongs to one declared task or representation account",
+        "Spark does not own the ledger",
+        "A Static entry, note, ledger, receipt, or returned context is not a Spark's or Gloss's body, identity, memory, or property",
+        "Only Thulia applies **Systemic Friction**",
+        "`PRUNE_ELIGIBLE` is not deletion authority",
+    ):
+        require(phrase in static_words, f"Static custody boundary missing: {phrase}")
+
+    firesides_text = FIRESIDES_DOC.read_text(encoding="utf-8")
+    firesides_words = " ".join(firesides_text.split())
+    for phrase in (
+        "| Version | `0.4` |",
+        "One account's isolated, versioned, reversible shorthand",
+        "The account owns the ledger; the lane closes at Homecoming",
+        "Separate accounts, separate Scribe lanes",
+        "Gloss](HEARTHLINE_GLOSS.md) is a different, stateless deterministic relay",
+        "Only Thulia applies Systemic Friction",
+        "in Hearthline's task account",
+        "canonical writer records the numbered Bridge Gloss offer in the declared recipient account",
+    ):
+        require(phrase in firesides_words,
+                f"Fireside custody boundary missing: {phrase}")
+
+    ordered_text = ORDERED_DOC.read_text(encoding="utf-8")
+    ordered_words = " ".join(ordered_text.split())
+    for phrase in (
+        "`TRANSLATION-ACCOUNT-000001/LEXICON-000001`",
+        "Routine translation reads no earlier mark",
+        "The slate belongs to the translation account, not to Gloss or Thulia",
+        "prefix identifies the custody series, not ownership of the payload ledger",
+        "Only Thulia applies **Systemic Friction**",
+        "It has no self-preservation veto",
+    ):
+        require(phrase in ordered_words, f"Ordered-lineage boundary missing: {phrase}")
+
+    agent_text = AGENT_PATH.read_text(encoding="utf-8")
+    agent_words = " ".join(agent_text.split())
+    for phrase in (
+        "Hearthline orchestrates the primary task",
+        "does not take over that work when Thulia is absent",
+        "Ledgers belong to declared task, representation, or translation accounts",
+        "Gloss is a stateless deterministic relay",
+        "not part of Gloss's body, memory, identity, or property",
+        "No ledger, payload, receipt, Static entry, note, translation mark, or returned context is modeled as a Spark's or Gloss's body, identity, memory, or property",
+        "Only a typed retention defect that names a declared account obligation, including any valid hold, may block a retention transition",
+        "no-veto rule is closed to **`G_mutable`**: records explicitly declared account-owned before the retention review",
+        "Out-of-domain material fails scope before Systemic Friction classification",
+        "Only Thulia applies **Systemic Friction**",
+        "`PRUNE_ELIGIBLE` records bounded eligibility, not deletion authority",
+    ):
+        require(phrase in agent_words, f"agent role boundary missing: {phrase}")
+
+    require("Systemic Friction" not in registry_text,
+            "Systemic Friction must not become a Research Station source")
+
+    visual_text = VISUAL_DOC.read_text(encoding="utf-8")
+    thulia_sheet_text = THULIA_SHEET_DOC.read_text(encoding="utf-8")
+    characters_text = CHARACTERS_README.read_text(encoding="utf-8")
+    require("| Version | `0.3` |" in visual_text,
+            "visual index behavior-pointer successor version missing")
+    require(
+        hashlib.sha256(THULIA_SHEET_DOC.read_bytes()).hexdigest()
+        == THULIA_SHEET_000002_SHA256,
+        "issued Thulia SHEET-000002 changed in place",
+    )
+    for name, text in (
+        ("HEARTHLINE_VISUAL_INDEX.md", visual_text),
+        ("assets/characters/README.md", characters_text),
+    ):
+        require("OWL-000001/PROFILE-000004" in text,
+                f"{name} lacks the current Thulia behavior pointer")
+        require("OWL-000001/PROFILE-000003" not in text,
+                f"{name} still calls the predecessor Thulia profile current")
+
+    current_role_surfaces = {
+        "README.md": (ROOT / "README.md").read_text(encoding="utf-8"),
+        "hearthline_agent.md": agent_text,
+        "HEARTHLINE_CREATURES.md": creature_text,
+        "HEARTHLINE_HOMECOMING.md": homecoming_text,
+        "HEARTHLINE_FIRESIDES.md": firesides_text,
+        "HEARTHLINE_ORDERED_LINEAGE.md": ordered_text,
+        "HEARTHLINE_SPARKS.md": sparks_text,
+        "HEARTHLINE_STATIC.md": static_text,
+        "HEARTHLINE_THULIA.md": thulia_text,
+        "HEARTHLINE_GLOSS.md": gloss_text,
+    }
+    for name, text in current_role_surfaces.items():
+        lowered_surface = " ".join(text.lower().split())
+        for forbidden in (
+            "each spark keeps its own static",
+            "each spark has its own isolated",
+            "spark-owned ledger",
+            "gloss surface",
+            "gloss's surface",
+        ):
+            require(forbidden not in lowered_surface,
+                    f"{name} retains forbidden ownership language: {forbidden}")
 
     for path in (
         RESEARCH_DOC,
         CREATURE_DOC,
         HOMECOMING_DOC,
+        FIRESIDES_DOC,
+        SPARKS_DOC,
+        STATIC_DOC,
+        THULIA_DOC,
+        GLOSS_DOC,
+        ORDERED_DOC,
+        VISUAL_DOC,
+        THULIA_SHEET_DOC,
+        CHARACTERS_README,
+        AGENT_PATH,
         ROOT / "README.md",
         ROOT / "SOURCE_MAP.md",
     ):

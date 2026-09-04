@@ -14,7 +14,7 @@ Visual identity: `HEARTHLINE/IMAGE-000001`.
 
 Thulia's current bilateral animation reference resolves the right-leg copper band, her bilateral shoulder markings, the angle-changing colors of her Northlight fields, her crest-and-brow expression language, and the small speaking beak with which she can correct a filing system more devastatingly than most people can correct a theorem.
 
-Visual identity: `OWL-000001/IMAGE-000006`. Her current behavior and lore are governed by `OWL-000001/PROFILE-000003`; her appearance is governed by `OWL-000001/SHEET-000002`. Where an image and a written sheet disagree, the written sheet wins.
+Visual identity: `OWL-000001/IMAGE-000006`. Her current behavior and lore are governed by `OWL-000001/PROFILE-000004`; her appearance is governed by `OWL-000001/SHEET-000002`. Where an image and a written sheet disagree, the written sheet wins.
 
 ## Trace room
 

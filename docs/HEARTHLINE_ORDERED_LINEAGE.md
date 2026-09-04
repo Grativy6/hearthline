@@ -4,16 +4,25 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.6` |
+| Version | `0.7` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
-**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, [Creatures](HEARTHLINE_CREATURES.md), Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, [Homes and Homecomings](HEARTHLINE_HOMECOMING.md), their receipts, and public visual presentation records.
+**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, task and representation accounts, [Creatures](HEARTHLINE_CREATURES.md), Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, [Gloss](HEARTHLINE_GLOSS.md) translation accounts and slates, [Homes and Homecomings](HEARTHLINE_HOMECOMING.md), their receipts, and public visual presentation records.
 
 Its purpose is simple: every Spark and every new version receives an ordered number, and earlier work remains individually addressable. Correction, retirement, rejection, or replacement may change what governs later work; none silently makes an earlier record disappear.
 
 An ordered number is an identifier inside a declared ledger scope. It records allocation and sequence only. It does not establish rank, seniority, quality, truth, personhood, experiential continuity, ownership, capability, permission, or authority.
+
+## v0.7 account-custody successor
+
+Version `0.7` assigns durable ledger custody to declared task,
+representation, and translation accounts. A Spark may receive an exclusive
+bounded write lane in one account, but its identity does not own that account
+or survive Homecoming as a continuing write claim. The version also adds
+Translation Slate and lexicon-generation examples without creating a
+Gloss-owned history.
 
 ## v0.6 presentation successor
 
@@ -45,18 +54,19 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Creature checkpoint | `CREATURE-000001/CHECKPOINT-000001` | That Creature's checkpoint series |
 | Campaign | `CAMPAIGN-000001` | One external comparison-campaign registry |
 | Campaign arm | `CAMPAIGN-000001/ARM-000001` | One physically isolated Creature arm |
+| Task or representation account | `ACCOUNT-000001` | One controller-owned account registry |
 | Homecoming | `SPARK-000001/HOMECOMING-000001` | That Spark's Homecoming series |
 | Homecoming Return Receipt | `SPARK-000001/HOMECOMING-000001/RETURN-000001` | One Homecoming's return series |
 | Homecoming Reconciliation Receipt | `SPARK-000001/HOMECOMING-000001/RECONCILIATION-000001` | One Homecoming's reconciliation series |
 | Homecoming Context-Close Receipt | `SPARK-000001/HOMECOMING-000001/CONTEXT-CLOSE-000001` | One Homecoming's context-close series |
-| Static version | `SPARK-000001/STATIC-000001` | That Spark's isolated Static lineage |
-| Static entry | `SPARK-000001/STATIC-000001/ENTRY-000001` | One Static version |
-| Field Notes page | `SPARK-000001/NOTES-000001` | That Spark's notes series |
-| Ember | `SPARK-000001/EMBER-000001` | That Spark's candidate-carry series |
+| Static version | `ACCOUNT-000001/STATIC-000001` | That account's isolated Static lineage |
+| Static entry | `ACCOUNT-000001/STATIC-000001/ENTRY-000001` | One account Static version |
+| Field Notes page | `ACCOUNT-000001/NOTES-000001` | That account's notes series |
+| Ember | `ACCOUNT-000001/EMBER-000001` | That account's candidate-carry series |
 | Fireside | `FIRESIDE-000001` | One named Fireside registry |
 | Run | `FIRESIDE-000001/RUN-000001` | That Fireside's run series |
 | Run Trail event | `FIRESIDE-000001/RUN-000001/EVENT-000001` | That run's committed event series |
-| Static activation receipt | `SPARK-000001/STATIC-ACTIVATION-000001` | That Spark's Static activation series |
+| Static activation receipt | `ACCOUNT-000001/STATIC-ACTIVATION-000001` | That account's Static activation series |
 | Carry Manifest | `FIRESIDE-000001/RUN-000001/CARRY-000001` | That run's reviewed carry series |
 | Load receipt | `FIRESIDE-000001/RUN-000001/LOAD-000001` | That run's context-load series |
 | Owl Scribe | `OWL-000001` | One named Owl registry |
@@ -71,6 +81,10 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Translation request | `OWL-000001/REQUEST-000001` | That Owl Scribe's request series |
 | Bridge Gloss | `OWL-000001/GLOSS-000001` | That Owl Scribe's gloss series |
 | Gloss delivery receipt | `OWL-000001/GLOSS-000001/DELIVERY-000001` | One gloss's recipient-delivery series |
+| Translation account | `TRANSLATION-ACCOUNT-000001` | One controller-owned translation registry |
+| Translation Slate | `TRANSLATION-ACCOUNT-000001/SLATE-000001` | One detachable, replaceable slate series |
+| Lexicon generation | `TRANSLATION-ACCOUNT-000001/LEXICON-000001` | That translation account's lexicon series |
+| Translation turn mark | `TRANSLATION-ACCOUNT-000001/SLATE-000001/MARK-000001` | One slate's attempted-turn series |
 
 The full identity also binds immutable registry and entity IDs. `SPARK-000001` in two unrelated registries is not one Spark. A portable reference therefore includes at least the registry identity, typed ordinal, stable entity identity, parent scope, and exact record digest.
 
@@ -84,13 +98,22 @@ The full identity also binds immutable registry and entity IDs. `SPARK-000001` i
 6. **Separate version from activation.** A proposed version receives its own version ordinal. Verification, approval, activation, supersession, rejection, and retirement are separate, ordered receipts. A version can therefore remain permanently proposed or rejected without its number being reused.
 7. **Derive what is active.** The governing Static or profile version is determined from valid activation receipts under the current grant, not from an overwriteable `latest` field. Convenience pointers may be cached but are not authoritative history.
 
-Every record should bind its typed ID, stable entity ID, parent ledger, predecessor where applicable, status, creation receipt, content digest, producer and tool identities when relevant, scope, and reason for change. Every disposition change appends a new ordered, hash-linked registry event rather than editing the old event in place.
+Every record should bind its typed ID, stable entity ID, owning task or account,
+parent ledger, assigned writer lane, predecessor where applicable, status,
+creation receipt, content digest, producer and tool identities when relevant,
+scope, and reason for change. Every disposition change appends a new ordered,
+hash-linked registry event rather than editing the old event in place.
 
 ## Spark identity and versions
 
 A new Spark receives a new Spark ordinal even if it has the same model, role, job, lens, or display name as an earlier Spark. Reuse of a name does not create identity continuity.
 
-A Spark may retain its stable Spark ordinal through profile versions when the exact ledger identity and authorized continuation are re-established. Changes to its role, job, lens, grant binding, model binding, or other identity-bearing configuration append a new profile version. A replacement process that cannot establish that continuation begins as a new Spark.
+A Spark may retain its stable Spark ordinal through profile versions when the
+exact account binding, write lane, and authorized continuation are
+re-established. Changes to its role, job, lens, grant binding, model binding,
+or other identity-bearing configuration append a new profile version. A
+replacement process that cannot establish that continuation begins as a new
+Spark. The stable Spark ordinal never conveys ownership of an account ledger.
 
 Retiring a Spark appends a retirement record. Reopening may append a new profile version if the continuation requirements are met; it does not delete the retirement or pretend the interruption did not occur.
 
@@ -159,6 +182,11 @@ reopening handles. Partial, rejected, revoked, and unknown returns retain their
 identities and exact dispositions. An unknown Homecoming is reconciled under its
 existing identity and is never replayed automatically.
 
+Reconciliation closes the returned Spark's exclusive bounded account write
+lane and records canonical store custody. Reopening the same account later
+requires a new lane grant; neither the Spark ordinal nor earlier authorship is
+a continuing write or retention claim.
+
 Homecoming is not retirement. After a separate Context-Close Receipt, the Spark
 may later receive another authorized dispatch under an established
 continuation, while its earlier Homecoming and consumed limits remain
@@ -184,10 +212,10 @@ operations.
 
 ## Static proposals and activations
 
-A same-lineage candidate Static revision receives the next Static version
-ordinal when proposed. A cross-Spark target-bound `static_delta` remains an
-Ember in its source Spark's lineage and receives no target version until the
-target ledger's authorized writer admits and allocates it after direction-bound
+A same-account-lineage candidate Static revision receives the next Static
+version ordinal when proposed. A cross-account target-bound `static_delta`
+remains an Ember in its source representation account and receives no target
+version until the target account's authorized writer admits and allocates it after direction-bound
 carry. Neither waits for success to become historically visible.
 
 Its lifecycle may include distinct states such as:
@@ -212,17 +240,27 @@ The page becomes blank; the history does not. Sealed pages, incomplete pages, re
 
 ## Owl Scribe and Bridge Gloss identities
 
-Thulia's adopted public lore identity is `OWL-000001`, with current design profile `OWL-000001/PROFILE-000003`, distinct from the Spark registry because Owl Scribe is a bounded custody and translation interface rather than a fourth Spark role. It is not evidence that an operational allocator, service, or model instance exists. Any model-assisted interpretive work behind that interface still receives its own Spark identity, role, profile, and grant.
+Thulia's adopted public lore identity is `OWL-000001`, with current design
+profile `OWL-000001/PROFILE-000004`, distinct from the Spark registry because
+Owl Scribe is a bounded custody, translation, and retention-classification
+interface rather than a fourth Spark role. It is not evidence that an
+operational allocator, service, or model instance exists. Any model-assisted
+interpretive work behind that interface still receives a distinct Spark
+identity, role, profile, exact job, task account, write lane, and grant.
 
-The Hearth Perch is Thulia's separately numbered Home series. It binds her own
-Owl Scribe return boundary and the dispatch-pinned roost index and version
+The Hearth Perch is Thulia's separately numbered Home series. It binds the Owl
+Scribe return boundary and the dispatch-pinned roost index and version
 without becoming a shared Static Perch, global codebook, or authority source.
-Work Static returns unchanged to its source Perch; Scribe-authored target-bound
-proposals return first to the Scribe's source Perch; and Thulia's candidate
+Work Static returns unchanged to its task-account source Perch; Scribe-authored target-bound
+proposals return first to the representation-account source Perch; and Thulia's candidate
 custody and representation-side return payloads return to the Hearth Perch for
 canonical controller reconciliation.
 
-Each Perch identifies one partitioned Spark Static lineage. A new Perch version appends changes to its index, access path, reconstruction handles, or availability state without altering the earlier version. A Perch number never becomes a shared codebook identity.
+Each Perch identifies one partitioned task- or representation-account Static
+lineage. A new Perch version appends changes to its pointer index, access path,
+reconstruction handles, availability state, retention holds, or unresolved
+exceptions without altering the earlier version. It does not duplicate the
+account payload. A Perch number never becomes a shared codebook identity.
 
 An Owl character sheet is a presentation record. A successor sheet may revise appearance, voice, mannerisms, poses, or other narrative cues while preserving its predecessor, but it cannot alter Owl Scribe behavior, access, authority, or the governing Owl profile. An identity-bearing design change belongs in a separately numbered profile successor.
 
@@ -231,6 +269,26 @@ An image identity is likewise a presentation record. The [visual index](HEARTHLI
 Every translation attempt receives its request number before work begins. Every successfully recorded Bridge Gloss receives its own gloss number, and delivery to each recipient receives a separate delivery number. Denied, failed, ambiguous, interrupted, invalidated, and superseded attempts keep their numbers and dispositions. A direction, destination, audience, or source-version change creates a successor request or gloss rather than silently changing the old one.
 
 A Bridge Gloss number records a derivative crossing only. It does not make the gloss true, exact beyond its declared reconstruction, loaded, adopted, authoritative, or independent of its sending ledger and sources.
+
+The `OWL-000001` prefix identifies the custody series, not ownership of the
+payload ledger. A recorded Bridge Gloss offer binds its declared recipient
+account; the canonical account writer appends it there, and Thulia retains only
+the pointer, status, hold, or unresolved exception needed for custody.
+
+## Gloss Translation Slate identities
+
+Gloss has no ordered memory or ledger series. Before a routine turn, the
+canonical translation-account writer allocates a mark identity on one exact
+detachable Translation Slate. Gloss deterministically emits the mark body from
+the canonical note, complete route, direction, and pinned lexicon generation;
+the account writer appends it. Routine translation reads no earlier mark.
+
+The slate belongs to the translation account, not to Gloss or Thulia. Thulia
+has bounded custody of its identity, validated lexicon-generation pointer,
+availability state, retention holds, and unresolved exceptions. A replacement
+slate receives a successor slate identity and a verified continuation or
+explicit gap. It is a replaceable interface, not part of Gloss's body or
+memory.
 
 ## Creature and campaign identities
 
@@ -269,6 +327,14 @@ The preservation promise is **no silent overwrite, reuse, or erasure**. It does 
 
 When bytes must be removed, the system preserves the ordinal and an accountable tombstone where lawful, records the availability change, invalidates dependent uses as needed, and narrows claims that can no longer be checked. A digest alone is not treated as recovery of deleted content.
 
+Only Thulia applies **Systemic Friction** to issue a retention classification
+under a separate grant. A Spark may raise a retention defect only by naming a
+concrete replay, open, contest, privacy, safety, or other account obligation.
+It has no self-preservation veto and does not own the ledger merely because it
+wrote through a bounded lane. `PRUNE_ELIGIBLE` does not erase anything; a
+canonical controller or separately authorized writer must perform and receipt
+the exact **Atomic Edge Promotion**.
+
 ## Implementation boundary
 
 This document specifies names and invariants. It does not create a registry, allocator, Spark, Fireside, ledger, runtime, or adoption event.
@@ -280,11 +346,15 @@ pair identities, budgets, and Static references, dispatch-pinned Home binding,
 authorized reroutes, heartbeat and all-pulse ordering, blocker and missed-pulse
 behavior, suspension/resume preservation, returned/reconciled/context-closed
 separation, idempotent and unknown Homecoming reconciliation, separated
-proposal and activation series, source-owned target-bound deltas, cross-registry
+proposal and activation series, account-custodied target-bound deltas, cross-registry
 collision handling, Hearth Perch and Static Perch isolation, recipient-specific
-gloss delivery, sealed-page immutability, lawful tombstoning, Creature profile
+gloss delivery, detachable Translation Slate and account-owned mark allocation,
+history-free deterministic turns, sealed-page immutability, lawful tombstoning, Creature profile
 succession, physically isolated campaign arms, campaign-index noninterference,
-one canonical effect-admission and serialization path, and failure when the
+one canonical effect-admission and serialization path, exclusive bounded Spark
+write lanes and Homecoming closure, retention-defect qualification,
+Thulia-only Systemic Friction classification, rejection of self-preservation
+vetoes, and failure when the
 active version cannot be established.
 
 Ordered lineage preserves addressability. It does not manufacture memory, identity continuity, consciousness, consent, standing, permission, or authority.

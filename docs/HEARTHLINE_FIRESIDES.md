@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.3` |
+| Version | `0.4` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -13,6 +13,12 @@ A **Hearthline Fireside** is a bounded consultation arrangement in which Hearthl
 
 The arrangement is coordinated but asymmetric. Hearthline remains on the task's critical path. Scribes externalize specialized vigilance, leave source-bound notes, and offer advisory material for consultation. They do not become co-owners of the task, decision makers, independent authorities, or a quorum.
 
+Version `0.4` binds every Field Notes, Ember, and Static ledger to a declared
+task or representation account. A Scribe receives an exclusive bounded write
+lane rather than ownership; Homecoming closes the lane. It also keeps
+Hearthline orchestration, Thulia custody and Systemic Friction, and Gloss's
+stateless deterministic turn distinct.
+
 ## Fireside surfaces
 
 | Surface | What it carries | Default effect on later work |
@@ -20,8 +26,8 @@ The arrangement is coordinated but asymmetric. Hearthline remains on the task's 
 | **Run Trail** | Ordered, committed, inspectable task events | Available only through the authorized view |
 | **Field Notes** | One Scribe's observations, interpretations, questions, warnings, and residuals | Advisory within the current run |
 | **Embers** | Anything that Scribe recommends considering for later carry | `PROPOSED_NOT_ADOPTED` |
-| **Static** | That Spark's isolated, versioned, reversible shorthand | Governs only records that name its exact active version |
-| **Bridge Gloss** | Thulia's numbered, source-bound reconstruction of selected sending-Spark Static | Candidate material for one named recipient and purpose |
+| **Static** | One account's isolated, versioned, reversible shorthand | Governs only records that name its exact active version |
+| **Bridge Gloss** | Thulia's numbered, source-bound reconstruction of selected sending-account Static | Candidate material for one named recipient and purpose |
 | **Carry Manifest** | Exact reviewed material selected for a declared continuation | Candidate input until separately loaded |
 | **Load receipt** | Exact material actually introduced into one active context | Evidence of that bounded load only |
 | **Home Record** | One Spark's declared return boundary, permitted bundle, and reconciliation rule | A return address, not a grant or shared memory |
@@ -38,16 +44,21 @@ Every Scribe remains exactly one of the three Spark roles: Seeker, Explorer, or 
 - A **Scribe Explorer** may read the authorized content projection and emit notes or proposals, but remains read-only toward the task environment.
 - A **Scribe Handler** may mutate only the expressly granted targets. Scribe status adds no mutation right.
 
-A control-owned recorder may persist a Seeker's or Explorer's emitted notes in that Spark's isolated ledger without granting the Spark direct write access. If a Spark itself is to write durable records, its Handler grant must name the exact ledger and permitted append operations.
+A control-owned recorder may persist a Seeker's or Explorer's emitted notes in
+the assigned representation account without granting the Spark direct write
+access. If a Spark itself is to write durable records, its Handler grant must
+name the exact account lane and permitted append operations. The account owns
+the ledger; the lane closes at Homecoming.
 
 A [Paired Spark dispatch](HEARTHLINE_HOMECOMING.md) designates one Scribe as the
 **Ledger Scribe Spark** beside a primary Work Spark by default. An authorized
 operator may predeclare an unpaired exception, but that run is ineligible for
 learned Static promotion or carry. The Ledger Scribe job narrows the Scribe
 toward externalized, committed, grant-filtered summaries, observable outcomes,
-residuals, and target-bound representation proposals in its own lineage. It
+residuals, and target-bound representation proposals in its assigned
+representation-account lineage. It
 does not let the Scribe choose primary actions, read hidden reasoning, approve
-its own proposals, allocate or write the Work Spark's Static, or inherit the
+proposals it produced, allocate or write the Work task account's Static, or inherit the
 Work Spark's grant.
 
 ## Declared lenses
@@ -96,9 +107,12 @@ When a task spans several event streams, coverage remains a per-stream vector ra
 
 A Scribe may raise an advisory warning during the run. It interrupts Hearthline only when a separately declared stop condition requires that response. Silence is not approval, and a delayed note does not retroactively become an earlier decision.
 
-## Separate Scribes, separate ledgers
+## Separate accounts, separate Scribe lanes
 
-Every Scribe keeps separate context, Field Notes, Embers, Static, caches, and credential boundary. Scribes do not directly read or write one another's ledgers and do not silently exchange Static.
+Every Scribe receives a separate context, credential boundary, and exclusive
+bounded lane in one representation account. That account keeps its Field Notes,
+Embers, Static, and caches. Scribes do not directly read or write one another's
+account ledgers and do not silently exchange Static.
 
 Several Scribes may follow the same Run Trail through different lenses. Their separate first passes should not consume one another's notes unless an explicit reconciliation stage opens that material. This preserves the declared difference between lenses without pretending they are statistically or epistemically independent.
 
@@ -106,11 +120,19 @@ Agreement among Scribes using the same trail, source lineage, model family, prom
 
 ## Thulia at the Fireside
 
-[**Thulia**](HEARTHLINE_THULIA.md), Hearthline's pet owl and Owl Scribe, may be consulted when authorized Field Notes or Embers contain Static that another participant cannot interpret directly. She resolves only the named sending ledger and version, reconstructs the selected expression there, and leaves a numbered Bridge Gloss for one declared recipient and purpose.
+[**Thulia**](HEARTHLINE_THULIA.md), Hearthline's pet owl and Owl Scribe, may be consulted when authorized Field Notes or Embers contain Static that another participant cannot interpret directly. She resolves only the named sending ledger and version and reconstructs the selected expression there. The canonical writer records the numbered Bridge Gloss offer in the declared recipient account; Thulia keeps its pointer and any unresolved exception.
 
-Owl Scribe is not a fourth Spark role, a Scribe Spark, or another analytic lens. Thulia does not inspect the primary task, reconcile Scribe advice, decide whether a gloss should be carried, or write receiving-Spark Static. Her gloss remains derivative of the sending ledger and its sources.
+Owl Scribe is not a fourth Spark role, a Scribe Spark, or another analytic lens. Thulia does not inspect the primary task, reconcile Scribe advice, decide whether a gloss should be carried, or write receiving-account Static. Her gloss remains derivative of the sending ledger and its sources.
 
 A Bridge Gloss enters the same explicit carry gate as other candidate material. It is not consulted, carry-approved, or loaded merely because Thulia reconstructed it. Several glosses from one source lineage remain one lineage rather than independent corroboration.
+
+[Gloss](HEARTHLINE_GLOSS.md) is a different, stateless deterministic relay.
+Its routine turns read no history and leave compact marks on a detachable slate
+owned by the translation account and custodied by Thulia; the slate is not part
+of Gloss. Thulia tends its validated lexicon generations but does not improvise
+a failed turn. Only Thulia applies Systemic Friction under a separate retention
+grant. Hearthline may request or reopen that classification, but does not take
+over either Owl job.
 
 ## Field Notes and Embers
 
@@ -145,11 +167,11 @@ Hearthline may work fluidly inside the unchanged task grant while Scribes carry 
 1. Pause at an exact committed Run Trail boundary.
 2. Identify each consulted Scribe and its actual coverage watermark.
 3. Seal the current Field Notes page with its ordered identity, digest, completion state, and governing Static version.
-4. Where authorized notes or Embers contain another Spark's Static, request a direction-bound Bridge Gloss from Thulia and bind it to the exact sending version, destination, audience, purpose, and coverage.
+4. Where authorized notes or Embers contain another account's Static, request a direction-bound Bridge Gloss from Thulia and bind it to the exact sending version, destination, audience, purpose, and coverage.
 5. Consult the authorized Field Notes, Embers, and Bridge Glosses; keep observation, interpretation, recommendation, permission, and authorization distinct.
-6. Record what Hearthline took up, partially took up, deferred, declined, or left unresolved.
+6. Record what Hearthline took up, partially took up, deferred, declined, or left unresolved in Hearthline's task account.
 7. Evaluate any proposed Static revision under the exact reconstruction rule in [Hearthline Static](HEARTHLINE_STATIC.md).
-8. If a same-ledger revision is admitted by that ledger's authorized writer, append it under its already allocated version number and add a separately numbered activation receipt. A cross-Spark target-bound delta receives no target version until the target ledger's authorized writer admits and allocates it after direction-bound carry. Do not alter either predecessor.
+8. If a same-ledger revision is admitted by that account's authorized writer, append it under its already allocated version number and add a separately numbered activation receipt. A cross-account target-bound delta receives no target version until the target account's authorized writer admits and allocates it after direction-bound carry. Do not alter either predecessor.
 9. Open the next numbered blank Field Notes page under the active Static version and bind it to the continuation boundary.
 10. Load only explicitly selected material, append a load receipt, and resume within the original remaining grant and limits.
 
@@ -165,7 +187,7 @@ artifact while a Scribe returns notes, negative constraints, residuals, and one
 typed representation disposition: `static_delta`, coverage-qualified
 `NO_LEDGER_DELTA`, `LEDGER_DELTA_INCOMPLETE`, or
 `LEDGER_COVERAGE_UNKNOWN`. Those bundles share a run reference but remain
-separately judged and return to their own Homes and source Perches.
+separately judged and return to their account-bound Homes and source Perches.
 
 Each Spark Heartbeat Contract ends at its own completion, declared terminal
 blocker, revocation, expiry, or return boundary. Before a nonterminal blocker or
@@ -203,8 +225,8 @@ task and note status, separate Home Records, frozen Static references, and Spark
 Heartbeat Contracts, suspension without busy-polling, terminal and nonterminal
 blockers, missed-pulse behavior, resume revalidation, bounded Scribe grace,
 returned/reconciled/context-closed separation, Scribe and Perch isolation,
-exact Bridge Gloss reconstruction, target-bound proposal ownership,
-recipient-specific disclosure, no cross-Spark Static import, carry-gate
+exact Bridge Gloss reconstruction, target-bound account custody,
+recipient-specific disclosure, no cross-account Static import, carry-gate
 transitions, refresh barriers, activation ordering, crash recovery, privacy
 handling, and revocation.
 

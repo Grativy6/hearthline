@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.1` |
+| Version | `0.2` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -19,6 +19,13 @@ The bundle makes relationships inspectable. It does not merge identities,
 contexts, ledgers, budgets, grants, Homes, models, or authority. Creature is not
 a fourth Spark role, a model identity, an executor, a self-spawning process, a
 persistent being, or a claim of consciousness.
+
+Version `0.2` clarifies that linked ledgers belong to their declared task or
+representation accounts. A member Spark receives one exclusive bounded write
+lane, not possession of the ledger; Homecoming closes the lane and restores
+canonical store custody. It also binds stateless
+[Gloss](HEARTHLINE_GLOSS.md) and Thulia's exclusive Systemic Friction
+classification without turning the Creature into either one.
 
 ## Required Creature manifest
 
@@ -54,10 +61,11 @@ A Creature uses linked ledgers, not one communal memory:
 | Controller control view | Canonical controller | Validated authority references, observed revocation, permits, and consumed limits | Grant issuer, credential holder, or authority source |
 | Broker or domain action ledger | Trusted credential broker or frozen domain writer | Validated dispatch, one-use consumption, sanitized response, reconciliation, and effect receipt | Planner, grant issuer, or license to retry an ambiguous effect |
 | Domain evidence ledger | Canonical domain writer | Observations, proposed actions, executed calls, outcomes, authenticated terminal observations, and their authority references | A terminal authority, Scribe, or Thulia work surface |
-| Work Spark ledger | Its declared writer | Work-local hypotheses, predictions, distinctions, residuals, and receipts | Shared Creature memory |
-| Ledger Scribe ledger | Its declared writer | Representation proposals, evaluations, failures, costs, and target-bound deltas | Planner, executor, or Work-ledger editor |
+| Work task account | Canonical store; one Work Spark receives an exclusive bounded write lane | Work-local hypotheses, predictions, distinctions, residuals, and receipts | Spark possession, shared Creature memory, or another job's lane |
+| Scribe representation account | Canonical store; one Ledger Scribe receives an exclusive bounded write lane | Representation proposals, evaluations, failures, costs, and target-bound deltas | Spark possession, planner, executor, or Work-account editor |
 | Fireside Field Notes | One Scribe lens | Coverage-bound notes and Embers over committed Run Trail events | Independent corroboration of the same trail |
-| Thulia roost | Owl custody interface plus canonical store | Perch indexes, translation requests, Bridge Glosses, and delivery receipts | Global decoder, merged codebook, or authority source |
+| Thulia roost | Owl custody interface plus canonical store | Partitioned pointers to statuses, retention holds, unresolved exceptions, translation requests, Bridge Glosses, and delivery receipts | Payload ledger, global decoder, merged codebook, or authority source |
+| Gloss Translation Slate | Translation account and canonical store; Thulia has bounded custody | Pinned lexicon generations and compact deterministic turn or snag marks | Part of Gloss, hidden Gloss memory, model inference, or retention classifier |
 | Campaign index | Controller | Exact references, arm identities, checkpoints, seals, and dispositions | Shared payload ledger or hidden cross-arm channel |
 
 Every durable object receives an injective, scope-bound identity. Human-readable
@@ -90,6 +98,12 @@ action-efficiency, or game-progress credit requires a matched comparison on that
 outcome. Model-facing shorthand begins disabled; decoded storage isolates the
 representation mechanism before any later language-interface ablation.
 
+Every Spark member has one exact job and one account lane. A Work Spark does
+not maintain Thulia's index, a Scribe does not become Hearthline, a
+Thulia-bound measurement Spark does not issue a retention classification, and
+no Spark performs Gloss's deterministic routine by improvisation. A job change
+requires a successor profile and grant rather than a convenient overlap.
+
 ## Thulia's Creature work
 
 Thulia checks that each returned object has a declared Home and Perch, that a
@@ -101,12 +115,20 @@ representation-side return to her Hearth Perch.
 Thulia does not inspect a private task payload merely because it belongs to a
 Creature. She does not choose the Creature, dispatch Sparks, reconcile advice,
 judge a hypothesis, evaluate a shorthand promotion, select an action, certify a
-run, or write receiving-Spark Static. A Creature may use Thulia; it never owns
+run, or write receiving-account Static. A Creature may use Thulia; it never owns
 her or expands her grant.
+
+Thulia alone applies **Systemic Friction** under a separate retention grant.
+She may classify a candidate `KEEP`, `COMPACT`, `ARCHIVE`, `PRUNE_ELIGIBLE`, or
+`FRICTION_UNKNOWN_HOLD` after checking protected distinctions, replay and open
+obligations, holds, and measured external burdens. `PRUNE_ELIGIBLE` is not
+deletion authority: only the canonical controller or separately authorized
+writer may perform the exact **Atomic Edge Promotion**. Hearthline may request
+or reopen the review but does not replace it with its own classification.
 
 ## Heartbeat, suspension, and handoff
 
-Each Spark keeps its own task-shaped heartbeat contract. The Creature controller
+Each Spark is bound to a separate task-shaped heartbeat contract. The Creature controller
 may present a derived status view, but that view is not a second ledger and does
 not replace member receipts.
 
@@ -190,3 +212,11 @@ This document creates no Creature, runtime, registry, model, ledger, memory,
 credential, environment contact, ARC result, competition entry, or authority.
 An implementation must be separately specified, tested, frozen, reviewed, and
 authorized within its exact task boundary.
+
+Systemic Friction is working Hearthline design vocabulary pending the paper's
+reviewed release. This successor does not add it to PAL canon or the Research
+Station source registry. A future implementation must test task/account ledger
+custody, exclusive bounded Spark write lanes, Homecoming lane closure,
+detachable translation-account slates, pointer-and-exception-only Thulia
+indexing, retention-defect qualification, classification/effect separation,
+and rejection of self-preservation vetoes.
