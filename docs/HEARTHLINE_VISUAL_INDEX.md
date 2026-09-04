@@ -4,17 +4,24 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2` |
+| Version | `0.3` |
 | Status | Adopted visual provenance and gallery index |
 | Hearthline image series | `HEARTHLINE/IMAGE-*` |
 | Thulia image series | `OWL-000001/IMAGE-*` |
 | Thulia character | `OWL-000001` |
-| Current Thulia behavior and lore | `OWL-000001/PROFILE-000003` |
+| Current Thulia behavior and lore | `OWL-000001/PROFILE-000004` |
 | Current Thulia appearance sheet | `OWL-000001/SHEET-000002` |
 | Implementation | Not asserted by this document |
 | Sole author and steward | Christopher D. Pang |
 
-This index registers all fifteen PNGs in the public gallery. The image ordinals are retrospective archival registrations for already-created files. They preserve declared sequence inside each visual series without claiming that numbers were preallocated before generation. A correction receives a new number; an earlier image stays visible in `history-and-artifacts/` rather than being renumbered, overwritten, or allowed to compete silently with the present.
+Version `0.3` refreshes only the current behavior pointer to
+`OWL-000001/PROFILE-000004`; it changes no image, appearance rule, or visual
+identity. This index registers all fifteen PNGs in the public gallery. The image
+ordinals are retrospective archival registrations for already-created files.
+They preserve declared sequence inside each visual series without claiming that
+numbers were preallocated before generation. A correction receives a new
+number; an earlier image stays visible in `history-and-artifacts/` rather than
+being renumbered, overwritten, or allowed to compete silently with the present.
 
 The [gallery entrance](../assets/) opens on current character, scene, and artifact material. Each room has one plainly named `history-and-artifacts/` side room. That topology is editorial presentation only: it does not activate, adopt, deprecate, or migrate an operational component.
 
@@ -22,7 +29,7 @@ The [gallery entrance](../assets/) opens on current character, scene, and artifa
 
 Visual material is interpreted in this order:
 
-1. [Thulia, Hearthline's Owl Scribe](HEARTHLINE_THULIA.md), profile `OWL-000001/PROFILE-000003`, controls Thulia's current behavior and lore.
+1. [Thulia, Hearthline's Owl Scribe](HEARTHLINE_THULIA.md), profile `OWL-000001/PROFILE-000004`, controls Thulia's current behavior and lore.
 2. [Thulia Character Sheet `0.2`](HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md), identity `OWL-000001/SHEET-000002`, controls her current appearance and animation construction.
 3. The latest compatible image may illustrate those written rules.
 4. Earlier studies and superseded corrections remain visual provenance.
