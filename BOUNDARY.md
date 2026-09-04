@@ -8,12 +8,15 @@ Appropriate public material includes:
 
 - versioned branch instructions and their status;
 - public boundaries, acceptance criteria, and change history;
+- explicitly labeled fictional lore, character art, and visual provenance;
 - links to already-public canonical sources; and
 - non-secret verification material intended for public review.
 
 The public source map may name public artifacts, versions, roles, status, authority ceilings, and canonical locators. It must not contain private source bytes, attachment hashes, journal excerpts, personal-context material, or a recoverable map of private chronology.
 
 Publication establishes what bytes were made available. It does not establish that those bytes were deployed, authorized, accepted as canon, or used for any external action.
+
+Fictional scenes and visual details may give Hearthline, Thulia, Sparks, or artifacts a narrative life. They do not report an AI system's experiences, instantiate the depicted characters or objects, or turn a story action, expression, color, heartbeat, or prop into an operational instruction or control.
 
 ## Copyright and authority
 

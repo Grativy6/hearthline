@@ -4,16 +4,20 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.5` |
+| Version | `0.6` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
-**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, [Creatures](HEARTHLINE_CREATURES.md), Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, [Homes and Homecomings](HEARTHLINE_HOMECOMING.md), and their receipts.
+**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, [Creatures](HEARTHLINE_CREATURES.md), Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, [Homes and Homecomings](HEARTHLINE_HOMECOMING.md), their receipts, and public visual presentation records.
 
 Its purpose is simple: every Spark and every new version receives an ordered number, and earlier work remains individually addressable. Correction, retirement, rejection, or replacement may change what governs later work; none silently makes an earlier record disappear.
 
 An ordered number is an identifier inside a declared ledger scope. It records allocation and sequence only. It does not establish rank, seniority, quality, truth, personhood, experiential continuity, ownership, capability, permission, or authority.
+
+## v0.6 presentation successor
+
+Version `0.6` adds ordered `IMAGE` examples for Hearthline and Thulia's public visual provenance. The initial gallery registrations are explicitly retrospective because the images existed before their public numbers were assigned. This presentation-only successor changes no Spark, Owl Scribe, Homecoming, Creature, Static, grant, or runtime behavior.
 
 ## Typed ordered identities
 
@@ -58,6 +62,8 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Owl Scribe | `OWL-000001` | One named Owl registry |
 | Owl profile version | `OWL-000001/PROFILE-000001` | That Owl Scribe's profile series |
 | Owl character sheet | `OWL-000001/SHEET-000001` | That Owl Scribe's appearance-sheet series |
+| Owl image | `OWL-000001/IMAGE-000001` | That Owl's public visual series |
+| Hearthline image | `HEARTHLINE/IMAGE-000001` | Hearthline's public visual series |
 | Hearth Perch | `OWL-000001/HEARTH-PERCH-000001` | That Owl Scribe's Home series |
 | Hearth Perch version | `OWL-000001/HEARTH-PERCH-000001/VERSION-000001` | One Hearth Perch's version series |
 | Perch | `OWL-000001/PERCH-000001` | That Owl Scribe's partition directory |
@@ -219,6 +225,8 @@ canonical controller reconciliation.
 Each Perch identifies one partitioned Spark Static lineage. A new Perch version appends changes to its index, access path, reconstruction handles, or availability state without altering the earlier version. A Perch number never becomes a shared codebook identity.
 
 An Owl character sheet is a presentation record. A successor sheet may revise appearance, voice, mannerisms, poses, or other narrative cues while preserving its predecessor, but it cannot alter Owl Scribe behavior, access, authority, or the governing Owl profile. An identity-bearing design change belongs in a separately numbered profile successor.
+
+An image identity is likewise a presentation record. The [visual index](HEARTHLINE_VISUAL_INDEX.md) binds each registered image to its exact repository path, dimensions, digest, status, and known residuals. A study, scene, correction, or successor keeps its own image number; moving an older image to a clearly labeled history view does not renumber or erase it. An image number does not create a character, memory, capability, trigger, credential, permission, or controlling design rule.
 
 Every translation attempt receives its request number before work begins. Every successfully recorded Bridge Gloss receives its own gloss number, and delivery to each recipient receives a separate delivery number. Denied, failed, ambiguous, interrupted, invalidated, and superseded attempts keep their numbers and dispositions. A direction, destination, audience, or source-version change creates a successor request or gloss rather than silently changing the old one.
 

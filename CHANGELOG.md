@@ -14,6 +14,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000006` | 2026-09-04 | `LORE_AND_VISUAL_SUCCESSOR` | Publish Hearthline's visual gallery, pre-Velis history, artifact lore, and distinct later-road lessons including the finite field station and returning-bell ledger. | [Record](docs/changelog/2026-09-04-hlp-000006-hearthline-lore-gallery.md) |
 | `HLP-000005` | 2026-09-03 | `TETHER_CONTINUITY_SUCCESSOR` | Add carrier-neutral, handle-bound exact reopening and require unresolved items to retain a route home. | [Record](docs/changelog/2026-09-03-hlp-000005-tether-continuity.md) |
 | `HLP-000004` | 2026-09-02 | `SOURCE_PROFILE_AND_DESIGN_SUCCESSOR` | Advance to PAL v2.3; install the Research Station, Creatures, and open objective windows; preserve repaired BRRRT and Strongwiz ceilings. | [Record](docs/changelog/2026-09-02-hlp-000004-research-station-creatures.md) |
 | `HLP-000003` | 2026-09-02 | `REPOSITORY_HISTORY_CORRECTION` | Generalize representation-side return to include bundles prepared by a Ledger Scribe or Thulia without assigning result status. | [Record](docs/changelog/2026-09-02-hlp-000003-generalize-representation-return.md) |
