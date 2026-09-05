@@ -1,0 +1,53 @@
+{
+  "schema": "hearthline.change-history.branch-reservations.v1",
+  "series": "HLP",
+  "status": "RESERVED_OFF_MAIN_NOT_ADOPTED",
+  "effect": "NAMESPACE_ONLY_NO_ADOPTION",
+  "authority": "NONE",
+  "source": {
+    "repository": "Grativy6/hearthline",
+    "pull_request": 12,
+    "pull_request_url": "https://github.com/Grativy6/hearthline/pull/12",
+    "commit": "3da4aca46f4bc7b3bea2fcf31bdfb3ed8aa31274",
+    "tree": "0f4ae1bcc16059c209b95959903f737c7507a555",
+    "content_hash_domain": "git_object_content_bytes_sha256"
+  },
+  "reservations": [
+    {
+      "id": "HLP-000008",
+      "ordinal": 8,
+      "source_path": "docs/changelog/2026-09-04-hlp-000008-thulia-gloss-systemic-friction.md",
+      "source_sha256": "e838917cfe2a165212658c2ae8ae9ca24ab59372b76e912aec95f466b54cc40d"
+    },
+    {
+      "id": "HLP-000009",
+      "ordinal": 9,
+      "source_path": "docs/changelog/2026-09-04-hlp-000009-the-night-the-garden-clicked.md",
+      "source_sha256": "92e225b3ca16a819be63cf2231f27b694fa85af5f06d3dede41bd322472ac58f"
+    },
+    {
+      "id": "HLP-000010",
+      "ordinal": 10,
+      "source_path": "docs/changelog/2026-09-04-hlp-000010-task-triad-lifecycle.md",
+      "source_sha256": "40de422653944c1d90159b9a92866007cb146b1ff5e1a6f39e586dd5ce368473"
+    },
+    {
+      "id": "HLP-000011",
+      "ordinal": 11,
+      "source_path": "docs/changelog/2026-09-04-hlp-000011-light-trio-selected-carry.md",
+      "source_sha256": "d73ad10c5623e068cf66d47ed0a4fe516c2250ec5f217fc6c2a5e3a0e9db3d1a"
+    },
+    {
+      "id": "HLP-000012",
+      "ordinal": 12,
+      "source_path": "docs/changelog/2026-09-05-hlp-000012-creature-charter-companion.md",
+      "source_sha256": "e9219758066ef90ecf3e0c08878b21974f509c7629a36b67ff166e9d6de47645"
+    },
+    {
+      "id": "HLP-000013",
+      "ordinal": 13,
+      "source_path": "docs/changelog/2026-09-05-hlp-000013-charter-publication-status.md",
+      "source_sha256": "ac7cbf940abfa6a8ef402b4af96626e607cda5fbbdef681b23e530a91608b36c"
+    }
+  ]
+}

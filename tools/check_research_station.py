@@ -274,8 +274,8 @@ def main() -> None:
 
     homecoming_text = HOMECOMING_DOC.read_text(encoding="utf-8")
     homecoming_words = " ".join(homecoming_text.split())
-    require("| Version | `0.4` |" in homecoming_text,
-            "Homecoming objective-window successor version missing")
+    require("| Version | `0.5` |" in homecoming_text,
+            "Homecoming Return Queue successor version missing")
     for phrase in (
         "open objective window",
         "Returns may arrive out of order",

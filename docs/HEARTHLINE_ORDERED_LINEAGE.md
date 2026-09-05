@@ -4,16 +4,29 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.6` |
+| Version | `0.7` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
-**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, [Creatures](HEARTHLINE_CREATURES.md), Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, [Homes and Homecomings](HEARTHLINE_HOMECOMING.md), their receipts, and public visual presentation records.
+**Hearthline Ordered Lineage** is the identity and versioning discipline for Hearthline Sparks, [Creatures](HEARTHLINE_CREATURES.md), [Return Queues](HEARTHLINE_RETURN_QUEUE.md), Firesides, Static, Field Notes, Embers, [Thulia's](HEARTHLINE_THULIA.md) Owl Scribe records, [Homes and Homecomings](HEARTHLINE_HOMECOMING.md), their receipts, and public visual presentation records.
 
 Its purpose is simple: every Spark and every new version receives an ordered number, and earlier work remains individually addressable. Correction, retirement, rejection, or replacement may change what governs later work; none silently makes an earlier record disappear.
 
 An ordered number is an identifier inside a declared ledger scope. It records allocation and sequence only. It does not establish rank, seniority, quality, truth, personhood, experiential continuity, ownership, capability, permission, or authority.
+
+## v0.7 return-queue successor
+
+Version `0.7` adds ordered identities for a controller-owned Return Queue, its
+items, immutable arrival snapshots, optional Queue Steward proposals, final
+service snapshots, and close receipts. Arrival order and service order are
+different series. Reordering never renumbers an item or erases the arrival
+record, and an order proposal never allocates a final position or authority.
+
+The public-history namespace also preserves explicitly issued off-main numbers
+as reservations rather than reusing them. Reservation is provenance only: it
+does not adopt the off-main content or place that content into the current
+mainline. Version `0.6` remains the presentation predecessor below.
 
 ## v0.6 presentation successor
 
@@ -49,6 +62,19 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Homecoming Return Receipt | `SPARK-000001/HOMECOMING-000001/RETURN-000001` | One Homecoming's return series |
 | Homecoming Reconciliation Receipt | `SPARK-000001/HOMECOMING-000001/RECONCILIATION-000001` | One Homecoming's reconciliation series |
 | Homecoming Context-Close Receipt | `SPARK-000001/HOMECOMING-000001/CONTEXT-CLOSE-000001` | One Homecoming's context-close series |
+| Return Queue | `RETURN-QUEUE-000001` | One controller-owned destination and queue registry |
+| Return Queue profile | `RETURN-QUEUE-000001/PROFILE-000001` | That queue's immutable policy and service-epoch lineage |
+| Intake Attempt Receipt | `RETURN-QUEUE-000001/INTAKE-000001` | One immutable idempotency binding before capacity disposition |
+| Intake Disposition Receipt | `RETURN-QUEUE-000001/INTAKE-000001/DISPOSITION-000001` | Append-only accepted, blocked, unknown, reconciled, or conflict outcome |
+| Return Queue item | `RETURN-QUEUE-000001/ITEM-000001` | That queue's immutable arrival-allocation series |
+| Enqueue Receipt | `RETURN-QUEUE-000001/ITEM-000001/ENQUEUE-000001` | One accepted item's atomic placement and arrival ordinal |
+| Arrival snapshot | `RETURN-QUEUE-000001/ARRIVAL-000001` | That queue's append-only arrival snapshot series |
+| Queue order proposal | `RETURN-QUEUE-000001/PROPOSAL-000001` | That queue's optional Queue Steward proposal series |
+| Final service snapshot | `RETURN-QUEUE-000001/SERVICE-ORDER-000001` | That queue's controller-committed service-order series |
+| Service transaction | `RETURN-QUEUE-000001/SERVICE-000001` | One controller-selected item and pre-admission revalidation scope |
+| Service Admission Receipt | `RETURN-QUEUE-000001/SERVICE-000001/ADMISSION-000001` | One actual passing admission, its order binding, and pre/post overtake counts |
+| Service Disposition Receipt | `RETURN-QUEUE-000001/SERVICE-000001/DISPOSITION-000001` | One terminal or bounded-handoff observation, including pre-admission failure |
+| Return Queue close | `RETURN-QUEUE-000001/CLOSE-000001` | That queue's terminal snapshot and close-receipt series |
 | Static version | `SPARK-000001/STATIC-000001` | That Spark's isolated Static lineage |
 | Static entry | `SPARK-000001/STATIC-000001/ENTRY-000001` | One Static version |
 | Field Notes page | `SPARK-000001/NOTES-000001` | That Spark's notes series |
@@ -261,6 +287,21 @@ Allocation and append must be atomic or fail closed. After a crash, restoration 
 
 An exact retry with the same idempotency key returns the same allocation. A genuinely new attempt receives the next number. Only allocation and canonical append need serialize; Spark investigation and candidate production may remain concurrent.
 
+For a Return Queue, allocation assigns one immutable arrival ordinal. A later
+service-order snapshot references those item identities without renumbering
+them. Each reorder appends the original arrival snapshot, optional proposal,
+final order, pinned policy and reasons, and per-item overtake counts. An
+overtake is counted only when a later-arriving eligible item actually enters
+service first, not when a proposal is written or an item remains in an unserved
+suffix. The actual controller admission receives its own Service Admission
+Receipt and is not inferred from the final-order snapshot. A failed
+pre-admission check or later terminal observation receives a separate Service
+Disposition Receipt. A profile successor
+receives a new profile identity and service epoch; migration cannot renumber an
+item or reset its accumulated count. A busy service writer may delay processing;
+it cannot resolve contention by dropping, overwriting, or appropriating a
+distinct return.
+
 For branched or offline work, an implementation may preallocate a recorded range or use a distinct registry namespace. It must not create two records that claim the same full identity. When material crosses registries, the original identity remains provenance and any locally adopted successor receives a new local identity.
 
 ## Retention, redaction, and tombstones
@@ -285,7 +326,11 @@ collision handling, Hearth Perch and Static Perch isolation, recipient-specific
 gloss delivery, sealed-page immutability, lawful tombstoning, Creature profile
 succession, physically isolated campaign arms, campaign-index noninterference,
 one canonical effect-admission and serialization path, and failure when the
-active version cannot be established.
+active version cannot be established. Return Queue implementations must also
+test atomic idempotent enqueue, immutable arrival order, complete proposal
+coverage, controller-only final-order append, bounded overtakes, base-rule
+fallback, traced overflow, and separate attribution for distinct valid
+returns.
 
 Ordered lineage preserves addressability. It does not manufacture memory, identity continuity, consciousness, consent, standing, permission, or authority.
 

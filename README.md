@@ -24,6 +24,7 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`docs/HEARTHLINE_STATIC.md`](docs/HEARTHLINE_STATIC.md) — the local, record-backed shorthand discipline for one Spark and one isolated append-only ledger lineage.
 - [`docs/HEARTHLINE_THULIA.md`](docs/HEARTHLINE_THULIA.md) — Thulia, Hearthline's pet owl and bounded Owl Scribe for partitioned Static custody and numbered Bridge Glosses.
 - [`docs/HEARTHLINE_HOMECOMING.md`](docs/HEARTHLINE_HOMECOMING.md) — declared Homes, paired Work and Ledger Scribe Sparks, task-shaped Heartbeat Contracts, open objective windows, and trace-preserving Homecoming.
+- [`docs/HEARTHLINE_RETURN_QUEUE.md`](docs/HEARTHLINE_RETURN_QUEUE.md) — controller-owned queued return, immutable arrival order, bounded reordering, and the optional Queue Steward Creature.
 - [`docs/HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md) — current Thulia appearance and animation sheet; its [`SHEET-000001`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md) predecessor remains preserved.
 - [`docs/HEARTHLINE_FIRESIDES.md`](docs/HEARTHLINE_FIRESIDES.md) — the non-blocking consultation pattern for Hearthline, Scribe Sparks, Run Trails, Field Notes, Embers, and refresh.
 - [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
@@ -32,12 +33,8 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`assets/README.md`](assets/README.md) — present-facing visual gallery with clearly separated history and artifact trails.
 - [`docs/HEARTHLINE_RESEARCH_STATION.md`](docs/HEARTHLINE_RESEARCH_STATION.md) — bounded public research context, inspected source identities, design extraction, and open provenance residuals.
 - [`docs/HEARTHLINE_TETHER.md`](docs/HEARTHLINE_TETHER.md) — carrier-neutral trace externalization, identity-bound handles, selective exact reopening, and unresolved-route discipline.
-- [`TRADEMARKS.md`](TRADEMARKS.md) — restrained name and source-identification guidance.
-- [`SECURITY.md`](SECURITY.md) — security scope and responsible reporting route.
-- [`CHANGELOG.md`](CHANGELOG.md) — bounded public change index and full-record routes.
-- [`tools/check_change_history.py`](tools/check_change_history.py) — local structural check for the bounded history surfaces.
-- [`tools/check_research_station.py`](tools/check_research_station.py) — source, successor, Creature-boundary, and candidate-text consistency check.
-- [`LICENSE`](LICENSE) — Creative Commons Attribution 4.0 International terms for covered repository material.
+- Housekeeping: [`TRADEMARKS.md`](TRADEMARKS.md), [`SECURITY.md`](SECURITY.md), [`CHANGELOG.md`](CHANGELOG.md), and [`LICENSE`](LICENSE).
+- [`tools/check_change_history.py`](tools/check_change_history.py) and the other `tools/` checks — fail-closed structural verification.
 
 Operational code, credentials, platform state, private receipts, and personal data do not belong in this repository.
 
@@ -86,6 +83,13 @@ identified objectives into one eventual response. The controller and host own
 admission and lifecycle; a heartbeat marks an interrupt boundary but is not a
 scheduler, keepalive, grant, or shared context.
 
+A **Homecoming Return Queue** gives every intake attempt a durable disposition
+and every accepted enqueue an immutable, controller-linearized arrival place.
+A lone bundle may be the immediate head; simultaneous bundles join the same
+path instead of letting a busy intake choose one. An optional Queue Steward
+Creature may propose a bounded service order; only the controller commits it,
+and every return keeps its status and attribution.
+
 **Thulia** is Hearthline's pet owl and Owl Scribe. She keeps every Spark's Static
 in its own numbered Perch. When one Spark needs to understand another, Thulia
 reconstructs selected shorthand inside the sending ledger and leaves a numbered,
@@ -98,7 +102,8 @@ separate direction-bound carry and target-ledger admission may create a new
 target-local Static record. She never merges the ledgers or teaches either Spark
 the other's language.
 
-See [Hearthline Sparks](docs/HEARTHLINE_SPARKS.md) for the family and role ceilings, [Hearthline Static](docs/HEARTHLINE_STATIC.md) for shorthand and reconstruction, [Thulia](docs/HEARTHLINE_THULIA.md) for the Owl Scribe and Bridge Gloss, [Paired Sparks and Homecoming](docs/HEARTHLINE_HOMECOMING.md) for return and pulse discipline, [Hearthline Firesides](docs/HEARTHLINE_FIRESIDES.md) for concurrent consultation and refresh, [Hearthline Ordered Lineage](docs/HEARTHLINE_ORDERED_LINEAGE.md) for numbering and non-overwrite rules, and [Hearthline Creatures](docs/HEARTHLINE_CREATURES.md) for bounded coordination formations.
+The repository map above links the full role, Homecoming, Return Queue,
+Creature, lineage, custody, and carry boundaries.
 
 **TETHER** is Hearthline's carrier-neutral continuity technique: externalize recoverable trace, bind a compact identity/scope/status/residual/reopen handle, verify it later, and reopen only what the present task needs. It carries trace—not hidden model state, extra context capacity, access permission, or authority. An unresolved item without a reopening route is incomplete.
 
@@ -158,13 +163,13 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000007 — Gloss and the two-sided note**
+**HLP-000014 — Homecoming Return Queue**
 
-- Introduced Gloss as a tiny golden note-turning wisp with one fixed, deterministic job.
-- Kept Gloss distinct from Thulia and her numbered Bridge Gloss records.
-- Let a note's work face return exactly while separate turn-marks preserve the route taken.
-- Made malformed, ambiguous, and lossy notes visible failures rather than invitations to guess.
+- Added one queue-intake path for lone and simultaneous returned bundles.
+- Preserved immutable arrival order, distinct attribution, and bounded actual-overtake accounting (`maximum_overtakes: 2`).
+- Made the optional Queue Steward Creature proposal-only; the controller commits service order.
+- Reserved PR #12's issued `HLP-000008`–`HLP-000013` identities without adopting their content.
 
-[Full change record](docs/changelog/2026-09-04-hlp-000007-gloss-turning-wisp.md) ·
+[Full change record](docs/changelog/2026-09-05-hlp-000014-homecoming-return-queue.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
