@@ -18,9 +18,13 @@ MORROW_LORE = ROOT / "lore" / "MORROW_AND_THE_MARKED_TETHERS.md"
 BOUNDARY_DOC = ROOT / "BOUNDARY.md"
 README = ROOT / "README.md"
 CHANGELOG = ROOT / "CHANGELOG.md"
-CHANGE_RECORD = (
+MORROW_CHANGE_RECORD = (
     ROOT / "docs" / "changelog" /
     "2026-09-05-hlp-000015-morrow-homecoming-priority.md"
+)
+OVERTAKE_CHANGE_RECORD = (
+    ROOT / "docs" / "changelog" /
+    "2026-09-05-hlp-000016-return-queue-overtake-bound.md"
 )
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 
@@ -62,17 +66,20 @@ def main() -> None:
     boundary = BOUNDARY_DOC.read_text(encoding="utf-8")
     readme = README.read_text(encoding="utf-8")
     changelog = CHANGELOG.read_text(encoding="utf-8")
-    change_record = CHANGE_RECORD.read_text(encoding="utf-8")
+    morrow_change_record = MORROW_CHANGE_RECORD.read_text(encoding="utf-8")
+    overtake_change_record = OVERTAKE_CHANGE_RECORD.read_text(encoding="utf-8")
 
     queue_words = words(queue)
     require("# Hearthline Return Queue" in queue,
             "Return Queue heading missing")
-    require("| Version | `0.2` |" in queue,
-            "Return Queue version is not 0.2")
+    require("| Version | `0.2.1` |" in queue,
+            "Return Queue version is not 0.2.1")
     require("| Status | Adopted lore and design vocabulary |" in queue,
             "Return Queue design is not marked adopted")
     require("| Implementation | Not asserted by this document |" in queue,
             "Return Queue text manufactured an implementation")
+    require("## v0.2.1 maximum-overtake claim-narrowing successor" in queue,
+            "Return Queue 0.2.1 successor section missing")
 
     require_all(
         queue_words,
@@ -188,6 +195,11 @@ def main() -> None:
             "cannot churn through proposals while lower items wait without earning overtakes",
             "Assignment, Revision, Intake Attempt, Intake Disposition, Enqueue, Proposal, Order, Service Admission, Service Disposition, Homecoming, and queue-close receipts occupy distinct typed identity domains",
             "If every eligible task is assigned `P0_URGENT`, the priority distinction collapses",
+            "For an item that remains continuously `READY`, the bound counts successful admissions of later-arriving eligible items ahead of it while controller service continues",
+            "it is not a wall-clock latency bound, a service-liveness promise, or an eventual-disposition guarantee",
+            "This fallback does not promise controller liveness, wall-clock service latency, or eventual disposition",
+            "This successor narrows the public claim only",
+            "Version `0.2` remains the frozen design predecessor below",
         ),
         "Morrow priority boundary",
     )
@@ -328,16 +340,18 @@ def main() -> None:
             "README blurs Queue Steward and controller authority")
     require("HLP-000015" in changelog,
             "changelog lacks the Morrow priority successor")
+    require("HLP-000016" in changelog,
+            "changelog lacks the overtake-bound claim narrowing")
     require("RESERVED_OFF_MAIN_NOT_ADOPTED" in changelog,
             "changelog lacks the reservation status")
     require("NAMESPACE_ONLY_NO_ADOPTION" in changelog,
             "changelog lacks the reservation effect ceiling")
-    require("| Change ID | `HLP-000015` |" in change_record,
+    require("| Change ID | `HLP-000015` |" in morrow_change_record,
             "Morrow priority change record identity missing")
-    require("| Predecessor | `HLP-000014` |" in change_record,
+    require("| Predecessor | `HLP-000014` |" in morrow_change_record,
             "Morrow priority predecessor missing")
     require_all(
-        words(change_record),
+        words(morrow_change_record),
         (
             "dense invocation-local ready-arrival rank",
             "never global arrival ordinals, readable queue identities, epochs, or cuts",
@@ -345,6 +359,31 @@ def main() -> None:
             "`QUEUE_ORDER_PROPOSAL_ONLY` is the stateless transform's allowed output schema, not a grant or decision",
         ),
         "Morrow change record least-view boundary",
+    )
+    require("| Change ID | `HLP-000016` |" in overtake_change_record,
+            "overtake-bound change record identity missing")
+    require("| Predecessor | `HLP-000015` |" in overtake_change_record,
+            "overtake-bound predecessor missing")
+    require(
+        "| Frozen predecessor SHA-256 | "
+        "`3c9620320309573023e0f3659dba00d3cd52328999be2edab7fd4ab6d2dd2ae1` |"
+        in overtake_change_record,
+        "overtake-bound record lacks the frozen predecessor digest",
+    )
+    require("| Return Queue | `0.2` -> `0.2.1` |" in overtake_change_record,
+            "overtake-bound version transition missing")
+    require_all(
+        words(overtake_change_record),
+        (
+            "`PUBLIC_RETURN_QUEUE_CLAIM_NARROWING_ONLY`",
+            "`PUBLIC_DESIGN_CLAIM_NARROWING_ONLY`",
+            "successful admissions of later-arriving eligible items ahead of a continuously `READY` item",
+            "conditional on controller service continuing",
+            "not a wall-clock latency bound, controller-liveness promise, or eventual-disposition guarantee",
+            "HLP-000015 remains the unchanged, frozen predecessor",
+            "does not change queue state, ordering, receipts, authority, or runtime behavior",
+        ),
+        "overtake-bound claim-narrowing record",
     )
 
     for path in (
@@ -357,7 +396,8 @@ def main() -> None:
         BOUNDARY_DOC,
         README,
         CHANGELOG,
-        CHANGE_RECORD,
+        MORROW_CHANGE_RECORD,
+        OVERTAKE_CHANGE_RECORD,
     ):
         check_links(path)
         lowered = path.read_text(encoding="utf-8").lower()

@@ -5,7 +5,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2` |
+| Version | `0.2.1` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -22,6 +22,17 @@ matters.
 The queue preserves each return as its own attributable object. It does not
 merge workers, Creatures, Homes, ledgers, grants, evaluation rules, results, or
 authority. A queue position is custody and scheduling state only.
+
+## v0.2.1 maximum-overtake claim-narrowing successor
+
+Version `0.2.1` clarifies that `maximum_overtakes` bounds successful
+admissions of later-arriving eligible items ahead of a continuously `READY`
+item while controller service continues. It is not a wall-clock latency bound,
+a controller-liveness promise, or an eventual-disposition guarantee.
+
+This successor narrows the public claim only. It changes no queue state,
+ordering rule, receipt, controller boundary, runtime behavior, or authority.
+Version `0.2` remains the frozen design predecessor below.
 
 ## v0.2 Morrow and the dispatch-priority successor
 
@@ -449,8 +460,10 @@ gaps as advisory evidence, but it is non-admissible as an order. If a proposal
 is absent, partial, late, invalid, non-deterministic, revoked, or uncertain,
 the controller retains the queue and computes the frozen priority-aware base
 service rule itself: fairness-due prefix, effective priority band, then stable
-FIFO arrival order. Queue correctness, dispatch priority, fairness, and
-eventual disposition never depend on Morrow remaining available.
+FIFO arrival order. Queue correctness, dispatch priority, and fairness-rule
+computation never depend on Morrow remaining available. This fallback does not
+promise controller liveness, wall-clock service latency, or eventual
+disposition.
 
 Reading `overtake_count` is not owning it. Before accepting any proposal, the
 controller independently recomputes every count and fairness-due item from
@@ -528,10 +541,14 @@ An item's overtake counter increments only when a later-arriving eligible item
 is actually admitted to service ahead of it. Merely proposing an order, or
 leaving an item in the unserved suffix of a snapshot, does not increment the
 counter. The initial queue profile sets `maximum_overtakes: 2` and an aging
-rule. Reaching the bound makes the older item service-due under the base rule
-unless a separately authorized exception records the exact blocker, duration, remedy,
-and reopening route. An urgent item may move forward under a predeclared rule;
-the displaced items remain visible and cannot be indefinitely starved.
+rule. For an item that remains continuously `READY`, the bound counts successful
+admissions of later-arriving eligible items ahead of it while controller service
+continues; it is not a wall-clock latency bound, a service-liveness promise, or
+an eventual-disposition guarantee. Reaching the bound makes the older item
+service-due under the base rule unless a separately authorized exception records
+the exact blocker, duration, remedy, and reopening route. Absent that exception,
+an urgent item may move forward under a predeclared rule only before the
+displaced item becomes fairness-due.
 
 Queue capacity is finite. When no slot can be durably allocated, the controller
 records `QUEUE_CAPACITY_BLOCKED` or `QUEUE_CAPACITY_UNKNOWN`, preserves the
@@ -647,7 +664,10 @@ A future implementation should test at least:
 - failed or uncertain selected-head removal from `READY`, receipted remedy
   before re-entry, and absence of high-priority retry livelock;
 - complete Morrow/Thulia surface and channel separation;
-- maximum-overtake and aging enforcement without starvation;
+- maximum-overtake and aging enforcement as a bound on successful later
+  admissions ahead of a continuously `READY` item, conditional on controller
+  service continuing, without asserting wall-clock latency, liveness, or
+  eventual disposition;
 - preservation of two separately valid wins and their attribution;
 - bounded overflow with a reopening route;
 - crash recovery before replay of an ambiguous service transaction; and

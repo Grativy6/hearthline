@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -52,6 +53,10 @@ FORBIDDEN_TEXT = (
 RESERVATION_SCHEMA = "hearthline.change-history.branch-reservations.v1"
 RESERVATION_STATUS = "RESERVED_OFF_MAIN_NOT_ADOPTED"
 RESERVATION_EFFECT = "NAMESPACE_ONLY_NO_ADOPTION"
+FROZEN_RECORD_SHA256 = {
+    "2026-09-05-hlp-000015-morrow-homecoming-priority.md":
+        "3c9620320309573023e0f3659dba00d3cd52328999be2edab7fd4ab6d2dd2ae1",
+}
 RESERVATION_SOURCE = {
     "repository": "Grativy6/hearthline",
     "pull_request": 12,
@@ -352,6 +357,12 @@ def main() -> None:
                 f"{target.name} date does not match its index row")
         require(filename.group("id") == str(row["id"]).lower(),
                 f"{target.name} ID does not match its index row")
+        if target.name in FROZEN_RECORD_SHA256:
+            digest = hashlib.sha256(target.read_bytes()).hexdigest()
+            require(
+                digest == FROZEN_RECORD_SHA256[target.name],
+                f"{target.name} changed after its frozen addition",
+            )
         note = read_bounded(target, 32 * 1024, 500)
         require(f"| Change ID | `{row['id']}` |" in note,
                 f"{target.name} does not declare index ID {row['id']}")
