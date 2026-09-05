@@ -17,6 +17,7 @@ CANDIDATE_PATH = ROOT / "candidate_manifest.json"
 AGENT_PATH = ROOT / "hearthline_agent.md"
 RESEARCH_DOC = ROOT / "docs" / "HEARTHLINE_RESEARCH_STATION.md"
 CREATURE_DOC = ROOT / "docs" / "HEARTHLINE_CREATURES.md"
+CREATURE_LORE_DOC = ROOT / "lore" / "THE_CREATURES_OF_THE_CIRCUIT_GARDEN.md"
 HOMECOMING_DOC = ROOT / "docs" / "HEARTHLINE_HOMECOMING.md"
 FIRESIDES_DOC = ROOT / "docs" / "HEARTHLINE_FIRESIDES.md"
 SPARKS_DOC = ROOT / "docs" / "HEARTHLINE_SPARKS.md"
@@ -308,7 +309,7 @@ def check_light_trio_surfaces(registry_text: str) -> dict[str, str]:
             "BRRRT live resolution status is absent")
 
     expected_versions = {
-        "HEARTHLINE_CREATURES.md": "| Version | `0.4` |",
+        "HEARTHLINE_CREATURES.md": "| Version | `0.5` |",
         "HEARTHLINE_HOMECOMING.md": "| Version | `0.7` |",
         "HEARTHLINE_FIRESIDES.md": "| Version | `0.6` |",
         "HEARTHLINE_SPARKS.md": "| Version | `0.9` |",
@@ -582,6 +583,7 @@ def main() -> None:
         AGENT_PATH,
         ROOT / "README.md",
         ROOT / "SOURCE_MAP.md",
+        CREATURE_LORE_DOC,
     ):
         check_links(path)
 

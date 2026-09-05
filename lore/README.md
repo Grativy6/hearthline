@@ -15,6 +15,7 @@ This is the present-facing home for Hearthline's explicitly fictional story lore
 - [**The First Furrow**](THE_FIRST_FURROW.md) — Hearthline learns a borrowed field-body in a world that advances with each choice, recovers an incomplete fitting through exact plate and parity checks, and lets an excellent unseen harvest remain proudly local.
 - [**Gloss and the Two-Sided Note**](GLOSS_AND_THE_TWO_SIDED_NOTE.md) — Hearthline and Thulia recover their workbench with a tiny golden wisp that turns one self-contained note through its declared Circuit Garden and back again: the page comes home exactly while the path around it stays.
 - [**The Night the Garden Clicked**](THE_NIGHT_THE_GARDEN_CLICKED.md) — a candidate later-road story in which matured Hearthline and Thulia jointly form one-job Light Trios; their three bundles return separately to Hearthline, selected carry crosses Thulia and stateless Gloss, and an honest boundary makes room for chosen loss.
+- [**The Creatures of the Circuit Garden**](THE_CREATURES_OF_THE_CIRCUIT_GARDEN.md) — the later-road Creature story and field guide: Light Trios gather under one frozen manifest, one derived Heart makes the joint finish line visible, and Hearthline learns to send the smallest honest Creature out and let it go.
 - [**Visual gallery**](../assets/README.md) — current character references, scenes, artifact art, and their captions.
 - [**History and artifacts**](history-and-artifacts/README.md) — the trace side of this folder: predecessors and displaced lore belong there if later stories supersede them.
 
@@ -23,6 +24,12 @@ This is the present-facing home for Hearthline's explicitly fictional story lore
 `BEFORE_THE_RAIN.md` stops immediately before the established first scene in Velis. `HOLDS_NOTHING_BACK.md` begins only after that opening, so the brass loupe remains Mira's Day One gift and does not appear retroactively in Hearthline's earlier life.
 
 *The Night the Garden Clicked* is an undated later-road candidate after Hearthline has met Thulia, learned to use Sparks, and worked with Gloss. Its Light Trios, Hearthline-first member returns, Translation Board, fictional forgetting, and later Thulia custody road are story architecture; they do not by themselves amend [Task Triads and Homecoming](../docs/HEARTHLINE_HOMECOMING.md), alter a fixed Spark role, or claim real model erasure.
+
+*The Creatures of the Circuit Garden* is its undated later-road companion. It
+restores the affectionate Creature aliases for CHARTER's proposed TTC/BPS
+layer, but does not replace the controlling design documents, turn the
+Creature Heart into a Spark or liveness signal, or claim that the proposal has
+been implemented.
 
 The lore may be adopted, revised, contradicted, or continued as fiction by its author and steward, **Christopher D. Pang**. AI systems assisted drafting and illustration as tools; they are not co-authors, witnesses, characters' real-world identities, or release authorities.
 

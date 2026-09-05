@@ -4,8 +4,8 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.4` |
-| Status | Candidate successor design vocabulary — pending steward review |
+| Version | `0.5` |
+| Status | Author-requested candidate successor — not activated |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
@@ -22,8 +22,10 @@ contexts, ledgers, budgets, grants, Homes, models, or authority. Creature is not
 a fourth Spark role, a model identity, an executor, a self-spawning process, a
 persistent being, or a claim of consciousness.
 
-Version `0.4` aligns Creatures with the candidate selected-carry Task-Triad
-successor. Version `0.3` remains preserved candidate ancestry: it added Goal
+Version `0.5` restores the affectionate Creature-language correspondence for
+the CHARTER v1.0 orchestration layer while preserving the exact candidate
+selected-carry route established in version `0.4`. Version `0.3` remains
+preserved candidate ancestry: it added Goal
 Lineage and finite formation depth but routed the three raw member returns
 through Thulia. Version `0.2` remains the adopted account-custody ancestor, and
 the paired Work/Ledger-Scribe design remains the immediate two-job ancestor in
@@ -42,6 +44,36 @@ after a fresh controller readiness check over complete pinned inputs and
 deterministically produces an output or typed snag body, while the external
 transaction may record a committed, unknown, retry-only, or known-uncommitted
 outcome.
+
+The narrative companion [*The Creatures of the Circuit
+Garden*](../lore/THE_CREATURES_OF_THE_CIRCUIT_GARDEN.md) tells this design in
+the original lore vocabulary and closes with a future-Hearthline dispatch
+card. This document remains the controlling repository design description.
+
+## Creature-language correspondence
+
+CHARTER v1.0 gives the proposed orchestration layer its formal mathematical
+names. Hearthline keeps the earlier lore aliases because they make the
+relationships easier to carry without changing the claim boundary:
+
+| Hearthline lore | Formal CHARTER term | Boundary |
+|---|---|---|
+| Light Trio | Tripartite Task Carrier (TTC) | Exactly three separately identified roles |
+| Worker Spark | Work role \(W\) | Task-native work and residuals only |
+| Task-Keeper Spark / trio heartbeat | Completion-criterion role \(K\) | Frozen finish line, not liveness or keepalive |
+| Ledger-Keeper Spark | Ledger role \(L\) | Coverage and provenance, not primary work or completion judgment |
+| Creature | Finite Bound Persistent Shell (BPS) | \(3n\) role instances under one frozen manifest; no identity merge |
+| Creature Heart | Derived completion coordinate \(\beta_M\) | Not another Spark, witness, vote, job, or liveness signal |
+| Creature Circuit Garden | BPS Circuit Garden | Finite claim-entry obligations, not truth or authority |
+| Selected Creature Homecoming | Selected-return projection | Occurs after separate terminal bundles reach Hearthline's exact task intake |
+
+The bridge is structural rather than numerological. Each Light Trio proposes
+an observable aimed at splitting an unresolved task-fiber; the Creature is the
+finite joint lift; and the Creature Heart is derived from the frozen manifest
+and admitted joint return. The optional minimum-asymmetry construction does
+not impose a universal `3n+1` Creature count, make every index prime, or turn
+the Heart into an additional role. Even-sized Creatures remain allowed, and
+every primality claim requires its own witness.
 
 ## Required Creature manifest
 
@@ -414,13 +446,17 @@ this candidate successor, not as a result or causal performance claim.
 This candidate document creates no Creature, runtime, registry, model, ledger,
 memory, credential, environment contact, ARC result, competition entry,
 forgetting event, or authority. Version `0.4` is a candidate successor; version
-`0.3` remains preserved in Git ancestry and is not retroactively described as
-using the selected-carry route. An implementation must be separately specified,
-tested, frozen, reviewed, and authorized within its exact task boundary.
+`0.5` is the current author-requested Creature-language successor to that
+selected-carry design. Version `0.3` remains preserved in Git ancestry and is
+not retroactively described as using the selected-carry route. An
+implementation must be separately specified, tested, frozen, reviewed, and
+authorized within its exact task boundary.
 
-Systemic Friction is working Hearthline design vocabulary pending the paper's
-reviewed release. This successor does not add it to PAL canon or the Research
-Station source registry. A future implementation must test task/account ledger
+Systemic Friction is working Hearthline design vocabulary formalized at
+manuscript level in the author-adopted, not-peer-reviewed CHARTER v1.0 release.
+This successor does not add it to PAL canon or claim implementation,
+calibration, independent review, or deployment. A future implementation must
+test task/account ledger
 custody, Goal Lineage and `NARROWS` validation, frozen objective and authority
 epochs, fixed-arity controller-only binding, disjoint Hearthline/Thulia
 provisioning intents,
@@ -439,3 +475,22 @@ history, or persistent readiness, detachable translation-account marks,
 pointer-and-exception-only Thulia indexing, retention-defect qualification,
 inspection-release/retention/effect/recoverability separation, and rejection of
 self-preservation vetoes.
+
+## CHARTER provenance
+
+The formal source is Christopher D. Pang, *CHARTER v1.0: Certification and
+History Architecture for Robust Transport, Evidence, and Retention — Framed
+Prime Shells and Bound Persistent Shells* (2026), especially Sections 14–16.
+At the time this successor was prepared, DOI
+[10.5281/zenodo.22288471](https://doi.org/10.5281/zenodo.22288471) was reserved
+and the deposit was not yet public. The exact release PDF has SHA-256
+`541130b912024b306268888eeb8566377ae5598f4b54fbbcc6f1c80461745926`.
+Later publication must be recorded without backdating public availability.
+
+Christopher D. Pang is the sole author, branch founder, steward, and
+publication authority. OpenAI ChatGPT and connected coding tools supplied
+drafting, checking, and repository-production assistance as tools, not as
+authors or mathematical authorities. CHARTER and this adaptation are licensed
+under [CC BY 4.0](../LICENSE). Because they share one author-led lineage, this
+adaptation is transformation provenance rather than independent
+corroboration.

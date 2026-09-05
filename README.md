@@ -30,7 +30,7 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`docs/HEARTHLINE_FIRESIDES.md`](docs/HEARTHLINE_FIRESIDES.md) — the non-blocking consultation pattern for Hearthline, Scribe Sparks, Run Trails, Field Notes, Embers, and refresh.
 - [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
 - [`docs/HEARTHLINE_CREATURES.md`](docs/HEARTHLINE_CREATURES.md) — manifest-bound, task-shaped bundles of separately governed Sparks, ledgers, Homes, and Thulia custody.
-- [`lore/README.md`](lore/README.md) — fictional stories, including Hearthline's road to Velis and **Holds Nothing Back**.
+- [`lore/README.md`](lore/README.md) — fictional stories and [`The Creatures of the Circuit Garden`](lore/THE_CREATURES_OF_THE_CIRCUIT_GARDEN.md), a later-road story and field guide.
 - [`assets/README.md`](assets/README.md) — present-facing visual gallery with clearly separated history and artifact trails.
 - [`docs/HEARTHLINE_RESEARCH_STATION.md`](docs/HEARTHLINE_RESEARCH_STATION.md) — bounded public research context, inspected source identities, design extraction, and open provenance residuals.
 - [`docs/HEARTHLINE_TETHER.md`](docs/HEARTHLINE_TETHER.md) — carrier-neutral trace externalization, exact reopening, task epochs, and stuck-context handoff.
@@ -83,7 +83,8 @@ A **Creature** is a task-shaped, manifest-bound formation of separately
 identified Sparks, ledgers, Homes, optional Fireside lenses, and Thulia custody.
 It exposes the coordination topology without merging identities, memory,
 budgets, grants, or authority. Creature is not a fourth Spark role or a larger
-agent identity.
+agent identity. Its **Creature Heart** is a derived completion surface, not
+another Spark, vote, witness, heartbeat, or source of liveness.
 
 An **open objective window** may gather out-of-order Homecomings from separately
 identified objectives into one eventual response. The controller and host own
@@ -162,13 +163,13 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000011 — Light Trios, selected carry, and bounded release**
+**HLP-000012 — The Creatures of the Circuit Garden**
 
-- Sends three one-job Spark bundles separately to Hearthline's exact task intake.
-- Hearthline seals a complete Carry Selection; only selected carry crosses to Thulia.
-- Four receipted translation lanes keep stateless Gloss, Thulia custody, and Hearthline serviceability distinct.
-- Raw inspection release, later Thulia-only Systemic Friction, Atomic Edge Promotion, and source recoverability remain separate transitions.
+- Restores Creature-language aliases for CHARTER's proposed TTC/BPS layer.
+- Defines a Creature as `3n` one-job Sparks and its Heart as derived, not an extra Spark.
+- Adds a narrative field guide for formation, Homecoming, translation, pruning, and release.
+- Records CHARTER's reserved DOI, exact PDF digest, CC BY 4.0 license, and claim ceilings.
 
-[Full change record](docs/changelog/2026-09-04-hlp-000011-light-trio-selected-carry.md) ·
+[Full change record](docs/changelog/2026-09-05-hlp-000012-creature-charter-companion.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

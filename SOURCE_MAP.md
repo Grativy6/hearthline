@@ -69,6 +69,23 @@ pre-alpha package version, not a tagged or published v0.4 release. Any
 manuscript records that manuscript's historical close-state; it is not silently
 rewritten into a claim that the public deposit existed earlier.
 
+## Reserved same-author release
+
+This row records a release package that exists in the same author-led project
+lineage but whose reserved DOI was not yet a public Zenodo deposit when this
+successor was prepared. It is therefore not silently promoted into the
+published table or the exact inspected-source registry. A later live deposit
+may receive an append-only source-status successor.
+
+| Work | Status in Hearthline | Bounded Hearthline use | Essential ceiling | Locator and exact artifact |
+|---|---|---|---|---|
+| *CHARTER v1.0: Certification and History Architecture for Robust Transport, Evidence, and Retention — Framed Prime Shells and Bound Persistent Shells* | `BRANCH`; author-adopted, not peer reviewed; deposit pending | Formal source for the TTC/BPS orchestration layer and its Hearthline aliases: Light Trio, Creature, Creature Heart, Creature Circuit Garden, and Selected Creature Homecoming | Inherited Lean core is delimited; Creature/BPS, Systemic Friction, translation, and minimum-asymmetry layers remain manuscript-level and do not establish implementation, calibration, deployment, model memory or forgetting, authority, personhood, or independent corroboration | Reserved [DOI 10.5281/zenodo.22288471](https://doi.org/10.5281/zenodo.22288471); release PDF SHA-256 `541130b912024b306268888eeb8566377ae5598f4b54fbbcc6f1c80461745926` |
+
+The lore-facing adaptation is [*The Creatures of the Circuit
+Garden*](lore/THE_CREATURES_OF_THE_CIRCUIT_GARDEN.md). CHARTER's formal terms
+control mathematical claims; the Creature names are Hearthline narrative and
+design aliases.
+
 ## Supporting and adjacent work
 
 | Work | Status in Hearthline | Ceiling |
