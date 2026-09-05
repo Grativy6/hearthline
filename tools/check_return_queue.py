@@ -288,8 +288,10 @@ def main() -> None:
         "Creature Queue Steward integration",
     )
 
-    require("| Version | `0.9` |" in ordered,
-            "Ordered Lineage Return Queue successor version missing")
+    require("| Version | `1.0` |" in ordered,
+            "Ordered Lineage visual successor version missing")
+    require("## v0.9 retry-rotation successor" in ordered,
+            "Ordered Lineage Return Queue predecessor missing")
     require_all(
         words(ordered),
         (

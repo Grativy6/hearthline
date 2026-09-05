@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.9` |
+| Version | `1.0` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -14,6 +14,17 @@
 Its purpose is simple: every Spark and every new version receives an ordered number, and earlier work remains individually addressable. Correction, retirement, rejection, or replacement may change what governs later work; none silently makes an earlier record disappear.
 
 An ordered number is an identifier inside a declared ledger scope. It records allocation and sequence only. It does not establish rank, seniority, quality, truth, personhood, experiential continuity, ownership, capability, permission, or authority.
+
+## v1.0 visual-presentation successor
+
+Version `1.0` adds separate public presentation series for Gloss, Morrow, and
+Creature-form archetypes. The form series is deliberately distinct from a
+`CREATURE-00000x` manifest identity; a recurring silhouette does not create a
+Creature, member roster, memory, profile, or authority.
+
+The physical `0` printed at the end of Gloss's ruler is a coordinate on a
+fictional measuring tool. It does not alter the rule below that issued record
+ordinals begin at `1`. Version `0.9` remains the retry-rotation predecessor.
 
 ## v0.9 retry-rotation successor
 
@@ -137,6 +148,11 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Owl character sheet | `OWL-000001/SHEET-000001` | That Owl Scribe's appearance-sheet series |
 | Owl image | `OWL-000001/IMAGE-000001` | That Owl's public visual series |
 | Hearthline image | `HEARTHLINE/IMAGE-000001` | Hearthline's public visual series |
+| Gloss appearance sheet | `GLOSS/SHEET-000001` | Gloss's public appearance-sheet series |
+| Gloss image | `GLOSS/IMAGE-000001` | Gloss's public visual series |
+| Morrow appearance sheet | `MORROW/SHEET-000001` | Morrow's public appearance-sheet series |
+| Morrow image | `MORROW/IMAGE-000001` | Morrow's public visual series |
+| Creature-form image | `CREATURE-FORM/IMAGE-000001` | Presentation archetypes, never Creature manifest identities |
 | Hearth Perch | `OWL-000001/HEARTH-PERCH-000001` | That Owl Scribe's Home series |
 | Hearth Perch version | `OWL-000001/HEARTH-PERCH-000001/VERSION-000001` | One Hearth Perch's version series |
 | Perch | `OWL-000001/PERCH-000001` | That Owl Scribe's partition directory |

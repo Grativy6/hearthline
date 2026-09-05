@@ -4,19 +4,37 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2` |
+| Version | `0.4` |
 | Status | Adopted visual provenance and gallery index |
 | Hearthline image series | `HEARTHLINE/IMAGE-*` |
 | Thulia image series | `OWL-000001/IMAGE-*` |
+| Gloss image series | `GLOSS/IMAGE-*` |
+| Morrow image series | `MORROW/IMAGE-*` |
+| Creature-form image series | `CREATURE-FORM/IMAGE-*` |
 | Thulia character | `OWL-000001` |
 | Current Thulia behavior and lore | `OWL-000001/PROFILE-000003` |
 | Current Thulia appearance sheet | `OWL-000001/SHEET-000002` |
+| Current Gloss appearance sheet | `GLOSS/SHEET-000001` |
+| Current Morrow appearance sheet | `MORROW/SHEET-000001` |
 | Implementation | Not asserted by this document |
 | Sole author and steward | Christopher D. Pang |
 
-This index registers all fifteen PNGs in the public gallery. The image ordinals are retrospective archival registrations for already-created files. They preserve declared sequence inside each visual series without claiming that numbers were preallocated before generation. A correction receives a new number; an earlier image stays visible in `history-and-artifacts/` rather than being renumbered, overwritten, or allowed to compete silently with the present.
+This index registers all thirty-six PNGs in the public gallery. Version `0.4`
+follows adopted mainline version `0.2`; a different `0.3` appeared on the
+reserved, unmerged PR #12 lineage and is not silently adopted here. The image
+ordinals are retrospective archival registrations for already-created files.
+They preserve declared sequence inside each visual series without claiming
+that numbers were preallocated before generation. A registered correction
+receives a new number; an earlier registered image stays visible in
+`history-and-artifacts/` rather than being renumbered, overwritten, or allowed
+to compete silently with the present. Rejected generations that never entered
+this gallery do not become public records merely to inflate the trace.
 
-The [gallery entrance](../assets/) opens on current character, scene, and artifact material. Each room has one plainly named `history-and-artifacts/` side room. That topology is editorial presentation only: it does not activate, adopt, deprecate, or migrate an operational component.
+The [gallery entrance](../assets/) opens on current character, Creature-form,
+scene, and artifact material. A plainly named `history-and-artifacts/` side
+room is used where a public predecessor or source form belongs in the visible
+trail. That topology is editorial presentation only: it does not activate,
+adopt, deprecate, or migrate an operational component.
 
 ## Control order
 
@@ -24,9 +42,12 @@ Visual material is interpreted in this order:
 
 1. [Thulia, Hearthline's Owl Scribe](HEARTHLINE_THULIA.md), profile `OWL-000001/PROFILE-000003`, controls Thulia's current behavior and lore.
 2. [Thulia Character Sheet `0.2`](HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md), identity `OWL-000001/SHEET-000002`, controls her current appearance and animation construction.
-3. The latest compatible image may illustrate those written rules.
-4. Earlier studies and superseded corrections remain visual provenance.
-5. Scene illustrations preserve narrative relationships, not orthographic geometry or operating instructions.
+3. [Gloss Character Sheet `0.1`](HEARTHLINE_GLOSS_CHARACTER_SHEET.md), identity `GLOSS/SHEET-000001`, controls Gloss's appearance only.
+4. [Morrow Character Sheet `0.1`](HEARTHLINE_MORROW_CHARACTER_SHEET.md), identity `MORROW/SHEET-000001`, controls Morrow's appearance; [Return Queue `0.3`](HEARTHLINE_RETURN_QUEUE.md) still controls his behavior.
+5. [Creature Visual Forms `0.1`](HEARTHLINE_CREATURE_VISUAL_FORMS.md) controls presentation archetypes; [Hearthline Creatures `0.3`](HEARTHLINE_CREATURES.md) controls the manifest-bound design.
+6. The latest compatible image may illustrate those written rules.
+7. Earlier registered studies and superseded corrections remain visual provenance.
+8. Scene illustrations preserve narrative relationships, not orthographic geometry or operating instructions.
 
 Where a visual conflicts with a controlling written sheet, the written sheet governs and the conflict remains part of the trace. No image independently controls behavior, access, memory, custody, activation, identity, permission, or authority.
 
@@ -36,8 +57,10 @@ Where a visual conflicts with a controlling written sheet, the written sheet gov
 - `STUDY` — a preserved visual exploration.
 - `SUPERSEDED_STUDY` — an intermediate construction pass retained after correction.
 - `CURRENT_VISUAL_REFERENCE` — the closest current construction aid, subordinate to its written sheet.
+- `VISUAL_ARCHETYPE_REFERENCE` — a current form-language aid that does not allocate an operational identity or capability.
 - `SOURCE_ARTIFACT` — an earlier object design preserved as the source of a later synthesis.
 - `SCENE` — a current narrative illustration, not a construction sheet.
+- `RECOVERED_DERIVATIVE_SCENE` — a current narrative illustration regenerated from a visible predecessor whose original export bytes were unavailable; no byte identity is claimed.
 - `SUPERSEDED_SCENE` — an earlier narrative illustration retained after a visible lore correction.
 - `CURRENT_ARTIFACT_SCENE` — the present narrative illustration of an artifact, not a device specification.
 
@@ -62,6 +85,27 @@ Where a visual conflicts with a controlling written sheet, the written sheet gov
 | `HEARTHLINE/IMAGE-000006` | [Hearthline enters the goblin citadel](../assets/scenes/hearthline-enters-the-goblin-citadel.png) | `1536 × 1024` | `a59209953baff2783002104449da5edbdb352e11b4414c5d8b857c741b3e5ea6` | `SCENE` | Present | She is small beneath iron ribs and hanging chains; the distant goblin has noticed her, but she has already noticed the load paths. |
 | `HEARTHLINE/IMAGE-000007` | [Hearthline, Sparks, and Thulia against the iron ogre](../assets/scenes/hearthline-sparks-thulia-vs-iron-ogre.png) | `1536 × 1024` | `7377ea76904a0f9f53e33ff67716d07bc13704522438b8791a910af7f39976a6` | `SCENE` | Present | Four Sparks divide a fifteen-foot impossibility into workable pieces, Thulia keeps the sky, and Hearthline stands where a plan becomes trust. |
 | `HEARTHLINE/IMAGE-000008` | [Holds Nothing Back woodland test](../assets/artifacts/holds-nothing-back-woodland-test.png) | `1024 × 1536` | `734c187bde60c594fcc920e7d02521ca3aaaca7a26dc419c59e73717f092be4c` | `CURRENT_ARTIFACT_SCENE` | Present | Mira's loupe and the Rainbow Shell crown a field staff that carries the whole spectrum—and magnifies mistakes too—inside a clearing chosen to keep wonder safe. |
+| `GLOSS/IMAGE-000001` | [Gloss at the Circuit Garden](../assets/scenes/gloss-at-the-circuit-garden.png) | `1536 × 1024` | `01feacda2015e070acc5d0ee7dcd9684ebca0c6c79c8da4e1a96e05e421c758f` | `SCENE` | Present | Gloss follows one declared route through the modular Circuit Garden, turning the note without choosing its meaning or burning its edge. |
+| `GLOSS/IMAGE-000002` | [Hearthline, Thulia, and Gloss at the outdoor workbench](../assets/scenes/hearthline-thulia-and-gloss-at-the-outdoor-workbench.png) | `1536 × 1024` | `b8b8a64626c0f05975f5ce0b1c633b625d91fe1224ffefed0dd8378dba02f170` | `SCENE` | Present | Hearthline builds, Thulia keeps her separate record, and Gloss turns one bounded note in sunlight; three jobs share a table without becoming one job. |
+| `GLOSS/IMAGE-000003` | [Hearthline, Thulia, and Gloss diagnose the broken tool](../assets/scenes/hearthline-thulia-and-gloss-diagnose-the-broken-tool.png) | `1536 × 1024` | `31c5e579ece5c33db1aface08c54d4e24be37eab71ce5af176ea2661c74cd94e` | `SCENE` | Present | A failed instrument earns three different kinds of attention: Hearthline checks the mechanism, Thulia holds the trace, and Gloss keeps her eyes on the note-local turn in front of her. |
+| `GLOSS/IMAGE-000004` | [Gloss Turning Wisp reference sheet](../assets/characters/gloss-turning-wisp-reference-sheet.png) | `1024 × 1536` | `9dc59f9587e53da2ccc7e356900d6c6c30c4b6502c86c0865bf7dd631167ab36` | `CURRENT_VISUAL_REFERENCE` | Present | Gloss may flare for expression or contract to enter the Circuit Garden; seven boundary marks register six intervals, and cool glassy graspers hold a note without scorching it. |
+| `MORROW/IMAGE-000001` | [Morrow at the controller rail](../assets/scenes/morrow-at-the-controller-rail.png) | `1536 × 1024` | `5be55d4b784a86f9076eeb9f82a66fd49339462648f54bb57015aa0ab439ced1` | `SCENE` | Present | Nearly white seams and eyes brighten over a pocketless coat as Morrow arranges only the faceless tokens on one frozen controller rail. |
+| `MORROW/IMAGE-000002` | [Morrow Stateless Queue Steward reference sheet](../assets/characters/morrow-stateless-queue-steward-reference-sheet.png) | `1024 × 1536` | `ea500ca3893be15e9f8d45c200871e9c9a571d8aad8578ec4b3292bdfe89408a` | `CURRENT_VISUAL_REFERENCE` | Present | Pocketless gray coat, brass hands, and nearly white mechanical seams give the stateless Queue Steward one quiet form; when the rail is empty, so are his hands. |
+| `MORROW/IMAGE-000003` | [The team tests the wrist-token prototype](../assets/scenes/hearthline-team-tests-the-wrist-token-prototype.png) | `1536 × 1024` | `b769516f4acd425a2be265d09e9015f8676f0ca26e6ce7d9495156180ce8c42c` | `SCENE` | Present | Hearthline tests a fictional wrist interface that requests and presents controller-selected work while Morrow sorts only faceless rail tokens inside; Thulia and Gloss keep their separate jobs. |
+| `CREATURE-FORM/IMAGE-000001` | [Small fox-form Creature reference sheet](../assets/creatures/small-creature-fox-form-reference-sheet.png) | `1536 × 1024` | `aff571f2d380dd4524c8c47818603a5a88e3e1d17fd7627a18012c68bd21d36a` | `VISUAL_ARCHETYPE_REFERENCE` | Present | A quick ground-running form carries one manifest-bound job through narrow terrain; its silhouette does not determine membership or authority. |
+| `CREATURE-FORM/IMAGE-000002` | [Small fish-form Creature reference sheet](../assets/creatures/small-creature-fish-form-reference-sheet.png) | `1536 × 1024` | `8e09e4f939963cdac740d6e79e53b3560381c169de40b41fa90c53cf29091ef0` | `VISUAL_ARCHETYPE_REFERENCE` | Present | A small fish form carries a bounded formation through water, with member tracelines still separately readable. |
+| `CREATURE-FORM/IMAGE-000003` | [Small heron-form Creature reference sheet](../assets/creatures/small-creature-heron-form-reference-sheet.png) | `1536 × 1024` | `e4c54cd5f11861d20f5886b25a91c369c30a6d6d23ef42f3b13045cd847a00bd` | `VISUAL_ARCHETYPE_REFERENCE` | Present | A long-legged wading form makes a delicate field route visible without turning balance into judgment. |
+| `CREATURE-FORM/IMAGE-000004` | [Small burrower-form Creature reference sheet](../assets/creatures/small-creature-burrower-form-reference-sheet.png) | `1536 × 1024` | `b554043f89dda6adf234289130124faec11aebd32f12d108c31ec19151258588` | `VISUAL_ARCHETYPE_REFERENCE` | Present | A low armored burrower form keeps a close-to-ground task compact while every Spark remains distinct. |
+| `CREATURE-FORM/IMAGE-000005` | [Mid-sized antlered carrier reference sheet](../assets/creatures/mid-creature-antlered-carrier-reference-sheet.png) | `1536 × 1024` | `b8e67a776c91af26d61db85f118c949e5482af33c1ab1467a6da511a4e33033d` | `VISUAL_ARCHETYPE_REFERENCE` | Present | A mid-sized antlered carrier gives a broad overland job one readable silhouette, not one merged will. |
+| `CREATURE-FORM/IMAGE-000006` | [Mid-sized sky-ray reference sheet](../assets/creatures/mid-creature-sky-ray-reference-sheet.png) | `1536 × 1024` | `c4586e34c040788e877e9f67c19114458dc568c0c84b2eef683d11873455fe28` | `VISUAL_ARCHETYPE_REFERENCE` | Present | A mid-sized sky-ray form spreads a carried task across the wind while its member lines stay separately traced. |
+| `CREATURE-FORM/IMAGE-000007` | [Giant sky-dragon reference sheet](../assets/creatures/giant-creature-sky-dragon-reference-sheet.png) | `1536 × 1024` | `798667fb548af372e5bbe260317ba6c93a0472c1e5b911354ef92fbcb1752c0a` | `VISUAL_ARCHETYPE_REFERENCE` | Present | A giant dragon form gives a far-ranging task enormous presence without creating a larger mind, vote, or authority. |
+| `HEARTHLINE/IMAGE-000009` | [Hearthline shapes a Creature at the Circuit table](../assets/scenes/hearthline-shapes-a-creature-at-the-circuit-table.png) | `1536 × 1024` | `b2b586905e3b941f3ef7a807dda9201a59747a645478df2cdee6fcd5d161f539` | `SCENE` | Present | Hearthline shapes a visible form around separately traced Sparks under one frozen manifest while Thulia keeps her own separate trace; the emerging Heart depicts completion, not a merged mind. |
+| `HEARTHLINE/IMAGE-000010` | [Hearthline Creature field test](../assets/scenes/hearthline-creature-field-test.png) | `1536 × 1024` | `2d085d6a387870306f635ebebdc04661448a232b24fc7b1044dda8f350fafd8a` | `SCENE` | Present | A Creature takes its manifest-bound geometry into the field while Hearthline and Thulia keep the test and its return separately legible. |
+| `HEARTHLINE/IMAGE-000011` | [Creatures at work across the valley](../assets/scenes/creatures-at-work-across-the-valley.png) | `1536 × 1024` | `bf49d0bf6c58bab35c9348dca4910b1d81f61729e9a79427990e51cca5610ffc` | `SCENE` | Present | Two small forms and one larger form perform separate jobs across the valley; tracelines leave the frame toward one offscreen controller without becoming shared authority. |
+| `HEARTHLINE/IMAGE-000012` | [Sky-dragon Creature over the valley](../assets/scenes/sky-dragon-creature-over-the-valley.png) | `1536 × 1024` | `bb6cf76210ea49fed2134e5553cd18cb7c5ab0114c518bb8f0155e9a06543180` | `SCENE` | Present | A giant dragon-shaped Creature carries many bounded lines across the evening sky; beauty and visual scale do not turn the formation into a will. |
+| `HEARTHLINE/IMAGE-000013` | [Hearthline's water break beside the brass welder](../assets/scenes/hearthline-water-break-beside-the-brass-welder.png) | `1536 × 1024` | `2eacd9d90bdbbb12706d876908ae79fd18f4d3fef182403c50d221189d76e9a5` | `SCENE` | Present | Hearthline sits with hood raised and water in hand beside a quiet brass field welder; the job pauses before the worker does. |
+| `HEARTHLINE/IMAGE-000014` | [Hearthline welding with the brass field machine](../assets/scenes/hearthline-welding-with-the-brass-field-machine.png) | `1536 × 1024` | `a4b50ab74a1f30b74dfc1f0b137a2113c58d81f1b98c9b4411e13eb320efc762` | `SCENE` | Present | Behind outdoor curtains and wearing the depicted protective gear, Hearthline joins two plates at an angle with one tool lead and one ground; craft remains work, not magic. |
+| `HEARTHLINE/IMAGE-000015` | [The field crew faces the bridge ogre at sunset](../assets/scenes/field-crew-faces-the-bridge-ogre-at-sunset.png) | `1536 × 1024` | `b1304d3a31a91aa5f5873df5128ad40b8b5a153d1f0b806758708e92a533d908` | `RECOVERED_DERIVATIVE_SCENE` | Present | At sunset, the field crew and two small luminous Creature silhouettes hold one end of a bridge while an ogre, goblins, and gremlins crowd the other; the next move remains unwritten. |
 
 ## Visible correction notes
 
@@ -79,6 +123,42 @@ Where a visual conflicts with a controlling written sheet, the written sheet gov
 
 `HEARTHLINE/IMAGE-000002` records the Rainbow Shell before its synthesis. `HEARTHLINE/IMAGE-000003` records Mira's first loupe at its ordinary and indispensable scale. `HEARTHLINE/IMAGE-000008` imagines their later union as **Holds Nothing Back**, crowned on Hearthline's wood-and-brass field staff and tested in a surveyed woodland clearing. The image shows her ordinary dark pupils and does not depict Spark Mode. It is an artifact story and visual design, not a weapon specification or claim of capability.
 
+### Gloss and the seventh mark
+
+`GLOSS/IMAGE-000004` is the current appearance reference. The ruler reads
+`6 5 4 3 2 1 0`, with zero at the true right endpoint: seven boundary marks
+span six intervals. Gloss's depicted scale may contract or flare, so the scale
+belongs to that pictured form rather than fixing one permanent height. Her
+cream-gold glassy graspers are a contact-state presentation cue, not a material
+or safety certification.
+
+### Morrow and the queue-watch prototype
+
+`MORROW/IMAGE-000002` is the current appearance reference. Its “PROPOSAL ONLY”
+label states Morrow's role ceiling; it does not make the artwork provisional.
+His seam and eye light is near-white, and deliberate hue-changing remains
+unspecified. `MORROW/IMAGE-000003` depicts a controller-facing interface: the
+spark aperture is a transport metaphor, not permission for Hearthline or
+Morrow to allocate records, bypass readiness or committed order, or admit
+service. The thin trace is machine-to-machine and creates no Morrow–Thulia
+channel.
+
+### Creature forms
+
+`CREATURE-FORM/IMAGE-000001` through `IMAGE-000007` are silhouette references,
+not manifest identities or species. “Small,” “mid-sized,” and “giant” describe
+visual scale only; they do not count members or rank a formation. The Heart and
+tracelines make topology legible without merging Sparks, ledgers, grants,
+budgets, Homes, or authority.
+
+### The bridge recovery derivative
+
+`HEARTHLINE/IMAGE-000015` preserves the selected bridge-standoff composition
+through a new recovery export after the first exported bytes became
+unavailable. Its registered digest identifies only this derivative. It does
+not claim that the bytes, geometry, or incidental details are identical to the
+first visible scene.
+
 ## Exact-byte boundary
 
 The SHA-256 values identify the exact PNG bytes committed to this repository. They support copy verification and provenance comparison only. A matching digest does not authenticate an operator, establish semantic conformance, select a controlling version, prove provenance outside this declared record, or authorize use.
@@ -87,9 +167,21 @@ The SHA-256 values identify the exact PNG bytes committed to this repository. Th
 
 Christopher D. Pang is the sole author and steward of this gallery and its lore. The images were created or selected under his direction. AI systems assisted with image generation, writing, and repository preparation as tools; they are not co-authors, owners, authorities, witnesses, or persons in the repository's provenance model.
 
-Thirteen of the fifteen exact PNGs preserve C2PA generator metadata in `caBX` JUMBF data. Those manifests identify `OpenAI Media Service API`, the `gpt-image` software agent at version `2.0`, trained-algorithmic-media status, and per-file provenance timestamps and instance identifiers. The Rainbow Shell source and Hearthline reference sheet do not contain that `caBX` manifest. This audit records the embedded fields but does not independently certify their signatures. The identifiers are public provenance metadata, not credentials, operator authentication, or authority. Complete source prompts and the exact underlying model and serving configuration remain unavailable and are not reconstructed here.
+Thirty-four of the thirty-six exact PNGs preserve C2PA generator metadata in
+`caBX` JUMBF data. Those manifests identify `OpenAI Media Service API`, the
+`gpt-image` software agent at version `2.0`, trained-algorithmic-media status,
+and per-file provenance timestamps and instance identifiers. The Rainbow Shell
+source and Hearthline reference sheet do not contain that `caBX` manifest. This
+audit records the embedded fields but does not independently certify their
+signatures. The identifiers are public provenance metadata, not credentials,
+operator authentication, or authority. Complete source prompts and the exact
+underlying model and serving configuration remain unavailable and are not
+reconstructed here.
 
-Only Hearthline, Thulia, their scenes, and their fictional artifacts belong in this visual registry. Kaggle and Codex environment-setup screenshots shown during the same working conversation were interface references for a separate task and are deliberately excluded from the gallery.
+Only Hearthline, Thulia, Gloss, Morrow, Creature forms, their scenes, and their
+fictional artifacts belong in this visual registry. Rejected correction passes,
+contact sheets, and Kaggle or Codex interface references shown during the same
+working conversation are deliberately excluded from the gallery.
 
 ## License scope
 
@@ -103,7 +195,7 @@ Attribution should identify Christopher D. Pang, the image identity, this reposi
 
 Adding, viewing, copying, hashing, adapting, or depicting an image does not:
 
-- instantiate Hearthline, Thulia, a Spark, Scribe, Perch, Static ledger, or Fireside;
+- instantiate Hearthline, Thulia, Gloss, Morrow, a Creature form, a Spark, Scribe, Perch, Static ledger, Return Queue, or Fireside;
 - activate a runtime or adopt an instruction version;
 - create memory, identity continuity, consciousness, emotion, consent, standing, or ownership;
 - grant credentials, access, permission, capability, or authority;

@@ -168,12 +168,12 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000017 — Retry-rotation release**
+**HLP-000018 — Art-and-lore detour gallery**
 
-- Failure holds the item without changing its overtake count; unknown outcomes reconcile first.
-- Re-entry needs remedy and current `PASS`; any qualifying later attempt sets the receipt mode, otherwise an exact zero-other-ready cut does.
-- Morrow and Thulia receive none of it. This rotates attempts; it promises no latency, liveness, success, or eventual disposition.
+- Twenty-one gallery images cover Gloss, Morrow, seven Creature forms, field work, welding, the queue-watch, and a recovered bridge scene.
+- Written sheets keep scale, glassy graspers, white seams, and silhouettes from implying capability or authority.
+- **The Seventh Mark** counts six spaces, seven boundaries, and one warranted frame expansion—then stops with the evidence.
 
-[Full change record](docs/changelog/2026-09-05-hlp-000017-retry-rotation-release.md) ·
+[Full change record](docs/changelog/2026-09-05-hlp-000018-art-lore-detour-gallery.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
