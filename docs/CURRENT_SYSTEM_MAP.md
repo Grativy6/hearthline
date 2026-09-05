@@ -10,7 +10,8 @@ This document distinguishes current default-branch material from unadopted candi
 |---|---|---|
 | `main@dd00eaa…` | `CURRENT_CANON` for default-branch history | `DRAFT_NOT_ACTIVATED`; `DRAFT_ONLY`; authority `NONE`; effect `NONE` |
 | `lore/the-night-the-garden-clicked-20260904@a6552c1…` | `ACTIVE_CANDIDATE` predecessor | Candidate-only |
-| `lore/creature-charter-20260905@49d600c…` | `ACTIVE_CANDIDATE` | `0.7-draft`; `DRAFT_NOT_ACTIVATED`; `DRAFT_ONLY`; authority `NONE`; effect `NONE` |
+| `HLP-000013` successor in this tree | `ACTIVE_CANDIDATE` | `0.7-draft`; CHARTER source status current; `DRAFT_NOT_ACTIVATED`; authority `NONE`; effect `NONE` |
+| `lore/creature-charter-20260905@49d600c…` | `ACTIVE_CANDIDATE_ANCESTOR` | Exact pre-publication candidate base |
 | `design/thulia-gloss-systemic-friction-20260904@54bf697…` | `OPEN_CONFLICT` | Divergent, unmerged design proposal |
 | PR #4 at `1780aaf…` | `OPEN_CONFLICT` | Unmerged visual and documentation proposal |
 
@@ -26,7 +27,7 @@ This document distinguishes current default-branch material from unadopted candi
 
 ## Capability roles and assignment jobs
 
-The fixed Spark capability roles are **Seeker**, **Explorer**, and **Handler**. The current default branch describes paired Work Spark and Ledger Scribe jobs. The `0.7-draft` candidate proposes the separate assignment jobs **Worker**, **Task-Keeper**, and **Ledger-Keeper**. Those jobs do not rename or replace Seeker, Explorer, and Handler.
+The fixed Spark capability roles are **Seeker**, **Explorer**, and **Handler**. The current default branch describes paired Work Spark and Ledger Scribe jobs. The `0.7-draft` candidate proposes the separate assignment jobs **Worker**, **Task-Keeper**, and **Ledger-Keeper**. Those jobs do not rename or replace Seeker, Explorer, and Handler. HLP-000013 changes source-publication status, not that topology.
 
 ## Current default-branch shape
 

@@ -367,9 +367,11 @@ steward review. It does not implement a codec, allocate a translation account
 or Board, instantiate a wisp, append a mark, preserve operational memory,
 activate Hearthline, or grant authority.
 
-Systemic Friction is working Hearthline design vocabulary pending the paper's
-reviewed release. This document does not add it to PAL canon, the controlling
-source stack, or the Research Station source registry.
+Systemic Friction is working Hearthline design vocabulary formalized at
+manuscript level in the same-author, published CHARTER v1.0 branch now recorded
+in the [source map](../SOURCE_MAP.md) and Research Station. It is not part of
+Gloss, PAL canon, the controlling source stack, an implementation, a calibrated
+result, or authority.
 
 Any implementation must separately specify and test canonicalization, route
 completeness, lexicon selection, deterministic repetition, inverse checks,

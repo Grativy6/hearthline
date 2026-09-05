@@ -631,9 +631,11 @@ its values gates raw-access close or the Readable Carry Envelope. A committed
 effect also does not by itself imply that every protected source byte was
 deleted or globally unrecoverable.
 
-Systemic Friction is Hearthline design vocabulary pending the paper's reviewed
-release. This profile does not make it PAL canon, a controlling source, a
-universal physical law, or a Research Station source-registry entry.
+Systemic Friction is Hearthline design vocabulary formalized at manuscript
+level in the same-author, published CHARTER v1.0 branch now recorded in the
+[source map](../SOURCE_MAP.md) and Research Station. This profile does not make
+it PAL canon, a controlling source, a universal physical law, an
+implementation, or authority.
 
 ## Creature-manifest custody
 

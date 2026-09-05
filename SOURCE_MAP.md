@@ -60,6 +60,7 @@ These public records are same-author research context, not additions to the cont
 | *Compactification Costs*, v0.2 | `BRANCH` | Typed structure- and detector-relative closure burdens, the APCI fiber-factorization bridge, and later GOLD fixtures | No universal scalar, physical compactification law, canonical detector, automatic decoder, or backdating of APCI or GOLD into CC v0.1 | [DOI 10.5281/zenodo.22238012](https://doi.org/10.5281/zenodo.22238012) |
 | *Single Cut Transport Lemma*, v0.2 | `BRANCH` | Resolution-qualified asymmetry, finite ordered-pair fixtures, action-bit trace lift, exact checkpoint capsules, heartbeat stutter, and re-entry | No universal minimum, practical sorting optimality, arbitrary-finite proof, progress from heartbeat, or authority from recoverability | [DOI 10.5281/zenodo.22239108](https://doi.org/10.5281/zenodo.22239108) |
 | *Boundary-Readable Trace and Absorber-Informed Closure* (BRRRT), v2.0 | `BRANCH` | Release-retention-readability transitions, witnessed benchmark crossings, uncertainty, residuals, reopening, and atomic promotion | A reading is not a mechanism; readability is not decoding; verification without the required grant is release-ready at most | [DOI 10.5281/zenodo.22261831](https://doi.org/10.5281/zenodo.22261831) |
+| *CHARTER v1.0: Certification and History Architecture for Robust Transport, Evidence, and Retention — Framed Prime Shells and Bound Persistent Shells* | `BRANCH`; author-adopted, not peer reviewed | Formal source for the TTC/BPS orchestration layer and its Hearthline aliases: Light Trio, Creature, Creature Heart, Creature Circuit Garden, and Selected Creature Homecoming | Inherited Lean core is delimited; Creature/BPS, Systemic Friction, translation, and minimum-asymmetry layers remain manuscript-level and do not establish implementation, calibration, deployment, model memory or forgetting, authority, personhood, or independent corroboration | [DOI 10.5281/zenodo.22288471](https://doi.org/10.5281/zenodo.22288471); published 2026-09-05; release PDF SHA-256 `541130b912024b306268888eeb8566377ae5598f4b54fbbcc6f1c80461745926` |
 | Strongwiz v3 campaign prototype / `0.4.0.dev0` | `EXPLORATORY` inspected design source | Representation-only Scribe separation, matched arms, reference-normalized ledger design, evidence-yield gate/curriculum design, exact restart boundaries, and representation-cost requirements | Prepared but not run or preregistered; its evidence-yield gate is not runner-wired and no compression, reasoning, action-efficiency, or ARC benefit is demonstrated; no code imported by Hearthline | [Inspected commit `edc88b8`](https://github.com/Grativy6/strongwiz/tree/edc88b80f872f766c22b3a050a7f6837d6e652d8) |
 
 The DOI record locators now report the manuscript versions in this table as
@@ -68,18 +69,6 @@ pre-alpha package version, not a tagged or published v0.4 release. Any
 `reserved` or `publication pending` wording retained inside a deposited
 manuscript records that manuscript's historical close-state; it is not silently
 rewritten into a claim that the public deposit existed earlier.
-
-## Reserved same-author release
-
-This row records a release package that exists in the same author-led project
-lineage but whose reserved DOI was not yet a public Zenodo deposit when this
-successor was prepared. It is therefore not silently promoted into the
-published table or the exact inspected-source registry. A later live deposit
-may receive an append-only source-status successor.
-
-| Work | Status in Hearthline | Bounded Hearthline use | Essential ceiling | Locator and exact artifact |
-|---|---|---|---|---|
-| *CHARTER v1.0: Certification and History Architecture for Robust Transport, Evidence, and Retention — Framed Prime Shells and Bound Persistent Shells* | `BRANCH`; author-adopted, not peer reviewed; deposit pending | Formal source for the TTC/BPS orchestration layer and its Hearthline aliases: Light Trio, Creature, Creature Heart, Creature Circuit Garden, and Selected Creature Homecoming | Inherited Lean core is delimited; Creature/BPS, Systemic Friction, translation, and minimum-asymmetry layers remain manuscript-level and do not establish implementation, calibration, deployment, model memory or forgetting, authority, personhood, or independent corroboration | Reserved [DOI 10.5281/zenodo.22288471](https://doi.org/10.5281/zenodo.22288471); release PDF SHA-256 `541130b912024b306268888eeb8566377ae5598f4b54fbbcc6f1c80461745926` |
 
 The lore-facing adaptation is [*The Creatures of the Circuit
 Garden*](lore/THE_CREATURES_OF_THE_CIRCUIT_GARDEN.md). CHARTER's formal terms

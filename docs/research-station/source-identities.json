@@ -1,6 +1,7 @@
 {
   "schema": "hearthline.research-station.sources.v1",
   "recorded_date": "2026-09-02",
+  "last_updated_date": "2026-09-05",
   "status": "RESEARCH_CONTEXT_ONLY",
   "steward": "Christopher D. Pang",
   "source_text_is_authorization": false,
@@ -96,6 +97,52 @@
           "filename": "Boundary_Readable_Trace_and_Absorber_Informed_Closure_v2.0_BRRRT.docx",
           "sha256": "84c74bed8d710f9d3f7057b95e2dcc0c4067c56aa07a7869f8f71bbf298ac890",
           "zenodo_md5": "f23b131f41089530fecdf192ec95bc5d"
+        }
+      ]
+    },
+    {
+      "source_id": "charter-v1.0",
+      "source_kind": "public_review_preprint",
+      "title": "CHARTER: Certification and History Architecture for Robust Transport, Evidence, and Retention",
+      "version": "1.0",
+      "publication_date": "2026-09-05",
+      "persistent_id": "https://doi.org/10.5281/zenodo.22288471",
+      "concept_id": "https://doi.org/10.5281/zenodo.22288470",
+      "license": "CC-BY-4.0",
+      "access_right": "open",
+      "hearthline_status": "BRANCH",
+      "publication_status": "PUBLISHED",
+      "artifact_identity_status": "RESOLVED_LIVE_RECORD_RELEASE_MATCH",
+      "artifact_identity_resolution": "The public Zenodo API reported record 22288471 as published on 2026-09-05. Its four live filenames, byte counts, and MD5 checksums match the prepared public release; the SHA-256 values below identify those matched release bytes.",
+      "public_record_created": "2026-09-05T05:52:23.317430+00:00",
+      "public_record_modified": "2026-09-05T05:52:23.722034+00:00",
+      "bounded_use": "Framed prime shells, kernel and fiber distinctions, carriage cost, Tripartite Task Carriers, Bound Persistent Shells, Circuit Gardens, Systemic Friction, Atomic Edge Promotion, and selected-carry release.",
+      "authority_ceiling": "The inherited Lean core is delimited and the later layers remain manuscript-level. Publication does not establish peer review, source truth, mathematical completeness, implementation, calibration, deployment, ARC performance, model memory or forgetting, personhood, independent corroboration, or authority.",
+      "inspected_artifact_hash_domain": "prepared_release_bytes_matched_to_live_zenodo_inventory_by_filename_size_and_md5",
+      "inspected_artifacts": [
+        {
+          "filename": "CHARTER_v1.0_Zenodo_Release_Public_Redacted.zip",
+          "bytes": 3322838,
+          "sha256": "eb695613b0de05188650f79de146159f5ef06588c04c7d0e0a1929d9d802c8d1",
+          "zenodo_md5": "461f0d4e0f6594e8559f01243016ffec"
+        },
+        {
+          "filename": "CHARTER_v1.0_Framed_Prime_Shells_and_Bound_Persistent_Shells.docx",
+          "bytes": 1673357,
+          "sha256": "3f813ecadfcea957bdccb157d83792612a85c78e318a4ec22da62efc3d8bcabf",
+          "zenodo_md5": "7ff472e1f08c8278ca2197afe221a7d0"
+        },
+        {
+          "filename": "CHARTER_v1.0_Zenodo_Release_Public_Redacted.zip.sha256",
+          "bytes": 114,
+          "sha256": "6bb3ba97e7bf1c7bac0872382e2ce0d6bc48fa9abefd4b0f372e1d1946f0be87",
+          "zenodo_md5": "4ffa872ac421bf394fe68be7c440fbf0"
+        },
+        {
+          "filename": "CHARTER_v1.0_Framed_Prime_Shells_and_Bound_Persistent_Shells.pdf",
+          "bytes": 1984477,
+          "sha256": "541130b912024b306268888eeb8566377ae5598f4b54fbbcc6f1c80461745926",
+          "zenodo_md5": "85f25f7cc100baef66c47505f352e852"
         }
       ]
     },

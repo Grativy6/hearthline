@@ -4,7 +4,7 @@ Hearthline is a public source, provenance, boundary, and durable-lore repository
 
 Status: `REVIEW_ONLY_NOT_MERGE_READY`
 
-This map is based on `main@dd00eaa30e46b74baf31f120622caef16a4e73dd`. It does not select an unmerged candidate. The current candidate already owns later HLP numbers, so this branch cannot be promoted until its lineage and next record number are chosen.
+This map was first prepared from `main@dd00eaa30e46b74baf31f120622caef16a4e73dd` and is now carried on the HLP-000013 publication-status successor to the Creature candidate. That lineage choice is repository history only; it does not merge to `main`, adopt an instruction, open a gate, or activate a runtime.
 
 ## Choose a route
 
@@ -21,7 +21,8 @@ This map is based on `main@dd00eaa30e46b74baf31f120622caef16a4e73dd`. It does no
 | Surface | Classification | Meaning |
 |---|---|---|
 | [`main@dd00eaa`](https://github.com/Grativy6/hearthline/tree/dd00eaa30e46b74baf31f120622caef16a4e73dd) | `CURRENT_CANON` | Current default-branch repository history only; its instruction remains `DRAFT_NOT_ACTIVATED`. |
-| [`lore/creature-charter-20260905@49d600c`](https://github.com/Grativy6/hearthline/tree/49d600cda356711aeb42381a76fb680bbfcd3b5e) | `ACTIVE_CANDIDATE` | Newer coherent review candidate; not adopted, merged, or activated. |
+| [HLP-000013 successor](docs/changelog/2026-09-05-hlp-000013-charter-publication-status.md) | `ACTIVE_CANDIDATE` | Carries the Creature candidate, foundation maps, and live CHARTER anchor; not adopted, merged, or activated. |
+| [`lore/creature-charter-20260905@49d600c`](https://github.com/Grativy6/hearthline/tree/49d600cda356711aeb42381a76fb680bbfcd3b5e) | `ACTIVE_CANDIDATE_ANCESTOR` | Exact pre-publication candidate base retained for comparison. |
 | [`design/thulia-gloss-systemic-friction-20260904@54bf697`](https://github.com/Grativy6/hearthline/tree/54bf6971edbc42738314754dcd199cede3f4484a) | `OPEN_CONFLICT` | Divergent design sibling whose trace remains preserved. |
 | [PR #4](https://github.com/Grativy6/hearthline/pull/4) | `OPEN_CONFLICT` | Unmerged visual-lineage proposal with reused image bytes and unique documentation. |
 

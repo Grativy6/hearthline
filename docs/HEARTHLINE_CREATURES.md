@@ -487,6 +487,12 @@ and the deposit was not yet public. The exact release PDF has SHA-256
 `541130b912024b306268888eeb8566377ae5598f4b54fbbcc6f1c80461745926`.
 Later publication must be recorded without backdating public availability.
 
+That later transition is now recorded by the append-only
+[HLP-000013 publication-status successor](changelog/2026-09-05-hlp-000013-charter-publication-status.md).
+The DOI became a live public citation target on 2026-09-05; the current source
+status and exact public inventory live in the [source map](../SOURCE_MAP.md)
+and [Research Station](HEARTHLINE_RESEARCH_STATION.md).
+
 Christopher D. Pang is the sole author, branch founder, steward, and
 publication authority. OpenAI ChatGPT and connected coding tools supplied
 drafting, checking, and repository-production assistance as tools, not as

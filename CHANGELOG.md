@@ -14,6 +14,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000013` | 2026-09-05 | `SOURCE_STATUS_SUCCESSOR` | Record CHARTER v1.0 as a live published branch, bind its public file inventory to the prepared release, and preserve its claim and authority ceilings. | [Record](docs/changelog/2026-09-05-hlp-000013-charter-publication-status.md) |
 | `HLP-000012` | 2026-09-05 | `CREATURE_CHARTER_COMPANION` | Restore the affectionate Creature aliases for CHARTER's TTC/BPS layer, add a narrative field guide, and record the reserved DOI, exact release digest, license, and claim ceilings. | [Record](docs/changelog/2026-09-05-hlp-000012-creature-charter-companion.md) |
 | `HLP-000011` | 2026-09-04 | `LIGHT_TRIO_SELECTED_CARRY_SUCCESSOR` | Route three separate Light-Trio returns to Hearthline, require complete Carry Selection before Thulia custody, and separate raw-view release, translation, Systemic Friction, Atomic Edge Promotion, and recoverability. | [Record](docs/changelog/2026-09-04-hlp-000011-light-trio-selected-carry.md) |
 | `HLP-000010` | 2026-09-04 | `TASK_TRIAD_LIFECYCLE_SUCCESSOR` | Specify the candidate Task Triad: Hearthline and Thulia nominate only their own seats, the controller freezes one complete offer, and final own-seat intents atomically bind all three before separate dispatch. | [Record](docs/changelog/2026-09-04-hlp-000010-task-triad-lifecycle.md) |

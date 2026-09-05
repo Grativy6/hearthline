@@ -15,6 +15,7 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 
 ## Repository map
 
+- [`START_HERE.md`](START_HERE.md) — review-only repository, candidate, and ARC route map.
 - [`hearthline_agent.md`](hearthline_agent.md) — public `0.7-draft` branch instruction.
 - [`SOURCE_MAP.md`](SOURCE_MAP.md) — current, historical, exploratory, branch, and open source treatment.
 - [`candidate_manifest.json`](candidate_manifest.json) — normalized-text candidate envelope; same-branch consistency only, never an adoption or authenticity anchor.
@@ -134,6 +135,7 @@ The following same-author publications are approved public research context for 
 | [*Compactification Costs*, v0.2](https://zenodo.org/records/22238012) | 2026-09-01 | Typed, detector-relative closure burdens with APCI fiber certification and later GOLD fixtures | No universal scalar, physical law, canonical detector, or backdating of APCI or GOLD into v0.1 |
 | [*Single Cut Transport Lemma*, v0.2](https://zenodo.org/records/22239108) | 2026-09-01 | Resolution-qualified asymmetry, finite action-trace fixtures, exact checkpoints, heartbeat stutter, and re-entry | No universal minimal asymmetry, practical optimality, progress from heartbeat, or authority from recoverability |
 | [*Boundary-Readable Trace and Absorber-Informed Closure* (BRRRT), v2.0](https://zenodo.org/records/22261831) | 2026-09-02 | Typed transition and readability ledger, benchmark crossings, and atomic promotion | A reading is not a mechanism; readability is not decoding; release-ready is not authorized |
+| [*CHARTER v1.0*](https://doi.org/10.5281/zenodo.22288471) | 2026-09-05 | Framed shells, TTC/BPS orchestration, carriage cost, and selected carry | Author-adopted and not peer reviewed; no implementation, ARC result, or authority |
 | [Strongwiz v3 campaign prototype](https://github.com/Grativy6/strongwiz/tree/edc88b80f872f766c22b3a050a7f6837d6e652d8) | Inspected 2026-09-02 | Inspected design source for representation-only Scribes, matched controls, restart integrity, material-event cadence, and cost-accounting requirements | Prepared, not run or preregistered; no runner-wired evidence-yield schedule, Scribe benefit, or ARC benefit established; no code imported here |
 
 This repository does not revise those works. It also does not turn one lineage into independent corroboration.
@@ -163,13 +165,13 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000012 — The Creatures of the Circuit Garden**
+**HLP-000013 — CHARTER publication anchor**
 
-- Restores Creature-language aliases for CHARTER's proposed TTC/BPS layer.
-- Defines a Creature as `3n` one-job Sparks and its Heart as derived, not an extra Spark.
-- Adds a narrative field guide for formation, Homecoming, translation, pruning, and release.
-- Records CHARTER's reserved DOI, exact PDF digest, CC BY 4.0 license, and claim ceilings.
+- Records CHARTER v1.0 as published on 2026-09-05 at DOI `10.5281/zenodo.22288471`.
+- Matches the live four-file inventory to the prepared release by filename, size, and MD5.
+- Adds CHARTER to bounded research context, not the controlling stack.
+- Preserves its manuscript, implementation, peer-review, ARC-result, and authority ceilings.
 
-[Full change record](docs/changelog/2026-09-05-hlp-000012-creature-charter-companion.md) ·
+[Full change record](docs/changelog/2026-09-05-hlp-000013-charter-publication-status.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

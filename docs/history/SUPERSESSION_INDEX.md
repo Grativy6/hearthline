@@ -6,11 +6,12 @@ This index is a derived reading aid. Git objects, frozen HLP records, and exact 
 
 ## Branch topology
 
-| Ref | Head | Classification | Reading rule |
+| Surface | Head or record | Classification | Reading rule |
 |---|---|---|---|
 | `main` | `dd00eaa30e46b74baf31f120622caef16a4e73dd` | `CURRENT_CANON` | Current default-branch history; not runtime adoption |
 | `lore/the-night-the-garden-clicked-20260904` | `a6552c1ad23f078d96a7a5247b1f0fd4f4936ec8` | `ACTIVE_CANDIDATE` | Candidate predecessor |
-| `lore/creature-charter-20260905` | `49d600cda356711aeb42381a76fb680bbfcd3b5e` | `ACTIVE_CANDIDATE` | Newest coherent candidate, not adopted |
+| HLP-000013 successor in this tree | [Publication-status record](../changelog/2026-09-05-hlp-000013-charter-publication-status.md) | `ACTIVE_CANDIDATE` | Carries the exact Creature base and foundation-map commit; not adopted |
+| `lore/creature-charter-20260905` | `49d600cda356711aeb42381a76fb680bbfcd3b5e` | `ACTIVE_CANDIDATE_ANCESTOR` | Exact pre-publication candidate base |
 | `design/thulia-gloss-systemic-friction-20260904` | `54bf6971edbc42738314754dcd199cede3f4484a` | `OPEN_CONFLICT` | Divergent design sibling retained for its semantics |
 | `codex/thulia-visual-lineage` | `1780aafb13db926a49cd298b1765f260a5e3a145` | `OPEN_CONFLICT` | Open, conflicting PR #4 |
 
@@ -22,8 +23,9 @@ This index is a derived reading aid. Git objects, frozen HLP records, and exact 
 - [`docs/WIP_TASK_TRIAD_CHECKPOINT_2026-09-04.md` at candidate `49d600c`](https://github.com/Grativy6/hearthline/blob/49d600cda356711aeb42381a76fb680bbfcd3b5e/docs/WIP_TASK_TRIAD_CHECKPOINT_2026-09-04.md), blob `ae049929ad04668ea58d4e6e8b12590d8d7f61c0`, preserves that HLP-000010-era topology. Its bytes remain unchanged and its context is `SUPERSEDED_CONTEXT`.
 - HLP-000011 supersedes the return topology without rewriting HLP-000010 or the WIP checkpoint: three member returns go separately to Hearthline; only selected carry crosses to Thulia.
 - HLP-000012 adds the CHARTER/Creature companion without adopting the branch.
+- HLP-000013 records the live CHARTER publication and exact public inventory without rewriting HLP-000012's reserved-DOI close-state or changing the Creature route.
 
-The candidate already owns HLP-000008 through HLP-000012 while `main` ends at HLP-000007. This review-only branch allocates no HLP ID. A lineage decision is required before an atomic promotion.
+The candidate owns HLP-000008 through HLP-000013 while `main` ends at HLP-000007. This remains a review candidate; its source-status receipt does not merge it to `main`, adopt its instruction, or activate it.
 
 ## Squash topology preserved
 

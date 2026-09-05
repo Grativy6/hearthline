@@ -520,6 +520,10 @@ separately, and later publication does not backdate public availability. This
 same-author adaptation adds transformation provenance, not independent
 corroboration.
 
+The later public transition is recorded without rewriting that historical
+close-state in [HLP-000013](../docs/changelog/2026-09-05-hlp-000013-charter-publication-status.md).
+The [source map](../SOURCE_MAP.md) carries the current publication status.
+
 CHARTER's formal terms control mathematical claims. Its inherited v0.1–v0.2
 Lean core is delimited; the Creature/BPS, Systemic Friction, translation, and
 minimum-asymmetry layers remain manuscript-level proposals pending dedicated

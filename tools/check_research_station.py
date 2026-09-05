@@ -40,6 +40,7 @@ LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 EXPECTED_SOURCES = {
     "pal-v2.3": "CURRENT",
     "brrrt-v2.0": "BRANCH",
+    "charter-v1.0": "BRANCH",
     "single-cut-transport-v0.2": "BRANCH",
     "compactification-costs-v0.2": "BRANCH",
     "strongwiz-v3-prototype": "EXPLORATORY",
@@ -48,6 +49,28 @@ EXPECTED_SOURCES = {
     "full-bandwidth-not-full-trace-v0.1": "BRANCH",
     "gold-v0.1": "BRANCH",
     "context-map-v1.0": "EXPLORATORY",
+}
+EXPECTED_CHARTER_ARTIFACTS = {
+    "CHARTER_v1.0_Zenodo_Release_Public_Redacted.zip": (
+        3_322_838,
+        "eb695613b0de05188650f79de146159f5ef06588c04c7d0e0a1929d9d802c8d1",
+        "461f0d4e0f6594e8559f01243016ffec",
+    ),
+    "CHARTER_v1.0_Framed_Prime_Shells_and_Bound_Persistent_Shells.docx": (
+        1_673_357,
+        "3f813ecadfcea957bdccb157d83792612a85c78e318a4ec22da62efc3d8bcabf",
+        "7ff472e1f08c8278ca2197afe221a7d0",
+    ),
+    "CHARTER_v1.0_Zenodo_Release_Public_Redacted.zip.sha256": (
+        114,
+        "6bb3ba97e7bf1c7bac0872382e2ce0d6bc48fa9abefd4b0f372e1d1946f0be87",
+        "4ffa872ac421bf394fe68be7c440fbf0",
+    ),
+    "CHARTER_v1.0_Framed_Prime_Shells_and_Bound_Persistent_Shells.pdf": (
+        1_984_477,
+        "541130b912024b306268888eeb8566377ae5598f4b54fbbcc6f1c80461745926",
+        "85f25f7cc100baef66c47505f352e852",
+    ),
 }
 EXPECTED_STRONGWIZ_BLOBS = {
     "docs/calibrations/003-strongwiz-v3-pal23-scribe.md":
@@ -162,6 +185,8 @@ def check_source_registry() -> tuple[dict[str, Any], str]:
             "unexpected research-station schema")
     require(registry.get("status") == "RESEARCH_CONTEXT_ONLY",
             "bad station status")
+    require(registry.get("last_updated_date") == "2026-09-05",
+            "research-station update date drift")
     require(registry.get("source_text_is_authorization") is False,
             "source text must not become authorization")
     require(registry.get("shared_author_lineage_is_independent_corroboration") is False,
@@ -215,6 +240,35 @@ def check_source_registry() -> tuple[dict[str, Any], str]:
     ]
     require(len(historical) == 1 and historical[0].get("current_live_record") is False,
             "BRRRT superseded wrapper observation missing")
+
+    charter = find_source(registry, "charter-v1.0")
+    require(charter.get("version") == "1.0", "CHARTER registry version drift")
+    require(
+        charter.get("persistent_id") == "https://doi.org/10.5281/zenodo.22288471",
+        "CHARTER registry DOI drift",
+    )
+    require(charter.get("publication_date") == "2026-09-05",
+            "CHARTER publication date drift")
+    require(charter.get("publication_status") == "PUBLISHED",
+            "CHARTER publication status missing")
+    require(charter.get("artifact_identity_status") ==
+            "RESOLVED_LIVE_RECORD_RELEASE_MATCH",
+            "CHARTER live release match missing")
+    charter_artifacts = {
+        item["filename"]: (
+            item.get("bytes"),
+            item.get("sha256"),
+            item.get("zenodo_md5"),
+        )
+        for item in charter.get("inspected_artifacts", [])
+    }
+    require(charter_artifacts == EXPECTED_CHARTER_ARTIFACTS,
+            "CHARTER public artifact inventory drifted")
+    research_text = RESEARCH_DOC.read_text(encoding="utf-8")
+    require("| Version | `0.2` |" in research_text,
+            "Research Station publication successor version missing")
+    require("10.5281/zenodo.22288471" in research_text,
+            "Research Station lacks the published CHARTER route")
 
     strongwiz = find_source(registry, "strongwiz-v3-prototype")
     require(strongwiz.get("prototype_status") ==
@@ -307,6 +361,9 @@ def check_light_trio_surfaces(registry_text: str) -> dict[str, str]:
                 f"{name} does not carry PAL v2.3")
     require("RESOLVED_LIVE_RECORD_CANONICAL_MATCH" in registry_text,
             "BRRRT live resolution status is absent")
+    for name in ("README.md", "SOURCE_MAP.md", "hearthline_agent.md"):
+        require("10.5281/zenodo.22288471" in surfaces[name],
+                f"{name} lacks the published CHARTER route")
 
     expected_versions = {
         "HEARTHLINE_CREATURES.md": "| Version | `0.5` |",
@@ -529,8 +586,14 @@ def check_light_trio_surfaces(registry_text: str) -> dict[str, str]:
             name,
         )
 
-    require("Systemic Friction" not in registry_text,
-            "Systemic Friction must not become a Research Station source")
+    registry = json.loads(registry_text)
+    friction_sources = [
+        source.get("source_id")
+        for source in registry["sources"]
+        if "Systemic Friction" in json.dumps(source, ensure_ascii=False)
+    ]
+    require(friction_sources == ["charter-v1.0"],
+            "only the bounded CHARTER branch may source Systemic Friction")
     return surfaces
 
 

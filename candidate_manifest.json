@@ -8,7 +8,7 @@
   "default_mode": "DRAFT_ONLY",
   "declared_author_operator_and_steward": "Christopher D. Pang",
   "policy_hash_domain": "utf8_lf_normalized_repository_text_sha256",
-  "policy_sha256": "40e88d4121ff5b67e17c8e9a9d7df3fe174b47598c2567c6a261d728d0066c5f",
+  "policy_sha256": "80649f063c777cb302d382f1d67d9006b52d520932e377994d95e30cb5ee59ad",
   "source_profile_id": "HEARTHLINE_PUBLIC_SOURCE_PROFILE_2",
   "declared_sources": {
     "PAL": {
