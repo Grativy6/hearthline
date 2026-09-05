@@ -168,13 +168,13 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000015 — Morrow and the Homecoming Priority Mark**
+**HLP-000016 — Clarify the maximum-overtake bound**
 
-- Hearthline now assigns a receipt-bound priority class before task dispatch.
-- Morrow proposes deterministic within-class order from a stateless, scheduling-only view; the controller retains fairness and admission.
-- Priority revisions are append-only, prospective, ceiling-bound, and never renew task authority or budgets.
-- Morrow and Thulia share no channel, state, ledger, custody, or record surface.
+- `maximum_overtakes` bounds successful later admissions ahead of a continuously `READY` item while controller service continues.
+- It does not promise wall-clock latency, controller liveness, or eventual disposition.
+- Morrow remains optional; fallback correctness and fairness-rule computation do not depend on his availability.
+- The HLP-000015 design record remains the frozen predecessor.
 
-[Full change record](docs/changelog/2026-09-05-hlp-000015-morrow-homecoming-priority.md) ·
+[Full change record](docs/changelog/2026-09-05-hlp-000016-return-queue-overtake-bound.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
