@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2` |
+| Version | `0.3` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -20,10 +20,38 @@ contexts, ledgers, budgets, grants, Homes, models, or authority. Creature is not
 a fourth Spark role, a model identity, an executor, a self-spawning process, a
 persistent being, or a claim of consciousness.
 
+## v0.3 Morrow profile successor
+
+Version `0.3` makes [Morrow](HEARTHLINE_RETURN_QUEUE.md#morrow-the-stateless-queue-steward),
+the named Queue Steward, a deterministic stateless profile by default. Morrow
+receives one frozen scheduling-only projection, emits one proposal under the
+pinned policy, and retains no state. The controller owns the queue, priority
+receipt chain, snapshot, overtake counters, proposal receipt, final order, and
+admission. Morrow's formal authority is `NONE`;
+`QUEUE_ORDER_PROPOSAL_ONLY` is an allowed output schema, not a grant or
+decision. Morrow is not required to be a Creature or Spark.
+
+The optional Queue Steward Creature introduced in `0.2` remains a compatible
+experimental wrapper only. Its manifest must pin the same profile and exact
+input/output byte domains; it cannot add persistent memory, a broader view, a
+different comparator, or authority. If the wrapper cannot establish that
+equivalence, its proposal is invalid and the controller computes the
+priority-aware base order itself.
+
+Morrow and Thulia have no shared member, ledger, Home, context, storage,
+receipt, or direct channel. Morrow cannot read a Perch, roost, Static ledger,
+Bridge Gloss, selected carry, or custody state. Thulia cannot read or alter a
+Homecoming priority assignment or revision, scheduling view, proposal, final
+order, or admission. Only the controller/Hearthline layer may separately route
+their minimum views and outputs; no Creature manifest may connect one output as
+input to the other, permit mutual invocation or impersonation, or make either
+function depend on the other's presence. Each remains correct when the other is
+absent. Version `0.2` remains the predecessor below.
+
 ## v0.2 Queue Steward successor
 
 Version `0.2` adds the optional
-[Queue Steward Creature](HEARTHLINE_RETURN_QUEUE.md#queue-steward-creature).
+[Queue Steward Creature](HEARTHLINE_RETURN_QUEUE.md#morrow-the-stateless-queue-steward).
 It receives one frozen, grant-filtered scheduling view and may return one queue
 order proposal. It is not the queue, scheduler, canonical controller, intake
 validator, Homecoming admitter, or owner of any return. Its proposal cannot
@@ -55,13 +83,16 @@ that names at least:
 - the canonical controller, single-writer surfaces, revocation source, return
   route, and Homecoming reconciliation rule.
 
-For a Queue Steward Creature, the manifest also freezes the queue and snapshot
-digests, metadata-only scheduling view, sort-policy version, base service rule,
-maximum overtakes, proposal schema, stop condition, and its own Homecoming
-route. Its proposal returns through a controller-bound control aperture that is
-separate from the exact data queue it proposes over; if Homecoming queueing is
-needed for that return, it uses a distinct control profile. Those fields confer
-no queue write or service authority.
+For a compatible optional Queue Steward Creature wrapper, the manifest also
+freezes the exact deterministic Morrow profile, metadata-only scheduling view,
+fresh opaque invocation binding, sort-policy version, base service rule,
+maximum overtakes, `QUEUE_ORDER_PROPOSAL_ONLY` schema, stop condition, and its
+own Homecoming route. Global arrival ordinals, queue and service epochs, cuts,
+and full snapshot digests remain controller-only. Its proposal returns through
+a controller-bound control aperture that is separate from the exact data queue
+it proposes over; if Homecoming queueing is needed for that return, it uses a
+distinct control profile. Those fields confer no queue write or service
+authority; formal authority remains `NONE`.
 
 An unbound field is not filled by inference. It remains `UNBOUND`, blocks the
 dependent transition, and requires a successor manifest. A moving branch,
@@ -83,7 +114,7 @@ A Creature uses linked ledgers, not one communal memory:
 | Thulia roost | Owl custody interface plus canonical store | Perch indexes, translation requests, Bridge Glosses, and delivery receipts | Global decoder, merged codebook, or authority source |
 | Campaign index | Controller | Exact references, arm identities, checkpoints, seals, and dispositions | Shared payload ledger or hidden cross-arm channel |
 | Return Queue | Canonical controller and store | Immutable arrival placement, order receipts, service dispositions, and reopening routes | Result judge, shared return payload, grant, or authority source |
-| Queue Scheduling View | Canonical store; one Queue Steward Creature receives a frozen projection | One bounded order proposal under the pinned policy | Queue writer, payload reader, controller, or admission surface |
+| Queue Scheduling View | Canonical store; the stateless Morrow profile or one compatible wrapper receives a frozen projection | One bounded order proposal under the pinned policy | Queue writer, payload reader, persistent memory, Thulia surface, controller, or admission surface |
 
 Every durable object receives an injective, scope-bound identity. Human-readable
 labels may repeat; canonical identities may not collide. Provider requests are
@@ -177,9 +208,10 @@ If several Homecomings contend for one serial intake, the
 [Hearthline Return Queue](HEARTHLINE_RETURN_QUEUE.md) gives every intake
 attempt a durable disposition and every accepted enqueue an immutable arrival
 ordinal while preserving its original lineage.
-An optional Queue Steward Creature may propose a different service order, but
-the controller alone validates and commits that order. Arrival, priority,
-admission, and rule-owned result status remain separate.
+The stateless Morrow profile, or a compatible optional Queue Steward Creature
+wrapper, may propose a different within-class service order, but the controller
+alone validates and commits that order. Arrival, priority, admission, and
+rule-owned result status remain separate.
 
 ## ARC-style matched preparation
 
@@ -224,8 +256,11 @@ credential, environment contact, ARC result, competition entry, or authority.
 An implementation must be separately specified, tested, frozen, reviewed, and
 authorized within its exact task boundary.
 
-A future Queue Steward implementation must additionally test metadata-only
-projection, complete-permutation coverage, controller-only order commitment,
-bounded overtakes, deterministic fallback to the base rule, preservation of
-distinct result attribution, and failure without queue mutation when the
-proposal or active policy cannot be established.
+A future Queue Steward implementation must additionally test pre-dispatch
+priority assignment, metadata-only projection, identical output for identical
+canonical input, absence of retained state, complete-permutation coverage,
+controller-only priority, overtake, order, and admission state, bounded
+overtakes ahead of ordinary priority bands, deterministic priority-aware
+fallback, complete Morrow/Thulia separation, preservation of distinct result
+attribution, and failure without queue mutation when the proposal or active
+policy cannot be established.

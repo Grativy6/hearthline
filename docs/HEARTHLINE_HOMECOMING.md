@@ -4,10 +4,60 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.5` |
+| Version | `0.6` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
+
+## v0.6 dispatch-priority successor
+
+Version `0.6` requires Hearthline to assign one bounded Homecoming priority
+class while commissioning a task, before the controller records dispatch. The
+controller binds the **Homecoming Priority Mark** to the task TETHER through a
+durable Homecoming Priority Assignment Receipt. The mark is sequencing
+metadata for a possible later return; it is not task importance, result status,
+permission, authority, or a promise that the return will be ready or admitted.
+
+The assignment observes the current objective and authority epochs without
+creating either one. It must fit the operator-authorized queue profile, class
+ceiling, and finite revision budget already frozen for that task. A missing,
+invalid, conflicting, or ambiguous required assignment blocks a new dispatch.
+The Spark, Creature, return, Morrow, evaluator, and Thulia cannot assign or
+promote themselves.
+
+Hearthline may later propose a different class only through an append-only,
+controller-authored Homecoming Priority Revision Receipt. A valid revision
+names its exact predecessor, survives exact-retry idempotency, stays within the
+original ceiling and remaining revision budget, and becomes effective only for
+its named queue epoch in the first later snapshot whose frozen
+`priority_ledger_cut` includes it. Revision append and snapshot cut share one
+controller-linearized surface and exact-head compare-and-swap, so a stale
+snapshot head cannot create retroactive priority. It never rewrites a frozen
+snapshot or renews scope, grant, authority, Home, audience, retention, expiry,
+deadline, capability, action count, cost ceiling, or budget. Invalid, stale,
+forked, no-op, or non-exact replay attempts under a new key leave the last
+unambiguous valid head unchanged; an ambiguous append cannot become effective
+before durable reconciliation.
+
+For both assignment and revision, typed idempotency lookup precedes current
+lifecycle, predecessor, and head validation. A byte-identical same-key retry
+returns the original receipt identity and latest durable disposition even after
+later state advances; a same-key changed binding conflicts. Only an unseen key
+undergoes fresh validation, and a non-exact replay under a new key cannot alter
+the valid head.
+
+At return, the controller resolves the effective receipt chain and gives the
+stateless Morrow profile only the effective rank and other scheduling fields permitted
+by the frozen Queue Scheduling View. It does not reveal the priority basis,
+task identity, cargo, result, or source prestige. Missing legacy priority is
+held for explicit migration rather than guessed. Controller fairness and
+admission remain separate and controlling.
+
+Morrow and Thulia never overlap or communicate. Priority marks, revisions,
+scheduling views, proposals, orders, and admission stay outside every Thulia
+Perch, ledger, Bridge Gloss, selected-carry, and custody surface. Thulia's
+records never enter Morrow's view. Only the controller routes their separate
+outputs. Version `0.5` remains the queue predecessor below.
 
 ## v0.5 return-queue successor
 
@@ -114,6 +164,8 @@ at least:
   tombstone behavior;
 - the expected terminal conditions, return route, reconciliation rule, and
   failure disposition; and
+- the task TETHER carrying the receipt-bound Homecoming Priority Mark and the
+  destination queue profile and epoch expected at return; and
 - the dispatch-pinned Home Record version and predecessor, plus the allowed
   reroute and revocation protocol and its initial authorized references.
 
@@ -169,6 +221,13 @@ merely because it travels beside the Work Spark.
 The pair also binds two separate frozen Static references: one for the Work
 Spark and one for the Ledger Scribe. Neither Spark writes, versions, or silently
 adopts the other's Static.
+
+Each member's task TETHER carries its own Homecoming Priority Mark even when
+both belong to one paired dispatch. Hearthline assigns those classes before
+dispatch under the same frozen policy or under separately named compatible
+profiles; pairing does not force equal priority or let either member inherit or
+revise the other's mark. The controller records each Assignment Receipt before
+that member begins work.
 
 The Work Spark may finish when its own task boundary is reached even if the
 Ledger Scribe is incomplete. The Scribe may receive a predeclared bounded grace
@@ -368,7 +427,7 @@ pulse, persistence budget, context, or authority.
 
 Readable lifecycle transitions may include:
 
-`SPARK_DISPATCHED -> SPARK_ACTIVE`
+`TASK:COMMISSIONED -> HOMECOMING_PRIORITY:ASSIGNED -> SPARK_DISPATCHED -> SPARK_ACTIVE`
 
 `SPARK_ACTIVE <-> SPARK_SUSPENDED`
 
@@ -452,8 +511,10 @@ complete declared coverage.
 This document adopts Home, Home Record, Paired Spark dispatch, Work Spark,
 Ledger Scribe Spark, Spark Heartbeat Contract, Pulse Receipt, open objective
 window, objective-set snapshot, the Homecoming Return Queue, Homecoming,
-Return Receipt, Reconciliation Receipt, Context-Close Receipt, and Hearth Perch
-as Hearthline lore and design vocabulary.
+Homecoming Priority Mark, Homecoming Priority Assignment Receipt, Homecoming
+Priority Revision Receipt, Return Receipt, Reconciliation Receipt,
+Context-Close Receipt, and Hearth Perch as Hearthline lore and design
+vocabulary.
 Paired dispatch is non-recursive: the Ledger Scribe does not receive another
 Ledger Scribe merely because it is a Spark. This document does not instantiate a
 Spark, scheduler, timer, background process, ledger, roost, model, monitor,
@@ -470,7 +531,10 @@ ownership, single-writer target admission, residual return, idempotent
 Homecoming, unknown-return reconciliation, separate close receipts, crash
 recovery, objective admission while another objective is suspended, out-of-order
 return, atomic idempotent enqueue, immutable arrival order, controller-only
-service-order admission, bounded overtakes, aggregation by reference,
+service-order admission, pre-dispatch priority assignment, append-only
+prospective revision, ceiling and revision-budget enforcement, stateless Morrow
+projection, explicit legacy-priority hold, bounded overtakes, complete
+Morrow/Thulia separation, aggregation by reference,
 host-window loss, no cross-objective grant or budget inheritance, privacy
 handling, and closure.
 

@@ -24,7 +24,7 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`docs/HEARTHLINE_STATIC.md`](docs/HEARTHLINE_STATIC.md) — the local, record-backed shorthand discipline for one Spark and one isolated append-only ledger lineage.
 - [`docs/HEARTHLINE_THULIA.md`](docs/HEARTHLINE_THULIA.md) — Thulia, Hearthline's pet owl and bounded Owl Scribe for partitioned Static custody and numbered Bridge Glosses.
 - [`docs/HEARTHLINE_HOMECOMING.md`](docs/HEARTHLINE_HOMECOMING.md) — declared Homes, paired Work and Ledger Scribe Sparks, task-shaped Heartbeat Contracts, open objective windows, and trace-preserving Homecoming.
-- [`docs/HEARTHLINE_RETURN_QUEUE.md`](docs/HEARTHLINE_RETURN_QUEUE.md) — controller-owned queued return, immutable arrival order, bounded reordering, and the optional Queue Steward Creature.
+- [`docs/HEARTHLINE_RETURN_QUEUE.md`](docs/HEARTHLINE_RETURN_QUEUE.md) — dispatch priority, queued return, immutable arrival order, and Morrow's stateless Queue Steward profile.
 - [`docs/HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md) — current Thulia appearance and animation sheet; its [`SHEET-000001`](docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md) predecessor remains preserved.
 - [`docs/HEARTHLINE_FIRESIDES.md`](docs/HEARTHLINE_FIRESIDES.md) — the non-blocking consultation pattern for Hearthline, Scribe Sparks, Run Trails, Field Notes, Embers, and refresh.
 - [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
@@ -85,10 +85,12 @@ scheduler, keepalive, grant, or shared context.
 
 A **Homecoming Return Queue** gives every intake attempt a durable disposition
 and every accepted enqueue an immutable, controller-linearized arrival place.
-A lone bundle may be the immediate head; simultaneous bundles join the same
-path instead of letting a busy intake choose one. An optional Queue Steward
-Creature may propose a bounded service order; only the controller commits it,
-and every return keeps its status and attribution.
+Hearthline assigns a receipt-bound Homecoming Priority Mark before dispatch.
+Stateless **Morrow** sees only a frozen scheduling view and may propose within-class
+order. He gets dense ready-only ranks rather than global queue ordinals or epochs,
+and his formal authority is `NONE`; the proposal-only output does not decide service.
+Fairness comes first; only the controller owns counts, commits an order, and admits service.
+An invalid new assignment blocks dispatch; an unmarked legacy return is held for explicit migration. Every return keeps its status and attribution.
 
 **Thulia** is Hearthline's pet owl and Owl Scribe. She keeps every Spark's Static
 in its own numbered Perch. When one Spark needs to understand another, Thulia
@@ -102,10 +104,13 @@ separate direction-bound carry and target-ledger admission may create a new
 target-local Static record. She never merges the ledgers or teaches either Spark
 the other's language.
 
+Morrow and Thulia share no channel, state, ledger, custody, invocation,
+impersonation, or dependency; each works when the other is absent.
+
 The repository map above links the full role, Homecoming, Return Queue,
 Creature, lineage, custody, and carry boundaries.
 
-**TETHER** is Hearthline's carrier-neutral continuity technique: externalize recoverable trace, bind a compact identity/scope/status/residual/reopen handle, verify it later, and reopen only what the present task needs. It carries trace—not hidden model state, extra context capacity, access permission, or authority. An unresolved item without a reopening route is incomplete.
+**TETHER** is Hearthline's carrier-neutral continuity technique: externalize recoverable trace, bind a compact identity/scope/status/residual/reopen handle, verify it later, and reopen only what the present task needs. Its receipt-bound Priority Mark sequences Homecoming without becoming permission or authority. An unresolved item without a reopening route is incomplete.
 
 ## Controlling references
 
@@ -163,13 +168,13 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000014 — Homecoming Return Queue**
+**HLP-000015 — Morrow and the Homecoming Priority Mark**
 
-- Added one queue-intake path for lone and simultaneous returned bundles.
-- Preserved immutable arrival order, distinct attribution, and bounded actual-overtake accounting (`maximum_overtakes: 2`).
-- Made the optional Queue Steward Creature proposal-only; the controller commits service order.
-- Reserved PR #12's issued `HLP-000008`–`HLP-000013` identities without adopting their content.
+- Hearthline now assigns a receipt-bound priority class before task dispatch.
+- Morrow proposes deterministic within-class order from a stateless, scheduling-only view; the controller retains fairness and admission.
+- Priority revisions are append-only, prospective, ceiling-bound, and never renew task authority or budgets.
+- Morrow and Thulia share no channel, state, ledger, custody, or record surface.
 
-[Full change record](docs/changelog/2026-09-05-hlp-000014-homecoming-return-queue.md) ·
+[Full change record](docs/changelog/2026-09-05-hlp-000015-morrow-homecoming-priority.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

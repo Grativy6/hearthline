@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.7` |
+| Version | `0.8` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -14,6 +14,26 @@
 Its purpose is simple: every Spark and every new version receives an ordered number, and earlier work remains individually addressable. Correction, retirement, rejection, or replacement may change what governs later work; none silently makes an earlier record disappear.
 
 An ordered number is an identifier inside a declared ledger scope. It records allocation and sequence only. It does not establish rank, seniority, quality, truth, personhood, experiential continuity, ownership, capability, permission, or authority.
+
+## v0.8 Homecoming-priority successor
+
+Version `0.8` adds ordered Homecoming Priority Assignment and Revision
+Receipts. Hearthline assigns the initial class during commissioning; the
+controller allocates and appends its receipt before dispatch. A revision is a
+new exact-predecessor record under compare-and-swap, never an overwrite of the
+task TETHER, initial assignment, an earlier revision, queue item, or frozen
+snapshot.
+
+Each queue snapshot pins the one effective assignment/revision head and class
+used for each ready item at that cut. A later valid revision first applies at
+its named queue epoch in the first later snapshot whose frozen
+`priority_ledger_cut` includes its durable ordinal. Revision append and
+snapshot cut share one controller-linearized compare-and-swap surface, so no
+predicted next-snapshot label can act retroactively. Invalid, stale, forked,
+no-op, or non-exact replay attempts under a new key consume their own
+disposition but do not change the valid head; an outcome-unknown append is
+reconciled before it can govern.
+Version `0.7` remains the return-queue predecessor below.
 
 ## v0.7 return-queue successor
 
@@ -56,6 +76,9 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Creature profile | `CREATURE-000001/PROFILE-000001` | That Creature's manifest-successor series |
 | Creature dispatch | `CREATURE-000001/DISPATCH-000001` | That Creature's dispatch series |
 | Creature checkpoint | `CREATURE-000001/CHECKPOINT-000001` | That Creature's checkpoint series |
+| Task dispatch | `TASK-000001/DISPATCH-000001` | One controller-owned task-dispatch lineage |
+| Homecoming Priority Assignment Receipt | `TASK-000001/DISPATCH-000001/HOMECOMING-PRIORITY-000001` | The dispatch's initial priority-assignment series |
+| Homecoming Priority Revision Receipt | `TASK-000001/DISPATCH-000001/HOMECOMING-PRIORITY-000001/REVISION-000001` | One assignment's append-only exact-predecessor revision series |
 | Campaign | `CAMPAIGN-000001` | One external comparison-campaign registry |
 | Campaign arm | `CAMPAIGN-000001/ARM-000001` | One physically isolated Creature arm |
 | Homecoming | `SPARK-000001/HOMECOMING-000001` | That Spark's Homecoming series |
@@ -68,6 +91,7 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Intake Disposition Receipt | `RETURN-QUEUE-000001/INTAKE-000001/DISPOSITION-000001` | Append-only accepted, blocked, unknown, reconciled, or conflict outcome |
 | Return Queue item | `RETURN-QUEUE-000001/ITEM-000001` | That queue's immutable arrival-allocation series |
 | Enqueue Receipt | `RETURN-QUEUE-000001/ITEM-000001/ENQUEUE-000001` | One accepted item's atomic placement and arrival ordinal |
+| Queue Readiness Receipt | `RETURN-QUEUE-000001/ITEM-000001/READINESS-000001` | One item's append-only eligibility, blocker, remedy, and re-entry series |
 | Arrival snapshot | `RETURN-QUEUE-000001/ARRIVAL-000001` | That queue's append-only arrival snapshot series |
 | Queue order proposal | `RETURN-QUEUE-000001/PROPOSAL-000001` | That queue's optional Queue Steward proposal series |
 | Final service snapshot | `RETURN-QUEUE-000001/SERVICE-ORDER-000001` | That queue's controller-committed service-order series |
@@ -130,6 +154,37 @@ active Spark or merge two Spark lineages. Home metadata routes and constrains
 custody; it does not authorize return, disclosure, admission, or retention. A
 return revalidates those authorities and follows only an ordered authorized
 reroute-or-revocation chain from the dispatch-pinned record.
+
+Before `TASK:DISPATCHED`, the controller allocates one Homecoming Priority
+Assignment Receipt and binds its reference into the exact task TETHER. The
+receipt observes the dispatch's current objective and authority epochs; it does
+not create them. A required assignment with an unknown append outcome blocks
+dispatch until reconciled. The controller performs typed idempotency lookup
+before current lifecycle, head, or compare-and-swap validation. A byte-identical
+same-key assignment retry returns the same allocated identity and latest durable
+terminal, unknown, or reconciled disposition even if dispatch or later state
+has advanced. Same-key changed binding receives a conflict disposition without
+a second assignment. Only an unseen key undergoes fresh lifecycle and policy
+validation.
+
+Every Priority Revision Receipt receives the next revision ordinal, names the
+exact valid predecessor and compare-and-swap head, and carries its own
+idempotency and terminal or unknown disposition. A revision may become
+effective only in its named queue epoch at the first later snapshot whose
+`priority_ledger_cut` includes it. Its append compares both the priority-ledger
+and observed snapshot heads under the controller's shared linearization. It
+cannot renumber or rewrite the dispatch, TETHER, assignment, queue item, or
+earlier snapshot, restore consumed revision budget, exceed the frozen class
+ceiling, or renew any scope, grant, authority, Home, expiry, deadline, action,
+cost, or budget limit.
+
+Revision idempotency lookup likewise precedes current-head and predecessor
+validation. A byte-identical same-key retry returns its original revision
+identity and latest durable terminal, unknown, or reconciled disposition even
+after a later revision advances the head. Same-key changed binding conflicts;
+only an unseen key enters fresh exact-predecessor and compare-and-swap checks.
+A stale predecessor or non-exact replay under a new key cannot mutate the valid
+head.
 
 A Paired Spark dispatch receives its pair number before either member begins.
 It binds exactly one Work Spark and one Ledger Scribe Spark, their separate
@@ -289,14 +344,22 @@ An exact retry with the same idempotency key returns the same allocation. A genu
 
 For a Return Queue, allocation assigns one immutable arrival ordinal. A later
 service-order snapshot references those item identities without renumbering
-them. Each reorder appends the original arrival snapshot, optional proposal,
-final order, pinned policy and reasons, and per-item overtake counts. An
-overtake is counted only when a later-arriving eligible item actually enters
-service first, not when a proposal is written or an item remains in an unserved
-suffix. The actual controller admission receives its own Service Admission
-Receipt and is not inferred from the final-order snapshot. A failed
-pre-admission check or later terminal observation receives a separate Service
-Disposition Receipt. A profile successor
+them. Each frozen snapshot also pins the immutable priority Assignment Receipt,
+the effective valid Revision Receipt or null, and the resolved class used for
+each ready item; a later revision cannot rewrite that historical cut. Each
+reorder appends the original arrival snapshot, optional proposal, final order,
+pinned policy and reasons, and per-item overtake counts. An overtake is counted
+only when a later-arriving eligible item actually enters service first, not
+when a proposal is written or an item remains in an unserved suffix. The
+controller independently recomputes the fairness-due set from Service Admission
+Receipts even when stateless Morrow used the projected count in a proposal. The
+actual controller admission receives its own Service Admission Receipt and is
+not inferred from the final-order snapshot. A failed pre-admission check
+receives a separate Service Disposition Receipt and moves the item out of
+`READY` before a successor snapshot. Re-entry requires a newly ordered Queue
+Readiness Receipt that binds the resolved remedy; an unknown outcome is
+reconciled first. A later terminal observation likewise receives a separate
+Service Disposition Receipt. A profile successor
 receives a new profile identity and service epoch; migration cannot renumber an
 item or reset its accumulated count. A busy service writer may delay processing;
 it cannot resolve contention by dropping, overwriting, or appropriating a
@@ -328,9 +391,13 @@ succession, physically isolated campaign arms, campaign-index noninterference,
 one canonical effect-admission and serialization path, and failure when the
 active version cannot be established. Return Queue implementations must also
 test atomic idempotent enqueue, immutable arrival order, complete proposal
-coverage, controller-only final-order append, bounded overtakes, base-rule
-fallback, traced overflow, and separate attribution for distinct valid
-returns.
+coverage, controller-only final-order append, pre-dispatch priority-assignment
+idempotency, exact-predecessor revision and conflict handling, immutable
+per-snapshot effective-priority binding, ceiling and revision-budget
+preservation, deterministic stateless Morrow output, bounded overtakes ahead of
+ordinary priority bands, priority-aware base-rule fallback, complete
+Morrow/Thulia separation, explicit legacy-priority hold and migration, traced
+overflow, and separate attribution for distinct valid returns.
 
 Ordered lineage preserves addressability. It does not manufacture memory, identity continuity, consciousness, consent, standing, permission, or authority.
 
