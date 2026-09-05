@@ -32,13 +32,20 @@ The following belong only in a separately controlled private environment:
 - operational Static ledgers, Thulia roost, Hearth Perch and Spark-local Perch indexes, Bridge Glosses, and their access, carry, and delivery receipts;
 - operational Spark identities, Home Records, paired-dispatch state, Spark Heartbeat Contracts, Pulse Receipts, suspension/resume state, return bundles, and Homecoming Return, Reconciliation, and Context-Close Receipts;
 - operational Return Queue profiles, queue items, arrival and service snapshots,
-  Queue Steward views and proposals, and order, overflow, service, and close
-  receipts;
+  Homecoming Priority Marks, Assignment and Revision Receipts, priority-ledger
+  cuts, Morrow/Queue Steward views and proposals, and order, overflow, service,
+  and close receipts;
 - private receipts, logs, conversation records, and unpublished work;
 - personal, behavioral, device, location, health, or biometric data; and
 - any learned template derived from such data.
 
 Do not commit sanitized-looking samples copied from real operational data. Use fabricated fixtures with no recoverable private source.
+
+Morrow and Thulia remain operationally disjoint even on the private side.
+There is no direct channel, shared state, ledger, Perch, Bridge Gloss, custody,
+selected carry, mutual invocation, impersonation, or availability dependency
+between them. The controller exposes only separate minimum views, and each
+function must remain correct when the other is absent.
 
 ## Authority boundary
 

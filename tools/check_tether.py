@@ -23,6 +23,7 @@ def main() -> None:
     agent = AGENT.read_text(encoding="utf-8")
     readme = README.read_text(encoding="utf-8")
     doc = DOC.read_text(encoding="utf-8")
+    doc_words = " ".join(doc.split())
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
 
     require("version: 0.4-draft" in agent, "agent draft version is not 0.4")
@@ -34,6 +35,8 @@ def main() -> None:
             "agent lacks the full TETHER route")
 
     require("# Hearthline TETHER" in doc, "TETHER document heading missing")
+    require("version: 0.2-draft" in doc,
+            "TETHER document version is not 0.2-draft")
     require("Trace Externalization Through Handle-bound Exact Reopening" in doc,
             "TETHER expansion missing")
     for phrase in (
@@ -46,8 +49,21 @@ def main() -> None:
         "The larger trace remains external",
         "TraceKey names the key",
         "TETHER names the motion",
+        "Homecoming Priority Mark",
+        "Homecoming Priority Assignment Receipt",
+        "task_tether_core_digest",
+        "HEARTHLINE_TASK_TETHER_CORE_V1",
+        "neither digest includes itself",
+        "Homecoming Priority Revision Receipt",
+        "priority-ledger head",
+        "observed snapshot head",
+        "an ambiguous append has no effect until reconciled from durable state",
+        "A revision can never renew or expand the TETHER's source task",
+        "Morrow sees only the controller-attested effective rank",
+        "Thulia receives none of the mark, assignment, revision, view, proposal, order, or admission surfaces",
+        "They have no direct channel or shared state",
     ):
-        require(phrase in doc, f"TETHER boundary missing: {phrase}")
+        require(phrase in doc_words, f"TETHER boundary missing: {phrase}")
 
     for field in (
         "tether_id:",

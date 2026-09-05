@@ -4,7 +4,7 @@
 
 ```yaml
 document: HEARTHLINE_TETHER
-version: 0.1-draft
+version: 0.2-draft
 status: PUBLIC_DESIGN_PROPOSAL
 author_and_steward: Christopher D. Pang
 repository_role: HEARTHLINE_CONTINUITY_TECHNIQUE
@@ -12,6 +12,58 @@ activation_effect: NONE
 ```
 
 > **Keeper.** Externalize recoverable trace through whatever reliable carrier is available. Carry a compact, identity-bound handle. Never carry a material unresolved state without also carrying a concrete route by which it could be reopened.
+
+## v0.2-draft Homecoming Priority Mark successor
+
+Version `0.2-draft` permits a task TETHER to carry a compact **Homecoming
+Priority Mark** assigned by Hearthline at commissioning and recorded by the
+canonical controller before dispatch. The mark is a projection of a durable
+Homecoming Priority Assignment Receipt, not an editable priority field. It
+avoids a self-hash: the controller first freezes the priority-envelope-free
+TETHER core and computes `task_tether_core_digest` under
+`HEARTHLINE_TASK_TETHER_CORE_V1`. The Assignment Receipt binds that digest,
+dispatch, destination queue profile and epoch, finite policy and class,
+controller-frozen ceiling and revision budget, controller-readable basis
+reference, and dispatch epoch. Only then does the final envelope carry the
+core, mark, and Assignment Receipt reference. A separate envelope digest may be
+computed afterward; neither digest includes itself.
+
+The mark routes scheduling intent home without carrying task cargo into the
+scheduler. It cannot verify the carrier, establish importance or result status,
+grant access, widen authority, or make a return ready. The dispatched Spark or
+Creature, its return payload, Morrow, an evaluator, and Thulia cannot author,
+edit, inherit, or promote it. A new dispatch requiring priority stops if the
+assignment receipt or exact TETHER binding is missing, invalid, conflicting, or
+ambiguous.
+
+A later class change is not an edit to the TETHER. Hearthline proposes it and
+the controller appends a separate Homecoming Priority Revision Receipt with an
+exact predecessor, monotonic ordinal, compare-and-swap head, remaining finite
+revision budget, named queue epoch, current priority-ledger head, and observed
+snapshot head. Revision append and snapshot cut share one controller-linearized
+surface. The revision first applies in the later snapshot whose frozen
+`priority_ledger_cut` includes it; stale-head compare-and-swap cannot backdate
+it. Invalid, stale, forked, no-op, or non-exact replay attempts under a new key
+do not change the last valid head; an ambiguous append has no effect until
+reconciled from durable state. A revision can never renew or expand the
+TETHER's source task, scope,
+grant, authority, Home, access, privacy, retention, expiry, deadline,
+capabilities, consumed limits, or budgets.
+
+Typed idempotency lookup precedes current lifecycle, predecessor, and head
+validation for both assignment and revision. A byte-identical same-key retry
+returns the original receipt identity and latest durable disposition even after
+later state advances; a same-key changed binding conflicts. Only an unseen key
+undergoes fresh validation, and a non-exact replay under a new key cannot alter
+the valid head.
+
+This successor does not make TETHER a queue, scheduler, priority ledger, or
+permission channel. Morrow sees only the controller-attested effective rank
+in a separate frozen Queue Scheduling View; he receives neither the task TETHER
+nor its receipt chain or basis. Thulia receives none of the mark, assignment,
+revision, view, proposal, order, or admission surfaces. Morrow receives none of
+her Perches, ledgers, Bridge Glosses, selected carry, or custody records. They
+have no direct channel or shared state.
 
 ## 1. Purpose
 

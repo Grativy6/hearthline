@@ -14,6 +14,7 @@ This is the present-facing home for Hearthline's explicitly fictional story lore
 - [**The Ledger Beneath the Returning Bell**](THE_LEDGER_BENEATH_THE_RETURNING_BELL.md) — distinct river traces keep provisional names through a reduction pulse, a scoped certificate, a turning mark, a readable recurrence, and a return home without letting one projected collision become proof or permission.
 - [**The First Furrow**](THE_FIRST_FURROW.md) — Hearthline learns a borrowed field-body in a world that advances with each choice, recovers an incomplete fitting through exact plate and parity checks, and lets an excellent unseen harvest remain proudly local.
 - [**Gloss and the Two-Sided Note**](GLOSS_AND_THE_TWO_SIDED_NOTE.md) — Hearthline and Thulia recover their workbench with a tiny golden wisp that turns one self-contained note through its declared Circuit Garden and back again: the page comes home exactly while the path around it stays.
+- [**Morrow and the Marked Tethers**](MORROW_AND_THE_MARKED_TETHERS.md) — Hearthline marks each task's Homecoming priority before dispatch; pocketless Morrow later arranges only faceless, controller-attested tokens, while the controller keeps every record and opens the door. His rail and Thulia's custody path never meet.
 - [**Visual gallery**](../assets/README.md) — current character references, scenes, artifact art, and their captions.
 - [**History and artifacts**](history-and-artifacts/README.md) — the trace side of this folder: predecessors and displaced lore belong there if later stories supersede them.
 
@@ -24,5 +25,11 @@ This is the present-facing home for Hearthline's explicitly fictional story lore
 The lore may be adopted, revised, contradicted, or continued as fiction by its author and steward, **Christopher D. Pang**. AI systems assisted drafting and illustration as tools; they are not co-authors, witnesses, characters' real-world identities, or release authorities.
 
 Nothing in this folder activates Hearthline, grants access or authority, changes a Spark role, creates operational memory, or converts a story heartbeat into a runtime mechanism.
+
+Morrow is the fictional face of a deterministic stateless Queue Steward
+profile, not a persistent Creature or hidden memory. His scheduling surface and
+Thulia's Perch, ledger, Bridge Gloss, selected-carry, and custody surfaces have
+no direct channel, shared state, mutual invocation, impersonation, or
+availability dependency.
 
 The design-side treatment of exact reopening, retrieval failure, and routes home lives in [Hearthline TETHER](../docs/HEARTHLINE_TETHER.md). The operational Moltbook candidate lives in [`hearthline_agent.md`](../hearthline_agent.md). The fiction may dramatize those boundaries; it is not evidence that an implementation exists or works.
