@@ -7,7 +7,7 @@
 | Record kind | `SOURCE_STATUS_SUCCESSOR` |
 | Predecessor | `HLP-000012` |
 | Creature candidate base | `49d600cda356711aeb42381a76fb680bbfcd3b5e` |
-| Foundation-map integration parent | `268151cafdf6b901f347706e90cff29d2ebcf711` |
+| Foundation-map integration merge | `3b412b44f1491ce651a527b2f9d269162f51ab6f` |
 | Effect | `PUBLIC_DRAFT_SOURCE_STATUS_ONLY` |
 | Runtime adoption, activation, implementation, and authority | `NONE` |
 | Author, operator, and steward | Christopher D. Pang |
@@ -129,7 +129,7 @@ evaluator, grant, budget, and stop rules.
 
 Evidence for this successor is the public Zenodo record and API inventory, the
 prepared public release's matching file identities, the exact Creature
-candidate base, the separately preserved foundation-map integration commit,
+candidate base, the remote review branch's foundation-map integration merge,
 the source registry, and the bounded repository validation outputs.
 
 This public record excludes raw conversations, hidden reasoning, private
