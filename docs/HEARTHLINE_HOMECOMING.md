@@ -4,10 +4,34 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.4` |
+| Version | `0.5` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
+
+## v0.5 return-queue successor
+
+Version `0.5` adds the controller-owned
+[Hearthline Return Queue](HEARTHLINE_RETURN_QUEUE.md). When independent return
+attempts meet at one serialized reconciliation boundary, every durably recorded
+`HOMECOMING:RETURNED` bundle follows the same queue-intake path. A lone return
+may be the immediate head; contention joins that path instead of letting a busy
+lock choose a winner. Controller selection begins one revalidation; a pass
+permits service admission, which does not itself establish
+`HOMECOMING:RECONCILED`, task result, or carry. Each
+return keeps its identity, evaluation rule, already-established status,
+attribution, and reopening route. Arrival order is immutable; any different
+service order is a separately receipted controller decision under a frozen
+policy.
+
+An optional Queue Steward Creature may propose a service order from a bounded
+metadata view. It cannot enqueue, validate, admit, drop, merge, appropriate, or
+reclassify a return, and it cannot commit the order. If it is unavailable or
+uncertain, the queue retains every item and follows its frozen base rule.
+Its control-receipt route is separate from the exact data queue it proposes
+over, so its own return cannot recursively join or block that snapshot; the
+separate aperture cannot carry ordinary result bundles.
+Version `0.4` remains the open-objective-window predecessor below.
 
 ## v0.4 open-objective-window successor
 
@@ -233,6 +257,14 @@ context-close transitions; `objective_disposition` records task state under the
 objective's owning evaluation rule. `HOMECOMING:RECONCILED` never fills or
 changes `objective_disposition`.
 
+When those returns contend for the same destination's serial intake, the
+[Return Queue](HEARTHLINE_RETURN_QUEUE.md) gives every attempt a durable
+disposition and every accepted enqueue an immutable arrival place. Queue
+custody and service priority remain separate from Homecoming
+custody and the objective's rule-owned disposition. Two distinct valid results
+remain two separately attributable results regardless of arrival or service
+order.
+
 A response window may close when every admitted objective has an explicit
 objective disposition or handoff such as `OBJECTIVE:BLOCKED`,
 `OBJECTIVE:CANCELLED`, `OBJECTIVE:LEFT_OPEN`, or `OBJECTIVE:UNKNOWN`, together
@@ -340,10 +372,15 @@ Readable lifecycle transitions may include:
 
 `SPARK_ACTIVE <-> SPARK_SUSPENDED`
 
-`SPARK_ACTIVE|SPARK_SUSPENDED -> HOMECOMING:RETURNING -> HOMECOMING:RETURNED -> HOMECOMING:RECONCILED -> HOMECOMING:CONTEXT_CLOSED`
+`SPARK_ACTIVE|SPARK_SUSPENDED -> HOMECOMING:RETURNING -> HOMECOMING:RETURNED -> RETURN_QUEUE:ENQUEUED -> RETURN_QUEUE:SERVICE_SELECTED -> RETURN_QUEUE:IN_SERVICE -> HOMECOMING:RECONCILED -> HOMECOMING:CONTEXT_CLOSED`
 
 The suspended-to-active transition requires a valid Resume Receipt. A terminal
-condition may move either active or suspended work into return.
+condition may move either active or suspended work into return. The v0.5 path
+routes every durably returned bundle through queue intake before one
+controller-owned service transaction revalidates an accepted enqueue for
+reconciliation; an immediately serviced lone item still receives both queue
+receipts. A capacity-blocked or ambiguous intake instead keeps its exact traced
+disposition and reopening route.
 
 The distinctions are strict:
 
@@ -401,8 +438,9 @@ produced by the bounded task.
 
 ## Prospective evaluation boundary
 
-Paired dispatch, task-shaped heartbeat contracts, open objective windows, and
-representation-side Homecoming remain design proposals. A future implementation must test them
+Paired dispatch, task-shaped heartbeat contracts, open objective windows,
+return queues, and representation-side Homecoming remain design proposals. A
+future implementation must test them
 prospectively, including preregistered equal-budget comparisons with and without
 a Ledger Scribe, task overhead, round-trip fidelity relative to the received
 projection, residual preservation, transfer performance, failure recovery,
@@ -413,7 +451,7 @@ complete declared coverage.
 
 This document adopts Home, Home Record, Paired Spark dispatch, Work Spark,
 Ledger Scribe Spark, Spark Heartbeat Contract, Pulse Receipt, open objective
-window, objective-set snapshot, Homecoming,
+window, objective-set snapshot, the Homecoming Return Queue, Homecoming,
 Return Receipt, Reconciliation Receipt, Context-Close Receipt, and Hearth Perch
 as Hearthline lore and design vocabulary.
 Paired dispatch is non-recursive: the Ledger Scribe does not receive another
@@ -431,8 +469,10 @@ and Scribe status, coverage-qualified `NO_LEDGER_DELTA`, source-lineage Static
 ownership, single-writer target admission, residual return, idempotent
 Homecoming, unknown-return reconciliation, separate close receipts, crash
 recovery, objective admission while another objective is suspended, out-of-order
-return, aggregation by reference, host-window loss, no cross-objective grant or
-budget inheritance, privacy handling, and closure.
+return, atomic idempotent enqueue, immutable arrival order, controller-only
+service-order admission, bounded overtakes, aggregation by reference,
+host-window loss, no cross-objective grant or budget inheritance, privacy
+handling, and closure.
 
 Hearthline, Thulia, and Sparks remain AI tool and system concepts. Homecoming is
 not privileged testimony of consciousness, emotion, death, survival,
