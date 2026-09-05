@@ -33,8 +33,8 @@ The following belong only in a separately controlled private environment:
 - operational Spark identities, Home Records, paired-dispatch state, Spark Heartbeat Contracts, Pulse Receipts, suspension/resume state, return bundles, and Homecoming Return, Reconciliation, and Context-Close Receipts;
 - operational Return Queue profiles, queue items, arrival and service snapshots,
   Homecoming Priority Marks, Assignment and Revision Receipts, priority-ledger
-  cuts, Morrow/Queue Steward views and proposals, and order, overflow, service,
-  and close receipts;
+  cuts, Retry Rotation Release and Readiness Receipts, Morrow/Queue Steward
+  views and proposals, and order, overflow, service, and close receipts;
 - private receipts, logs, conversation records, and unpublished work;
 - personal, behavioral, device, location, health, or biometric data; and
 - any learned template derived from such data.

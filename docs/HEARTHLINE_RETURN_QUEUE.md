@@ -5,7 +5,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.2.1` |
+| Version | `0.3` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -22,6 +22,26 @@ matters.
 The queue preserves each return as its own attributable object. It does not
 merge workers, Creatures, Homes, ledgers, grants, evaluation rules, results, or
 authority. A queue position is custody and scheduling state only.
+
+## v0.3 retry-rotation successor
+
+Version `0.3` closes one repeated-failure gap without adding a liveness claim.
+After a selected item receives a failed or unknown pre-admission Service
+Disposition Receipt, the controller keeps that item held and leaves its
+`overtake_count` unchanged. It cannot re-enter `READY` merely because its
+ordinary remedy now passes. Re-entry also requires one unique, controller-owned
+**Retry Rotation Release Receipt** proving either that a distinct queue item
+received a later service attempt or that no other eligible ready item exists at
+the exact pre-reopen cut.
+
+The release rotates service attempts; it does not promise elapsed-time
+fairness, successful admission, controller liveness, or eventual disposition.
+The paired Readiness Receipt changes only queue eligibility from `HELD` to
+`READY`; neither receipt changes priority, authority, Homecoming or payload
+custody, result, budget, deadline, or overtake count. Morrow never receives the
+release or its evidence, remains stateless, and gains no new output. Thulia
+remains fully disjoint. Version `0.2.1` remains the claim-narrowing predecessor
+below.
 
 ## v0.2.1 maximum-overtake claim-narrowing successor
 
@@ -277,14 +297,16 @@ overtake_count: append-derived count, never silently reset
 service_transaction_ref: unset until controller selection
 service_admission_receipt_ref: unset until actual controller admission
 service_disposition_receipt_ref: unset until a terminal or bounded handoff
+retry_rotation_release_receipt_ref: unset unless one failed-attempt generation is released
+readiness_receipt_ref: unset until a held item validly re-enters READY
 reopen_handle: exact bounded route back to the unresolved return
 ```
 
 Assignment, Revision, Intake Attempt, Intake Disposition, Enqueue, Proposal,
-Order, Service Admission, Service Disposition, Homecoming, and queue-close
-receipts occupy distinct typed identity domains. A shared idempotency key,
-digest, ordinal, readable label, or task cannot make one receipt stand in for
-another.
+Order, Service Admission, Service Disposition, Retry Rotation Release,
+Readiness, Homecoming, and queue-close receipts occupy distinct typed identity
+domains. A shared idempotency key, digest, ordinal, readable label, task, or
+service transaction cannot make one receipt stand in for another.
 
 For the initial bounded profile, `maximum_overtakes` is `2`. A successor
 profile may choose another finite value, but it must freeze that value before
@@ -509,11 +531,13 @@ deadline, spend beyond a budget, or overtake a fairness-due item.
 
 A final service snapshot records intended order but consumes no overtake and
 admits no item by itself. It lets the controller allocate one service
-transaction for the selected head. The controller first checks that item's
-ordinary revalidation inputs. A passing check permits a separate append-only
-Service Admission Receipt bound to the queue item, profile and service epoch,
-final snapshot and order receipt, controller, revalidation inputs and pass
-result, and the exact pre/post overtake counts. That receipt atomically marks
+transaction for the selected head and one immutable, controller-linearized
+`service_ordinal` before the pre-admission outcome is known. The controller
+first checks that item's ordinary revalidation inputs. A passing check permits
+a separate append-only Service Admission Receipt bound to the queue item,
+profile and service epoch, final snapshot and order receipt, controller,
+service transaction and ordinal, revalidation inputs and pass result, and the
+exact pre/post overtake counts. That receipt atomically marks
 `RETURN_QUEUE:IN_SERVICE` and is the durable event that consumes an actual
 overtake.
 
@@ -522,14 +546,78 @@ create or mutate result status, Homecoming custody, selected carry, grant,
 authority, publication, or external-effect state.
 
 A failed or uncertain pre-admission revalidation instead receives a Service
-Disposition Receipt and consumes no overtake. That same controller transaction
-moves the selected item out of `READY` into an explicit held, terminal, or
-unknown state with its blocker, remedy, and reopening handle before any
-successor snapshot. The item cannot re-enter `READY` for another attempt until
-a new controller Readiness Receipt binds the resolved remedy and current
-revalidation inputs; an unknown outcome must first be durably reconciled. A
-repeatedly failing high-priority head therefore cannot churn through proposals
-while lower items wait without earning overtakes.
+Disposition Receipt `D` bound to that same `service_ordinal` and consumes no
+overtake. For a `FAILED` or `UNKNOWN` disposition, that same controller
+transaction moves the selected item `x` out of `READY` into `HELD` with its
+blocker, remedy, and reopening handle before any successor snapshot. `D`
+records the item's exact pre/post `overtake_count` as the same value `K`.
+
+### Retry Rotation Release Receipt
+
+Let `x` be the item held after `D`, and let `K` be its persisted
+`overtake_count` at that disposition.
+An `UNKNOWN` disposition must first be reconciled from durable state. If
+reconciliation establishes that admission occurred, ordinary in-service
+recovery governs and retry release is forbidden. Only a failed disposition, or
+an unknown disposition reconciled to failure, may become the source `D` for a
+retry release.
+
+Before `x` can re-enter `READY`, the controller requires the ordinary resolved
+remedy and a current revalidation result of `PASS`, plus exactly one accepted
+Retry Rotation Release Receipt `Q` for that item and failed-attempt generation.
+At most one `Q` may be accepted for the pair `(x, D)`. `Q` binds `x`, `D`, `K`,
+the queue, profile and service epoch, the release policy, an idempotency key,
+and exactly one of these modes:
+
+| `release_mode` | Required controller evidence |
+|---|---|
+| `OTHER_ITEM_SERVICE_ATTEMPTED` | One later typed Service Admission Receipt or pre-admission Service Disposition Receipt for a distinct item in the same queue, profile and service epoch, with a greater `service_ordinal`, plus proof that `x` remained held continuously from `D` through that attempt and the release cut. |
+| `NO_OTHER_ELIGIBLE_READY` | The exact pre-reopen snapshot digest and queue-head digest, evaluated under the current eligibility rule, with controller-derived `other_ready_count = 0`; `x` is excluded because it is still held. Over the typed service receipts after `D` through that bound head, the controller must also derive `qualifying_later_attempt_count = 0`. |
+
+The two modes are evidence-determined and exclusive. If one or more qualifying
+later distinct-item service attempts exist after `D` at the bound cut, `Q` must
+use `OTHER_ITEM_SERVICE_ATTEMPTED`; `NO_OTHER_ELIGIBLE_READY` is invalid even
+when the current `other_ready_count` is zero. `NO_OTHER_ELIGIBLE_READY` is valid
+only when `qualifying_later_attempt_count = 0`. Evidence for both modes or
+neither mode makes `Q` invalid.
+For `OTHER_ITEM_SERVICE_ATTEMPTED`, the other receipt proves only that another
+item received a service attempt; it does not claim that attempt succeeded. For
+`NO_OTHER_ELIGIBLE_READY`, the release and readiness transition compare and
+swap the bound pre-reopen head so a stale zero-count observation cannot reopen
+`x` after another item becomes ready.
+
+The controller journals release-and-reopen idempotency before append. An exact
+retry returns the same `Q` and `R` identities and latest durable disposition.
+Reusing the key with changed bindings, accepting a second release for the same
+`D`, or using a stale item, queue, profile, epoch, snapshot, or head records
+conflict without mutation. An ambiguous append has no effect until its one
+canonical `Q`/`R` outcome is reconciled.
+
+`Q` alone does not make `x` ready. One controller Readiness Receipt `R` must
+bind `x`, `D`, the unique `Q`, the resolved ordinary remedy, current
+revalidation inputs and `PASS`, and the resulting readiness-state transition.
+The controller atomically appends accepted `Q`, consumes it once into `R`, and
+moves `x` from `HELD` to `READY`; no accepted orphan `Q` may be used as a later
+permit. A later failure creates a new `D` that requires a new release
+generation. `D`, `Q`, and `R` leave `K` unchanged. `Q` and `R` do not create,
+renew, widen, transfer, or alter priority, authority, grant, Homecoming or
+payload custody, result status, selected carry, budget, expiry, deadline, or
+external-effect state. `R` changes only queue eligibility from `HELD` to
+`READY`.
+
+Morrow receives neither `D`, `Q`, `R`, their identities, release mode, service
+ordinal, held proof, snapshot or head digest, remedy, nor revalidation result.
+After `R`, a successor invocation may include `x` only through Morrow's ordinary
+fresh opaque ready projection. Thulia receives none of the release surface and
+cannot issue, inspect, route, consume, or depend on `Q` or `R`; Morrow likewise
+has no access to her custody surface.
+
+The design claim is limited to attempt rotation under continued controller
+enforcement: while another eligible item is ready, a failed `x` cannot be
+reopened until a distinct item has received a later service attempt. It does
+not guarantee that any attempt passes, that the controller continues servicing
+the queue, that service occurs within a wall-clock interval, or that any item
+eventually receives a disposition.
 
 After admitted work reaches a terminal queue observation or bounded handoff,
 the controller appends a Service Disposition Receipt bound to the service
@@ -607,19 +695,24 @@ After a crash or interruption, the controller reconstructs the last durable
 Homecoming Priority Assignment and Revision Receipts, their idempotency and
 compare-and-swap dispositions, Intake Attempt and Disposition Receipts,
 accepted Enqueue Receipts and arrival snapshot, order receipt, Service
-Admission Receipt, in-service transaction, Service Disposition Receipts, and
-consumed limits. It reconciles every
+Admission Receipt, in-service transaction, Service Disposition Receipts, Retry
+Rotation Release and Readiness Receipts, their one-use and idempotency
+dispositions, and consumed limits. It reconciles every
 `ENQUEUE_OUTCOME_UNKNOWN` before deriving the accepted arrival set. It never moves an ordinal
 backward or assumes an unreceipted admission or handoff completed. An ambiguous service effect stops at
 `SERVICE_OUTCOME_UNKNOWN`; recovery reconciles the existing transaction before
-any successor attempt.
+any successor attempt. An ambiguous failed disposition, retry release, or
+readiness transition is likewise reconciled before an item can re-enter
+`READY`.
 
 A queue-close snapshot freezes an intake cutoff and covers every Intake Attempt
 Receipt through it. Close is forbidden while any append outcome remains
 ambiguous or any `ENQUEUE_OUTCOME_UNKNOWN` or `QUEUE_CAPACITY_UNKNOWN`
 disposition remains unresolved. An unresolved priority assignment or revision
 append must be reconciled or preserved in an explicit held/terminal handoff;
-close cannot silently select a class. Every accepted intake disposition must link one handled queue item;
+an unresolved Retry Rotation Release or Readiness append must likewise be
+reconciled or preserved with the held item's explicit handoff. Close cannot
+silently select a class or infer retry release. Every accepted intake disposition must link one handled queue item;
 every blocked, conflict, cancelled, or explicitly left-open intake must have a
 terminal disposition and bounded TETHER route. Every enqueued item must then
 have a terminal Service Disposition Receipt or an explicit bounded handoff such
@@ -661,9 +754,29 @@ A future implementation should test at least:
 - deterministic stateless Morrow output and priority-aware controller fallback;
 - maximum-overtake precedence over priority and no deadline, expiry, grant, or
   budget renewal through a mark or revision;
-- failed or uncertain selected-head removal from `READY`, receipted remedy
-  before re-entry, and absence of high-priority retry livelock;
-- complete Morrow/Thulia surface and channel separation;
+- failed or uncertain selected-head removal from `READY`, unchanged
+  `overtake_count`, and reconciliation of every unknown disposition before
+  release;
+- one unique Retry Rotation Release Receipt per failed-attempt generation,
+  exact-retry idempotency, exclusive release modes, one-use consumption, and
+  conflict without mutation;
+- `OTHER_ITEM_SERVICE_ATTEMPTED` proof from a distinct item's later typed
+  admission or disposition in the same queue, profile and service epoch, with a
+  greater service ordinal and continuous-held proof for the failed item;
+- `NO_OTHER_ELIGIBLE_READY` proof from the exact pre-reopen snapshot and head,
+  derived zero other-ready count, and compare-and-swap protection against a
+  stale empty view;
+- evidence-determined mode selection: any qualifying later distinct-item
+  service attempt after `D` requires `OTHER_ITEM_SERVICE_ATTEMPTED`, while
+  `NO_OTHER_ELIGIBLE_READY` requires a derived zero qualifying-attempt count
+  even when the current other-ready count is zero;
+- ordinary remedy and current `PASS` in the Readiness Receipt, with no priority,
+  authority, Homecoming or payload custody, result, budget, deadline, or
+  overtake-count mutation through release or readiness;
+- attempt rotation without a wall-clock, successful-admission, controller-
+  liveness, or eventual-disposition guarantee;
+- exclusion of retry-release identities, modes, evidence, and state from both
+  Morrow and Thulia, with their existing disjointness preserved;
 - maximum-overtake and aging enforcement as a bound on successful later
   admissions ahead of a continuously `READY` item, conditional on controller
   service continuing, without asserting wall-clock latency, liveness, or

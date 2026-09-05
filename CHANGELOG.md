@@ -16,6 +16,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000017` | 2026-09-05 | `RETURN_QUEUE_RETRY_ROTATION_SUCCESSOR` | Require one controller-owned Retry Rotation Release Receipt before a failed item can re-enter READY, rotating service attempts without claiming latency, liveness, success, or eventual disposition. | [Record](docs/changelog/2026-09-05-hlp-000017-retry-rotation-release.md) |
 | `HLP-000016` | 2026-09-05 | `RETURN_QUEUE_CLAIM_NARROWING` | Clarify maximum overtakes as a successful-later-admission bound for a continuously ready item while service continues, without implying latency, liveness, or eventual disposition. | [Record](docs/changelog/2026-09-05-hlp-000016-return-queue-overtake-bound.md) |
 | `HLP-000015` | 2026-09-05 | `MORROW_PRIORITY_SUCCESSOR` | Name Morrow's stateless Queue Steward profile and bind Hearthline's dispatch-time Homecoming priority to append-only controller receipts without overlap with Thulia. | [Record](docs/changelog/2026-09-05-hlp-000015-morrow-homecoming-priority.md) |
 | `HLP-000014` | 2026-09-05 | `RETURN_QUEUE_DESIGN_SUCCESSOR` | Add a controller-owned Homecoming Return Queue, optional proposal-only Queue Steward Creature, bounded overtakes, and permanent namespace reservations for unmerged PR #12 records. | [Record](docs/changelog/2026-09-05-hlp-000014-homecoming-return-queue.md) |

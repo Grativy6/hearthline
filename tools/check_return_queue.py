@@ -26,6 +26,10 @@ OVERTAKE_CHANGE_RECORD = (
     ROOT / "docs" / "changelog" /
     "2026-09-05-hlp-000016-return-queue-overtake-bound.md"
 )
+RETRY_ROTATION_CHANGE_RECORD = (
+    ROOT / "docs" / "changelog" /
+    "2026-09-05-hlp-000017-retry-rotation-release.md"
+)
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 
 
@@ -68,18 +72,23 @@ def main() -> None:
     changelog = CHANGELOG.read_text(encoding="utf-8")
     morrow_change_record = MORROW_CHANGE_RECORD.read_text(encoding="utf-8")
     overtake_change_record = OVERTAKE_CHANGE_RECORD.read_text(encoding="utf-8")
+    retry_rotation_change_record = RETRY_ROTATION_CHANGE_RECORD.read_text(
+        encoding="utf-8"
+    )
 
     queue_words = words(queue)
     require("# Hearthline Return Queue" in queue,
             "Return Queue heading missing")
-    require("| Version | `0.2.1` |" in queue,
-            "Return Queue version is not 0.2.1")
+    require("| Version | `0.3` |" in queue,
+            "Return Queue version is not 0.3")
     require("| Status | Adopted lore and design vocabulary |" in queue,
             "Return Queue design is not marked adopted")
     require("| Implementation | Not asserted by this document |" in queue,
             "Return Queue text manufactured an implementation")
     require("## v0.2.1 maximum-overtake claim-narrowing successor" in queue,
             "Return Queue 0.2.1 successor section missing")
+    require("## v0.3 retry-rotation successor" in queue,
+            "Return Queue 0.3 successor section missing")
 
     require_all(
         queue_words,
@@ -118,7 +127,8 @@ def main() -> None:
             "A final service snapshot records intended order but consumes no overtake and admits no item by itself",
             "The controller first checks that item's ordinary revalidation inputs",
             "A passing check permits a separate append-only Service Admission Receipt",
-            "A failed or uncertain pre-admission revalidation instead receives a Service Disposition Receipt and consumes no overtake",
+            "A failed or uncertain pre-admission revalidation instead receives a Service Disposition Receipt",
+            "Disposition Receipt `D` bound to that same `service_ordinal` and consumes no overtake",
             "`maximum_overtakes` is `2`",
             "a genuinely new attempt after the named remedy requires a new idempotency key",
             "It reconciles every `ENQUEUE_OUTCOME_UNKNOWN` before deriving the accepted arrival set",
@@ -190,16 +200,41 @@ def main() -> None:
             "each bounded function remains correct if the other is absent",
             "Service admission changes only queue service and overtake state",
             "It does not create or mutate result status, Homecoming custody, selected carry, grant, authority, publication, or external-effect state",
-            "moves the selected item out of `READY` into an explicit held, terminal, or unknown state",
-            "a new controller Readiness Receipt binds the resolved remedy",
-            "cannot churn through proposals while lower items wait without earning overtakes",
-            "Assignment, Revision, Intake Attempt, Intake Disposition, Enqueue, Proposal, Order, Service Admission, Service Disposition, Homecoming, and queue-close receipts occupy distinct typed identity domains",
+            "For a `FAILED` or `UNKNOWN` disposition, that same controller transaction moves the selected item `x` out of `READY` into `HELD`",
+            "records the item's exact pre/post `overtake_count` as the same value `K`",
+            "Assignment, Revision, Intake Attempt, Intake Disposition, Enqueue, Proposal, Order, Service Admission, Service Disposition, Retry Rotation Release, Readiness, Homecoming, and queue-close receipts occupy distinct typed identity domains",
             "If every eligible task is assigned `P0_URGENT`, the priority distinction collapses",
             "For an item that remains continuously `READY`, the bound counts successful admissions of later-arriving eligible items ahead of it while controller service continues",
             "it is not a wall-clock latency bound, a service-liveness promise, or an eventual-disposition guarantee",
             "This fallback does not promise controller liveness, wall-clock service latency, or eventual disposition",
             "This successor narrows the public claim only",
             "Version `0.2` remains the frozen design predecessor below",
+            "**Retry Rotation Release Receipt**",
+            "An `UNKNOWN` disposition must first be reconciled from durable state",
+            "Only a failed disposition, or an unknown disposition reconciled to failure, may become the source `D` for a retry release",
+            "ordinary resolved remedy and a current revalidation result of `PASS`",
+            "At most one `Q` may be accepted for the pair `(x, D)`",
+            "`OTHER_ITEM_SERVICE_ATTEMPTED`",
+            "a distinct item in the same queue, profile and service epoch, with a greater `service_ordinal`",
+            "proof that `x` remained held continuously from `D` through that attempt and the release cut",
+            "`NO_OTHER_ELIGIBLE_READY`",
+            "exact pre-reopen snapshot digest and queue-head digest",
+            "controller-derived `other_ready_count = 0`",
+            "controller must also derive `qualifying_later_attempt_count = 0`",
+            "The two modes are evidence-determined and exclusive",
+            "If one or more qualifying later distinct-item service attempts exist after `D` at the bound cut, `Q` must use `OTHER_ITEM_SERVICE_ATTEMPTED`",
+            "`NO_OTHER_ELIGIBLE_READY` is invalid even when the current `other_ready_count` is zero",
+            "`NO_OTHER_ELIGIBLE_READY` is valid only when `qualifying_later_attempt_count = 0`",
+            "The controller journals release-and-reopen idempotency before append",
+            "An exact retry returns the same `Q` and `R` identities and latest durable disposition",
+            "The controller atomically appends accepted `Q`, consumes it once into `R`, and moves `x` from `HELD` to `READY`",
+            "`D`, `Q`, and `R` leave `K` unchanged",
+            "`Q` and `R` do not create, renew, widen, transfer, or alter priority, authority, grant, Homecoming or payload custody, result status, selected carry, budget, expiry, deadline, or external-effect state",
+            "`R` changes only queue eligibility from `HELD` to `READY`",
+            "Morrow receives neither `D`, `Q`, `R`, their identities, release mode, service ordinal, held proof, snapshot or head digest, remedy, nor revalidation result",
+            "Thulia receives none of the release surface",
+            "The design claim is limited to attempt rotation under continued controller enforcement",
+            "It does not guarantee that any attempt passes, that the controller continues servicing the queue, that service occurs within a wall-clock interval, or that any item eventually receives a disposition",
         ),
         "Morrow priority boundary",
     )
@@ -253,7 +288,7 @@ def main() -> None:
         "Creature Queue Steward integration",
     )
 
-    require("| Version | `0.8` |" in ordered,
+    require("| Version | `0.9` |" in ordered,
             "Ordered Lineage Return Queue successor version missing")
     require_all(
         words(ordered),
@@ -278,6 +313,13 @@ def main() -> None:
             "Enqueue Receipt",
             "Service transaction",
             "Service Disposition Receipt",
+            "Retry Rotation Release Receipt",
+            "one controller-linearized `service_ordinal` before its pre-admission outcome",
+            "leaves `overtake_count` unchanged, and moves the item to `HELD`",
+            "a unique Retry Rotation Release Receipt plus a newly ordered Queue Readiness Receipt binding the resolved remedy and current `PASS`",
+            "a distinct item's later typed service attempt in the same queue, profile and service epoch with a greater ordinal and continuous-held proof",
+            "an exact pre-reopen snapshot/head showing zero other eligible ready items and zero qualifying later attempts",
+            "Any qualifying later distinct-item attempt after the failed disposition requires the first mode, even if the current other-ready count is zero",
             "An overtake is counted only when a later-arriving eligible item actually enters service first",
             "off-main numbers as reservations rather than reusing them",
         ),
@@ -329,6 +371,7 @@ def main() -> None:
         (
             "operational Return Queue profiles, queue items, arrival and service snapshots",
             "Homecoming Priority Marks, Assignment and Revision Receipts",
+            "Retry Rotation Release and Readiness Receipts",
             "Morrow/Queue Steward views and proposals",
             "There is no direct channel, shared state, ledger, Perch, Bridge Gloss, custody, selected carry, mutual invocation, impersonation, or availability dependency between them",
         ),
@@ -342,6 +385,8 @@ def main() -> None:
             "changelog lacks the Morrow priority successor")
     require("HLP-000016" in changelog,
             "changelog lacks the overtake-bound claim narrowing")
+    require("HLP-000017" in changelog,
+            "changelog lacks the retry-rotation successor")
     require("RESERVED_OFF_MAIN_NOT_ADOPTED" in changelog,
             "changelog lacks the reservation status")
     require("NAMESPACE_ONLY_NO_ADOPTION" in changelog,
@@ -385,6 +430,45 @@ def main() -> None:
         ),
         "overtake-bound claim-narrowing record",
     )
+    require("| Change ID | `HLP-000017` |" in retry_rotation_change_record,
+            "retry-rotation change record identity missing")
+    require("| Predecessor | `HLP-000016` |" in retry_rotation_change_record,
+            "retry-rotation predecessor missing")
+    require(
+        "| Frozen predecessor SHA-256 | "
+        "`16a0790ed32cbe66644fbbe02c94405b4224488f77ef38b4f2bd76c11e5fbcff` |"
+        in retry_rotation_change_record,
+        "retry-rotation record lacks the frozen predecessor digest",
+    )
+    require("| Return Queue | `0.2.1` -> `0.3` |"
+            in retry_rotation_change_record,
+            "retry-rotation Return Queue transition missing")
+    require("| Ordered Lineage | `0.8` -> `0.9` |"
+            in retry_rotation_change_record,
+            "retry-rotation Ordered Lineage transition missing")
+    require_all(
+        words(retry_rotation_change_record),
+        (
+            "`PUBLIC_RETURN_QUEUE_RETRY_ROTATION_DESIGN_ONLY`",
+            "`PUBLIC_DESIGN_SUCCESSOR_ONLY`",
+            "Required a `FAILED` or `UNKNOWN` disposition `D` to move the selected item `x` into `HELD` while preserving its pre/post `overtake_count` as the same value `K`",
+            "exactly one accepted release `Q` for each `(x, D)` failed-attempt generation, in exactly one mode",
+            "`OTHER_ITEM_SERVICE_ATTEMPTED`",
+            "`NO_OTHER_ELIGIBLE_READY`",
+            "ordinary resolved remedy, current revalidation inputs, and `PASS`",
+            "distinct item in the same queue, profile and service epoch, a greater `service_ordinal`",
+            "exact pre-reopen snapshot digest and queue-head digest with controller-derived `other_ready_count = 0`",
+            "`qualifying_later_attempt_count = 0`",
+            "If a qualifying later distinct-item attempt exists, `Q` must use `OTHER_ITEM_SERVICE_ATTEMPTED`, even when the current `other_ready_count` is zero",
+            "Mode cannot be relabeled from current readiness after its governing attempt history exists",
+            "Morrow receives no retry-release identity, mode, evidence, service ordinal, held proof, snapshot or head digest, remedy, or revalidation result",
+            "Thulia receives none of the release surface",
+            "The design claim is limited to attempt rotation under continued controller enforcement",
+            "does not promise wall-clock latency, successful admission, controller liveness, or eventual disposition",
+            "HLP-000015 and HLP-000016 remain byte-for-byte frozen predecessors",
+        ),
+        "retry-rotation change record",
+    )
 
     for path in (
         QUEUE_DOC,
@@ -398,6 +482,7 @@ def main() -> None:
         CHANGELOG,
         MORROW_CHANGE_RECORD,
         OVERTAKE_CHANGE_RECORD,
+        RETRY_ROTATION_CHANGE_RECORD,
     ):
         check_links(path)
         lowered = path.read_text(encoding="utf-8").lower()

@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.8` |
+| Version | `0.9` |
 | Status | Adopted lore and design vocabulary |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
@@ -14,6 +14,28 @@
 Its purpose is simple: every Spark and every new version receives an ordered number, and earlier work remains individually addressable. Correction, retirement, rejection, or replacement may change what governs later work; none silently makes an earlier record disappear.
 
 An ordered number is an identifier inside a declared ledger scope. It records allocation and sequence only. It does not establish rank, seniority, quality, truth, personhood, experiential continuity, ownership, capability, permission, or authority.
+
+## v0.9 retry-rotation successor
+
+Version `0.9` adds the controller-owned Retry Rotation Release Receipt as a
+distinct typed identity. After a failed or unknown service disposition holds
+an item, one unique release for that failed-attempt generation must be consumed
+by the Readiness Receipt before re-entry. The release proves a later service
+attempt for another item or an exact pre-reopen cut with no other eligible
+ready item. It does not replace the disposition, remedy, current `PASS`, or
+Readiness Receipt.
+
+Each selected service transaction receives one controller-linearized
+`service_ordinal` before its pre-admission outcome. A release in
+`OTHER_ITEM_SERVICE_ATTEMPTED` mode may cite only a distinct item's typed later
+admission or pre-admission disposition in the same queue, profile and service
+epoch, with a greater ordinal and proof that the failed item remained held.
+`NO_OTHER_ELIGIBLE_READY` instead binds the exact pre-reopen snapshot and head
+with derived zero other-ready and qualifying-later-attempt counts. If any
+qualifying later distinct-item attempt exists after the failed disposition,
+the release must use `OTHER_ITEM_SERVICE_ATTEMPTED` even when no other item is
+currently ready. Version `0.8` remains the Homecoming-priority predecessor
+below.
 
 ## v0.8 Homecoming-priority successor
 
@@ -92,6 +114,7 @@ Ordinals are integers from `1` through `2^63 - 1`. Display forms use at least si
 | Return Queue item | `RETURN-QUEUE-000001/ITEM-000001` | That queue's immutable arrival-allocation series |
 | Enqueue Receipt | `RETURN-QUEUE-000001/ITEM-000001/ENQUEUE-000001` | One accepted item's atomic placement and arrival ordinal |
 | Queue Readiness Receipt | `RETURN-QUEUE-000001/ITEM-000001/READINESS-000001` | One item's append-only eligibility, blocker, remedy, and re-entry series |
+| Retry Rotation Release Receipt | `RETURN-QUEUE-000001/SERVICE-000001/DISPOSITION-000001/RETRY-RELEASE-000001` | One failed-attempt generation's unique controller release consumed by readiness re-entry |
 | Arrival snapshot | `RETURN-QUEUE-000001/ARRIVAL-000001` | That queue's append-only arrival snapshot series |
 | Queue order proposal | `RETURN-QUEUE-000001/PROPOSAL-000001` | That queue's optional Queue Steward proposal series |
 | Final service snapshot | `RETURN-QUEUE-000001/SERVICE-ORDER-000001` | That queue's controller-committed service-order series |
@@ -354,12 +377,21 @@ when a proposal is written or an item remains in an unserved suffix. The
 controller independently recomputes the fairness-due set from Service Admission
 Receipts even when stateless Morrow used the projected count in a proposal. The
 actual controller admission receives its own Service Admission Receipt and is
-not inferred from the final-order snapshot. A failed pre-admission check
-receives a separate Service Disposition Receipt and moves the item out of
-`READY` before a successor snapshot. Re-entry requires a newly ordered Queue
-Readiness Receipt that binds the resolved remedy; an unknown outcome is
-reconciled first. A later terminal observation likewise receives a separate
-Service Disposition Receipt. A profile successor
+not inferred from the final-order snapshot. Each selected service transaction
+receives an immutable controller-linearized `service_ordinal` before its
+pre-admission outcome. A failed or unknown pre-admission check receives a
+separate Service Disposition Receipt, leaves `overtake_count` unchanged, and
+moves the item to `HELD` before a successor snapshot. Re-entry requires a
+unique Retry Rotation Release Receipt plus a newly ordered Queue Readiness
+Receipt binding the resolved remedy and current `PASS`; an unknown disposition
+is reconciled first. The release is accepted in exactly one mode: a distinct
+item's later typed service attempt in the same queue, profile and service epoch
+with a greater ordinal and continuous-held proof, or an exact pre-reopen
+snapshot/head showing zero other eligible ready items and zero qualifying later
+attempts. Any qualifying later distinct-item attempt after the failed
+disposition requires the first mode, even if the current other-ready count is
+zero. A later terminal observation likewise receives a separate Service
+Disposition Receipt. A profile successor
 receives a new profile identity and service epoch; migration cannot renumber an
 item or reset its accumulated count. A busy service writer may delay processing;
 it cannot resolve contention by dropping, overwriting, or appropriating a

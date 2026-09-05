@@ -168,13 +168,12 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000016 — Clarify the maximum-overtake bound**
+**HLP-000017 — Retry-rotation release**
 
-- `maximum_overtakes` bounds successful later admissions ahead of a continuously `READY` item while controller service continues.
-- It does not promise wall-clock latency, controller liveness, or eventual disposition.
-- Morrow remains optional; fallback correctness and fairness-rule computation do not depend on his availability.
-- The HLP-000015 design record remains the frozen predecessor.
+- Failure holds the item without changing its overtake count; unknown outcomes reconcile first.
+- Re-entry needs remedy and current `PASS`; any qualifying later attempt sets the receipt mode, otherwise an exact zero-other-ready cut does.
+- Morrow and Thulia receive none of it. This rotates attempts; it promises no latency, liveness, success, or eventual disposition.
 
-[Full change record](docs/changelog/2026-09-05-hlp-000016-return-queue-overtake-bound.md) ·
+[Full change record](docs/changelog/2026-09-05-hlp-000017-retry-rotation-release.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
