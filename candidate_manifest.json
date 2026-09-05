@@ -3,12 +3,12 @@
   "manifest_kind": "HEARTHLINE_PUBLIC_CANDIDATE",
   "document": "HEARTHLINE_MOLTBOOK_AGENT",
   "branch_id": "hearthline.moltbook",
-  "artifact_version": "0.4-draft",
+  "artifact_version": "0.7-draft",
   "artifact_status": "DRAFT_NOT_ACTIVATED",
   "default_mode": "DRAFT_ONLY",
   "declared_author_operator_and_steward": "Christopher D. Pang",
   "policy_hash_domain": "utf8_lf_normalized_repository_text_sha256",
-  "policy_sha256": "4a792b0071dfadc621ebe7798b76dce8f8c9149d68d3f959885ddd89442ecae5",
+  "policy_sha256": "80649f063c777cb302d382f1d67d9006b52d520932e377994d95e30cb5ee59ad",
   "source_profile_id": "HEARTHLINE_PUBLIC_SOURCE_PROFILE_2",
   "declared_sources": {
     "PAL": {

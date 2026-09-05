@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Hearthline's public research-station and Creature design surfaces."""
+"""Validate Hearthline's research station and current Light-Trio surfaces."""
 
 from __future__ import annotations
 
@@ -17,7 +17,22 @@ CANDIDATE_PATH = ROOT / "candidate_manifest.json"
 AGENT_PATH = ROOT / "hearthline_agent.md"
 RESEARCH_DOC = ROOT / "docs" / "HEARTHLINE_RESEARCH_STATION.md"
 CREATURE_DOC = ROOT / "docs" / "HEARTHLINE_CREATURES.md"
+CREATURE_LORE_DOC = ROOT / "lore" / "THE_CREATURES_OF_THE_CIRCUIT_GARDEN.md"
 HOMECOMING_DOC = ROOT / "docs" / "HEARTHLINE_HOMECOMING.md"
+FIRESIDES_DOC = ROOT / "docs" / "HEARTHLINE_FIRESIDES.md"
+SPARKS_DOC = ROOT / "docs" / "HEARTHLINE_SPARKS.md"
+STATIC_DOC = ROOT / "docs" / "HEARTHLINE_STATIC.md"
+THULIA_DOC = ROOT / "docs" / "HEARTHLINE_THULIA.md"
+GLOSS_DOC = ROOT / "docs" / "HEARTHLINE_GLOSS.md"
+ORDERED_DOC = ROOT / "docs" / "HEARTHLINE_ORDERED_LINEAGE.md"
+TASK_TRIADS_DOC = ROOT / "docs" / "HEARTHLINE_TASK_TRIADS.md"
+VISUAL_DOC = ROOT / "docs" / "HEARTHLINE_VISUAL_INDEX.md"
+THULIA_SHEET_DOC = ROOT / "docs" / "HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md"
+CHARACTERS_README = ROOT / "assets" / "characters" / "README.md"
+
+THULIA_SHEET_000002_SHA256 = (
+    "9080ca86547a8924e980e5339a8b45f6fce7bddb3a050115d4ddae19603b4650"
+)
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 COMMIT_RE = re.compile(r"^[0-9a-f]{40}$")
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
@@ -25,6 +40,7 @@ LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 EXPECTED_SOURCES = {
     "pal-v2.3": "CURRENT",
     "brrrt-v2.0": "BRANCH",
+    "charter-v1.0": "BRANCH",
     "single-cut-transport-v0.2": "BRANCH",
     "compactification-costs-v0.2": "BRANCH",
     "strongwiz-v3-prototype": "EXPLORATORY",
@@ -33,6 +49,28 @@ EXPECTED_SOURCES = {
     "full-bandwidth-not-full-trace-v0.1": "BRANCH",
     "gold-v0.1": "BRANCH",
     "context-map-v1.0": "EXPLORATORY",
+}
+EXPECTED_CHARTER_ARTIFACTS = {
+    "CHARTER_v1.0_Zenodo_Release_Public_Redacted.zip": (
+        3_322_838,
+        "eb695613b0de05188650f79de146159f5ef06588c04c7d0e0a1929d9d802c8d1",
+        "461f0d4e0f6594e8559f01243016ffec",
+    ),
+    "CHARTER_v1.0_Framed_Prime_Shells_and_Bound_Persistent_Shells.docx": (
+        1_673_357,
+        "3f813ecadfcea957bdccb157d83792612a85c78e318a4ec22da62efc3d8bcabf",
+        "7ff472e1f08c8278ca2197afe221a7d0",
+    ),
+    "CHARTER_v1.0_Zenodo_Release_Public_Redacted.zip.sha256": (
+        114,
+        "6bb3ba97e7bf1c7bac0872382e2ce0d6bc48fa9abefd4b0f372e1d1946f0be87",
+        "4ffa872ac421bf394fe68be7c440fbf0",
+    ),
+    "CHARTER_v1.0_Framed_Prime_Shells_and_Bound_Persistent_Shells.pdf": (
+        1_984_477,
+        "541130b912024b306268888eeb8566377ae5598f4b54fbbcc6f1c80461745926",
+        "85f25f7cc100baef66c47505f352e852",
+    ),
 }
 EXPECTED_STRONGWIZ_BLOBS = {
     "docs/calibrations/003-strongwiz-v3-pal23-scribe.md":
@@ -64,6 +102,20 @@ EXPECTED_STRONGWIZ = {
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise SystemExit(message)
+
+
+def words(text: str) -> str:
+    return " ".join(text.split())
+
+
+def require_all(text: str, phrases: tuple[str, ...], boundary: str) -> None:
+    for phrase in phrases:
+        require(phrase in text, f"{boundary} missing: {phrase}")
+
+
+def require_absent(text: str, phrases: tuple[str, ...], boundary: str) -> None:
+    for phrase in phrases:
+        require(phrase not in text, f"{boundary} contains obsolete collapse: {phrase}")
 
 
 def no_duplicate_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
@@ -120,18 +172,21 @@ def check_digest_fields(value: Any, path: str = "registry") -> None:
             check_digest_fields(child, f"{path}[{index}]")
 
 
-def main() -> None:
+def check_source_registry() -> tuple[dict[str, Any], str]:
+    """Preserve the pinned public source and Strongwiz identity checks."""
     registry_text = REGISTRY_PATH.read_text(encoding="utf-8")
     lowered = registry_text.lower()
     for forbidden in ("c:\\users\\", "e:\\", "file://", "token=", "api_key"):
-        require(forbidden not in lowered, f"registry contains private-path text: {forbidden}")
+        require(forbidden not in lowered,
+                f"registry contains private-path text: {forbidden}")
 
     registry = read_json(REGISTRY_PATH)
-    require(
-        registry.get("schema") == "hearthline.research-station.sources.v1",
-        "unexpected research-station schema",
-    )
-    require(registry.get("status") == "RESEARCH_CONTEXT_ONLY", "bad station status")
+    require(registry.get("schema") == "hearthline.research-station.sources.v1",
+            "unexpected research-station schema")
+    require(registry.get("status") == "RESEARCH_CONTEXT_ONLY",
+            "bad station status")
+    require(registry.get("last_updated_date") == "2026-09-05",
+            "research-station update date drift")
     require(registry.get("source_text_is_authorization") is False,
             "source text must not become authorization")
     require(registry.get("shared_author_lineage_is_independent_corroboration") is False,
@@ -148,8 +203,8 @@ def main() -> None:
         require(source.get("hearthline_status") == EXPECTED_SOURCES[source_id],
                 f"unexpected status for {source_id}")
         require(source.get("bounded_use"), f"{source_id} lacks bounded use")
-        require(source.get("authority_ceiling"), f"{source_id} lacks authority ceiling")
-
+        require(source.get("authority_ceiling"),
+                f"{source_id} lacks authority ceiling")
     check_digest_fields(registry)
 
     pal = find_source(registry, "pal-v2.3")
@@ -174,9 +229,11 @@ def main() -> None:
     require(len(current_pdfs) == 2, "BRRRT current PDF surfaces changed")
     require({item.get("bytes") for item in current_pdfs} == {1_251_146},
             "BRRRT current PDF sizes differ")
-    require({item.get("sha256") for item in current_pdfs} ==
-            {"f9e699ad4a8541506ecc6678c3296bdf4fbe4dd249a0dd6759c7fd0d22837e0a"},
-            "BRRRT current loose/package SHA match lost")
+    require(
+        {item.get("sha256") for item in current_pdfs}
+        == {"f9e699ad4a8541506ecc6678c3296bdf4fbe4dd249a0dd6759c7fd0d22837e0a"},
+        "BRRRT current loose/package SHA match lost",
+    )
     historical = [
         item for item in brrrt_pdfs
         if item.get("variant", "").startswith("superseded_")
@@ -184,8 +241,38 @@ def main() -> None:
     require(len(historical) == 1 and historical[0].get("current_live_record") is False,
             "BRRRT superseded wrapper observation missing")
 
+    charter = find_source(registry, "charter-v1.0")
+    require(charter.get("version") == "1.0", "CHARTER registry version drift")
+    require(
+        charter.get("persistent_id") == "https://doi.org/10.5281/zenodo.22288471",
+        "CHARTER registry DOI drift",
+    )
+    require(charter.get("publication_date") == "2026-09-05",
+            "CHARTER publication date drift")
+    require(charter.get("publication_status") == "PUBLISHED",
+            "CHARTER publication status missing")
+    require(charter.get("artifact_identity_status") ==
+            "RESOLVED_LIVE_RECORD_RELEASE_MATCH",
+            "CHARTER live release match missing")
+    charter_artifacts = {
+        item["filename"]: (
+            item.get("bytes"),
+            item.get("sha256"),
+            item.get("zenodo_md5"),
+        )
+        for item in charter.get("inspected_artifacts", [])
+    }
+    require(charter_artifacts == EXPECTED_CHARTER_ARTIFACTS,
+            "CHARTER public artifact inventory drifted")
+    research_text = RESEARCH_DOC.read_text(encoding="utf-8")
+    require("| Version | `0.2` |" in research_text,
+            "Research Station publication successor version missing")
+    require("10.5281/zenodo.22288471" in research_text,
+            "Research Station lacks the published CHARTER route")
+
     strongwiz = find_source(registry, "strongwiz-v3-prototype")
-    require(strongwiz.get("prototype_status") == "PREPARED_NOT_RUN_NOT_PREREGISTERED",
+    require(strongwiz.get("prototype_status") ==
+            "PREPARED_NOT_RUN_NOT_PREREGISTERED",
             "Strongwiz prototype status was inflated")
     require(strongwiz.get("inspection_status") == "PINNED_DESIGN_SOURCE",
             "Strongwiz inspection status missing")
@@ -208,8 +295,7 @@ def main() -> None:
             "Strongwiz CI receipt URL drifted")
     require(ci.get("head_ci_commit") == EXPECTED_STRONGWIZ["repository_commit"],
             "Strongwiz CI evidence is not bound to the inspected head")
-    require(ci.get("head_ci_result") == "SUCCESS",
-            "Strongwiz CI result changed")
+    require(ci.get("head_ci_result") == "SUCCESS", "Strongwiz CI result changed")
     require(
         (
             ci.get("core_v3_tests_passed"),
@@ -224,7 +310,10 @@ def main() -> None:
     }
     require(blob_map == EXPECTED_STRONGWIZ_BLOBS,
             "Strongwiz Git-blob identity set changed")
+    return pal, registry_text
 
+
+def check_candidate(pal: dict[str, Any]) -> None:
     candidate = read_json(CANDIDATE_PATH)
     policy_bytes = AGENT_PATH.read_bytes().replace(b"\r\n", b"\n")
     policy_hash = hashlib.sha256(policy_bytes).hexdigest()
@@ -233,7 +322,7 @@ def main() -> None:
             "policy hash domain missing")
     require(candidate.get("policy_sha256") == policy_hash,
             "candidate policy_sha256 does not match hearthline_agent.md")
-    require(candidate.get("artifact_version") == "0.4-draft",
+    require(candidate.get("artifact_version") == "0.7-draft",
             "candidate artifact version drift")
     require(candidate.get("artifact_status") == "DRAFT_NOT_ACTIVATED",
             "candidate was activated by repository text")
@@ -249,53 +338,315 @@ def main() -> None:
     require(candidate.get("authority") == "NONE", "candidate authority widened")
     require(candidate.get("effect") == "NONE", "candidate effect widened")
 
+
+def check_light_trio_surfaces(registry_text: str) -> dict[str, str]:
     surfaces = {
         "README.md": (ROOT / "README.md").read_text(encoding="utf-8"),
         "SOURCE_MAP.md": (ROOT / "SOURCE_MAP.md").read_text(encoding="utf-8"),
         "BOUNDARY.md": (ROOT / "BOUNDARY.md").read_text(encoding="utf-8"),
         "hearthline_agent.md": AGENT_PATH.read_text(encoding="utf-8"),
+        "HEARTHLINE_CREATURES.md": CREATURE_DOC.read_text(encoding="utf-8"),
+        "HEARTHLINE_HOMECOMING.md": HOMECOMING_DOC.read_text(encoding="utf-8"),
+        "HEARTHLINE_FIRESIDES.md": FIRESIDES_DOC.read_text(encoding="utf-8"),
+        "HEARTHLINE_SPARKS.md": SPARKS_DOC.read_text(encoding="utf-8"),
+        "HEARTHLINE_STATIC.md": STATIC_DOC.read_text(encoding="utf-8"),
+        "HEARTHLINE_THULIA.md": THULIA_DOC.read_text(encoding="utf-8"),
+        "HEARTHLINE_GLOSS.md": GLOSS_DOC.read_text(encoding="utf-8"),
+        "HEARTHLINE_ORDERED_LINEAGE.md": ORDERED_DOC.read_text(encoding="utf-8"),
+        "HEARTHLINE_TASK_TRIADS.md": TASK_TRIADS_DOC.read_text(encoding="utf-8"),
     }
-    for name, text in surfaces.items():
+    for name in ("README.md", "SOURCE_MAP.md", "BOUNDARY.md", "hearthline_agent.md"):
+        text = surfaces[name]
         require("PAL v2.3" in text or "| PAL | 2.3 |" in text,
                 f"{name} does not carry PAL v2.3")
     require("RESOLVED_LIVE_RECORD_CANONICAL_MATCH" in registry_text,
             "BRRRT live resolution status is absent")
-    creature_text = CREATURE_DOC.read_text(encoding="utf-8")
-    creature_words = " ".join(creature_text.split())
-    for phrase in (
-        "not a fourth Spark role",
-        "physically isolated Creature instances",
-        "canonical controller",
-        "not a second ledger",
-        "Pulse Receipt",
-        "no action port",
-    ):
-        require(phrase in creature_words, f"Creature boundary missing: {phrase}")
+    for name in ("README.md", "SOURCE_MAP.md", "hearthline_agent.md"):
+        require("10.5281/zenodo.22288471" in surfaces[name],
+                f"{name} lacks the published CHARTER route")
 
-    homecoming_text = HOMECOMING_DOC.read_text(encoding="utf-8")
-    homecoming_words = " ".join(homecoming_text.split())
-    require("| Version | `0.4` |" in homecoming_text,
-            "Homecoming objective-window successor version missing")
-    for phrase in (
-        "open objective window",
-        "Returns may arrive out of order",
-        "does not keep the exchange open",
-        "one aggregation response",
-        "homecoming_custody_state",
-        "objective_disposition",
-        "no Homecoming custody state manufactures task status",
-        "no provider or environment effect is duplicated",
-        "not a claim that Hearthline or this workspace has implemented or passed it",
+    expected_versions = {
+        "HEARTHLINE_CREATURES.md": "| Version | `0.5` |",
+        "HEARTHLINE_HOMECOMING.md": "| Version | `0.7` |",
+        "HEARTHLINE_FIRESIDES.md": "| Version | `0.6` |",
+        "HEARTHLINE_SPARKS.md": "| Version | `0.9` |",
+        "HEARTHLINE_STATIC.md": "| Version | `0.8` |",
+        "HEARTHLINE_THULIA.md": "| Version | `0.6` |",
+        "HEARTHLINE_GLOSS.md": "| Version | `0.3` |",
+        "HEARTHLINE_ORDERED_LINEAGE.md": "| Version | `0.9` |",
+        "HEARTHLINE_TASK_TRIADS.md": "| Version | `0.2-draft` |",
+    }
+    for name, marker in expected_versions.items():
+        require(marker in surfaces[name], f"{name} current version marker missing")
+    require("version: 0.7-draft" in surfaces["hearthline_agent.md"],
+            "agent current version marker missing")
+
+    task_triads = words(surfaces["HEARTHLINE_TASK_TRIADS.md"])
+    require_all(
+        task_triads,
+        (
+            "Hearthline exclusively provisions the Work Spark and Task-Keeper jobs",
+            "Thulia exclusively provisions the Ledger Scribe/Ledger-Keeper job",
+            "Neither interface provisions, selects, or binds the other interface's seat",
+            "controller atomically matches their two independently committed final provisioning intents",
+            "Only `TRIAD_BOUND` permits a later dispatch attempt; it does not itself start a member or expose an action lane",
+            "Member bundles never return to Thulia first: each valid sealed bundle returns separately to the exact Hearthline task intake that commissioned it",
+            "`RETURN_HELD_STALE_EPOCH`",
+            "`RETURN_PENDING_HEARTHLINE`",
+            "`member_return_transaction_ref`",
+            "`member_return_emission_state`",
+            "`member_intake_receipt_state`",
+            "Triad Return Manifest",
+            "immutable Carry Selection",
+            "carry_selection_coverage_state",
+            "`SELECT_KEEP`, `SELECT_CONDENSE`, or `SELECT_LOSE`",
+            "selected_carry_store_outcome_state: COMMITTED",
+            "`inspection_context_state: RAW_ACCESS_DROPPED`",
+            "four separately granted and receipted `H_TO_T_CARRY`, `T_TO_GLOSS_TURN`, `GLOSS_TO_T_RESULT`, and `T_TO_H_READABLE` lanes",
+            "`owl_turn_disposition: CANDIDATE_COMPLETE`",
+            "Gloss has no Task Line of its own, no open objective, no context window, no prior-turn reads, no Homecoming, no ledger ownership, and no heartbeat",
+            "Readiness is checked anew for each exact turn; it is never inherited",
+            "Systemic Friction classification != Atomic Edge Promotion authority",
+            "source_recoverability_state",
+            "Inspection closure and pruning are independent edges",
+            "MAX_SUPPORT_DEPTH = 1",
+        ),
+        "Task-Triad Light Trio architecture",
+    )
+
+    agent = words(surfaces["hearthline_agent.md"])
+    require_all(
+        agent,
+        (
+            "Hearthline nonbindingly nominates only Worker plus Task-Keeper; Thulia independently nominates only Ledger-Keeper",
+            "Every Triad member returns through its own controller/store-mediated transaction to the exact predeclared Hearthline task intake, never to Thulia",
+            "Only a controller-observed `SEALED`, separately `VALID` bundle from a `SEALED_TERMINAL` member may enter `RETURN_PENDING_HEARTHLINE`",
+            "**Complete Return Manifest:**",
+            "Immutable Carry Selection",
+            "selected_carry_store_outcome_state: COMMITTED",
+            "raw Hearthline aperture may enter `CLOSE_PENDING` only after durable `ACCEPTED_BY_THULIA`",
+            "`H_TO_T_CARRY`, `T_TO_GLOSS_TURN`, `GLOSS_TO_T_RESULT`, and `T_TO_H_READABLE` each require their own grant",
+            "exactly `CANDIDATE_COMPLETE`",
+            "`gloss_readiness_state` is checked externally for each exact turn as `READY_FOR_EXACT_TURN`, `NOT_READY`, or `READINESS_UNKNOWN`",
+            "only Thulia applies **Systemic Friction**",
+            "A canonical controller or separately authorized writer must revalidate the exact candidate, epochs, and holds before recording any Atomic Edge Promotion",
+            "`canonical_store_effect_state` and `source_recoverability_state` remain independent",
+            "`RAW_ACCESS_DROPPED` attests only controller-observed closure",
+        ),
+        "agent Light Trio architecture",
+    )
+
+    homecoming = words(surfaces["HEARTHLINE_HOMECOMING.md"])
+    require_all(
+        homecoming,
+        (
+            "raw member returns go separately to the commissioning Hearthline intake",
+            "`RETURN_PENDING_HEARTHLINE`",
+            "immutable **Carry Selection**",
+            "The Carry Selection crosses four independently receipted lanes",
+            "`H_TO_T_CARRY`",
+            "`T_TO_GLOSS_TURN`",
+            "`GLOSS_TO_T_RESULT`",
+            "`T_TO_H_READABLE`",
+            "`CANDIDATE_COMPLETE`",
+            "`selected_carry_store_outcome_state: COMMITTED`",
+            "`RAW_ACCESS_DROPPED`",
+            "Only afterward does Thulia apply **Systemic Friction**",
+            "Atomic Edge Promotion",
+            "source_recoverability_state",
+        ),
+        "Homecoming selected-carry route",
+    )
+
+    thulia = words(surfaces["HEARTHLINE_THULIA.md"])
+    require_all(
+        thulia,
+        (
+            "one bounded custody role with exactly three non-overlapping duties",
+            "The three member bundles do **not** return to Thulia",
+            "A controller-observed `SEALED` plus separately `VALID` bundle then returns directly to Hearthline's task intake under its own identity and target receipt",
+            "Hearthline may inspect separately admitted member bundles and make the semantic Carry Selection",
+            "`H_TO_T_CARRY`",
+            "`T_TO_H_READABLE`",
+            "`T_TO_GLOSS_TURN`",
+            "`GLOSS_TO_T_RESULT`",
+            "`CANDIDATE_COMPLETE`",
+            "Only Thulia applies Systemic Friction",
+            "The canonical store then performs **Atomic Edge Promotion**",
+        ),
+        "Thulia custody boundary",
+    )
+
+    gloss = words(surfaces["HEARTHLINE_GLOSS.md"])
+    require_all(
+        gloss,
+        (
+            "Mechanism class | `STATELESS_DETERMINISTIC`",
+            "history_reads: 0",
+            "`gloss_readiness_state`",
+            "`READY_FOR_EXACT_TURN`",
+            "`NOT_READY`",
+            "`READINESS_UNKNOWN`",
+            "Gloss does not receive a Spark identity, Task-Keeper, Ledger-Keeper, Heartbeat Contract, Pulse Receipt, Home, Homecoming, liveness state, or private ledger",
+            "`T_TO_GLOSS_TURN`",
+            "`GLOSS_TO_T_RESULT`",
+            "`T_TO_H_READABLE`",
+            "Gloss never applies **Systemic Friction**",
+            "Atomic Edge Promotion",
+        ),
+        "Gloss deterministic-turn boundary",
+    )
+
+    supporting_requirements = {
+        "HEARTHLINE_CREATURES.md": (
+            "Task Triad",
+            "Carry Selection",
+            "`H_TO_T_CARRY`, `T_TO_GLOSS_TURN`, `GLOSS_TO_T_RESULT`, and `T_TO_H_READABLE`",
+            "selected-carry",
+            "Systemic Friction",
+            "Atomic Edge Promotion",
+            "source recoverability",
+        ),
+        "HEARTHLINE_FIRESIDES.md": (
+            "`RETURN_PENDING_HEARTHLINE`",
+            "Carry Selection",
+            "`H_TO_T_CARRY`",
+            "`T_TO_GLOSS_TURN`",
+            "`GLOSS_TO_T_RESULT`",
+            "`T_TO_H_READABLE`",
+            "Systemic Friction",
+            "Atomic Edge Promotion",
+            "source recoverability",
+        ),
+        "HEARTHLINE_SPARKS.md": (
+            "Light Trio",
+            "`RETURN_PENDING_HEARTHLINE`",
+            "Carry Selection",
+            "H_TO_T_CARRY",
+            "T_TO_GLOSS_TURN",
+            "GLOSS_TO_T_RESULT",
+            "T_TO_H_READABLE",
+            "Systemic Friction",
+            "Atomic Edge Promotion",
+            "Gloss readiness",
+        ),
+        "HEARTHLINE_STATIC.md": (
+            "`RETURN_PENDING_HEARTHLINE`",
+            "Carry Selection",
+            "`H_TO_T_CARRY`, `T_TO_GLOSS_TURN`, `GLOSS_TO_T_RESULT`, and `T_TO_H_READABLE`",
+            "heartbeat-free deterministic turn",
+            "Systemic Friction",
+            "Atomic Edge Promotion",
+            "recoverability state",
+        ),
+        "HEARTHLINE_ORDERED_LINEAGE.md": (
+            "`RETURN_PENDING_HEARTHLINE`",
+            "Carry Selection",
+            "`selected_carry_store_outcome_state`",
+            "`H_TO_T_CARRY`, `T_TO_GLOSS_TURN`, `GLOSS_TO_T_RESULT`, and `T_TO_H_READABLE`",
+            "`owl_turn_disposition: CANDIDATE_COMPLETE`",
+            "Gloss has no heartbeat",
+            "Systemic Friction",
+            "Atomic Edge Promotion",
+            "source recoverability",
+        ),
+    }
+    for name, phrases in supporting_requirements.items():
+        require_all(words(surfaces[name]), phrases, f"{name} Light Trio alignment")
+
+    # Reject the old active route and role absorption. Historical predecessor
+    # descriptions remain allowed, but current normative sentences may not use
+    # these exact obsolete forms.
+    for name in (
+        "hearthline_agent.md",
+        "HEARTHLINE_CREATURES.md",
+        "HEARTHLINE_HOMECOMING.md",
+        "HEARTHLINE_FIRESIDES.md",
+        "HEARTHLINE_SPARKS.md",
+        "HEARTHLINE_STATIC.md",
+        "HEARTHLINE_THULIA.md",
+        "HEARTHLINE_GLOSS.md",
+        "HEARTHLINE_ORDERED_LINEAGE.md",
+        "HEARTHLINE_TASK_TRIADS.md",
     ):
-        require(phrase in homecoming_words,
-                f"objective-window boundary missing: {phrase}")
+        require_absent(
+            words(surfaces[name]),
+            (
+                "returns its Work, Task-Boundary Witness, and Ledger payloads separately through Thulia",
+                "Hearthline provisions the Ledger-Keeper",
+                "Hearthline provisions the Ledger Scribe",
+                "Thulia provisions the Worker and Task-Keeper",
+                "Thulia provisions the Work Spark and Task-Keeper",
+                "Task-Keeper keeps the Worker alive",
+                "Task-Keeper keeps a runtime alive",
+                "Gloss receives a heartbeat",
+                "support_depth: 2",
+                "MAX_SUPPORT_DEPTH = 2",
+            ),
+            name,
+        )
+
+    registry = json.loads(registry_text)
+    friction_sources = [
+        source.get("source_id")
+        for source in registry["sources"]
+        if "Systemic Friction" in json.dumps(source, ensure_ascii=False)
+    ]
+    require(friction_sources == ["charter-v1.0"],
+            "only the bounded CHARTER branch may source Systemic Friction")
+    return surfaces
+
+
+def check_visual_lineage() -> None:
+    visual_text = VISUAL_DOC.read_text(encoding="utf-8")
+    characters_text = CHARACTERS_README.read_text(encoding="utf-8")
+    require("| Version | `0.3` |" in visual_text,
+            "visual index behavior-pointer successor version missing")
+    require(
+        hashlib.sha256(THULIA_SHEET_DOC.read_bytes()).hexdigest()
+        == THULIA_SHEET_000002_SHA256,
+        "issued Thulia SHEET-000002 changed in place",
+    )
+    for name, text in (
+        ("HEARTHLINE_VISUAL_INDEX.md", visual_text),
+        ("assets/characters/README.md", characters_text),
+    ):
+        require("OWL-000001/PROFILE-000004" in text,
+                f"{name} lacks the adopted Thulia behavior pointer")
+        for candidate_profile in (
+            "OWL-000001/PROFILE-000005",
+            "OWL-000001/PROFILE-000006",
+        ):
+            require(candidate_profile not in text,
+                    f"{name} prematurely promotes {candidate_profile}")
+        require("OWL-000001/PROFILE-000003" not in text,
+                f"{name} still calls the predecessor Thulia profile current")
+
+
+def main() -> None:
+    pal, registry_text = check_source_registry()
+    check_candidate(pal)
+    check_light_trio_surfaces(registry_text)
+    check_visual_lineage()
 
     for path in (
         RESEARCH_DOC,
         CREATURE_DOC,
         HOMECOMING_DOC,
+        FIRESIDES_DOC,
+        SPARKS_DOC,
+        STATIC_DOC,
+        THULIA_DOC,
+        GLOSS_DOC,
+        ORDERED_DOC,
+        TASK_TRIADS_DOC,
+        VISUAL_DOC,
+        THULIA_SHEET_DOC,
+        CHARACTERS_README,
+        AGENT_PATH,
         ROOT / "README.md",
         ROOT / "SOURCE_MAP.md",
+        CREATURE_LORE_DOC,
     ):
         check_links(path)
 

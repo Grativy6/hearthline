@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.1` |
+| Version | `0.2` |
 | Status | Public research-context and provenance registry |
 | Runtime effect | `NONE` |
 | Author and steward | Christopher D. Pang |
@@ -20,6 +20,7 @@ independent corroboration, or authority. Its machine-readable source record is
 | [BRRRT v2.0](https://doi.org/10.5281/zenodo.22261831) | Transition and readability ledger; benchmark crossings; release-ready versus authorized promotion | A reading is not a mechanism, readability is not decoding, and verification does not manufacture a grant |
 | [Single Cut Transport Lemma v0.2](https://doi.org/10.5281/zenodo.22239108) | Finite pairwise fixtures, action-trace lift, exact checkpoints, heartbeat stutter, and re-entry | Finite verification is not a universal proof; heartbeat is not progress; recoverability is not authority |
 | [Compactification Costs v0.2](https://doi.org/10.5281/zenodo.22238012) | Detector-relative loss, reachable-image decoders, totalization seams, and full representation-cost questions | No universal scalar, canonical detector, automatic decoder, physical law, or authority |
+| [CHARTER v1.0](https://doi.org/10.5281/zenodo.22288471) | Framed prime shells, carriage cost, TTC/BPS orchestration, Circuit Gardens, Systemic Friction, Atomic Edge Promotion, and selected carry | Author-adopted and not peer reviewed; inherited core is delimited and later layers remain manuscript-level; no implementation, calibration, deployment, ARC result, model forgetting, personhood, or authority |
 | [Strongwiz v3 prototype](https://github.com/Grativy6/strongwiz/tree/edc88b80f872f766c22b3a050a7f6837d6e652d8) | Design evidence for representation-only scribes, material-event cadence, restart integrity, matched controls, and cost ledgers | Prepared but not run or preregistered; no demonstrated scribe or ARC benefit; no code imported here |
 
 Compactification Costs v0.2 was already present in Hearthline's public research
@@ -27,6 +28,20 @@ map. This intake confirms it rather than claiming a second source. PAL v2.3 is a
 successor source for new Hearthline records; it does not relabel PAL v2.2-era
 records. Single Cut v0.2 succeeds the previously listed v0.1 context. BRRRT and
 the Strongwiz inspection are new bounded entries.
+
+### Published CHARTER artifact identity
+
+The public Zenodo API reported record `22288471` as published on 5 September
+2026 with version `1.0`, open access, and CC BY 4.0. Its four-file inventory
+matched the prepared public release by filename, byte count, and Zenodo MD5:
+the 1,984,477-byte PDF, 1,673,357-byte DOCX, 3,322,838-byte public-redacted ZIP,
+and 114-byte ZIP SHA-256 sidecar. The registry records both those live
+inventory values and the locally verified release SHA-256 values.
+
+The match closes the reserved-DOI publication-status residual from HLP-000012.
+It establishes a public artifact identity, not peer review, source truth,
+mathematical completeness, implementation, calibration, deployment, an ARC
+result, model forgetting, personhood, or authority.
 
 ### Resolved BRRRT artifact identity
 
