@@ -56,6 +56,8 @@ RESERVATION_EFFECT = "NAMESPACE_ONLY_NO_ADOPTION"
 FROZEN_RECORD_SHA256 = {
     "2026-09-05-hlp-000015-morrow-homecoming-priority.md":
         "3c9620320309573023e0f3659dba00d3cd52328999be2edab7fd4ab6d2dd2ae1",
+    "2026-09-05-hlp-000016-return-queue-overtake-bound.md":
+        "16a0790ed32cbe66644fbbe02c94405b4224488f77ef38b4f2bd76c11e5fbcff",
 }
 RESERVATION_SOURCE = {
     "repository": "Grativy6/hearthline",
