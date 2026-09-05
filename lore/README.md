@@ -15,6 +15,7 @@ This is the present-facing home for Hearthline's explicitly fictional story lore
 - [**The First Furrow**](THE_FIRST_FURROW.md) — Hearthline learns a borrowed field-body in a world that advances with each choice, recovers an incomplete fitting through exact plate and parity checks, and lets an excellent unseen harvest remain proudly local.
 - [**Gloss and the Two-Sided Note**](GLOSS_AND_THE_TWO_SIDED_NOTE.md) — Hearthline and Thulia recover their workbench with a tiny golden wisp that turns one self-contained note through its declared Circuit Garden and back again: the page comes home exactly while the path around it stays.
 - [**Morrow and the Marked Tethers**](MORROW_AND_THE_MARKED_TETHERS.md) — Hearthline marks each task's Homecoming priority before dispatch; pocketless Morrow later arranges only faceless, controller-attested tokens, while the controller keeps every record and opens the door. His rail and Thulia's custody path never meet.
+- [**The Seventh Mark**](THE_SEVENTH_MARK.md) — At Tamsin Vale's bench, young Hearthline discovers that six measured spaces need seven boundary marks, and that one bounded frame expansion can reveal a missing edge without turning pattern fit into permission to invent one.
 - [**Visual gallery**](../assets/README.md) — current character references, scenes, artifact art, and their captions.
 - [**History and artifacts**](history-and-artifacts/README.md) — the trace side of this folder: predecessors and displaced lore belong there if later stories supersede them.
 

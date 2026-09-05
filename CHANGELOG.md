@@ -16,6 +16,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000018` | 2026-09-05 | `LORE_AND_VISUAL_SUCCESSOR` | Publish twenty selected finals, one bridge-scene recovery derivative, Gloss and Morrow appearance sheets, seven bounded Creature-form archetypes, and the Seventh Mark without changing operational authority. | [Record](docs/changelog/2026-09-05-hlp-000018-art-lore-detour-gallery.md) |
 | `HLP-000017` | 2026-09-05 | `RETURN_QUEUE_RETRY_ROTATION_SUCCESSOR` | Require one controller-owned Retry Rotation Release Receipt before a failed item can re-enter READY, rotating service attempts without claiming latency, liveness, success, or eventual disposition. | [Record](docs/changelog/2026-09-05-hlp-000017-retry-rotation-release.md) |
 | `HLP-000016` | 2026-09-05 | `RETURN_QUEUE_CLAIM_NARROWING` | Clarify maximum overtakes as a successful-later-admission bound for a continuously ready item while service continues, without implying latency, liveness, or eventual disposition. | [Record](docs/changelog/2026-09-05-hlp-000016-return-queue-overtake-bound.md) |
 | `HLP-000015` | 2026-09-05 | `MORROW_PRIORITY_SUCCESSOR` | Name Morrow's stateless Queue Steward profile and bind Hearthline's dispatch-time Homecoming priority to append-only controller receipts without overlap with Thulia. | [Record](docs/changelog/2026-09-05-hlp-000015-morrow-homecoming-priority.md) |
