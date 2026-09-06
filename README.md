@@ -33,6 +33,7 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`assets/README.md`](assets/README.md) — present-facing visual gallery with clearly separated history and artifact trails.
 - [`docs/HEARTHLINE_RESEARCH_STATION.md`](docs/HEARTHLINE_RESEARCH_STATION.md) — bounded public research context, inspected source identities, design extraction, and open provenance residuals.
 - [`docs/HEARTHLINE_TETHER.md`](docs/HEARTHLINE_TETHER.md) — carrier-neutral trace externalization, identity-bound handles, selective exact reopening, and unresolved-route discipline.
+- [`branch-archive.json`](docs/changelog/branch-archive.json) — retired-lane pointers; no adoption.
 - Housekeeping: [`TRADEMARKS.md`](TRADEMARKS.md), [`SECURITY.md`](SECURITY.md), [`CHANGELOG.md`](CHANGELOG.md), and [`LICENSE`](LICENSE).
 - [`tools/check_change_history.py`](tools/check_change_history.py) and the other `tools/` checks — fail-closed structural verification.
 
@@ -168,12 +169,12 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000018 — Art-and-lore detour gallery**
+**HLP-000019 — Retire two conflicting review lanes**
 
-- Twenty-one gallery images cover Gloss, Morrow, seven Creature forms, field work, welding, the queue-watch, and a recovered bridge scene.
-- Written sheets keep scale, glassy graspers, white seams, and silhouettes from implying capability or authority.
-- **The Seventh Mark** counts six spaces, seven boundaries, and one warranted frame expansion—then stops with the evidence.
+- Exact handles preserve PR #4 and PR #12 at their inspected open, unmerged heads.
+- Eight image blobs stay canonical; ten PR #12 residuals receive pointers only.
+- No branch content, WIP, or lore is copied or adopted.
 
-[Full change record](docs/changelog/2026-09-05-hlp-000018-art-lore-detour-gallery.md) ·
+[Full change record](docs/changelog/2026-09-06-hlp-000019-retired-review-lanes.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
