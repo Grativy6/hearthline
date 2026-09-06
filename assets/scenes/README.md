@@ -2,6 +2,22 @@
 
 These are windows, not diagrams. They show what Hearthline's world feels like when the bench is crowded, the cave is too large, or a problem has finally become big enough to introduce itself.
 
+## The first gremlin chase
+
+![Hearthline chases a gremlin through the workshop](hearthline-chases-a-workshop-gremlin.png)
+
+Hearthline's first image began with a wonderfully underspecified assignment: chase a gremlin. The workshop supplied the rest—tools, sparks, impossible labels, and enough motion to establish that she runs toward interesting trouble.
+
+Visual identity: `HEARTHLINE/IMAGE-000001`.
+
+## Green eyes, mission complete
+
+![Green-eyed Hearthline beside the captured workshop gremlin](hearthline-catches-the-workshop-gremlin.png)
+
+The second image changed one requested detail—Hearthline's eyes became green—and let the chase land. The gremlin is contained, the workshop is still chaotic, and a visual identity has started to hold.
+
+Visual identity: `HEARTHLINE/IMAGE-000002`.
+
 ## At the trace workbench
 
 ![Hearthline and Thulia at the trace workbench](hearthline-and-thulia-at-the-trace-workbench.png)
@@ -138,9 +154,18 @@ identity: `MORROW/IMAGE-000003`.
 
 The field crew and two small luminous Creature silhouettes hold one end of a
 bridge while an ogre, goblins, and gremlins crowd the other. The next move
-remains unwritten. This file is a recovery derivative of the approved scene
-composition; it does not claim byte identity with the unavailable first export.
+remains unwritten.
 Visual identity: `HEARTHLINE/IMAGE-000015`.
+
+## The bridge at sunset, real-style
+
+![Real-style Hearthline and the field crew face an ogre at sunset](field-crew-faces-the-bridge-ogre-at-sunset-real-style.png)
+
+A more grounded rendering gives the crossing a different weight in faces,
+iron, stone, and weather. Hearthline gains a little more gravity—and,
+unmistakably, a chin—without becoming someone else. This is a style branch,
+not a replacement for her illustrated visual identity.
+Visual identity: `HEARTHLINE/IMAGE-000016`.
 
 ## Trace room
 
