@@ -29,11 +29,11 @@ Hearthline is an AI-assisted tool configuration, not a co-author, independent au
 - [`docs/HEARTHLINE_FIRESIDES.md`](docs/HEARTHLINE_FIRESIDES.md) — the non-blocking consultation pattern for Hearthline, Scribe Sparks, Run Trails, Field Notes, Embers, and refresh.
 - [`docs/HEARTHLINE_ORDERED_LINEAGE.md`](docs/HEARTHLINE_ORDERED_LINEAGE.md) — append-only ordered identities for every Spark and every successor version or record series.
 - [`docs/HEARTHLINE_CREATURES.md`](docs/HEARTHLINE_CREATURES.md) — manifest-bound, task-shaped bundles of separately governed Sparks, ledgers, Homes, and Thulia custody.
-- [`lore/README.md`](lore/README.md) — fictional stories, including Hearthline's road to Velis and **Holds Nothing Back**.
-- [`assets/README.md`](assets/README.md) — present-facing visual gallery with clearly separated history and artifact trails.
+- [`lore/README.md`](lore/README.md) — fictional stories and their artifact branch, including Hearthline's road to Velis and **Holds Nothing Back**.
+- [`assets/README.md`](assets/README.md) — present-facing character, Creature-form, and scene gallery with clearly separated history trails.
 - [`docs/HEARTHLINE_RESEARCH_STATION.md`](docs/HEARTHLINE_RESEARCH_STATION.md) — bounded public research context, inspected source identities, design extraction, and open provenance residuals.
 - [`docs/HEARTHLINE_TETHER.md`](docs/HEARTHLINE_TETHER.md) — carrier-neutral trace externalization, identity-bound handles, selective exact reopening, and unresolved-route discipline.
-- [`branch-archive.json`](docs/changelog/branch-archive.json) — retired-lane pointers; no adoption.
+- [`branch-archive.json`](docs/changelog/branch-archive.json) — HLP-000019 retired-lane pointers; no adoption.
 - Housekeeping: [`TRADEMARKS.md`](TRADEMARKS.md), [`SECURITY.md`](SECURITY.md), [`CHANGELOG.md`](CHANGELOG.md), and [`LICENSE`](LICENSE).
 - [`tools/check_change_history.py`](tools/check_change_history.py) and the other `tools/` checks — fail-closed structural verification.
 
@@ -169,12 +169,12 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000019 — Retire two conflicting review lanes**
+**HLP-000020 — Move artifacts beside their lore**
 
-- Exact handles preserve PR #4 and PR #12 at their inspected open, unmerged heads.
-- Eight image blobs stay canonical; ten PR #12 residuals receive pointers only.
-- No branch content, WIP, or lore is copied or adopted.
+- Two exact image blobs move from `assets/artifacts/` to `lore/artifacts/`.
+- Holds Nothing Back remains the image at the lore entrance.
+- The Rainbow Shell, first loupe, and Circuit Garden share one object catalog.
 
-[Full change record](docs/changelog/2026-09-06-hlp-000019-retired-review-lanes.md) ·
+[Full change record](docs/changelog/2026-09-06-hlp-000020-artifact-lore-consolidation.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

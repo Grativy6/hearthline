@@ -16,6 +16,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000020` | 2026-09-06 | `LORE_ARTIFACT_TOPOLOGY_SUCCESSOR` | Move the artifact gallery beside its lore, keep Holds Nothing Back at the lore entrance, and gather the Rainbow Shell, first loupe, and Circuit Garden without duplicating scene images. | [Record](docs/changelog/2026-09-06-hlp-000020-artifact-lore-consolidation.md) |
 | `HLP-000019` | 2026-09-06 | `BRANCH_ARCHIVE_SUCCESSOR` | Retire open PR #4 and PR #12 from active selection while preserving exact commit/tree reopening handles, deduplicated mainline mappings, and pointer-only unique residuals without content adoption. | [Record](docs/changelog/2026-09-06-hlp-000019-retired-review-lanes.md) |
 | `HLP-000018` | 2026-09-05 | `LORE_AND_VISUAL_SUCCESSOR` | Publish twenty selected finals, one bridge-scene recovery derivative, Gloss and Morrow appearance sheets, seven bounded Creature-form archetypes, and the Seventh Mark without changing operational authority. | [Record](docs/changelog/2026-09-05-hlp-000018-art-lore-detour-gallery.md) |
 | `HLP-000017` | 2026-09-05 | `RETURN_QUEUE_RETRY_ROTATION_SUCCESSOR` | Require one controller-owned Retry Rotation Release Receipt before a failed item can re-enter READY, rotating service attempts without claiming latency, liveness, success, or eventual disposition. | [Record](docs/changelog/2026-09-05-hlp-000017-retry-rotation-release.md) |

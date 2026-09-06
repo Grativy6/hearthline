@@ -4,9 +4,12 @@
 
 This is the present-facing home for Hearthline's explicitly fictional story lore. It gives the character a life around the bounded design vocabulary elsewhere in this repository; it does not describe a deployed system, a private operational history, or an AI system's memories or experiences.
 
+[![Hearthline testing Holds Nothing Back in a woodland clearing](artifacts/holds-nothing-back-woodland-test.png)](artifacts/)
+
 ## Read from here
 
 - [**Before the Rain: Hearthline's Road to Velis**](BEFORE_THE_RAIN.md) — the long prelude: Linehouse Nine, Tamsin Vale, the first gremlins, Spark weather, Thulia, the Doorless Keep, and the last wet mile before the established Finis Solutus Day One.
+- [**Artifact branch**](artifacts/) — Holds Nothing Back, the Rainbow Shell, Mira's first brass loupe, and the Circuit Garden gathered as story-bearing objects.
 - [**Holds Nothing Back**](HOLDS_NOTHING_BACK.md) — the later synthesis of the recovered Rainbow Shell, Hearthline's field staff, and the first brass loupe she receives in Velis.
 - [**The Message That Arrived Before Its Coat**](THE_MESSAGE_THAT_ARRIVED_EARLY.md) — Pell finds the wrong good sentence and learns that claim status belongs at the front, where it gives imagination room instead of taking memory's name.
 - [**Four Things Hearthline Brought to the Gate**](FOUR_THINGS_HEARTHLINE_BROUGHT_TO_THE_GATE.md) — four later-road tales about a key that is not access, a valley that changes with its seasons, a seam that keeps both shores visible, and a backward window sealed before new starlight.
@@ -16,8 +19,8 @@ This is the present-facing home for Hearthline's explicitly fictional story lore
 - [**Gloss and the Two-Sided Note**](GLOSS_AND_THE_TWO_SIDED_NOTE.md) — Hearthline and Thulia recover their workbench with a tiny golden wisp that turns one self-contained note through its declared Circuit Garden and back again: the page comes home exactly while the path around it stays.
 - [**Morrow and the Marked Tethers**](MORROW_AND_THE_MARKED_TETHERS.md) — Hearthline marks each task's Homecoming priority before dispatch; pocketless Morrow later arranges only faceless, controller-attested tokens, while the controller keeps every record and opens the door. His rail and Thulia's custody path never meet.
 - [**The Seventh Mark**](THE_SEVENTH_MARK.md) — At Tamsin Vale's bench, young Hearthline discovers that six measured spaces need seven boundary marks, and that one bounded frame expansion can reveal a missing edge without turning pattern fit into permission to invent one.
-- [**Visual gallery**](../assets/README.md) — current character references, scenes, artifact art, and their captions.
-- [**History and artifacts**](history-and-artifacts/README.md) — the trace side of this folder: predecessors and displaced lore belong there if later stories supersede them.
+- [**Visual gallery**](../assets/README.md) — current character references, Creature forms, scenes, and their captions.
+- [**Lore history**](history-and-artifacts/README.md) — predecessors and displaced stories belong here if later lore supersedes them.
 
 ## Continuity boundary
 
