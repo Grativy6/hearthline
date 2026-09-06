@@ -119,9 +119,9 @@ She has not yet proved herself wrong.
 
 Holds Nothing Back, its effects, Spark Mode, Little Wick, and every event in this record are fictional lore. This page is not a build specification, weapons instruction, runtime mechanism, safety certification, permission, activation record, or assertion about an AI system's capabilities, feelings, memories, identity, or authority.
 
-The [woodland illustration](../assets/artifacts/holds-nothing-back-woodland-test.png) is a narrative scene. It shows a beautiful last-resort artifact under careful test. It does not establish that the depicted device exists or works outside the story.
+The [woodland illustration](artifacts/holds-nothing-back-woodland-test.png) is a narrative scene. It shows a beautiful last-resort artifact under careful test. It does not establish that the depicted device exists or works outside the story.
 
-The first Rainbow Shell image remains on the trace side as the artifact's [visual precursor](../assets/artifacts/history-and-artifacts/prismatic-twin-spiral-rainbow-shell-source.png).
+The first Rainbow Shell image remains beside the artifact lore as its [visual precursor](artifacts/prismatic-twin-spiral-rainbow-shell-source.png).
 
 The light is allowed to be wonderful.
 
