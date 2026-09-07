@@ -169,12 +169,12 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest repository change
 
-**HLP-000020 — Move artifacts beside their lore**
+**HLP-000021 — The Volunteer**
 
-- Two exact image blobs move from `assets/artifacts/` to `lore/artifacts/`.
-- Holds Nothing Back remains the image at the lore entrance.
-- The Rainbow Shell, first loupe, and Circuit Garden share one object catalog.
+- A volunteer tomato becomes Hearthline's favorite.
+- Success, overgrowth, and tending give the cabin garden its story.
+- Read it in the [lore collection](lore/THE_VOLUNTEER.md).
 
-[Full change record](docs/changelog/2026-09-06-hlp-000020-artifact-lore-consolidation.md) ·
+[Full change record](docs/changelog/2026-09-07-hlp-000021-the-volunteer.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
