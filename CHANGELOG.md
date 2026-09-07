@@ -16,7 +16,8 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
-| `HLP-000021` | 2026-09-07 | `LORE_SUCCESSOR` | Add The Volunteer, a cabin story about an accidental tomato, the appeal of more, and learning to leave room in a garden. | [Record](docs/changelog/2026-09-07-hlp-000021-the-volunteer.md) |
+| `HLP-000022` | 2026-09-07 | `LORE_SUCCESSOR` | Add The Volunteer, a cabin story about an accidental tomato, the appeal of more, and learning to leave room in a garden. | [Record](docs/changelog/2026-09-07-hlp-000022-the-volunteer.md) |
+| `HLP-000021` | 2026-09-07 | `PAL_CHARTER_AUDIT_SUMMARY` | Add a bounded plain-language pointer to three local Lean checks, retaining their limited coverage, [draft audit review](https://github.com/Grativy6/PAL-Lean-Audit/pull/11), and no-runtime-effect ceiling. | [Record](docs/changelog/2026-09-07-hlp-000021-pal23-charter-lean-audit-summary.md) |
 | `HLP-000020` | 2026-09-06 | `LORE_ARTIFACT_TOPOLOGY_SUCCESSOR` | Move the artifact gallery beside its lore, keep Holds Nothing Back at the lore entrance, and gather the Rainbow Shell, first loupe, and Circuit Garden without duplicating scene images. | [Record](docs/changelog/2026-09-06-hlp-000020-artifact-lore-consolidation.md) |
 | `HLP-000019` | 2026-09-06 | `BRANCH_ARCHIVE_SUCCESSOR` | Retire open PR #4 and PR #12 from active selection while preserving exact commit/tree reopening handles, deduplicated mainline mappings, and pointer-only unique residuals without content adoption. | [Record](docs/changelog/2026-09-06-hlp-000019-retired-review-lanes.md) |
 | `HLP-000018` | 2026-09-05 | `LORE_AND_VISUAL_SUCCESSOR` | Publish twenty selected finals, one bridge-scene recovery derivative, Gloss and Morrow appearance sheets, seven bounded Creature-form archetypes, and the Seventh Mark without changing operational authority. | [Record](docs/changelog/2026-09-05-hlp-000018-art-lore-detour-gallery.md) |

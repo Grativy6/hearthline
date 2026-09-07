@@ -167,14 +167,13 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 > The trace informs; it does not authorize.
 
 <!-- latest-change:start -->
-## Latest repository change
+## Latest
 
-**HLP-000021 — The Volunteer**
+**HLP-000022 — The Volunteer**
 
-- A volunteer tomato becomes Hearthline's favorite.
-- Success, overgrowth, and tending give the cabin garden its story.
-- Read it in the [lore collection](lore/THE_VOLUNTEER.md).
+- A volunteer tomato leads from success to overgrowth and tending.
+- Read [The Volunteer](lore/THE_VOLUNTEER.md).
 
-[Full change record](docs/changelog/2026-09-07-hlp-000021-the-volunteer.md) ·
+[Full change record](docs/changelog/2026-09-07-hlp-000022-the-volunteer.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

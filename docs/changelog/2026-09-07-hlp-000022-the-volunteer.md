@@ -2,18 +2,25 @@
 
 | Field | Value |
 |---|---|
-| Change ID | `HLP-000021` |
+| Change ID | `HLP-000022` |
 | Record kind | `LORE_SUCCESSOR` |
 | Recorded date | 2026-09-07 |
-| Predecessor | `HLP-000020` |
-| Frozen predecessor SHA-256 | `47f7cb7a92789d1e396fdf9f64c60f96533c5ea59e079deef1a16331f8283d18` |
-| Branch base | `23a0c2d68c89ec18b5b7c54d18fe0a09b2c33bdc` |
-| Branch-base tree | `1bede121f2077f864cee20badcb15aca049835c7` |
+| Predecessor | `HLP-000021` |
+| Frozen predecessor SHA-256 | `f99e5f9709efee360e8ccd372451e8eaedb45942df814960ec6305ae50d85654` |
+| Original story branch base | `23a0c2d68c89ec18b5b7c54d18fe0a09b2c33bdc` |
+| Original story branch-base tree | `1bede121f2077f864cee20badcb15aca049835c7` |
 | Scope | `PUBLIC_FICTIONAL_LORE_ONLY` |
 | Record authority | `NONE` |
 | Record effect | `LORE_ONLY` |
 | Operational effect | `NONE` |
 | Author and steward | Christopher D. Pang |
+
+## Identity correction
+
+Christopher directed this record to use `HLP-000022` so that `HLP-000021`
+remains the PAL/CHARTER audit summary. The story text is unchanged. Its
+[prior mainline record](https://github.com/Grativy6/hearthline/blob/1ce15657572a6296655c7c045e74566ce9f2c76b/docs/changelog/2026-09-07-hlp-000021-the-volunteer.md)
+preserves the earlier identity as Git provenance.
 
 ## What changed
 
