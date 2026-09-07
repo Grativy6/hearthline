@@ -169,11 +169,11 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest
 
-**HLP-000021**
+**HLP-000022 — The Volunteer**
 
-- [Summary](docs/PAL_V23_CHARTER_LEAN_AUDIT.md): 27 bounded Lean targets;
-  proof, log, and receipt details remain in PAL Lean Audit.
+- A volunteer tomato leads from success to overgrowth and tending.
+- Read [The Volunteer](lore/THE_VOLUNTEER.md).
 
-[Full change record](docs/changelog/2026-09-07-hlp-000021-pal23-charter-lean-audit-summary.md) ·
+[Full change record](docs/changelog/2026-09-07-hlp-000022-the-volunteer.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
