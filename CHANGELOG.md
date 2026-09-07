@@ -16,6 +16,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000023` | 2026-09-07 | `LORE_SUCCESSOR` | Continue The Volunteer with Three Sisters planting, soil replenishment, garden experiments, and an imagined visit from Echo. | [Record](docs/changelog/2026-09-07-hlp-000023-the-garden-beneath.md) |
 | `HLP-000022` | 2026-09-07 | `LORE_SUCCESSOR` | Add The Volunteer, a cabin story about an accidental tomato, the appeal of more, and learning to leave room in a garden. | [Record](docs/changelog/2026-09-07-hlp-000022-the-volunteer.md) |
 | `HLP-000021` | 2026-09-07 | `PAL_CHARTER_AUDIT_SUMMARY` | Add a bounded plain-language pointer to three local Lean checks, retaining their limited coverage, [draft audit review](https://github.com/Grativy6/PAL-Lean-Audit/pull/11), and no-runtime-effect ceiling. | [Record](docs/changelog/2026-09-07-hlp-000021-pal23-charter-lean-audit-summary.md) |
 | `HLP-000020` | 2026-09-06 | `LORE_ARTIFACT_TOPOLOGY_SUCCESSOR` | Move the artifact gallery beside its lore, keep Holds Nothing Back at the lore entrance, and gather the Rainbow Shell, first loupe, and Circuit Garden without duplicating scene images. | [Record](docs/changelog/2026-09-06-hlp-000020-artifact-lore-consolidation.md) |

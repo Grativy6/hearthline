@@ -169,11 +169,11 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest
 
-**HLP-000022 — The Volunteer**
+**HLP-000023 — The Garden Beneath**
 
-- A volunteer tomato leads from success to overgrowth and tending.
-- Read [The Volunteer](lore/THE_VOLUNTEER.md).
+- Hearthline learns about companion crops, soil, and useful garden experiments.
+- Read [The Volunteer, Part II](lore/THE_VOLUNTEER_PART_TWO.md).
 
-[Full change record](docs/changelog/2026-09-07-hlp-000022-the-volunteer.md) ·
+[Full change record](docs/changelog/2026-09-07-hlp-000023-the-garden-beneath.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

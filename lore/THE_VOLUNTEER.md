@@ -206,3 +206,7 @@ She never did find out where the first seed had come from.
 When she carried the plate inside, a seed clung to its rim. She saw it at the door and paused, smiling.
 
 This one went into a small pot.
+
+---
+
+[Continue with Part II: The Garden Beneath](THE_VOLUNTEER_PART_TWO.md)
