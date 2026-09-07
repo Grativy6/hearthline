@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.4` |
+| Version | `0.5` |
 | Status | Adopted visual provenance and gallery index |
 | Hearthline image series | `HEARTHLINE/IMAGE-*` |
 | Thulia image series | `OWL-000001/IMAGE-*` |
@@ -19,8 +19,11 @@
 | Implementation | Not asserted by this document |
 | Sole author and steward | Christopher D. Pang |
 
-This index registers all thirty-six PNGs in the public gallery. Version `0.4`
-follows adopted mainline version `0.2`; a different `0.3` appeared on the
+This index registers thirty-seven PNGs in the public gallery. Version `0.5`
+adds the Glass Gem harvest scene as `HEARTHLINE/IMAGE-000017`; the scene gallery
+already uses `IMAGE-000016` for its realistic bridge illustration. This index
+does not yet cover every existing gallery PNG. Version `0.4`
+followed adopted mainline version `0.2`; a different `0.3` appeared on the
 reserved, unmerged PR #12 lineage and is not silently adopted here. The image
 ordinals are retrospective archival registrations for already-created files.
 They preserve declared sequence inside each visual series without claiming
@@ -106,6 +109,7 @@ Where a visual conflicts with a controlling written sheet, the written sheet gov
 | `HEARTHLINE/IMAGE-000013` | [Hearthline's water break beside the brass welder](../assets/scenes/hearthline-water-break-beside-the-brass-welder.png) | `1536 × 1024` | `2eacd9d90bdbbb12706d876908ae79fd18f4d3fef182403c50d221189d76e9a5` | `SCENE` | Present | Hearthline sits with hood raised and water in hand beside a quiet brass field welder; the job pauses before the worker does. |
 | `HEARTHLINE/IMAGE-000014` | [Hearthline welding with the brass field machine](../assets/scenes/hearthline-welding-with-the-brass-field-machine.png) | `1536 × 1024` | `a4b50ab74a1f30b74dfc1f0b137a2113c58d81f1b98c9b4411e13eb320efc762` | `SCENE` | Present | Behind outdoor curtains and wearing the depicted protective gear, Hearthline joins two plates at an angle with one tool lead and one ground; craft remains work, not magic. |
 | `HEARTHLINE/IMAGE-000015` | [The field crew faces the bridge ogre at sunset](../assets/scenes/field-crew-faces-the-bridge-ogre-at-sunset.png) | `1536 × 1024` | `b1304d3a31a91aa5f5873df5128ad40b8b5a153d1f0b806758708e92a533d908` | `RECOVERED_DERIVATIVE_SCENE` | Present | At sunset, the field crew and two small luminous Creature silhouettes hold one end of a bridge while an ogre, goblins, and gremlins crowd the other; the next move remains unwritten. |
+| `HEARTHLINE/IMAGE-000017` | [Hearthline and Thulia at the Glass Gem harvest](../assets/scenes/hearthline-and-thulia-glass-gem-harvest.png) | `1536 × 1024` | `a4d7bd38da7ade00584b12e9768ec426aa223f152ac0cd54c0bf96d98b0418da` | `SCENE` | Present | Hearthline opens a colorful ear of corn beside Thulia; months of patient gardening still leave room for a surprise. |
 
 ## Visible correction notes
 
@@ -159,6 +163,14 @@ unavailable. Its registered digest identifies only this derivative. It does
 not claim that the bytes, geometry, or incidental details are identical to the
 first visible scene.
 
+### The Glass Gem harvest
+
+`HEARTHLINE/IMAGE-000017` accompanies
+[The Volunteer, Part II](../lore/THE_VOLUNTEER_PART_TWO.md). Its more realistic,
+youthful-looking face is a scene interpretation; it establishes no fixed age
+or replacement character reference. Thulia's detailed feather treatment is
+likewise illustrative rather than a revision of her written appearance sheet.
+
 ## Exact-byte boundary
 
 The SHA-256 values identify the exact PNG bytes committed to this repository. They support copy verification and provenance comparison only. A matching digest does not authenticate an operator, establish semantic conformance, select a controlling version, prove provenance outside this declared record, or authorize use.
@@ -167,7 +179,8 @@ The SHA-256 values identify the exact PNG bytes committed to this repository. Th
 
 Christopher D. Pang is the sole author and steward of this gallery and its lore. The images were created or selected under his direction. AI systems assisted with image generation, writing, and repository preparation as tools; they are not co-authors, owners, authorities, witnesses, or persons in the repository's provenance model.
 
-Thirty-four of the thirty-six exact PNGs preserve C2PA generator metadata in
+The version `0.4` audit found that thirty-four of its thirty-six exact PNGs
+preserve C2PA generator metadata in
 `caBX` JUMBF data. Those manifests identify `OpenAI Media Service API`, the
 `gpt-image` software agent at version `2.0`, trained-algorithmic-media status,
 and per-file provenance timestamps and instance identifiers. The Rainbow Shell
@@ -177,6 +190,10 @@ signatures. The identifiers are public provenance metadata, not credentials,
 operator authentication, or authority. Complete source prompts and the exact
 underlying model and serving configuration remain unavailable and are not
 reconstructed here.
+
+The harvest PNG added in version `0.5` also contains a `caBX` chunk. Its selected
+export bytes are preserved unchanged; this addition does not independently
+validate its embedded manifest or infer its exact serving configuration.
 
 Only Hearthline, Thulia, Gloss, Morrow, Creature forms, their scenes, and their
 fictional artifacts belong in this visual registry. Rejected correction passes,

@@ -5,6 +5,10 @@
 > **Operational effect:** None
 > **Author and steward:** Christopher D. Pang
 
+![Hearthline opens colorful Glass Gem corn beside Thulia at the garden harvest table](../assets/scenes/hearthline-and-thulia-glass-gem-harvest.png)
+
+*Months of patient tending, and the harvest still has a surprise.*
+
 The woman who had given Hearthline the bean seeds came back for her bowl.
 
 This was the third bowl. Neither of them had a reliable account of the first two, although both suspected tomatoes were involved.

@@ -167,6 +167,17 @@ unmistakably, a chin—without becoming someone else. This is a style branch,
 not a replacement for her illustrated visual identity.
 Visual identity: `HEARTHLINE/IMAGE-000016`.
 
+## What the husk kept
+
+![Hearthline compares an opened ear of Glass Gem corn with Thulia's iridescent shoulder feathers](hearthline-and-thulia-glass-gem-harvest.png)
+
+The first husk opens on a surprise. Hearthline holds the colors beside Thulia's
+shoulder while tomatoes, basil, and the rest of the harvest wait on the table.
+This more realistic rendering accompanies
+[The Volunteer, Part II: The Garden Beneath](../../lore/THE_VOLUNTEER_PART_TWO.md).
+
+Visual identity: `HEARTHLINE/IMAGE-000017`.
+
 ## Trace room
 
 The first workshop standoff, made before the pale-pupil Spark Mode tell was settled, remains in [history and artifacts](history-and-artifacts/). Rejected anatomy, ruler, seam-light, and machine-design generations were never registered as public scenes and are not promoted as competing history.
