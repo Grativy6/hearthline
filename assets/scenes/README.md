@@ -178,6 +178,22 @@ This more realistic rendering accompanies
 
 Visual identity: `HEARTHLINE/IMAGE-000017`.
 
+## The chair that kept its place
+
+![Hearthline holds a mug on the evening porch above a winding garden path](hearthline-evening-porch-stylized-reference.png)
+
+Warm windows, lanterns, flowers, and one unoccupied stretch of evening surround
+Hearthline's chair. Thulia, Gloss, and Morrow share the scene without turning
+the porch into another assignment. Read
+[The Chair That Kept Its Place](../../lore/THE_CHAIR_THAT_KEPT_ITS_PLACE.md).
+
+Visual identity: `HEARTHLINE/IMAGE-000018`. **Non-canonical stylized reference**;
+the accompanying description is an imagined vignette. Christopher accepted
+the measured cabin and garden plans into fictional canon and history on
+2026-09-08. The illustration's improvised architecture, character proportions,
+and decorative details do not change those plans or the written character
+sheets. Extra lights and owl-shaped details introduce no additional characters.
+
 ## Trace room
 
 The first workshop standoff, made before the pale-pupil Spark Mode tell was settled, remains in [history and artifacts](history-and-artifacts/). Rejected anatomy, ruler, seam-light, and machine-design generations were never registered as public scenes and are not promoted as competing history.

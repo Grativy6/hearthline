@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Version | `0.5` |
+| Version | `0.6` |
 | Status | Adopted visual provenance and gallery index |
 | Hearthline image series | `HEARTHLINE/IMAGE-*` |
 | Thulia image series | `OWL-000001/IMAGE-*` |
@@ -19,10 +19,12 @@
 | Implementation | Not asserted by this document |
 | Sole author and steward | Christopher D. Pang |
 
-This index registers thirty-seven PNGs in the public gallery. Version `0.5`
-adds the Glass Gem harvest scene as `HEARTHLINE/IMAGE-000017`; the scene gallery
-already uses `IMAGE-000016` for its realistic bridge illustration. This index
-does not yet cover every existing gallery PNG. Version `0.4`
+This index registers thirty-eight PNGs in the public gallery. Version `0.6`
+adds the evening porch picture as `HEARTHLINE/IMAGE-000018`, explicitly marked
+as a non-canonical stylized reference. Version `0.5` added the Glass Gem harvest
+scene as `HEARTHLINE/IMAGE-000017`; the scene gallery already uses `IMAGE-000016`
+for its realistic bridge illustration. This index does not yet cover every
+existing gallery PNG. Version `0.4`
 followed adopted mainline version `0.2`; a different `0.3` appeared on the
 reserved, unmerged PR #12 lineage and is not silently adopted here. The image
 ordinals are retrospective archival registrations for already-created files.
@@ -63,11 +65,12 @@ Where a visual conflicts with a controlling written sheet, the written sheet gov
 - `VISUAL_ARCHETYPE_REFERENCE` — a current form-language aid that does not allocate an operational identity or capability.
 - `SOURCE_ARTIFACT` — an earlier object design preserved as the source of a later synthesis.
 - `SCENE` — a current narrative illustration, not a construction sheet.
+- `STYLIZED_NONCANONICAL_REFERENCE` — an expressly non-canonical atmosphere reference; its architecture, proportions, and incidental details do not establish fictional facts or replace accepted plans and character sheets.
 - `RECOVERED_DERIVATIVE_SCENE` — a current narrative illustration regenerated from a visible predecessor whose original export bytes were unavailable; no byte identity is claimed.
 - `SUPERSEDED_SCENE` — an earlier narrative illustration retained after a visible lore correction.
 - `CURRENT_ARTIFACT_SCENE` — the present narrative illustration of an artifact, not a device specification.
 
-“Current” means useful on the front-facing gallery side. It does not mean runtime adoption or activation.
+“Current” means useful on the front-facing gallery side. It does not mean runtime adoption or activation. The `Present` side likewise describes gallery placement, not canonical status.
 
 ## Exact visual registry
 
@@ -110,6 +113,7 @@ Where a visual conflicts with a controlling written sheet, the written sheet gov
 | `HEARTHLINE/IMAGE-000014` | [Hearthline welding with the brass field machine](../assets/scenes/hearthline-welding-with-the-brass-field-machine.png) | `1536 × 1024` | `a4b50ab74a1f30b74dfc1f0b137a2113c58d81f1b98c9b4411e13eb320efc762` | `SCENE` | Present | Behind outdoor curtains and wearing the depicted protective gear, Hearthline joins two plates at an angle with one tool lead and one ground; craft remains work, not magic. |
 | `HEARTHLINE/IMAGE-000015` | [The field crew faces the bridge ogre at sunset](../assets/scenes/field-crew-faces-the-bridge-ogre-at-sunset.png) | `1536 × 1024` | `b1304d3a31a91aa5f5873df5128ad40b8b5a153d1f0b806758708e92a533d908` | `RECOVERED_DERIVATIVE_SCENE` | Present | At sunset, the field crew and two small luminous Creature silhouettes hold one end of a bridge while an ogre, goblins, and gremlins crowd the other; the next move remains unwritten. |
 | `HEARTHLINE/IMAGE-000017` | [Hearthline and Thulia at the Glass Gem harvest](../assets/scenes/hearthline-and-thulia-glass-gem-harvest.png) | `1536 × 1024` | `a4d7bd38da7ade00584b12e9768ec426aa223f152ac0cd54c0bf96d98b0418da` | `SCENE` | Present | Hearthline opens a colorful ear of corn beside Thulia; months of patient gardening still leave room for a surprise. |
+| `HEARTHLINE/IMAGE-000018` | [Hearthline on the evening porch](../assets/scenes/hearthline-evening-porch-stylized-reference.png) | `1536 × 1024` | `9535291de45e7aafbc243b60b0c0aa2cc6092570530a99f31d29ce008588d08e` | `STYLIZED_NONCANONICAL_REFERENCE` | Present | A mug, warm windows, and a winding garden path leave Hearthline room to enjoy the evening; a stylized impression of home, with accepted plans controlling its fictional layout. |
 
 ## Visible correction notes
 
@@ -171,6 +175,18 @@ youthful-looking face is a scene interpretation; it establishes no fixed age
 or replacement character reference. Thulia's detailed feather treatment is
 likewise illustrative rather than a revision of her written appearance sheet.
 
+### The evening porch
+
+`HEARTHLINE/IMAGE-000018` accompanies
+[The Chair That Kept Its Place](../lore/THE_CHAIR_THAT_KEPT_ITS_PLACE.md), a
+non-canonical fictional description of the selected picture. Christopher's
+2026-09-08 acceptance makes the measured cabin and garden plans part of the
+cabin's fictional canon and history; it does not give this stylized image the
+same status. The plans retain the two-floor, no-basement layout. Roof shapes,
+room placement, path geometry, and character proportions in the illustration
+remain artistic interpretation. Extra decorative flames or owl-shaped details
+do not introduce additional Gloss or Thulia characters.
+
 ## Exact-byte boundary
 
 The SHA-256 values identify the exact PNG bytes committed to this repository. They support copy verification and provenance comparison only. A matching digest does not authenticate an operator, establish semantic conformance, select a controlling version, prove provenance outside this declared record, or authorize use.
@@ -194,6 +210,10 @@ reconstructed here.
 The harvest PNG added in version `0.5` also contains a `caBX` chunk. Its selected
 export bytes are preserved unchanged; this addition does not independently
 validate its embedded manifest or infer its exact serving configuration.
+
+The evening porch PNG added in version `0.6` also contains a `caBX` chunk.
+Its exact selected bytes are retained without recompression or metadata
+removal. No embedded signature was independently validated for this addition.
 
 Only Hearthline, Thulia, Gloss, Morrow, Creature forms, their scenes, and their
 fictional artifacts belong in this visual registry. Rejected correction passes,

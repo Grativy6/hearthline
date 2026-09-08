@@ -16,6 +16,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000025` | 2026-09-08 | `LORE_AND_VISUAL_SUCCESSOR` | Add a stylized evening-porch picture and non-canonical description while preserving the accepted fictional floor plans. | [Record](docs/changelog/2026-09-08-hlp-000025-the-chair-that-kept-its-place.md) |
 | `HLP-000024` | 2026-09-07 | `LORE_AND_VISUAL_SUCCESSOR` | Add the selected Glass Gem harvest illustration to Part II and the scene gallery. | [Record](docs/changelog/2026-09-07-hlp-000024-glass-gem-harvest-art.md) |
 | `HLP-000023` | 2026-09-07 | `LORE_SUCCESSOR` | Continue The Volunteer with Three Sisters planting, soil replenishment, garden experiments, and an imagined visit from Echo. | [Record](docs/changelog/2026-09-07-hlp-000023-the-garden-beneath.md) |
 | `HLP-000022` | 2026-09-07 | `LORE_SUCCESSOR` | Add The Volunteer, a cabin story about an accidental tomato, the appeal of more, and learning to leave room in a garden. | [Record](docs/changelog/2026-09-07-hlp-000022-the-volunteer.md) |

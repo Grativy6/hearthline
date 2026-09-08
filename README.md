@@ -169,11 +169,11 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest
 
-**HLP-000024 — The harvest picture**
+**HLP-000025 — The chair that kept its place**
 
-- Hearthline and Thulia open the Glass Gem harvest.
-- See [The Volunteer, Part II](lore/THE_VOLUNTEER_PART_TWO.md).
+- A stylized porch picture and an imagined evening.
+- Read [The Chair That Kept Its Place](lore/THE_CHAIR_THAT_KEPT_ITS_PLACE.md).
 
-[Full change record](docs/changelog/2026-09-07-hlp-000024-glass-gem-harvest-art.md) ·
+[Full change record](docs/changelog/2026-09-08-hlp-000025-the-chair-that-kept-its-place.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
