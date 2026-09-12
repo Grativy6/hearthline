@@ -169,11 +169,11 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest
 
-**HLP-000025 — The chair that kept its place**
+**HLP-000026 — The Cooperative for Auditable Provenance**
 
-- A stylized porch picture and an imagined evening.
-- Read [The Chair That Kept Its Place](lore/THE_CHAIR_THAT_KEPT_ITS_PLACE.md).
+- CAP becomes canonical fictional lore: a shared civic record with no sovereign or authority over later tasks.
+- Read [CAP](lore/THE_COOPERATIVE_FOR_AUDITABLE_PROVENANCE.md).
 
-[Full change record](docs/changelog/2026-09-08-hlp-000025-the-chair-that-kept-its-place.md) ·
+[Full change record](docs/changelog/2026-09-10-hlp-000026-cooperative-for-auditable-provenance.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

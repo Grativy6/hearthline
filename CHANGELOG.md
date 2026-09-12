@@ -16,25 +16,11 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
-| `HLP-000025` | 2026-09-08 | `LORE_AND_VISUAL_SUCCESSOR` | Add a stylized evening-porch picture and non-canonical description while preserving the accepted fictional floor plans. | [Record](docs/changelog/2026-09-08-hlp-000025-the-chair-that-kept-its-place.md) |
-| `HLP-000024` | 2026-09-07 | `LORE_AND_VISUAL_SUCCESSOR` | Add the selected Glass Gem harvest illustration to Part II and the scene gallery. | [Record](docs/changelog/2026-09-07-hlp-000024-glass-gem-harvest-art.md) |
-| `HLP-000023` | 2026-09-07 | `LORE_SUCCESSOR` | Continue The Volunteer with Three Sisters planting, soil replenishment, garden experiments, and an imagined visit from Echo. | [Record](docs/changelog/2026-09-07-hlp-000023-the-garden-beneath.md) |
-| `HLP-000022` | 2026-09-07 | `LORE_SUCCESSOR` | Add The Volunteer, a cabin story about an accidental tomato, the appeal of more, and learning to leave room in a garden. | [Record](docs/changelog/2026-09-07-hlp-000022-the-volunteer.md) |
-| `HLP-000021` | 2026-09-07 | `PAL_CHARTER_AUDIT_SUMMARY` | Add a bounded plain-language pointer to three local Lean checks, retaining their limited coverage, [draft audit review](https://github.com/Grativy6/PAL-Lean-Audit/pull/11), and no-runtime-effect ceiling. | [Record](docs/changelog/2026-09-07-hlp-000021-pal23-charter-lean-audit-summary.md) |
-| `HLP-000020` | 2026-09-06 | `LORE_ARTIFACT_TOPOLOGY_SUCCESSOR` | Move the artifact gallery beside its lore, keep Holds Nothing Back at the lore entrance, and gather the Rainbow Shell, first loupe, and Circuit Garden without duplicating scene images. | [Record](docs/changelog/2026-09-06-hlp-000020-artifact-lore-consolidation.md) |
-| `HLP-000019` | 2026-09-06 | `BRANCH_ARCHIVE_SUCCESSOR` | Retire open PR #4 and PR #12 from active selection while preserving exact commit/tree reopening handles, deduplicated mainline mappings, and pointer-only unique residuals without content adoption. | [Record](docs/changelog/2026-09-06-hlp-000019-retired-review-lanes.md) |
-| `HLP-000018` | 2026-09-05 | `LORE_AND_VISUAL_SUCCESSOR` | Publish twenty selected finals, one bridge-scene recovery derivative, Gloss and Morrow appearance sheets, seven bounded Creature-form archetypes, and the Seventh Mark without changing operational authority. | [Record](docs/changelog/2026-09-05-hlp-000018-art-lore-detour-gallery.md) |
-| `HLP-000017` | 2026-09-05 | `RETURN_QUEUE_RETRY_ROTATION_SUCCESSOR` | Require one controller-owned Retry Rotation Release Receipt before a failed item can re-enter READY, rotating service attempts without claiming latency, liveness, success, or eventual disposition. | [Record](docs/changelog/2026-09-05-hlp-000017-retry-rotation-release.md) |
-| `HLP-000016` | 2026-09-05 | `RETURN_QUEUE_CLAIM_NARROWING` | Clarify maximum overtakes as a successful-later-admission bound for a continuously ready item while service continues, without implying latency, liveness, or eventual disposition. | [Record](docs/changelog/2026-09-05-hlp-000016-return-queue-overtake-bound.md) |
-| `HLP-000015` | 2026-09-05 | `MORROW_PRIORITY_SUCCESSOR` | Name Morrow's stateless Queue Steward profile and bind Hearthline's dispatch-time Homecoming priority to append-only controller receipts without overlap with Thulia. | [Record](docs/changelog/2026-09-05-hlp-000015-morrow-homecoming-priority.md) |
-| `HLP-000014` | 2026-09-05 | `RETURN_QUEUE_DESIGN_SUCCESSOR` | Add a controller-owned Homecoming Return Queue, optional proposal-only Queue Steward Creature, bounded overtakes, and permanent namespace reservations for unmerged PR #12 records. | [Record](docs/changelog/2026-09-05-hlp-000014-homecoming-return-queue.md) |
-| `HLP-000007` | 2026-09-04 | `LORE_SUCCESSOR` | Introduce Gloss, the little turning wisp whose note-local Circuit Garden returns an exact work face without erasing the separately carried route. | [Record](docs/changelog/2026-09-04-hlp-000007-gloss-turning-wisp.md) |
-| `HLP-000006` | 2026-09-04 | `LORE_AND_VISUAL_SUCCESSOR` | Publish Hearthline's visual gallery, pre-Velis history, artifact lore, and distinct later-road lessons including the finite field station, returning-bell ledger, and First Furrow. | [Record](docs/changelog/2026-09-04-hlp-000006-hearthline-lore-gallery.md) |
-| `HLP-000005` | 2026-09-03 | `TETHER_CONTINUITY_SUCCESSOR` | Add carrier-neutral, handle-bound exact reopening and require unresolved items to retain a route home. | [Record](docs/changelog/2026-09-03-hlp-000005-tether-continuity.md) |
-| `HLP-000004` | 2026-09-02 | `SOURCE_PROFILE_AND_DESIGN_SUCCESSOR` | Advance to PAL v2.3; install the Research Station, Creatures, and open objective windows; preserve repaired BRRRT and Strongwiz ceilings. | [Record](docs/changelog/2026-09-02-hlp-000004-research-station-creatures.md) |
-| `HLP-000003` | 2026-09-02 | `REPOSITORY_HISTORY_CORRECTION` | Generalize representation-side return to include bundles prepared by a Ledger Scribe or Thulia without assigning result status. | [Record](docs/changelog/2026-09-02-hlp-000003-generalize-representation-return.md) |
-| `HLP-000002` | 2026-09-02 | `REPOSITORY_HISTORY_PROMOTION` | Install bounded public history and keep representation-side custody distinct from result classification. | [Record](docs/changelog/2026-09-02-hlp-000002-bounded-repository-history.md) |
-| `HLP-000001` | 2026-09-02 | `HISTORY_BACKFILL` | Recover public repository history through Paired Sparks and Homecoming. | [Record](docs/changelog/2026-09-02-hlp-000001-pre-index-history.md) |
+| `HLP-000026` | 2026-09-10 | `LORE_SUCCESSOR` | Establish the Cooperative for Auditable Provenance as Hearthline's canonical fictional common record beyond any one task, without sovereignty or operational authority. | [Record](docs/changelog/2026-09-10-hlp-000026-cooperative-for-auditable-provenance.md) |
+
+## Archived cohorts
+
+- [HLP-000001 through HLP-000025](docs/changelog/index/hlp-000001-to-hlp-000025.md)
 
 ## Issued off-main namespace reservations
 

@@ -18,6 +18,7 @@ MORROW_LORE = ROOT / "lore" / "MORROW_AND_THE_MARKED_TETHERS.md"
 BOUNDARY_DOC = ROOT / "BOUNDARY.md"
 README = ROOT / "README.md"
 CHANGELOG = ROOT / "CHANGELOG.md"
+CHANGELOG_ARCHIVES = ROOT / "docs" / "changelog" / "index"
 MORROW_CHANGE_RECORD = (
     ROOT / "docs" / "changelog" /
     "2026-09-05-hlp-000015-morrow-homecoming-priority.md"
@@ -69,7 +70,13 @@ def main() -> None:
     morrow_lore = MORROW_LORE.read_text(encoding="utf-8")
     boundary = BOUNDARY_DOC.read_text(encoding="utf-8")
     readme = README.read_text(encoding="utf-8")
-    changelog = CHANGELOG.read_text(encoding="utf-8")
+    changelog = "\n".join(
+        path.read_text(encoding="utf-8")
+        for path in (
+            CHANGELOG,
+            *sorted(CHANGELOG_ARCHIVES.glob("*.md")),
+        )
+    )
     morrow_change_record = MORROW_CHANGE_RECORD.read_text(encoding="utf-8")
     overtake_change_record = OVERTAKE_CHANGE_RECORD.read_text(encoding="utf-8")
     retry_rotation_change_record = RETRY_ROTATION_CHANGE_RECORD.read_text(

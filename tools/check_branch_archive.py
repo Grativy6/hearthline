@@ -19,6 +19,7 @@ CHANGE_RECORD = (
 )
 README = ROOT / "README.md"
 CHANGELOG = ROOT / "CHANGELOG.md"
+CHANGELOG_ARCHIVES = ROOT / "docs" / "changelog" / "index"
 
 SCHEMA = "hearthline.change-history.branch-archive.v1"
 MAIN_COMMIT = "445d8e41df7129d67657130175644696d4d7e8e9"
@@ -446,7 +447,13 @@ def main() -> None:
     require(CHANGE_RECORD.is_file(), "HLP-000019 change record is missing")
     record = CHANGE_RECORD.read_text(encoding="utf-8")
     readme = README.read_text(encoding="utf-8")
-    changelog = CHANGELOG.read_text(encoding="utf-8")
+    changelog = "\n".join(
+        path.read_text(encoding="utf-8")
+        for path in (
+            CHANGELOG,
+            *sorted(CHANGELOG_ARCHIVES.glob("*.md")),
+        )
+    )
     for anchor in (
         EXPECTED_LANES[4]["source_commit"], EXPECTED_LANES[4]["source_tree"],
         EXPECTED_LANES[12]["source_commit"], EXPECTED_LANES[12]["source_tree"],
