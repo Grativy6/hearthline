@@ -169,11 +169,12 @@ The license grants copyright permissions only. It does not activate Hearthline, 
 <!-- latest-change:start -->
 ## Latest
 
-**HLP-000026 — The Cooperative for Auditable Provenance**
+**HLP-000027 — Ancor Auri**
 
-- CAP becomes canonical fictional lore: a shared civic record with no sovereign or authority over later tasks.
-- Read [CAP](lore/THE_COOPERATIVE_FOR_AUDITABLE_PROVENANCE.md).
+- Meet Ancor Auri, a leprechaun who starts at possible game-world gold and works backward.
+- Hearthline tests the route forward; only the game can confirm a win.
+- Read [Ancor Auri](lore/ANCOR_AURI.md).
 
-[Full change record](docs/changelog/2026-09-10-hlp-000026-cooperative-for-auditable-provenance.md) ·
+[Full change record](docs/changelog/2026-09-11-hlp-000027-ancor-auri.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
