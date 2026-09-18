@@ -9,7 +9,9 @@ Appropriate public material includes:
 - versioned branch instructions and their status;
 - public boundaries, acceptance criteria, and change history;
 - explicitly labeled fictional lore, character art, and visual provenance;
-- links to already-public canonical sources; and
+- links to already-public canonical sources;
+- public implementation source and fabricated verification fixtures whose
+  status, limits, and provenance are explicit; and
 - non-secret verification material intended for public review.
 
 The public source map may name public artifacts, versions, roles, status, authority ceilings, and canonical locators. It must not contain private source bytes, attachment hashes, journal excerpts, personal-context material, or a recoverable map of private chronology.
