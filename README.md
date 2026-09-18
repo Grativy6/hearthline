@@ -11,6 +11,11 @@ not create an independent authority or identity.
 
 ## Start here
 
+**Love; Seed, not Feed; Honest.** Hearthline includes this compact
+[founding orientation](docs/FOUNDING_ORIENTATION.md) in the MCP connection's
+opening instructions, before any tool call. Seed offers paths without
+prescribing a destination; the toolkit's source and authority limits remain.
+
 - [Public toolkit profile](docs/PUBLIC_TOOLKIT.md) — the foundation,
   mechanisms, status boundaries, and public scope.
 - [Install and runtime](docs/TOOLKIT_RUNTIME.md) — package entry points,
@@ -84,13 +89,12 @@ for name and mark boundaries.
 <!-- latest-change:start -->
 ## Latest
 
-**HLP-000029 — Public toolkit capability map**
+**HLP-000030 — Founding orientation at the MCP entrance**
 
-- Route the public entrance through runtime, capability, context, continuity,
-  science/math, and software surfaces.
-- Keep foundation checks and optional profiles separate, bounded, and source-mapped.
-- Keep PEACHES offline preparation, live keys, and canonical books outside the default entrance.
+- Send Love; Seed, not Feed; Honest in the MCP initialization instructions.
+- Preserve chosen play, fiction, and exploration without prescribing a destination.
+- Keep optional templates, capabilities, and authority boundaries unchanged.
 
-[Full change record](docs/changelog/2026-09-17-hlp-000029-public-toolkit-capability-map.md) ·
+[Full change record](docs/changelog/2026-09-18-hlp-000030-founding-orientation.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

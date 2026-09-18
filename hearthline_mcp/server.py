@@ -11,6 +11,7 @@ from mcp.server.fastmcp import FastMCP
 from mcp.types import ToolAnnotations
 
 from . import __version__
+from .orientation import FOUNDING_ORIENTATION
 from .core import (collision_check, compact, dependency_correction, dependency_record,
                    finite_packet, inspect_context, observation, repair_context,
                    status_manifest)
@@ -40,7 +41,7 @@ def create_server(*, profile: str = "public", store_root: str | Path | None = No
     if store_root is None:
         appdata = Path(os.environ.get("APPDATA", Path.home() / "AppData" / "Roaming"))
         store_root = appdata / "Hearthline" / "toolkit"
-    mcp = FastMCP(f"hearthline-toolkit-{profile}")
+    mcp = FastMCP(f"hearthline-toolkit-{profile}", instructions=FOUNDING_ORIENTATION)
     store = ScopedStore(store_root, store_namespace, adapter=f"hearthline:{profile}", user=user)
     continuity = ContinuityEngine(store)
     software = SoftwareEngine(store, mode="TRACE_ONLY", operator_id=f"hearthline:{user}")
