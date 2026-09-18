@@ -1,0 +1,33 @@
+{
+  "schema": "hearthline.capabilities.v1",
+  "profile": "public_model_plus_mechanisms",
+  "default_lore_loaded": false,
+  "default_moltbook_loaded": false,
+  "profiles": {"public_default":"full_toolkit", "cabin":["foundation","core","continuity"]},
+  "source_content_mode": "reference_identity_only",
+  "capabilities": [
+    {"id":"source_registry","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["source_registry_resource","report_source_status"],"limits":["reference-only content","caller-supplied hashes are declarations"],"reopen":"clean MCP query/read/verify smoke"},
+    {"id":"pal_foundation","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["pal_review_packet"],"limits":["finite adapted PAL 2.3 profile; no blanket conformance"],"reopen":"applicable PAL channels and negative fixtures"},
+    {"id":"pal_compatibility","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["compatibility_profile_resource"],"limits":["PAL 2.2/PPP history remains explicit"],"reopen":"missing clause or unsupported obligation"},
+    {"id":"charter_bounded_composition","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["charter_check_contract","validate_persistent_formation"],"limits":["no dispatch or authority creation"],"reopen":"role, lane or boundary schema"},
+    {"id":"pecan_crossing","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["pecan_check_crossing","inspect_authority_separation_json"],"limits":["declared grant usability is not authorization"],"reopen":"external grant, consent or live outcome evidence"},
+    {"id":"pea_candidate_review","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["pea_explain_candidate","review_evaluator_grant_json"],"limits":["human disposition remains external"],"reopen":"evaluator grant or standing/privacy source"},
+    {"id":"seed_release","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["seed_review_release","review_release_envelope_json"],"limits":["explicit declarations do not certify ethics or agency"],"reopen":"human release disposition"},
+    {"id":"context_orientation_assembly","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["orient_context","inspect_context_packet","report_source_status","make_finite_packet"],"limits":["selection does not establish reading or understanding","not exposed by Cabin"],"reopen":"source binding and clean integration evidence"},
+    {"id":"context_profiles","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["orient_context"],"limits":["profiles are purpose-bound and revisable","not exposed by Cabin"],"reopen":"versioned profile registry"},
+    {"id":"observation_comparison","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["science.observation_contract","science.compare_prerequisites","science.detection_limit","science.simulation_vs_observation"],"limits":["no causal inference","not exposed by Cabin"],"reopen":"domain calibration"},
+    {"id":"residual_alternatives_dependencies","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["science.residual_alternatives","record_typed_dependency","reopen_load_bearing_dependents"],"limits":["model edges remain provisional unless adopted","not exposed by Cabin"],"reopen":"typed dependency-source bindings"},
+    {"id":"tracekey_tether","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["prepare_trace_key","resolve_trace_key","bind_persistent_tether","read_persistent_tether","reopen_persistent_tether"],"limits":["trace only; no hidden state or authority renewal"],"reopen":"cross-process recovery"},
+    {"id":"compaction_apci","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["compact_context_packet","check_compaction_collision","repair_compacted_context","math.apci_cost"],"limits":["query-relative preservation","not exposed by Cabin"],"reopen":"protected-query assumptions"},
+    {"id":"bridge_endpoint_repair","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["math.finite_endpoint","math.readout_binding","math.side_trace_repair","math.bridge_repair"],"limits":["Hodge realization unavailable","not exposed by Cabin"],"reopen":"component-matched Hodge data"},
+    {"id":"gold_comparison_projection","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["math.gold_channels"],"limits":["six-channel finite fixtures","not exposed by Cabin"],"reopen":"broader channel or geometry assumptions"},
+    {"id":"gppr_exact_routing","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["math.gppr_factor_events","math.gppr_partition"],"limits":["bounded supplied factors and conservative fallback","not exposed by Cabin"],"reopen":"precision and partition evidence"},
+    {"id":"a0bk_receipt_grammar","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["software.a0bk","pal_review_packet"],"limits":["proposed PAL 2.2-oriented adaptation","not exposed by Cabin"],"reopen":"exact source mapping or adoption"},
+    {"id":"fbt_trace_control","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["software.fbt"],"limits":["ordinary trace-control implemented; model-internal execution NOT_RUN; no performance claim","not exposed by Cabin"],"reopen":"instrumented local model"},
+    {"id":"carrier_diagnostic_c2c","status":"IMPLEMENTED_BOUNDED_PROFILE","availability":"OPTIONAL_UNAVAILABLE","experiment":"NOT_RUN","operations":["software.carrier_contract","software.c2c_capability"],"limits":["API-only hosts cannot provide KV internals; local KV access alone is insufficient without compatible bridge/operator/readout","not exposed by Cabin"],"reopen":"compatible local model internals"},
+    {"id":"p3la_composition","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["software.p3la"],"limits":["no implicit fusion or consensus","not exposed by Cabin"],"reopen":"declared component adapters and receipts"},
+    {"id":"heartbeat_custody_formation","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["create_persistent_heartbeat","pulse_persistent_heartbeat","suspend_persistent_heartbeat","resume_persistent_heartbeat","record_persistent_custody","validate_persistent_formation"],"limits":["no scheduler or authority renewal"],"reopen":"final missed-pulse/restart smoke"},
+    {"id":"peaches_preparation_verification","status":"IMPLEMENTED_BOUNDED_PROFILE","operations":["peaches_prepare_stamp","peaches_verify_stamp"],"limits":["book append/mirror/transition operations remain in Book of Peaches"],"reopen":"clean cross-package install"},
+    {"id":"branchline_beta_binding","status":"IMPLEMENTED_BOUNDED_PROFILE","verification":"PASS","operations":["discover_capabilities","bind_foundation_profile","bind_optional_toolkit","record_model_attribution","preserve_cancel_restart"],"limits":["app contract remains model-neutral"],"reopen":"changed app/server contracts"}
+  ]
+}

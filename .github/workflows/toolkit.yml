@@ -1,0 +1,58 @@
+name: Hearthline toolkit
+
+on:
+  push:
+    paths:
+      - "hearthline_mcp/**"
+      - "tests/**"
+      - "pyproject.toml"
+      - "requirements.txt"
+      - ".github/workflows/toolkit.yml"
+  pull_request:
+    paths:
+      - "hearthline_mcp/**"
+      - "tests/**"
+      - "pyproject.toml"
+      - "requirements.txt"
+      - ".github/workflows/toolkit.yml"
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout the pinned Book of Peaches dependency
+        uses: actions/checkout@v4
+        with:
+          repository: Grativy6/book-of-peaches
+          ref: c91ab35dcb6b594f91d59ebe08d45cad005d2c04
+          path: book-of-peaches
+      - name: Checkout the pinned SeedPEA dependency
+        uses: actions/checkout@v4
+        with:
+          repository: Grativy6/seedpea-mcp-adapter
+          ref: 45eb52243770f42cebe3e0c3afe096a271b86f98
+          path: seedpea
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install pinned local dependency chain
+        run: >-
+          python -m pip install
+          "pytest==8.4.2"
+          "cryptography==50.0.1"
+          ./book-of-peaches
+          ./seedpea/packages/foundation
+          ./seedpea
+          .
+      - name: Run full Hearthline toolkit tests
+        run: python -m pytest -q tests
+      - name: Run real cross-adapter MCP equivalence
+        working-directory: seedpea
+        run: python -m pytest -q tests/test_real_adapter_equivalence.py

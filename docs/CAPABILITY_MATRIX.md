@@ -1,0 +1,48 @@
+# Hearthline capability matrix
+
+This is the public, model-plus-mechanisms inventory for the current bounded
+toolkit profile. A bounded profile is evidence about the named finite contract;
+it is not blanket conformance, truth, permission, authority, or a measured
+performance improvement. The public profile does not load Chris's lore,
+private records, or the legacy Moltbook branch by default.
+
+Status `IMPLEMENTED_BOUNDED_PROFILE` means the named operations and finite
+checks exist in the current source and have targeted tests. `OPTIONAL_UNAVAILABLE`
+means the contract can report its boundary while the external prerequisite is
+not supplied. The current verification register records completed clean-install,
+real-stdio, route, Cabin, and Branchline checks separately from implementation
+status.
+
+| ID | Public operations | Status and current limit | Tests / reopening route |
+|---|---|---|---|
+| `source_registry` | `source_registry_resource`, `report_source_status` | `IMPLEMENTED_BOUNDED_PROFILE`; exact reference/search/content-hash checks, reference-only source content; Cabin exposes the foundation registry but not report_source_status | `tests/test_operational_contracts.py`, `tests/test_context_contracts.py`; real MCP query/read smoke passed |
+| `pal_foundation` | `pal_review_packet` | `IMPLEMENTED_BOUNDED_PROFILE`; finite PAL 2.3 account/receipt profile, not native whole-system conformance | `packages/foundation/tests/test_pal_profile.py`, `tests/test_operational_contracts.py`; seed 56 tests plus 12 subtests; reopen with every applicable PAL channel and negative fixture |
+| `pal_compatibility` | `compatibility_profile_resource` | `IMPLEMENTED_BOUNDED_PROFILE`; preserves PAL 2.2/PPP history and labels adapted/lossy mappings | `tests/test_operational_contracts.py`; reopen missing source clause or unsupported obligation |
+| `charter_bounded_composition` | `charter_check_contract`, `validate_persistent_formation` | `IMPLEMENTED_BOUNDED_PROFILE`; checks bounded roles, carry, limits and finish evidence; does not dispatch | `tests/test_operational_contracts.py`, `tests/test_continuity.py`; reopen role or boundary schema |
+| `pecan_crossing` | `pecan_check_crossing`, `inspect_authority_separation_json` | `IMPLEMENTED_BOUNDED_PROFILE`; separates declared stages and reports grant usability without granting authority | `tests/test_operational_contracts.py`; reopen external grant, consent, revocation or live outcome evidence |
+| `pea_candidate_review` | `pea_explain_candidate`, `review_evaluator_grant_json` | `IMPLEMENTED_BOUNDED_PROFILE`; carries sourced candidate reasons to human review | `tests/test_operational_contracts.py`; reopen evaluator grant or missing standing/privacy source |
+| `seed_release` | `seed_review_release`, `review_release_envelope_json` | `IMPLEMENTED_BOUNDED_PROFILE`; preserves claims, choices, correction, refusal and natural stop | `tests/test_operational_contracts.py`; reopen release envelope or human disposition |
+| `context_orientation_assembly` | `orient_context`, `inspect_context_packet`, `report_source_status`, `make_finite_packet` | `IMPLEMENTED_BOUNDED_PROFILE`; disjoint supplied/available/omitted states with selection tracked separately and bounded envelopes; not exposed by Cabin | `tests/test_context_contracts.py`, `tests/test_core.py`; Hearthline 59-test suite and equivalent real-stdio routes passed |
+| `context_profiles` | `orient_context` | `IMPLEMENTED_BOUNDED_PROFILE`; mathematical, scientific, philosophical and game profiles plus legacy aliases; not exposed by Cabin | `tests/test_context_contracts.py`; reopen versioned profile registry or purpose change |
+| `observation_comparison` | `science.observation_contract`, `science.compare_prerequisites`, `science.detection_limit`, `science.simulation_vs_observation` | `IMPLEMENTED_BOUNDED_PROFILE`; observed, processed, simulated and proposed channels remain distinct; not exposed by Cabin | `tests/test_science_contracts.py`, `tests/test_science_math.py`; domain calibration remains source-scoped |
+| `residual_alternatives_dependencies` | `science.residual_alternatives`, `record_typed_dependency`, `reopen_load_bearing_dependents` | `IMPLEMENTED_BOUNDED_PROFILE`; persisted adopted load-bearing edges reopen transitively; unrelated history remains; Cabin exposes dependency operations, while science.residual_alternatives stays public-only | `tests/test_core.py`, `tests/test_science_contracts.py`; reopen typed explanation/dependency-source bindings |
+| `tracekey_tether` | `prepare_trace_key`, `resolve_trace_key`, `bind_persistent_tether`, `read_persistent_tether`, `reopen_persistent_tether` | `IMPLEMENTED_BOUNDED_PROFILE`; identity-bound local trace handles, no hidden state or renewed authority | `tests/test_continuity.py`, `tests/test_server.py`; equivalent real-stdio and restart/recovery checks passed for public and Cabin profiles |
+| `compaction_apci` | `compact_context_packet`, `check_compaction_collision`, `repair_compacted_context`, `math.apci_cost` | `IMPLEMENTED_BOUNDED_PROFILE`; protected-query-relative packet loss, collision and repair; not exposed by Cabin | `tests/test_core.py`, `tests/test_science_math.py`; reopen protected-query and cost assumptions |
+| `bridge_endpoint_repair` | `math.finite_endpoint`, `math.readout_binding`, `math.side_trace_repair`, `math.bridge_repair` | `IMPLEMENTED_BOUNDED_PROFILE`; finite fiber/readout and minimal repair; Hodge realization remains unavailable and this profile is not exposed by Cabin | `tests/test_science_math.py`; reopen component-matched Hodge data and proof obligations |
+| `gold_comparison_projection` | `math.gold_channels` | `IMPLEMENTED_BOUNDED_PROFILE`; six-channel common/difference, cube projection, route and sector/residual fixtures; not exposed by Cabin | `tests/test_science_math.py`; reopen broader channel types or geometry assumptions |
+| `gppr_exact_routing` | `math.gppr_factor_events`, `math.gppr_partition` | `IMPLEMENTED_BOUNDED_PROFILE`; exact bounded event ribbons and conservative 2-D enclosure fallback; not exposed by Cabin | `tests/test_science_math.py`; reopen supplied factor registry, precision and partition evidence |
+| `a0bk_receipt_grammar` | `software.a0bk`, `pal_review_packet` | `IMPLEMENTED_BOUNDED_PROFILE`; proposed PAL 2.2-oriented grammar adapted to PAL 2.3 with residuals; not exposed by Cabin | `tests/test_software.py`, `packages/foundation/tests/test_pal_profile.py`; reopen exact source mapping or native adoption |
+| `fbt_trace_control` | `software.fbt` | `IMPLEMENTED_BOUNDED_PROFILE`; TRACE_ONLY, SHADOW and policy-bound GOVERNING state machine; ordinary software is implemented, model-internal execution remains NOT_RUN; not exposed by Cabin | `tests/test_software.py`; reopen instrumented model/internal trace experiment |
+| `carrier_diagnostic_c2c` | `software.carrier_contract`, `software.c2c_capability` | `IMPLEMENTED_BOUNDED_PROFILE` with `OPTIONAL_UNAVAILABLE` and experiment `NOT_RUN`; local KV access alone is insufficient without a compatible bridge; not exposed by Cabin | `tests/test_software.py`; reopen compatible local models, geometry, operator and readout |
+| `p3la_composition` | `software.p3la` | `IMPLEMENTED_BOUNDED_PROFILE`; typed transformations preserve disagreement and require an explicit fusion policy; not exposed by Cabin | `tests/test_software.py`; reopen multiple declared component adapters and receipts |
+| `heartbeat_custody_formation` | `create_persistent_heartbeat`, `pulse_persistent_heartbeat`, `suspend_persistent_heartbeat`, `resume_persistent_heartbeat`, `record_persistent_custody`, `validate_persistent_formation` | `IMPLEMENTED_BOUNDED_PROFILE`; reports state and custody without scheduling or authority renewal | `tests/test_continuity.py`, `tests/test_server.py`; equivalent real-stdio route and missed-pulse/restart checks passed, including Cabin |
+| `peaches_preparation_verification` | `peaches_prepare_stamp`, `peaches_verify_stamp` | `IMPLEMENTED_BOUNDED_PROFILE`; shared preparation/verification boundary; append, mirror and transition custody live in Book of Peaches | book tests and foundation MCP tests; seed 56+12 subtests and clean cross-package route passed; reopen book integration |
+| `branchline_beta_binding` | app-side MCP discovery/binding and result attribution | `IMPLEMENTED_BOUNDED_PROFILE`; root/chat isolation, cancellation/restart, actual Python-server and browser routes passed | 13 Branchline backend tests including actual Python, plus a separate passing browser smoke; reopen with changed app/server contracts |
+
+Source identities are maintained in the workflow and source registry. Source
+references identify material and limits; they do not import private corpus text,
+activate a profile, or establish conformance. FBT/C2C and Hodge work require
+their stated local experimental prerequisites. Honesty PCP remains experimental
+and unloaded by default.
+
+Test paths for foundation contracts are relative to the seedPEA repository; toolkit tests are relative to this repository. Cabin's core group also exposes make_finite_packet, record_observation_event, read_persistent_records and validate_transport_capsule. The richer named science and context tool groups remain absent from Cabin. A shared capability row does not imply that every listed operation is exposed by every profile.

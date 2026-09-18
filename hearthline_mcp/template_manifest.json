@@ -1,0 +1,15 @@
+{
+  "template_id": "hearthline-public-template",
+  "version": "0.1.0",
+  "role": "optional orientation template",
+  "default_loaded": false,
+  "private_content": false,
+  "lore_loaded": false,
+  "references": [
+    "https://github.com/Grativy6/hearthline/blob/95776397c707abdbae05d1a746e98bc0aa140b2f/docs/PUBLIC_TOOLKIT.md",
+    "https://github.com/Grativy6/hearthline/blob/95776397c707abdbae05d1a746e98bc0aa140b2f/docs/BUILD_PREPARATION.md"
+  ],
+  "orientation": "Hearthline is a selectable trace-informed toolkit: preserve source, type relations, carry consequence, separate evidence from authority, and keep unresolved work reopenable.",
+  "attribution": "Christopher D. Pang is the author and original steward of Hearthline and its source frameworks; AI assistance remains tool assistance.",
+  "notice": "This manifest is a selectable reference. It does not create persona, authority, memory, consent, or dependency."
+}

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hearthline-toolkit"
+version = "0.1.0"
+description = "Public, model-neutral Hearthline continuity and reasoning toolkit"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Christopher Daniel Pang"}]
+license = "CC-BY-4.0"
+license-files = ["LICENSE"]
+dependencies = ["mcp==1.28.0", "seedpea-foundation==0.1.0"]
+
+[project.scripts]
+hearthline-mcp = "hearthline_mcp.server:main"
+
+[tool.setuptools.packages.find]
+include = ["hearthline_mcp*"]
+
+[tool.setuptools.package-data]
+hearthline_mcp = ["template_manifest.json", "capabilities.json"]

@@ -83,8 +83,10 @@ def main() -> None:
 
     require("docs/HEARTHLINE_TETHER.md" in readme,
             "README lacks the TETHER document route")
-    require("Version: `0.4-draft`" in readme,
-            "README current version is not 0.4-draft")
+    require("docs/PUBLIC_TOOLKIT.md" in readme,
+            "README lacks the public toolkit route")
+    require("docs/LEGACY_MOLTBOOK.md" in readme,
+            "README lacks the preserved legacy Moltbook route")
 
     normalized = AGENT.read_bytes().replace(b"\r\n", b"\n")
     digest = hashlib.sha256(normalized).hexdigest()
