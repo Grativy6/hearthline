@@ -13,6 +13,17 @@ not create an independent authority or identity.
 
 - [Public toolkit profile](docs/PUBLIC_TOOLKIT.md) — the foundation,
   mechanisms, status boundaries, and public scope.
+- [Install and runtime](docs/TOOLKIT_RUNTIME.md) — package entry points,
+  configured storage, and the model-neutral MCP surface.
+- [Capability matrix](docs/CAPABILITY_MATRIX.md) — current capability,
+  source, status, and residual register.
+- [Context contracts](docs/CONTEXT_CONTRACTS.md) — orientation, selection,
+  compaction, and protected-query boundaries.
+- [Continuity runtime](docs/CONTINUITY_RUNTIME.md) — TETHER, dependencies,
+  correction, and heartbeat behavior.
+- [Science and mathematics](docs/SCIENCE_MATH_CAPABILITIES.md) and
+  [software mechanisms](docs/SOFTWARE_MECHANISMS.md) — bounded optional
+  profiles with explicit unresolveds.
 - [Build preparation](docs/BUILD_PREPARATION.md) — four deliverables,
   shared foundation, existing code to preserve, and first verification targets.
 - [Legacy Moltbook index](docs/LEGACY_MOLTBOOK.md) — the preserved,
@@ -32,8 +43,13 @@ The public profile does not require lore, private Cabin material, or the
 Moltbook branch. Those remain separate paths so users can begin with the
 mechanisms and develop their own version.
 
-The foundation includes **PAL v2.3** and the other bounded source roles
-described in the public toolkit profile and [source map](SOURCE_MAP.md).
+The foundation package exposes bounded structural checks for **PAL v2.3**,
+CHARTER, PECAN, PEA, and SEED. The public toolkit adds context, continuity,
+observation, science, mathematics, and software mechanisms. These are
+implementation profiles with source mappings and residuals, not blanket
+conformance claims. Offline PEACHES preparation and verification belongs to
+the foundation/book integration path; no live key or canonical book is
+created here.
 
 ## Scope boundary
 
@@ -68,12 +84,13 @@ for name and mark boundaries.
 <!-- latest-change:start -->
 ## Latest
 
-**HLP-000028 — Public toolkit entrance**
+**HLP-000029 — Public toolkit capability map**
 
-- Begin with the general model-plus-mechanisms toolkit; lore remains optional.
-- Preserve Moltbook as a subordinate legacy route with its artifacts unchanged.
-- Prepare the four-part build without claiming completed adapters or a live book.
+- Route the public entrance through runtime, capability, context, continuity,
+  science/math, and software surfaces.
+- Keep foundation checks and optional profiles separate, bounded, and source-mapped.
+- Keep PEACHES offline preparation, live keys, and canonical books outside the default entrance.
 
-[Full change record](docs/changelog/2026-09-17-hlp-000028-public-toolkit-entrance.md) ·
+[Full change record](docs/changelog/2026-09-17-hlp-000029-public-toolkit-capability-map.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

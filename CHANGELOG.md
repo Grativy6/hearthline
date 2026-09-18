@@ -16,6 +16,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000029` | 2026-09-17 | `DOCUMENTATION_SUCCESSOR` | Route the public toolkit entrance through its runtime, capability, context, continuity, science/math, and software surfaces with explicit limits. | [Record](docs/changelog/2026-09-17-hlp-000029-public-toolkit-capability-map.md) |
 | `HLP-000028` | 2026-09-17 | `DOCUMENTATION_SUCCESSOR` | Establish the public toolkit entrance, preserve Moltbook as an optional legacy route, and record the four-part build preparation. | [Record](docs/changelog/2026-09-17-hlp-000028-public-toolkit-entrance.md) |
 | `HLP-000027` | 2026-09-11 | `LORE_SUCCESSOR` | Introduce Ancor Auri, a fictional leprechaun who anchors on a possible game-world win and offers backward hypotheses while Hearthline tests forward. | [Record](docs/changelog/2026-09-11-hlp-000027-ancor-auri.md) |
 | `HLP-000026` | 2026-09-10 | `LORE_SUCCESSOR` | Establish the Cooperative for Auditable Provenance as Hearthline's canonical fictional common record beyond any one task, without sovereignty or operational authority. | [Record](docs/changelog/2026-09-10-hlp-000026-cooperative-for-auditable-provenance.md) |
