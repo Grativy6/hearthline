@@ -7,6 +7,15 @@ continuity, heartbeat reporting, Thulia-style custody, and bounded formation
 manifests. It does not load Chris's lore, private records, Moltbook material,
 or a model by default.
 
+On connection, the MCP `initialize` response includes the compact
+[founding orientation](FOUNDING_ORIENTATION.md) in its standard `instructions`
+field: **Love; Seed, not Feed; Honest**. No discovery tool call or template
+opt-in is required. All Hearthline server profiles carry the same wording;
+the optional template remains separately opt-in. The host decides how to
+present server instructions to a model; delivery does not guarantee adoption.
+Existing installed servers receive this change only after their package is
+updated and they reconnect. This does not change model weights or permissions.
+
 `create_server(profile=..., store_root=..., store_namespace=..., user=...)` binds the
 server to a host-selected adapter profile, user scope, namespace, and storage
 root. The persistence namespace is derived from that complete tuple. Tool callers cannot choose

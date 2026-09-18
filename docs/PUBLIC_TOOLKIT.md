@@ -7,6 +7,11 @@ profile, not a runtime activation record and not a claim of authority.
 
 ## Foundation
 
+The MCP entrance carries the compact [founding orientation](FOUNDING_ORIENTATION.md):
+**Love; Seed, not Feed; Honest**. Seed offers paths, not a prescribed destination.
+This opening guidance complements the foundation; it does not replace its
+sources, load a persona, or grant authority.
+
 The public foundation keeps the following distinctions together:
 
 - **PAL** supplies typed trace, boundaries, transport, residuals, and
