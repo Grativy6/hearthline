@@ -16,6 +16,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000031` | 2026-09-21 | `MCP_CONTEXT_SUCCESSOR` | Register MIND/TIES references and separate preserved content from declared receiving-context applicability across correction and restart. | [Record](docs/changelog/2026-09-21-hlp-000031-mind-ties-applicability.md) |
 | `HLP-000030` | 2026-09-18 | `MCP_ORIENTATION_SUCCESSOR` | Carry Love; Seed, not Feed; Honest in MCP initialization instructions while preserving model-neutral tools and authority boundaries. | [Record](docs/changelog/2026-09-18-hlp-000030-founding-orientation.md) |
 | `HLP-000029` | 2026-09-17 | `DOCUMENTATION_SUCCESSOR` | Route the public toolkit entrance through its runtime, capability, context, continuity, science/math, and software surfaces with explicit limits. | [Record](docs/changelog/2026-09-17-hlp-000029-public-toolkit-capability-map.md) |
 | `HLP-000028` | 2026-09-17 | `DOCUMENTATION_SUCCESSOR` | Establish the public toolkit entrance, preserve Moltbook as an optional legacy route, and record the four-part build preparation. | [Record](docs/changelog/2026-09-17-hlp-000028-public-toolkit-entrance.md) |

@@ -15,6 +15,8 @@ status.
 
 | ID | Public operations | Status and current limit | Tests / reopening route |
 |---|---|---|---|
+| `context_research_sources` | `read_context_sources`, `hearthline://context-sources` | `REFERENCE_IDENTITIES_ONLY`; pinned MIND 0.4 and TIES 0.2 editions supplement the foundation without loading or adopting them; context group only | `tests/test_context_applicability.py`; reopen with exact edition and raw-file digest |
+| `context_applicability` | `review_context_applicability` | `IMPLEMENTED_BOUNDED_PROFILE`; reduced source-identity / declared-condition comparison; no semantic fidelity, truth, admission or training; context group only | `tests/test_context_applicability.py`, `tests/test_applicability_route.py`; current facts, scoped conditions, correction and actual restart |
 | `source_registry` | `source_registry_resource`, `report_source_status` | `IMPLEMENTED_BOUNDED_PROFILE`; exact reference/search/content-hash checks, reference-only source content; Cabin exposes the foundation registry but not report_source_status | `tests/test_operational_contracts.py`, `tests/test_context_contracts.py`; real MCP query/read smoke passed |
 | `pal_foundation` | `pal_review_packet` | `IMPLEMENTED_BOUNDED_PROFILE`; finite PAL 2.3 account/receipt profile, not native whole-system conformance | `packages/foundation/tests/test_pal_profile.py`, `tests/test_operational_contracts.py`; seed 56 tests plus 12 subtests; reopen with every applicable PAL channel and negative fixture |
 | `pal_compatibility` | `compatibility_profile_resource` | `IMPLEMENTED_BOUNDED_PROFILE`; preserves PAL 2.2/PPP history and labels adapted/lossy mappings | `tests/test_operational_contracts.py`; reopen missing source clause or unsupported obligation |

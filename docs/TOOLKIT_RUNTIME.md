@@ -42,7 +42,12 @@ continuity operations; optional context, mathematics, science, and software
 profiles are public-toolkit capabilities and are not silently loaded into
 Cabin.
 
-The package is a 0.1.0 implementation checkpoint. FBT's ordinary bounded
+The package is a 0.2.0 implementation checkpoint. The context group adds
+`read_context_sources`, `hearthline://context-sources`, and
+`review_context_applicability`; see the [contract and runnable example](CONTEXT_CONTRACTS.md).
+This is an additive change with no record migration. Existing installations
+need an explicit package update and reconnection to expose the new tools.
+The shared foundation remains pinned to 0.1.0. FBT's ordinary bounded
 trace-control operations are implemented, while model-internal execution is
 `NOT_RUN`. C2C declares its carrier diagnostic and prerequisite boundary, but
 the experiment remains `NOT_RUN` until a compatible bridge, operator, and

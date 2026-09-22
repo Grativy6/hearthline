@@ -4,7 +4,7 @@ The package contains model-neutral, bounded records and continuity helpers.
 It does not load Hearthline lore, private history, or a model by default.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 from .server import create_server
 

@@ -89,12 +89,12 @@ for name and mark boundaries.
 <!-- latest-change:start -->
 ## Latest
 
-**HLP-000030 — Founding orientation at the MCP entrance**
+**HLP-000031 — MIND/TIES context applicability**
 
-- Send Love; Seed, not Feed; Honest in the MCP initialization instructions.
-- Preserve chosen play, fiction, and exploration without prescribing a destination.
-- Keep optional templates, capabilities, and authority boundaries unchanged.
+- Register the published MIND v0.4 and TIES v0.2 editions with explicit roles and limits.
+- Review preserved content separately from its declared conditions of reuse.
+- Keep unknown conditions, correction history, and selective reopening visible across restart.
 
-[Full change record](docs/changelog/2026-09-18-hlp-000030-founding-orientation.md) ·
+[Full change record](docs/changelog/2026-09-21-hlp-000031-mind-ties-applicability.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
