@@ -41,6 +41,8 @@ adapter is not authorization.
 The public Hearthline layer is the place for the broader working toolkit:
 
 - TETHER for recoverable task trace and selective reopening;
+- MIND/TIES source references and separate reviews of preserved content and
+  declared receiving-context conditions, with missing evidence left unresolved;
 - Heartbeats for bounded state reporting, never scope or authority renewal;
 - Thulia and related custody or relay mechanisms;
 - compaction and carry measurements, including compactification-cost views;
@@ -69,11 +71,12 @@ default or activate an external service.
 
 ## Status
 
-This document describes the intended public entry and routing boundary. It
-does not claim that every named mechanism has been implemented, integrated, or
-validated in this repository. The broad public MCP adapter implementation is
-still planned. Each tool or experiment must carry its own source, status,
-limits, and verification evidence before it is treated as working.
+The public MCP adapter is implemented as a bounded toolkit. Its
+[capability matrix](CAPABILITY_MATRIX.md) separates working operations from
+experimental and unavailable mechanisms. Toolkit 0.2.0 adds reference-only
+MIND/TIES editions and a finite context applicability review; it does not
+implement the synthesis's proposed learner. Each tool or experiment retains
+its own source, limits, and verification evidence.
 
 The [build preparation note](BUILD_PREPARATION.md) records the four-part
 delivery plan, first contract work, offline checks and deferred live-book work.

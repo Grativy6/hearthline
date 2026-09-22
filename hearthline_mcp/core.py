@@ -10,7 +10,7 @@ import json
 from datetime import datetime, timezone
 from typing import Any, Mapping
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 MAX_PACKET_CHARS = 100_000
 MAX_ITEMS = 256
 DEPENDENCY_RELATIONS = {"supports", "depends_on", "load_bearing", "compares", "derived_from"}

@@ -16,6 +16,7 @@ from .core import (collision_check, compact, dependency_correction, dependency_r
                    finite_packet, inspect_context, observation, repair_context,
                    status_manifest)
 from .context import orient, source_status, transport_capsule
+from .applicability import context_sources, review_applicability
 from .store import ScopedStore
 from .continuity import ContinuityEngine
 from .science_math import TOOLS as MATH_TOOLS, TOOL_DESCRIPTIONS
@@ -85,6 +86,23 @@ def create_server(*, profile: str = "public", store_root: str | Path | None = No
 
     @_tool(group="context", annotations=ToolAnnotations(readOnlyHint=True, destructiveHint=False))
     def report_source_status(request: dict[str, Any]) -> dict[str, Any]: return source_status(request)
+
+    @_tool(group="context", annotations=ToolAnnotations(readOnlyHint=True, destructiveHint=False))
+    def read_context_sources() -> dict[str, Any]:
+        """Read MIND/TIES edition identities and limits; no source download or adoption."""
+        return context_sources()
+
+    @_tool(group="context", annotations=ToolAnnotations(readOnlyHint=True, destructiveHint=False))
+    def review_context_applicability(request: dict[str, Any]) -> dict[str, Any]:
+        """Check hash-bound source content separately from exact declared target conditions.
+
+        Source: source_id, version, expected_hash, supplied_content. Conditions
+        belong inside supplied_content.applicability_conditions: condition_id,
+        field, equals, evidence_refs. Target: context_id, facts mapping each
+        field to {value, evidence_refs}. Supply a reopen_handle. Missing facts
+        remain unresolved. A match is not truth, semantic fidelity or permission.
+        """
+        return review_applicability(request)
 
     @_tool(group="context", annotations=ToolAnnotations(readOnlyHint=True, destructiveHint=False))
     def compact_context_packet(request: dict[str, Any]) -> dict[str, Any]: return compact(request)
@@ -168,6 +186,11 @@ def create_server(*, profile: str = "public", store_root: str | Path | None = No
 
     @mcp.resource("hearthline://capabilities")
     def capabilities() -> str: return files("hearthline_mcp").joinpath("capabilities.json").read_text()
+
+    if allowed is None or "context" in allowed:
+        @mcp.resource("hearthline://context-sources")
+        def context_source_registry() -> str:
+            return json.dumps(context_sources(), indent=2, sort_keys=True)
 
     try:
         from seedpea_foundation.mcp_tools import register_foundation

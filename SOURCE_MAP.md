@@ -53,6 +53,8 @@ These public records are same-author research context, not additions to the cont
 
 | Work | Status in Hearthline | Bounded Hearthline use | Essential ceiling | Public locator |
 |---|---|---|---|---|
+| *MIND: Matrix of Information, Negation, and Distinction*, v0.4 | `EXPLORATORY`; reduced implementation profile | Context-bound distinctions, grounded revision, lineage and unresolveds; section 8.7 separates source preservation from target applicability | Toolkit comparison checks canonical content identity and declared exact conditions only; no semantic oracle, evidence authentication, optimizer or learned weights | [DOI 10.5281/zenodo.22882309](https://doi.org/10.5281/zenodo.22882309) |
+| *TIES: Trace-Informed Emergence Stack*, v0.2 | `BRANCH`; synthesis and bounded composition profile | Connects PPPS, CHARTER, MIND and the three Context papers; composes carry, selective correction, TETHER and heartbeat boundaries, with optional PEACHES provenance | No new controlling framework, blanket conformance, uninterrupted identity, authority renewal, scheduler or validated learner | [DOI 10.5281/zenodo.22883830](https://doi.org/10.5281/zenodo.22883830) |
 | *The Context Sets a Rhythm*, v0.1 | `EXPLORATORY` | Cadence, refresh, intersection, and scheduler-choice vocabulary | No autonomous scheduler, proof of alignment, PAL-canon change, or verified runtime effect | [DOI 10.5281/zenodo.22214952](https://doi.org/10.5281/zenodo.22214952) |
 | *Golden Phase Prime Ribbons* (GPPR), v0.1 | `BRANCH` | Exact prime-valuation geometry, optional golden-angle routing, and ordered receipt ribbons | No factoring advantage, finite-bit compression, universal optimizer, privileged geometry, or authority | [DOI 10.5281/zenodo.22225414](https://doi.org/10.5281/zenodo.22225414) |
 | *Full Bandwidth Is Not Full Trace: A PAL–FBT Synthesis*, v0.1 | `BRANCH` | Separation of latent feedback from trace certification, with a two-lane integration and evaluation profile | No FBT code imported or executed by Hearthline; no new neural result, Strongwiz causal credit, trace-fidelity guarantee, ARC-performance claim, or safety guarantee | [DOI 10.5281/zenodo.22228162](https://doi.org/10.5281/zenodo.22228162) |
@@ -68,6 +70,17 @@ pre-alpha package version, not a tagged or published v0.4 release. Any
 `reserved` or `publication pending` wording retained inside a deposited
 manuscript records that manuscript's historical close-state; it is not silently
 rewritten into a claim that the public deposit existed earlier.
+
+MIND and TIES also have a packaged, reference-only
+[edition catalogue](hearthline_mcp/context_sources.json), exposed by the
+context group's `read_context_sources` tool and `hearthline://context-sources`
+resource. It pins one deposited DOCX per work by filename, edition and SHA-256
+of the raw file bytes. Those identities were checked against the published
+records on 2026-09-21; filenames and historical draft wording are preserved.
+The catalogue supplements the shared foundation registry without revising it.
+PPPS is shorthand for PAL, PECAN, PEA and SEED, not the separate PPP Kernel.
+See the [context contract](docs/CONTEXT_CONTRACTS.md) for the precise reduced
+mapping and unresolved interfaces. Source metadata alone is not source loading.
 
 ## Supporting and adjacent work
 

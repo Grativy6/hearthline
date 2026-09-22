@@ -1,0 +1,55 @@
+{
+  "schema": "hearthline.context-sources.v1",
+  "content_mode": "REFERENCE_IDENTITIES_ONLY",
+  "authority_effect": "NONE",
+  "adoption_effect": "NONE",
+  "source_content_loaded": false,
+  "lineage": "Same-author research context; these works are not independent corroboration of one another.",
+  "foundation_relation": "Complements, and does not replace or revise, PAL, CHARTER, PECAN, PEA and SEED in the shared foundation.",
+  "sources": [
+    {
+      "source_id": "MIND",
+      "title": "MIND - Matrix of Information, Negation, and Distinction",
+      "author": "Christopher D. Pang",
+      "version": "0.4",
+      "doi": "10.5281/zenodo.22882309",
+      "record_url": "https://zenodo.org/records/22882309",
+      "artifact": {
+        "filename": "MIND_v0.4_Draft.docx",
+        "url": "https://zenodo.org/api/records/22882309/files/MIND_v0.4_Draft.docx/content",
+        "sha256": "ff71e0af8ace035582a74bd62435cf1c0c2c750a165231dce86cc821b8abc981",
+        "hash_domain": "raw_file_bytes"
+      },
+      "role": "Research framework for context-bound meaning, grounded revision, retained lineage and unresolved material.",
+      "adapter_mapping": {
+        "source_sections": ["5", "7", "8.7"],
+        "operation": "review_context_applicability",
+        "status": "REDUCED_IMPLEMENTATION_PROFILE",
+        "implements": "Separate canonical-content preservation and exact declared target-condition comparison; carry evidence references and unresolveds.",
+        "limits": ["No semantic fidelity or truth oracle", "No evidence authentication or independence test", "No optimizer, learned weights, capacity growth or validated learner"]
+      }
+    },
+    {
+      "source_id": "TIES",
+      "title": "TIES: Trace-Informed Emergence Stack",
+      "author": "Christopher D. Pang",
+      "version": "0.2",
+      "doi": "10.5281/zenodo.22883830",
+      "record_url": "https://zenodo.org/records/22883830",
+      "artifact": {
+        "filename": "TIES_v0.2_Synthesis.docx",
+        "url": "https://zenodo.org/api/records/22883830/files/TIES_v0.2_Synthesis.docx/content",
+        "sha256": "b5518061b6c25b55d7aeecefb8adca36011560c54ceed449047cd0d69aaa656c",
+        "hash_domain": "raw_file_bytes"
+      },
+      "role": "Nine-work synthesis connecting the PPPS stack, CHARTER, MIND and the three Context papers; TETHER, heartbeats and optional PEACHES remain bounded companions.",
+      "adapter_mapping": {
+        "source_sections": ["5", "7", "8", "9", "10", "11"],
+        "operations": ["review_context_applicability", "compact_context_packet", "bind_persistent_tether", "reopen_persistent_tether", "reopen_load_bearing_dependents", "pulse_persistent_heartbeat"],
+        "status": "BOUNDED_COMPOSITION_PROFILE",
+        "implements": "Composes existing source-bound carry, current-condition review, selective correction and restart reporting.",
+        "limits": ["Not a new controlling source or blanket conformance claim", "No uninterrupted model identity or hidden-state recovery", "No automatic admission, grant renewal, scheduling, training or deployment"]
+      }
+    }
+  ]
+}
