@@ -37,11 +37,21 @@ def _source_check(declared: list[Any], supplied: list[Any] | None = None) -> tup
     """Verify source identity only when actual content is supplied."""
     if not isinstance(declared, list) or supplied is not None and not isinstance(supplied, list):
         return "UNVERIFIED", ["sources_must_be_lists"]
-    supplied_by_id = {str(x.get("source_id")): x for x in (supplied or []) if isinstance(x, Mapping)}
+    supplied_by_id = {}
+    for item in supplied or []:
+        if not isinstance(item, Mapping) or not _text(item.get("source_id")):
+            return "UNVERIFIED", ["invalid_retrieved_source"]
+        if item["source_id"] in supplied_by_id:
+            return "UNVERIFIED", ["duplicate_retrieved_source:" + item["source_id"]]
+        supplied_by_id[item["source_id"]] = item
     errors = []
+    seen = set()
     for source in declared:
-        if not isinstance(source, Mapping) or not source.get("source_id") or not source.get("version") or not source.get("hash"):
+        if not isinstance(source, Mapping) or not _text(source.get("source_id")) or not source.get("version") or not source.get("hash"):
             errors.append("invalid_source_binding"); continue
+        if source["source_id"] in seen:
+            errors.append("duplicate_source_binding:" + source["source_id"])
+        seen.add(source["source_id"])
         actual = supplied_by_id.get(str(source["source_id"]))
         if actual is None:
             errors.append("source_not_retrieved:" + str(source["source_id"])); continue
@@ -91,6 +101,14 @@ class ContinuityEngine:
         return {"kind": "tether", "status": "BOUND", "tether": binds[-1], "history": events, "reopenable": True, "authority_renewal": "NONE"}
 
     def reopen_tether(self, request: Mapping[str, Any]) -> dict[str, Any]:
+        # A TETHER explicitly upgraded with a work checkpoint must use that
+        # checkpoint's current predicates. The legacy route cannot skip them.
+        checkpoints = [r for r in self.store.read()["records"] if r.get("kind") == "work.checkpoint"
+                       and r.get("tether_id") == request.get("tether_id")]
+        if checkpoints:
+            return {"kind": "tether.reopen", "status": "CHECKPOINT_REVIEW_REQUIRED",
+                    "checkpoint_id": checkpoints[-1]["id"], "route": "reopen_work_checkpoint",
+                    "authority_renewal": "NONE", "reopened": False}
         current = self.read_tether(str(request.get("tether_id", "")))
         if current["status"] != "BOUND":
             return {"kind": "tether.reopen", "status": "MISSING", "authority_renewal": "NONE"}

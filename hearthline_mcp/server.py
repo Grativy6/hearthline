@@ -19,6 +19,7 @@ from .context import orient, source_status, transport_capsule
 from .applicability import context_sources, review_applicability
 from .store import ScopedStore
 from .continuity import ContinuityEngine
+from .checkpoints import CheckpointEngine
 from .science_math import TOOLS as MATH_TOOLS, TOOL_DESCRIPTIONS
 from .software import TOOLS as SOFTWARE_TOOLS, TOOL_DESCRIPTIONS as SOFTWARE_TOOL_DESCRIPTIONS, SoftwareEngine, fbt_operation
 
@@ -45,6 +46,7 @@ def create_server(*, profile: str = "public", store_root: str | Path | None = No
     mcp = FastMCP(f"hearthline-toolkit-{profile}", instructions=FOUNDING_ORIENTATION)
     store = ScopedStore(store_root, store_namespace, adapter=f"hearthline:{profile}", user=user)
     continuity = ContinuityEngine(store)
+    checkpoints = CheckpointEngine(store)
     software = SoftwareEngine(store, mode="TRACE_ONLY", operator_id=f"hearthline:{user}")
 
     def _tool(*, group: str, **kwargs: Any):
@@ -160,6 +162,21 @@ def create_server(*, profile: str = "public", store_root: str | Path | None = No
     @_tool(group="continuity", annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=False, idempotentHint=False))
     def reopen_persistent_tether(request: dict[str, Any]) -> dict[str, Any]: return continuity.reopen_tether(request)
 
+    @_tool(group="continuity", annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=False, idempotentHint=True))
+    def freeze_work_checkpoint(request: dict[str, Any]) -> dict[str, Any]:
+        """Freeze explicit work and PAL 2.4 requirements under an existing TETHER; no grant is created."""
+        return checkpoints.freeze(request)
+
+    @_tool(group="continuity", annotations=ToolAnnotations(readOnlyHint=True, destructiveHint=False))
+    def read_work_checkpoint(checkpoint_id: str) -> dict[str, Any]:
+        """Recover supplied work without treating it as permission to resume."""
+        return checkpoints.read(checkpoint_id)
+
+    @_tool(group="continuity", annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=False, idempotentHint=False))
+    def reopen_work_checkpoint(request: dict[str, Any]) -> dict[str, Any]:
+        """Append a review of recovered work, current sources, grant and resources. Executes no task."""
+        return checkpoints.reopen(request)
+
     @_tool(group="continuity", annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=False, idempotentHint=False))
     def create_persistent_heartbeat(request: dict[str, Any]) -> dict[str, Any]: return continuity.create_heartbeat(request)
 
@@ -195,7 +212,7 @@ def create_server(*, profile: str = "public", store_root: str | Path | None = No
     try:
         from seedpea_foundation.mcp_tools import register_foundation
     except ImportError as exc:
-        raise RuntimeError("hearthline-toolkit requires seedpea-foundation==0.1.0; install the shared foundation before starting the MCP server") from exc
+        raise RuntimeError("hearthline-toolkit requires seedpea-foundation==0.2.0; install the shared foundation before starting the MCP server") from exc
     register_foundation(mcp, include_institution=False)
     def _math_wrapper(function: Any):
         def math_tool(request: dict[str, Any]) -> dict[str, Any]:

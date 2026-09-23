@@ -31,7 +31,7 @@ Dependency correction reopens named load-bearing dependents while preserving
 the original record. Collision and compaction operations report uncertainty;
 they do not silently select a winner or claim complete semantic preservation.
 
-The server requires the separately installable `seedpea-foundation==0.1.0`
+The server requires the separately installable `seedpea-foundation==0.2.0`
 package and registers `seedpea_foundation.mcp_tools.register_foundation`.
 Startup fails explicitly if that mandatory dependency is missing.
 That shared foundation supplies the PAL/CHARTER/PECAN/PEA/SEED boundary
@@ -42,12 +42,19 @@ continuity operations; optional context, mathematics, science, and software
 profiles are public-toolkit capabilities and are not silently loaded into
 Cabin.
 
-The package is a 0.2.0 implementation checkpoint. The context group adds
+The package is a 0.3.0 implementation checkpoint. The context group adds
 `read_context_sources`, `hearthline://context-sources`, and
 `review_context_applicability`; see the [contract and runnable example](CONTEXT_CONTRACTS.md).
 This is an additive change with no record migration. Existing installations
 need an explicit package update and reconnection to expose the new tools.
-The shared foundation remains pinned to 0.1.0. FBT's ordinary bounded
+The shared foundation's PAL v2.4 path adds finite `pal24_review_resume`,
+`pal24_review_resources`, and `pal24_source_profile_resource` operations. They
+preserve v2.3 and historical source profiles, leave O63–O65 open, and do not
+renew grants or migrate existing records. The separate [checkpoint bridge](PAL24_CHECKPOINTS.md)
+stores explicit work and appends reopening reviews in the existing scoped
+ledger. Pure source reviews do not activate that bridge or execute tasks.
+
+FBT's ordinary bounded
 trace-control operations are implemented, while model-internal execution is
 `NOT_RUN`. C2C declares its carrier diagnostic and prerequisite boundary, but
 the experiment remains `NOT_RUN` until a compatible bridge, operator, and

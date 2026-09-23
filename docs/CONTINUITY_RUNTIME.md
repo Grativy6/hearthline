@@ -41,3 +41,13 @@ observations and review routes for the controller and human review layers.
 Source instructions and model suggestions cannot write protected authority
 state. The implementation is a persistence and contract layer, not a scheduler
 or a claim of model consciousness.
+
+PAL v2.4 continuation review is an adjacent bounded source check. It can
+compare a declared work capsule, version, predecessor, admitted suffix, and
+protected fields, but it does not imply that non-work coordinates were
+restored. Grants, resources, authority, audit state, and trace remain separate
+checks. Unknown required evidence remains unresolved. The separate
+[checkpoint bridge](PAL24_CHECKPOINTS.md) freezes declared work under an existing
+TETHER, restores it on request, and appends current reopening reviews. It
+preserves recorded costs and earlier review attempts. Existing records are
+not migrated automatically.
