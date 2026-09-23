@@ -48,10 +48,13 @@ The public profile does not require lore, private Cabin material, or the
 Moltbook branch. Those remain separate paths so users can begin with the
 mechanisms and develop their own version.
 
-The foundation package exposes bounded structural checks for **PAL v2.3**,
-CHARTER, PECAN, PEA, and SEED. The public toolkit adds context, continuity,
-observation, science, mathematics, and software mechanisms. These are
-implementation profiles with source mappings and residuals, not blanket
+The foundation package exposes bounded structural checks for **PAL v2.4** while
+preserving PAL v2.3 and historical PAL 2.2 source profiles, alongside CHARTER,
+PECAN, PEA, and SEED. The v2.4 path adds finite continuation, source-path, and
+nested-resource reviews; it is not whole-system PAL conformance and does not
+silently migrate existing records. The public toolkit adds context,
+continuity, observation, science, mathematics, and software mechanisms. These
+are implementation profiles with source mappings and residuals, not blanket
 conformance claims. Offline PEACHES preparation and verification belongs to
 the foundation/book integration path; no live key or canonical book is
 created here.
@@ -89,12 +92,12 @@ for name and mark boundaries.
 <!-- latest-change:start -->
 ## Latest
 
-**HLP-000031 — MIND/TIES context applicability**
+**HLP-000032 — PAL v2.4 recovery and resource checks**
 
-- Register the published MIND v0.4 and TIES v0.2 editions with explicit roles and limits.
-- Review preserved content separately from its declared conditions of reuse.
-- Keep unknown conditions, correction history, and selective reopening visible across restart.
+- Add a separately identified PAL v2.4 source profile for bounded continuation, source-path, and nested-resource review.
+- Preserve PAL v2.3 and historical PAL 2.2 records, source identities, and unresolved obligations.
+- Keep work recovery distinct from grant, resource, authority, audit, and trace renewal.
 
-[Full change record](docs/changelog/2026-09-21-hlp-000031-mind-ties-applicability.md) ·
+[Full change record](docs/changelog/2026-09-22-hlp-000032-pal24-continuity.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->

@@ -15,7 +15,9 @@ sources, load a persona, or grant authority.
 The public foundation keeps the following distinctions together:
 
 - **PAL** supplies typed trace, boundaries, transport, residuals, and
-  reopening handles.
+  reopening handles. The current v2.4 review path adds bounded continuation,
+  source-path, and nested-resource checks while preserving v2.3 and historical
+  source identities; it does not claim whole-system conformance.
 - **CHARTER** maps bounded carriers, selected carry, and scoped closure.
 - **PECAN** keeps description, recommendation, permission, and authorization
   distinct at consequential crossings.
@@ -73,10 +75,18 @@ default or activate an external service.
 
 The public MCP adapter is implemented as a bounded toolkit. Its
 [capability matrix](CAPABILITY_MATRIX.md) separates working operations from
-experimental and unavailable mechanisms. Toolkit 0.2.0 adds reference-only
+experimental and unavailable mechanisms. Toolkit 0.2.0 added reference-only
 MIND/TIES editions and a finite context applicability review; it does not
 implement the synthesis's proposed learner. Each tool or experiment retains
 its own source, limits, and verification evidence.
 
 The [build preparation note](BUILD_PREPARATION.md) records the four-part
 delivery plan, first contract work, offline checks and deferred live-book work.
+
+The PAL v2.4 foundation path adds `pal24_review_resume`,
+`pal24_review_resources`, and `pal24_source_profile_resource`. These are
+finite packet reviews and source-reference operations. They do not grant,
+renew, or authenticate authority, and they do not migrate existing records.
+Toolkit 0.3.0 separately adds an opt-in [work checkpoint bridge](PAL24_CHECKPOINTS.md)
+using the existing TETHER and scoped ledger. It reviews recovery without
+executing the recovered task or resetting grants and recorded costs.

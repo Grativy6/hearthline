@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Grativy6/seedpea-mcp-adapter
-          ref: 45eb52243770f42cebe3e0c3afe096a271b86f98
+          ref: 7381824e65d4cccb965793755e12e274804e04cb
           path: seedpea
       - uses: actions/setup-python@v5
         with:

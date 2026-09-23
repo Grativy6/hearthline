@@ -16,7 +16,7 @@ A source may occupy more than one row when different claims have different statu
 
 | Artifact | Version | Hearthline role | Public locator | In review baseline |
 |---|---:|---|---|---:|
-| PAL | 2.3 | Mechanical trace, role-typed boundaries, declared projections, transport, residuals, authority ceilings, and reopening handles | [DOI 10.5281/zenodo.22240134](https://doi.org/10.5281/zenodo.22240134) | yes |
+| PAL | 2.4 | Current source for mechanical trace, role-typed boundaries, declared projections, conditional work recovery, source paths, nested resource accounting, residuals, authority ceilings, and reopening handles | [DOI 10.5281/zenodo.22888036](https://doi.org/10.5281/zenodo.22888036) | yes |
 | PECAN | 1.0.4 | Consequential-crossing detection, canonicalization, lineage, refusal, and reopening | [DOI 10.5281/zenodo.21760884](https://doi.org/10.5281/zenodo.21760884) | yes |
 | PEA Core | 1.1.3 | Candidate ethical and authority review under a current external evaluator grant | [DOI 10.5281/zenodo.21911684](https://doi.org/10.5281/zenodo.21911684) | yes |
 | SEED | 0.3 | Optional human-facing release discipline | [DOI 10.5281/zenodo.21760893](https://doi.org/10.5281/zenodo.21760893) | yes |
@@ -26,13 +26,21 @@ A source may occupy more than one row when different claims have different statu
 
 Artifact name and version, not DOI alone, identify a source. PEA Core and PPP share a release record while retaining separate identities, schemas, roles, and authority ceilings.
 
-PAL v2.3 succeeds PAL v2.2 for new Hearthline records and leaves v2.2-era
-records under their original source identity. PECAN v1.0.4 and SEED v0.3
+PAL v2.4 is the current reference for the additive checkpoint and review
+profiles. The versioned account/receipt checker still targets PAL v2.3. This
+preserves PAL v2.3 and PAL v2.2-era records under their original source
+identity; a source successor does not rewrite historical bytes or relabel old
+receipts. The v2.4 adapter is a bounded finite review, not whole-system
+conformance. It keeps declared work recovery separate from grants, resources,
+authority, audit state, and trace, and keeps unknown required checks unknown.
+O63, O64, and O65 remain open in the published source; T73–T75 are test
+specifications rather than execution receipts. PECAN v1.0.4 and SEED v0.3
 preserve older native component manifests. PEA Core v1.1.3 and optional PPP
-v0.6 describe PAL v2.2 compatibility surfaces and therefore remain explicit
-legacy seams under this v2.3 source profile. Those interface descriptions do
-not establish that a v2.3 adapter is implemented or that the composed stack
-conforms. Historical packets keep their original manifests and must not be
+v0.6 remain explicit compatibility seams. Those interface descriptions do
+not by themselves establish an implementation or composed-stack conformance.
+The [source mapping](docs/pal24-source-map.md) and
+[checkpoint contract](docs/PAL24_CHECKPOINTS.md) name this release's bounded
+implementation. Historical packets keep their original manifests and must not be
 silently relabeled.
 
 ## Source-role ceilings
