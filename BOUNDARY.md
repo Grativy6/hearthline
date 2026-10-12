@@ -1,6 +1,6 @@
 # Public and Operational Boundary
 
-This repository publishes inspectable Hearthline instructions. It does not contain or control a live Hearthline runtime.
+This repository publishes the model-neutral Hearthline toolkit, technical contracts and scoped formal evidence. It does not control an installed runtime.
 
 ## Public side
 
@@ -8,7 +8,7 @@ Appropriate public material includes:
 
 - versioned branch instructions and their status;
 - public boundaries, acceptance criteria, and change history;
-- explicitly labeled fictional lore, character art, and visual provenance;
+- functional design contracts with explicit implementation status;
 - links to already-public canonical sources;
 - public implementation source and fabricated verification fixtures whose
   status, limits, and provenance are explicit; and
@@ -18,7 +18,7 @@ The public source map may name public artifacts, versions, roles, status, author
 
 Publication establishes what bytes were made available. It does not establish that those bytes were deployed, authorized, accepted as canon, or used for any external action.
 
-Fictional scenes and visual details may give Hearthline, Thulia, Sparks, or artifacts a narrative life. They do not report an AI system's experiences, instantiate the depicted characters or objects, or turn a story action, expression, color, heartbeat, or prop into an operational instruction or control.
+Personal lore, character art and selected private continuity belong in a separately configured environment. Previously public originals remain in Git history through the [historical reading guide](docs/HISTORY.md); this reorganization is not a secrecy guarantee. Named mechanisms remain usable without adopting a character or personal context.
 
 ## Copyright and authority
 
@@ -51,7 +51,7 @@ function must remain correct when the other is absent.
 
 ## Authority boundary
 
-Christopher D. Pang is the sole author, operator, and steward of Hearthline. Only an authenticated operator-controlled process outside the branch's write scope may adopt a version, select a mode, grant a capability, or revoke it.
+Christopher D. Pang is the author and original steward of this project. Each installation has its own operator and chosen context. Only an authenticated operator-controlled process outside that installation's agent write scope may adopt a version, select a mode, grant a capability, or revoke it.
 
 Repository events are never authorization events. In particular:
 
@@ -74,6 +74,6 @@ Supplied continuity is not experiential memory. A journal, transcript, summary, 
 
 A future runtime should consume a deliberately selected immutable release or exact digest, never a moving branch. Updating the public repository and adopting runtime instructions must remain separate, reviewable events with separate receipts.
 
-The committed `candidate_manifest.json` is a same-branch consistency envelope: it binds the policy's UTF-8, LF-normalized repository text and declared metadata present in the proposal. It does not bind a platform checkout's raw line-ending bytes. Because policy and manifest can change together, it is not an external integrity anchor, operator authentication, source-authenticity finding, semantic-conformance result, freshness guarantee, adoption record, or activation receipt. The separate operator-controlled local pin remains the exact-byte adoption prerequisite.
+The historical [`candidate_manifest.json`](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/candidate_manifest.json) is a same-branch consistency envelope for its legacy agent: it binds the policy's UTF-8, LF-normalized repository text and declared metadata present in the proposal. It does not bind a platform checkout's raw line-ending bytes. Because policy and manifest can change together, it is not an external integrity anchor, operator authentication, source-authenticity finding, semantic-conformance result, freshness guarantee, adoption record, or activation receipt. The separate operator-controlled local pin remains the exact-byte adoption prerequisite.
 
 An optional private-lineage seal may provide an additional, bounded provenance comparison if it follows [`docs/PRIVATE_LINEAGE_SEALS.md`](docs/PRIVATE_LINEAGE_SEALS.md). Such a seal remains shared-key evidence about an exact committed Git tree and its HMAC-bound declared context. It is not an adoption record, public identity proof, semantic review, or authority source.

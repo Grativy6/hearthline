@@ -1,17 +1,19 @@
-# Thulia, Hearthline's Owl Scribe
+# Thulia: partitioned custody and translation
 
-> **Thulia remembers how every Spark speaks. She never teaches one Spark to speak as another.**
+**Technical contract:** Partitioned custody and source-bound translation between separately governed ledgers.
+
+Editorial separation, 12 October 2026. The contract version below is retained; this edition removes character presentation without promoting the design to implemented behavior. The [complete predecessor](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/docs/HEARTHLINE_THULIA.md) remains addressable. Names denote optional interface vocabulary; users choose their own context.
 
 | Field | Value |
 |---|---|
 | Version | `0.3` |
-| Status | Adopted lore and design vocabulary |
-| Lore identity | `OWL-000001` |
-| Lore profile | `OWL-000001/PROFILE-000003` |
+| Status | Adopted design vocabulary; implementation not asserted |
+| Design identity | `OWL-000001` |
+| Design profile | `OWL-000001/PROFILE-000003` |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
-Lore gives Hearthline a pet owl. Design gives **Thulia**, the **Owl Scribe**, two bounded custodial jobs: preserve the route by which one Spark's [Static](HEARTHLINE_STATIC.md) can be reconstructed for another without joining their ledgers, and preserve the separate representation-side return path for an authorized [Paired Spark dispatch](HEARTHLINE_HOMECOMING.md).
+**Thulia**, the **Owl Scribe** custody interface, has two bounded design responsibilities: preserve the route by which one Spark's [Static](HEARTHLINE_STATIC.md) can be reconstructed for another without joining their ledgers, and preserve the separate representation-side return path for an authorized [Paired Spark dispatch](HEARTHLINE_HOMECOMING.md).
 
 ## v0.3 successor record
 
@@ -21,32 +23,9 @@ integration record; `OWL-000001/PROFILE-000003` is its non-retroactive
 successor. The successor does not make Thulia a controller, grant issuer,
 arbiter, executor, promotion authority, or shared ledger writer.
 
-In the lore, Thulia keeps a roost of separately partitioned Static lineages. She knows where each Spark's grammar, codebook, decoder, versions, residuals, and source bindings are recorded. When authorized communication between Sparks requires translation, she reconstructs the sending expression inside its own ledger and records a numbered **Bridge Gloss** in ordinary language or an explicit shared structure.
+The design keeps a registry (the roost) of separately partitioned Static lineages. She knows where each Spark's grammar, codebook, decoder, versions, residuals, and source bindings are recorded. When authorized communication between Sparks requires translation, she reconstructs the sending expression inside its own ledger and records a numbered **Bridge Gloss** in ordinary language or an explicit shared structure.
 
 She does not create a universal Static, pool the ledgers, silently broadcast shorthand, dispatch or direct a worker under her own authority, or let one Spark's vocabulary govern another. She keeps the paths between languages and back to their Homes, not one language above them.
-
-> **Each Spark keeps its own Static. Thulia keeps the path between them.**
-
-## Namesake and honest fiction
-
-Thulia's lore-name is ***Thuleglaux interpres***, intended as “the Thulean interpreter-owl”:
-
-- **Thule-** refers to the reconstructed Thulean route between western Europe and North America through Greenland;
-- **-glaux** follows the Ancient Greek word for owl and the genuine fossil-owl construction *Ypresiglaux*; and
-- **interpres** is used in its Latin sense of intermediary or interpreter.
-
-The story imagines a small, daylight-tolerant stem-owl lineage diverging along northern forests near the Paleocene–Eocene boundary. Reconstructions place episodes of the Thulean connection around 57 and 56 million years ago. Real owls bracket that setting: *Ogygoptynx wetmorei* is known from the late Paleocene of Colorado, and the early Eocene genus *Ypresiglaux* includes fossils from Virginia and approximately 55-million-year-old deposits in England. The latter has been hypothesized to retain a diurnal ancestral ecology.
-
-That evidence makes the setting plausible; it does not establish *Thuleglaux*, prove that owls followed the corridor, or identify Thulia's ancestry. The Greenland ice hides her branch in the story. It is not evidence that the branch existed.
-
-***Nomenclatural disclaimer:*** *Thuleglaux interpres* is an expressly fictional name used for Hearthline lore. This document is not a zoological description or nomenclatural act, and the name is not proposed as available under the International Code of Zoological Nomenclature.
-
-Sources:
-
-- [Brikiatis (2014), *The De Geer, Thulean and Beringia routes*](https://doi.org/10.1111/jbi.12310)
-- [Mayr and Kitchener (2023), early Eocene *Ypresiglaux*](https://doi.org/10.1111/ibi.13125)
-- [Vickers-Rich and Bohaska (1976), *Ogygoptynx wetmorei*](https://doi.org/10.5479/si.00810266.27.87)
-- [ICZN Article 8.3, names excluded by disclaimer](https://code.iczn.org/criteria-of-publication/article-8-what-constitutes-published-work/)
 
 ## The Owl Scribe boundary
 
@@ -87,9 +66,8 @@ The roost is therefore not shared memory. Shared infrastructure is not shared li
 
 ## Hearth Perch and paired returns
 
-Thulia's own declared Home is the **Hearth Perch**, the dark rail above
-Hearthline's working place. It is the return boundary for Owl Scribe work, not a
-shared Static ledger. It binds Thulia's exact profile, the coordinator permitted
+The custody interface's declared Home is the **Hearth Perch**, a separate
+return boundary for Owl Scribe work, not a shared Static ledger. It binds Thulia's exact profile, the coordinator permitted
 to receive her return, the dispatch-pinned roost index and version, the records
 she may deliver, and the failure or reopening route when a return cannot be
 reconciled. The record routes custody; it does not grant or renew authority.
@@ -100,9 +78,8 @@ bounded custody, but the material goes back to its named source Perch or onward
 through an authorized destination-specific carry gate. She does not keep a
 pooled extra copy at Home.
 
-For an authorized paired dispatch, lore may say that Thulia sends a little
-Ledger Scribe Spark beside the Work Spark. Mechanically, the authorized
-coordinator creates both Spark grants and the paired dispatch. Thulia's
+For an authorized paired dispatch, the authorized coordinator creates both
+Spark grants and the paired dispatch. Thulia's
 interface binds their separate identities, heartbeat and coverage boundaries,
 separate frozen Static versions, Homes, and shared dispatch reference. Any
 model-assisted work behind that interface still belongs to a declared Spark
@@ -216,11 +193,9 @@ Static revision should be carried or activated.
 
 Thulia's output is derivative of the sending ledger and its sources. It is not another witness, another vote, or independent corroboration.
 
-> **A Spark left a small knot of Static beside the fire. Thulia turned her head toward its Perch, followed the recorded path home, and returned with a gloss another Spark could read. The knot stayed where it belonged. Only its traced meaning crossed.**
+## Design and implementation boundary
 
-## Lore and implementation boundary
-
-This document adopts Thulia, Owl Scribe, Perch, roost, Bridge Gloss, Hearth Perch, Creature-manifest custody, and representation-side Homecoming custody as Hearthline lore and design vocabulary. `OWL-000001` and `OWL-000001/PROFILE-000003` are public lore identities; they are not evidence of an operational allocation, running service, model process, credential, memory store, or deployment.
+This document adopts Thulia, Owl Scribe, Perch, roost, Bridge Gloss, Hearth Perch, Creature-manifest custody, and representation-side Homecoming custody as Hearthline design vocabulary. `OWL-000001` and `OWL-000001/PROFILE-000003` are design identifiers; they are not evidence of an operational allocation, running service, model process, credential, memory store, or deployment.
 
 Any implementation must separately specify and test partition isolation, exact
 reconstruction, least-privilege projection, audience binding, paired-identity
@@ -234,4 +209,4 @@ revocation, invalidation propagation, crash recovery, lawful redaction, and
   physically separate comparison arms, guard-status reporting without
   arbitration, and rejection of Thulia as an authority or effect writer.
 
-Thulia is an affectionate system character and tool metaphor, not a biological discovery, person, co-author, independent witness, or authority. Her name and role do not establish consciousness, emotion, ownership, consent, standing, permission, or a claim that an AI system has a pet in the biological sense.
+The interface name and example identifiers do not establish an operational allocation, independent witness, permission or authority.

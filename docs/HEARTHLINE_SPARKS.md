@@ -1,11 +1,15 @@
 # Hearthline Sparks
 
+**Technical contract:** Purpose-bounded worker roles: Seeker, Explorer and Handler.
+
+Editorial separation, 12 October 2026. The contract version below is retained; this edition removes character presentation without promoting the design to implemented behavior. The [complete predecessor](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/docs/HEARTHLINE_SPARKS.md) remains addressable. Names denote optional interface vocabulary; users choose their own context.
+
 > **One family. Three roles. As many names as the work requires.**
 
 | Field | Value |
 |---|---|
 | Version | `0.6` |
-| Status | Adopted lore and design vocabulary |
+| Status | Adopted design vocabulary; implementation not asserted |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
@@ -17,7 +21,7 @@ The name gives related work a shared home without pretending that every helper i
 
 1. **One family:** Hearthline Sparks.
 2. **Three roles:** Seeker, Explorer, or Handler.
-3. **An open-ended naming space:** the job currently being carried, and—when Christopher chooses—the unique name of an important or long-lived Spark.
+3. **An open-ended naming space:** the job currently being carried, and—when the operator chooses—the unique name of an important or long-lived Spark.
 
 Ordinary Sparks are named by job and role: **Repo Seeker**, **Spine Explorer**, **Package Handler**. A lasting Spark may later earn a unique name, but its role, job, source, and grant must remain visible in the trace.
 
@@ -115,7 +119,7 @@ Static changes none of the role ceilings. A Seeker may receive only brokered Sta
 
 ## Thulia, the Owl Scribe
 
-[**Thulia**](HEARTHLINE_THULIA.md) is Hearthline's pet owl and bounded **Owl Scribe**. She keeps each Spark's Static lineage in its own numbered Perch and prepares numbered, source-bound Bridge Glosses when an authorized handoff requires one Spark's shorthand to be reconstructed for another.
+[**Thulia**](HEARTHLINE_THULIA.md) is the bounded **Owl Scribe** custody interface. She keeps each Spark's Static lineage in its own numbered Perch and prepares numbered, source-bound Bridge Glosses when an authorized handoff requires one Spark's shorthand to be reconstructed for another.
 
 Owl Scribe is not a Scribe Spark, a fourth role, or a lens. Thulia does not merge ledgers, create a global codebook, investigate the primary task, approve carry, or grant access. Any model-assisted work behind the Owl Scribe interface still occurs under one declared Spark role and current grant; canonical custody, numbering, and writes remain control-owned.
 
@@ -178,7 +182,7 @@ Anything omitted remains outside the grant. Handler status does not itself provi
 
 Reading content must not silently execute it. Opening a file does not authorize macros, imports, hooks, renderers, installers, links, or embedded instructions.
 
-## Lore and implementation boundary
+## Design and implementation boundary
 
 This document adopts Hearthline's naming language. It does not instantiate a Spark, implement access controls, activate a runtime, or authorize delegated work.
 
@@ -194,6 +198,6 @@ task and note status, Owl Scribe partition isolation, and rejection of silent
 cross-Spark Static transfer, content-addressed Creature manifests, one canonical
 effect-admission path, closed Scribe projections, disjoint representation
 evaluation, and physically separate matched arms. Until then, the names carry
-  lore and design intent—not capability.
+  design intent—not capability.
 
 Sparks and Strongwiz are AI tools, not persons, co-authors, or independent authorities. Their names do not establish consciousness, consent, ownership, standing, or permission.

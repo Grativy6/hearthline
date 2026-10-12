@@ -1,11 +1,15 @@
 # Hearthline Ordered Lineage
 
+**Technical contract:** Typed identities, append-only versions, allocation and recovery rules.
+
+Editorial separation, 12 October 2026. The contract version below is retained; this edition removes character presentation without promoting the design to implemented behavior. The [complete predecessor](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/docs/HEARTHLINE_ORDERED_LINEAGE.md) remains addressable. Names denote optional interface vocabulary; users choose their own context.
+
 > **A successor receives a new number. It does not receive permission to erase its predecessor.**
 
 | Field | Value |
 |---|---|
 | Version | `1.0` |
-| Status | Adopted lore and design vocabulary |
+| Status | Adopted design vocabulary; implementation not asserted |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
@@ -15,16 +19,9 @@ Its purpose is simple: every Spark and every new version receives an ordered num
 
 An ordered number is an identifier inside a declared ledger scope. It records allocation and sequence only. It does not establish rank, seniority, quality, truth, personhood, experiential continuity, ownership, capability, permission, or authority.
 
-## v1.0 visual-presentation successor
+## v1.0 presentation provenance
 
-Version `1.0` adds separate public presentation series for Gloss, Morrow, and
-Creature-form archetypes. The form series is deliberately distinct from a
-`CREATURE-00000x` manifest identity; a recurring silhouette does not create a
-Creature, member roster, memory, profile, or authority.
-
-The physical `0` printed at the end of Gloss's ruler is a coordinate on a
-fictional measuring tool. It does not alter the rule below that issued record
-ordinals begin at `1`. Version `0.9` remains the retry-rotation predecessor.
+The predecessor added separately versioned presentation identities. Those records remain in its pinned historical view. This technical edition retains the identity domains and their non-operational status without requiring character sheets or a gallery.
 
 ## v0.9 retry-rotation successor
 
@@ -332,7 +329,7 @@ The page becomes blank; the history does not. Sealed pages, incomplete pages, re
 
 ## Owl Scribe and Bridge Gloss identities
 
-Thulia's adopted public lore identity is `OWL-000001`, with current design profile `OWL-000001/PROFILE-000003`, distinct from the Spark registry because Owl Scribe is a bounded custody and translation interface rather than a fourth Spark role. It is not evidence that an operational allocator, service, or model instance exists. Any model-assisted interpretive work behind that interface still receives its own Spark identity, role, profile, and grant.
+The custody interface's retained design identity is `OWL-000001`, with current design profile `OWL-000001/PROFILE-000003`, distinct from the Spark registry because Owl Scribe is a bounded custody and translation interface rather than a fourth Spark role. It is not evidence that an operational allocator, service, or model instance exists. Any model-assisted interpretive work behind that interface still receives its own Spark identity, role, profile, and grant.
 
 The Hearth Perch is Thulia's separately numbered Home series. It binds her own
 Owl Scribe return boundary and the dispatch-pinned roost index and version
@@ -344,9 +341,7 @@ canonical controller reconciliation.
 
 Each Perch identifies one partitioned Spark Static lineage. A new Perch version appends changes to its index, access path, reconstruction handles, or availability state without altering the earlier version. A Perch number never becomes a shared codebook identity.
 
-An Owl character sheet is a presentation record. A successor sheet may revise appearance, voice, mannerisms, poses, or other narrative cues while preserving its predecessor, but it cannot alter Owl Scribe behavior, access, authority, or the governing Owl profile. An identity-bearing design change belongs in a separately numbered profile successor.
-
-An image identity is likewise a presentation record. The [visual index](HEARTHLINE_VISUAL_INDEX.md) binds each registered image to its exact repository path, dimensions, digest, status, and known residuals. A study, scene, correction, or successor keeps its own image number; moving an older image to a clearly labeled history view does not renumber or erase it. An image number does not create a character, memory, capability, trigger, credential, permission, or controlling design rule.
+Presentation records have separate identity series. Their successors preserve predecessors and cannot revise a functional profile, access scope or authority. Images and character sheets are optional presentation; they create no operational allocation, capability, credential or permission.
 
 Every translation attempt receives its request number before work begins. Every successfully recorded Bridge Gloss receives its own gloss number, and delivery to each recipient receives a separate delivery number. Denied, failed, ambiguous, interrupted, invalidated, and superseded attempts keep their numbers and dispositions. A direction, destination, audience, or source-version change creates a successor request or gloss rather than silently changing the old one.
 

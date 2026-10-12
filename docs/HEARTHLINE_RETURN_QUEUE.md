@@ -1,12 +1,16 @@
 # Hearthline Return Queue
 
+**Technical contract:** Controller-owned admission and stateless scheduling proposals with bounded overtakes.
+
+Editorial separation, 12 October 2026. The contract version below is retained; this edition removes character presentation without promoting the design to implemented behavior. The [complete predecessor](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/docs/HEARTHLINE_RETURN_QUEUE.md) remains addressable. Names denote optional interface vocabulary; users choose their own context.
+
 > **When several bounded returns reach one narrow door, give every intake
 > attempt a receipt and every accepted enqueue a place.**
 
 | Field | Value |
 |---|---|
 | Version | `0.3` |
-| Status | Adopted lore and design vocabulary |
+| Status | Adopted design vocabulary; implementation not asserted |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
@@ -389,8 +393,7 @@ path.
 
 ## Morrow: the stateless Queue Steward
 
-**Morrow** is the fictional presentation of the default deterministic Queue
-Steward profile. The profile is a stateless scheduling transform, not a Spark,
+**Morrow** names the default deterministic Queue Steward profile. The profile is a stateless scheduling transform, not a Spark,
 persistent process, memory, controller, arbiter, or owner of the returns. For
 each invocation it receives one complete frozen input and emits one Queue Order
 Proposal; then its working surface is discarded. The same profile, policy, and

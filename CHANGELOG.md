@@ -16,6 +16,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000034` | 2026-10-12 | `PUBLIC_LAB_ORGANIZATION` | Separate the public toolkit and formal work from personal portrayal; preserve originals and historical routes. | [Record](docs/changelog/2026-10-12-hlp-000034-public-lab-organization.md) |
 | `HLP-000033` | 2026-10-12 | `FORMAL_COMPANION` | Share CPX v0.6 selected formal targets, exact proof sources and scoped Lean evidence. | [Record](docs/changelog/2026-10-12-hlp-000033-cpx-formal-companion.md) |
 | `HLP-000032` | 2026-09-22 | `MCP_CONTINUITY_SUCCESSOR` | Add PAL v2.4 work recovery and resource reviews while preserving earlier profiles, current-grant checks and append-only history. | [Record](docs/changelog/2026-09-22-hlp-000032-pal24-continuity.md) |
 | `HLP-000031` | 2026-09-21 | `MCP_CONTEXT_SUCCESSOR` | Register MIND/TIES references and separate preserved content from declared receiving-context applicability across correction and restart. | [Record](docs/changelog/2026-09-21-hlp-000031-mind-ties-applicability.md) |
@@ -24,6 +25,8 @@ paths, and the next cohort begins here.
 | `HLP-000028` | 2026-09-17 | `DOCUMENTATION_SUCCESSOR` | Establish the public toolkit entrance, preserve Moltbook as an optional legacy route, and record the four-part build preparation. | [Record](docs/changelog/2026-09-17-hlp-000028-public-toolkit-entrance.md) |
 | `HLP-000027` | 2026-09-11 | `LORE_SUCCESSOR` | Introduce Ancor Auri, a fictional leprechaun who anchors on a possible game-world win and offers backward hypotheses while Hearthline tests forward. | [Record](docs/changelog/2026-09-11-hlp-000027-ancor-auri.md) |
 | `HLP-000026` | 2026-09-10 | `LORE_SUCCESSOR` | Establish the Cooperative for Auditable Provenance as Hearthline's canonical fictional common record beyond any one task, without sovereignty or operational authority. | [Record](docs/changelog/2026-09-10-hlp-000026-cooperative-for-auditable-provenance.md) |
+
+Earlier full records retain their exact bytes. Their retired relative art/story targets resolve in the [pinned original tree](https://github.com/Grativy6/hearthline/tree/f5c69b912761f29e2c82f83d1fe412fc83ec873a/docs/changelog/); see the [historical reading guide](docs/HISTORY.md).
 
 ## Archived cohorts
 

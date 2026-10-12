@@ -10,6 +10,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urlparse
 
+from public_history import read_source_bytes, read_source_text
+
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "docs" / "research-station" / "source-identities.json"
@@ -76,7 +78,7 @@ def no_duplicate_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
 
 def read_json(path: Path) -> dict[str, Any]:
     value = json.loads(
-        path.read_text(encoding="utf-8"), object_pairs_hook=no_duplicate_object
+        read_source_text(path), object_pairs_hook=no_duplicate_object
     )
     require(isinstance(value, dict), f"{path.name} root must be an object")
     return value
@@ -226,7 +228,8 @@ def main() -> None:
             "Strongwiz Git-blob identity set changed")
 
     candidate = read_json(CANDIDATE_PATH)
-    policy_bytes = AGENT_PATH.read_bytes().replace(b"\r\n", b"\n")
+    # Preserve the legacy binding check against pinned public history.
+    policy_bytes = read_source_bytes(AGENT_PATH).replace(b"\r\n", b"\n")
     policy_hash = hashlib.sha256(policy_bytes).hexdigest()
     require(candidate.get("policy_hash_domain") ==
             "utf8_lf_normalized_repository_text_sha256",
@@ -253,7 +256,7 @@ def main() -> None:
         "README.md": (ROOT / "README.md").read_text(encoding="utf-8"),
         "SOURCE_MAP.md": (ROOT / "SOURCE_MAP.md").read_text(encoding="utf-8"),
         "BOUNDARY.md": (ROOT / "BOUNDARY.md").read_text(encoding="utf-8"),
-        "hearthline_agent.md": AGENT_PATH.read_text(encoding="utf-8"),
+        "historical hearthline_agent.md": read_source_text(AGENT_PATH),
     }
     for name, text in surfaces.items():
         require("PAL v2.3" in text or "| PAL | 2.3 |" in text,

@@ -1,11 +1,15 @@
 # Hearthline Paired Sparks and Homecoming
 
+**Technical contract:** Paired dispatch, bounded heartbeat contracts and separately recorded return states.
+
+Editorial separation, 12 October 2026. The contract version below is retained; this edition removes character presentation without promoting the design to implemented behavior. The [complete predecessor](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/docs/HEARTHLINE_HOMECOMING.md) remains addressable. Names denote optional interface vocabulary; users choose their own context.
+
 > **Every bounded Spark leaves with a path home.**
 
 | Field | Value |
 |---|---|
 | Version | `0.6` |
-| Status | Adopted lore and design vocabulary |
+| Status | Adopted design vocabulary; implementation not asserted |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
@@ -506,7 +510,7 @@ projection, residual preservation, transfer performance, failure recovery,
 coverage classification, and whether `NO_LEDGER_DELTA` is emitted only after
 complete declared coverage.
 
-## Lore and implementation boundary
+## Design and implementation boundary
 
 This document adopts Home, Home Record, Paired Spark dispatch, Work Spark,
 Ledger Scribe Spark, Spark Heartbeat Contract, Pulse Receipt, open objective

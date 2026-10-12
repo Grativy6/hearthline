@@ -1,0 +1,2 @@
+# Frozen history is checked against exact Git object bytes on every platform.
+docs/changelog/*.md -text

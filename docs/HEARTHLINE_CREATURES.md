@@ -1,11 +1,15 @@
 # Hearthline Creatures
 
+**Technical contract:** Manifest-bound worker formations with separate grants, ledgers and return routes.
+
+Editorial separation, 12 October 2026. The contract version below is retained; this edition removes character presentation without promoting the design to implemented behavior. The [complete predecessor](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/docs/HEARTHLINE_CREATURES.md) remains addressable. Names denote optional interface vocabulary; users choose their own context.
+
 > **A Creature is a task-shaped bundle of bounded helpers, not one larger will.**
 
 | Field | Value |
 |---|---|
 | Version | `0.3` |
-| Status | Adopted lore and design vocabulary |
+| Status | Adopted design vocabulary; implementation not asserted |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 

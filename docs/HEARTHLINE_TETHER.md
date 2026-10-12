@@ -1,5 +1,9 @@
 # Hearthline TETHER
 
+**Technical contract:** Exact reopening handles that retain scope and unresolved work.
+
+Editorial separation, 12 October 2026. The contract version below is retained; this edition removes character presentation without promoting the design to implemented behavior. The [complete predecessor](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/docs/HEARTHLINE_TETHER.md) remains addressable. Names denote optional interface vocabulary; users choose their own context.
+
 ## Trace Externalization Through Handle-bound Exact Reopening
 
 ```yaml

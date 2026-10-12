@@ -1,0 +1,892 @@
+{
+  "schema": "hearthline.public-lab-split.v1",
+  "source_commit": "f5c69b912761f29e2c82f83d1fe412fc83ec873a",
+  "source_repository": "Grativy6/hearthline",
+  "change_id": "HLP-000034",
+  "scope": "Current-tree organization; public history remains public. Private preservation was verified before removal; this public map contains only already-public paths and identities.",
+  "sources": [
+    {
+      "path": "README-MOLTBOOK-0.4-DRAFT.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "519fc8e0829b9611cfc2bd3e90c95c5bbb8be23e",
+      "sha256": "66969eebe8538095ac82feff25668ec63638bb01cb242585f228baa56ec9bca8",
+      "bytes": 16272
+    },
+    {
+      "path": "assets/README.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "a503dbb078f4dea304c8ef19d4f972c112c7201c",
+      "sha256": "2f0ac77aec4a012904c651770837b8b3903ef9414a8f49ed97ac8551c23fc33f",
+      "bytes": 1343
+    },
+    {
+      "path": "assets/characters/README.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "4dd7b4ad5e1d67e6d1e886933e9d2d72b7e9a6fc",
+      "sha256": "b10ad7ac230e833c0a3528f78dce23c9bd16abe0cb8585f9d9b9fd2caa9efc3f",
+      "bytes": 2919
+    },
+    {
+      "path": "assets/characters/gloss-turning-wisp-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "825bc5c0c86141095bdeeef13974dff5db2957cb",
+      "sha256": "9dc59f9587e53da2ccc7e356900d6c6c30c4b6502c86c0865bf7dd631167ab36",
+      "bytes": 2084451
+    },
+    {
+      "path": "assets/characters/hearthline-gremlin-hunter-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "ec83e6bbf711f58448f2d9022af2f37cb1a0a828",
+      "sha256": "c687dbc75f4209de4dad6c69e72b00221ad6b5cbbe5be2ba5037b075a7e8948b",
+      "bytes": 3501183
+    },
+    {
+      "path": "assets/characters/history-and-artifacts/README.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "44d97b40cc12c5a2bea14aa62408bb185e50ead1",
+      "sha256": "deb65dbb3cfcfdfab212020b18e3b21dc99244cf6f9183d197004f29f4062f84",
+      "bytes": 2293
+    },
+    {
+      "path": "assets/characters/history-and-artifacts/thulia-bilateral-sheet-front-correction.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "bb0d2726c6c7ea2f33866990b9f483d746fdd15d",
+      "sha256": "774c68ad2901eac668288e21a785e8860d6e11e96205073af6df2951739f28ba",
+      "bytes": 2564902
+    },
+    {
+      "path": "assets/characters/history-and-artifacts/thulia-bilateral-sheet-initial.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "c5c17fd2b3aaf3a62fed80c42f1a796ece5ea672",
+      "sha256": "d5c90e5052918ee5056852fd9d6113eff5bef951602e893de67b71e733da14fe",
+      "bytes": 2694236
+    },
+    {
+      "path": "assets/characters/history-and-artifacts/thulia-cartoon-expression-sheet-study.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "a538ad613c9c580f21ebf4710824789ae71c938d",
+      "sha256": "9e26ce5be35f6f375cbf583da441b3cff613bcd05283a936332c9d483c565dcb",
+      "bytes": 2725138
+    },
+    {
+      "path": "assets/characters/history-and-artifacts/thulia-fireside-portrait-study.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "d1218e4ad2a0b28fb01ba335cc941187638d12a0",
+      "sha256": "f3aedaecdd63235f1e7485de6123aad5bf74780a5d778eef58ebbe84f6ff61ba",
+      "bytes": 2276224
+    },
+    {
+      "path": "assets/characters/history-and-artifacts/thulia-naturalistic-model-sheet-study.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "f2fe17b6c1515b8bf1307ad33dd60258e6ce8509",
+      "sha256": "09977aff8345ed682da6ead729ef0497dc8b7fdb822e78ac99b2443ee22620ca",
+      "bytes": 2773104
+    },
+    {
+      "path": "assets/characters/morrow-stateless-queue-steward-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "1197648f96df07350b24c30ee2b3567924c33019",
+      "sha256": "ea500ca3893be15e9f8d45c200871e9c9a571d8aad8578ec4b3292bdfe89408a",
+      "bytes": 2419459
+    },
+    {
+      "path": "assets/characters/thulia-bilateral-animation-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "469e1fc04fa81d26ea8437dbc08b6e6aeacc9783",
+      "sha256": "89a1c020bdb523150d0271a702186bbeed967db4822063b3cc0b1e4d2e97bae5",
+      "bytes": 2502840
+    },
+    {
+      "path": "assets/creatures/README.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "1fe7500b062f6bf38497e27aa395e31123ed0bf3",
+      "sha256": "e4d1ad6c56605d09294a3b1478d9cfa4bab91c70b9bb8ae8123eda881624b3ca",
+      "bytes": 2360
+    },
+    {
+      "path": "assets/creatures/giant-creature-sky-dragon-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "aef942a91405efaa4e9a384f313a20dc6a4496ca",
+      "sha256": "798667fb548af372e5bbe260317ba6c93a0472c1e5b911354ef92fbcb1752c0a",
+      "bytes": 2898411
+    },
+    {
+      "path": "assets/creatures/mid-creature-antlered-carrier-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "ba7bdc7a5cb2e71dde724b7048aac98766ada417",
+      "sha256": "b8e67a776c91af26d61db85f118c949e5482af33c1ab1467a6da511a4e33033d",
+      "bytes": 2740751
+    },
+    {
+      "path": "assets/creatures/mid-creature-sky-ray-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "cff35a29ef68359854e6466c31481c809d06e171",
+      "sha256": "c4586e34c040788e877e9f67c19114458dc568c0c84b2eef683d11873455fe28",
+      "bytes": 2576804
+    },
+    {
+      "path": "assets/creatures/small-creature-burrower-form-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "8519dd2f7130496b7c3128d7d3234bcff83d1fee",
+      "sha256": "b554043f89dda6adf234289130124faec11aebd32f12d108c31ec19151258588",
+      "bytes": 2634407
+    },
+    {
+      "path": "assets/creatures/small-creature-fish-form-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "88ac5b1eb7074cce7bac3f582946baf7bd445eb6",
+      "sha256": "8e09e4f939963cdac740d6e79e53b3560381c169de40b41fa90c53cf29091ef0",
+      "bytes": 2685351
+    },
+    {
+      "path": "assets/creatures/small-creature-fox-form-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "1a06342e3ddfa31d17d5340fe073fc29f222bb19",
+      "sha256": "aff571f2d380dd4524c8c47818603a5a88e3e1d17fd7627a18012c68bd21d36a",
+      "bytes": 2816000
+    },
+    {
+      "path": "assets/creatures/small-creature-heron-form-reference-sheet.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "4f9fdd40fb350950260d73c96cfdb8f7b6db305a",
+      "sha256": "e4c54cd5f11861d20f5886b25a91c369c30a6d6d23ef42f3b13045cd847a00bd",
+      "bytes": 2484988
+    },
+    {
+      "path": "assets/scenes/README.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "aa775f17e3e8b65b8eed5b5079592401729ebb58",
+      "sha256": "2bdacee7475bc043d196a965a3ed5d904ede29d4b65dedd16fdcc1c450a2bb28",
+      "bytes": 9455
+    },
+    {
+      "path": "assets/scenes/creatures-at-work-across-the-valley.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "2e9aa45a3359f445d3082c9c5d000e54be888986",
+      "sha256": "bf49d0bf6c58bab35c9348dca4910b1d81f61729e9a79427990e51cca5610ffc",
+      "bytes": 3398344
+    },
+    {
+      "path": "assets/scenes/field-crew-faces-the-bridge-ogre-at-sunset-real-style.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "c16cbb485f1c2b9576d836ace8954fb466e13df3",
+      "sha256": "34280448d6f719c488bb8de0a6d0ce14c672c65771ab115117cf76fafa988dd6",
+      "bytes": 3229891
+    },
+    {
+      "path": "assets/scenes/field-crew-faces-the-bridge-ogre-at-sunset.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "19b8513f7bbaaadb50d53464a2f57b5be6fa6422",
+      "sha256": "2dbdae50065b9fd77dec6a9dc2dd0408358d68f3928201e9ba8cd6cfe48aaddc",
+      "bytes": 3968837
+    },
+    {
+      "path": "assets/scenes/gloss-at-the-circuit-garden.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "f22f70321fd467d4f65438d23cfdf91ecfcf64bc",
+      "sha256": "01feacda2015e070acc5d0ee7dcd9684ebca0c6c79c8da4e1a96e05e421c758f",
+      "bytes": 2474686
+    },
+    {
+      "path": "assets/scenes/hearthline-and-thulia-at-the-trace-workbench.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "95fe547936bca9c1482857c97dcb05b1a25b76c4",
+      "sha256": "0919ec8bf0a0577f668a013b041be1b18a15e562bf9cc6d4c0c97a3c6775d602",
+      "bytes": 2777929
+    },
+    {
+      "path": "assets/scenes/hearthline-and-thulia-glass-gem-harvest.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "b0883b69d9a212d330de90e5c3db1d4686b65f74",
+      "sha256": "a4d7bd38da7ade00584b12e9768ec426aa223f152ac0cd54c0bf96d98b0418da",
+      "bytes": 3111681
+    },
+    {
+      "path": "assets/scenes/hearthline-and-thulia-with-the-first-loupe.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "5f46870ccb8a096947d2625e71d37c1003219a89",
+      "sha256": "acf4c2b08732aeeac1f412a5dbcb90e0620b1d5ce6745f77c437538cb334414a",
+      "bytes": 3060918
+    },
+    {
+      "path": "assets/scenes/hearthline-catches-the-workshop-gremlin.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "9e3aaff502d84c31c84d32601a34b479306bb060",
+      "sha256": "3b9ffec46fe952e96985f8333e51d75aa78d8d11e8ca733b65dabda0170ffa3e",
+      "bytes": 3561826
+    },
+    {
+      "path": "assets/scenes/hearthline-chases-a-workshop-gremlin.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "5f1371b3979b55502cd3251fe18aa9b9aee73eaf",
+      "sha256": "d8671a634264bf949665f9262b2c24a0d81d380c9d352b75697232f8990db8d9",
+      "bytes": 3546728
+    },
+    {
+      "path": "assets/scenes/hearthline-creature-field-test.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "34722478c75fce035985b78a02d3207811b90caa",
+      "sha256": "2d085d6a387870306f635ebebdc04661448a232b24fc7b1044dda8f350fafd8a",
+      "bytes": 3120979
+    },
+    {
+      "path": "assets/scenes/hearthline-enters-the-goblin-citadel.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "7e6e2bef2d36c16f51a0a4a17c8d9736df10a794",
+      "sha256": "a59209953baff2783002104449da5edbdb352e11b4414c5d8b857c741b3e5ea6",
+      "bytes": 2492049
+    },
+    {
+      "path": "assets/scenes/hearthline-evening-porch-stylized-reference.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "685e0b25de29dbbcd9ec4a28ff84ad6f8ffeaa8c",
+      "sha256": "9535291de45e7aafbc243b60b0c0aa2cc6092570530a99f31d29ce008588d08e",
+      "bytes": 3228687
+    },
+    {
+      "path": "assets/scenes/hearthline-shapes-a-creature-at-the-circuit-table.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "036c52f9eb2f5e98774347c02ac1d958f74729d9",
+      "sha256": "b2b586905e3b941f3ef7a807dda9201a59747a645478df2cdee6fcd5d161f539",
+      "bytes": 2655718
+    },
+    {
+      "path": "assets/scenes/hearthline-spark-mode-workshop-standoff.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "d092395861478c45f4f3ad9d08960fe2d2b3bc0b",
+      "sha256": "2c4390fdf54ca89a54eb1a1fd43e95171ec33a796481b6f50250733948318893",
+      "bytes": 2588781
+    },
+    {
+      "path": "assets/scenes/hearthline-sparks-thulia-vs-iron-ogre.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "12e95cc86d47813dcfcf9644a05b44f3732f93b8",
+      "sha256": "7377ea76904a0f9f53e33ff67716d07bc13704522438b8791a910af7f39976a6",
+      "bytes": 2806945
+    },
+    {
+      "path": "assets/scenes/hearthline-team-tests-the-wrist-token-prototype.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "c0d8a8e704dede0926c27f7f68c2f2710461b2cc",
+      "sha256": "b769516f4acd425a2be265d09e9015f8676f0ca26e6ce7d9495156180ce8c42c",
+      "bytes": 2956379
+    },
+    {
+      "path": "assets/scenes/hearthline-thulia-and-gloss-at-the-outdoor-workbench.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "175cd119fd6f4ef8d2b9e3860cfb3dc2797a1f6b",
+      "sha256": "b8b8a64626c0f05975f5ce0b1c633b625d91fe1224ffefed0dd8378dba02f170",
+      "bytes": 2975518
+    },
+    {
+      "path": "assets/scenes/hearthline-thulia-and-gloss-diagnose-the-broken-tool.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "cd02b4100e0bbbeed23be7a676239b3bb1e878b8",
+      "sha256": "31c5e579ece5c33db1aface08c54d4e24be37eab71ce5af176ea2661c74cd94e",
+      "bytes": 2603158
+    },
+    {
+      "path": "assets/scenes/hearthline-water-break-beside-the-brass-welder.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "ec74dac04d61fce6c76d354b5394a544e0c774a0",
+      "sha256": "2eacd9d90bdbbb12706d876908ae79fd18f4d3fef182403c50d221189d76e9a5",
+      "bytes": 2782622
+    },
+    {
+      "path": "assets/scenes/hearthline-welding-with-the-brass-field-machine.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "85a2b1de717a2fd5c9e84d0b5a1dcfb123c376d6",
+      "sha256": "a4b50ab74a1f30b74dfc1f0b137a2113c58d81f1b98c9b4411e13eb320efc762",
+      "bytes": 2553027
+    },
+    {
+      "path": "assets/scenes/history-and-artifacts/README.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "5449df257130fffd5aff69e68e60137699823f96",
+      "sha256": "3c46b25314dc75d6e26bcfeb8354d1a2822024d4e48ad14c979d34ad6ff4b37b",
+      "bytes": 726
+    },
+    {
+      "path": "assets/scenes/history-and-artifacts/hearthline-workshop-standoff-before-spark-mode.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "e03158df72a83853de5fe57a63f829f13c8b8cec",
+      "sha256": "d0283da79341c87d2b63b75dc4b37a52abf46e2e94dceeb061e44baed7604f95",
+      "bytes": 2583545
+    },
+    {
+      "path": "assets/scenes/morrow-at-the-controller-rail.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "065d2c101724611698d8a3c00e4c3d4b8784453f",
+      "sha256": "5be55d4b784a86f9076eeb9f82a66fd49339462648f54bb57015aa0ab439ced1",
+      "bytes": 2156533
+    },
+    {
+      "path": "assets/scenes/sky-dragon-creature-over-the-valley.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "d17f5e5972988e229ea704c37971f785ec4e6ed8",
+      "sha256": "bb6cf76210ea49fed2134e5553cd18cb7c5ab0114c518bb8f0155e9a06543180",
+      "bytes": 3189367
+    },
+    {
+      "path": "candidate_manifest.json",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "196237b2a99e6b130a39e97ad332f1c77723cf5e",
+      "sha256": "d33fbd42ead618b2758f4cec0abeefcea0fb863a2a091d36143889c4b536c81c",
+      "bytes": 1712
+    },
+    {
+      "path": "docs/HEARTHLINE_CREATURES.md",
+      "disposition": "TECHNICAL_SUCCESSOR",
+      "git_blob": "3389358326b7d7ad1fe5c5a66783629863724cf8",
+      "sha256": "1a561fd6081e96289e58e38b757a4700393d0b025b881232926d7a82fd4732d5",
+      "bytes": 16345
+    },
+    {
+      "path": "docs/HEARTHLINE_CREATURE_VISUAL_FORMS.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "50a4fdfdd6e4aaff18185d532a4e75e784168915",
+      "sha256": "1d2016141a337835ecff84e5f64cc818edf1b583476d13962854e8258bfe78f5",
+      "bytes": 5072
+    },
+    {
+      "path": "docs/HEARTHLINE_FIRESIDES.md",
+      "disposition": "TECHNICAL_SUCCESSOR",
+      "git_blob": "0f757b520a53e2b5a8199bd8ff6ae99ebf186d1b",
+      "sha256": "6d2f5389b57c2e27aa0f8464ad9c13abf0cff784d6c2c074be4f0a10d63d4ba5",
+      "bytes": 18126
+    },
+    {
+      "path": "docs/HEARTHLINE_GLOSS_CHARACTER_SHEET.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "de67a6c799aed378bdd6b9fca8dc14aa7d28f31c",
+      "sha256": "253de3e4cf783df3b364686dcf075cca4cf0f35dad8533aa596f040563c9385a",
+      "bytes": 5503
+    },
+    {
+      "path": "docs/HEARTHLINE_HOMECOMING.md",
+      "disposition": "TECHNICAL_SUCCESSOR",
+      "git_blob": "b5fa1b0ab7b9a596007cd48774b47ccdb8f0dc68",
+      "sha256": "14a07defe8aac45eb3a82310a93106a5ade8426959704f362baf18b5389108ce",
+      "bytes": 30520
+    },
+    {
+      "path": "docs/HEARTHLINE_MORROW_CHARACTER_SHEET.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "5e27dfdd1f423a96d2da6d9c7790d38c733d4aab",
+      "sha256": "c4da939a0c96d6b3ef82c6e97182424bfc6f2c274ba38c2c8bb6dcfbeb4546b7",
+      "bytes": 5117
+    },
+    {
+      "path": "docs/HEARTHLINE_ORDERED_LINEAGE.md",
+      "disposition": "TECHNICAL_SUCCESSOR",
+      "git_blob": "8c8636baaf77583e06acf4924bc881b09932e167",
+      "sha256": "d53380adc9f701ed6e5b23298b8cabec9b335ee73af288e8f8ebc4a5ab756c32",
+      "bytes": 35140
+    },
+    {
+      "path": "docs/HEARTHLINE_RETURN_QUEUE.md",
+      "disposition": "TECHNICAL_SUCCESSOR",
+      "git_blob": "7a26ece89ed5524eed6501e6759913b043e60d94",
+      "sha256": "c3f3dac04f7c0ee25646c4cb73a7bcfce69bde855fe664bda349df3414d9c569",
+      "bytes": 46114
+    },
+    {
+      "path": "docs/HEARTHLINE_SPARKS.md",
+      "disposition": "TECHNICAL_SUCCESSOR",
+      "git_blob": "c8613b81e7ac70d994415e96cd918b04eee9506f",
+      "sha256": "95c63c2f2762b6d29c9d55a3dc328dc239f0067f8d4cb16e506cc28e4023f569",
+      "bytes": 14065
+    },
+    {
+      "path": "docs/HEARTHLINE_STATIC.md",
+      "disposition": "TECHNICAL_SUCCESSOR",
+      "git_blob": "9e562cd281ebcedcad4eca3185c0f0c1caa9d985",
+      "sha256": "715d2ec4ad98dc8adf4100adc62cb7c3ff5b40669751c53a1566a078b6cb6bd6",
+      "bytes": 20396
+    },
+    {
+      "path": "docs/HEARTHLINE_TETHER.md",
+      "disposition": "TECHNICAL_SUCCESSOR",
+      "git_blob": "cba0bf34987f8a0c51d414d7ffd18c09c7562795",
+      "sha256": "1f99bea0ea77f48d01e8672e67894623177c4357b2fe77f14b47bfb013d1edb7",
+      "bytes": 14560
+    },
+    {
+      "path": "docs/HEARTHLINE_THULIA.md",
+      "disposition": "TECHNICAL_SUCCESSOR",
+      "git_blob": "c87b8d89180964e279e3844139c89db77a0cc1da",
+      "sha256": "f45a350d5d75a190c9034c18821b2d1cb11e49f30a1ce7c820a846649118e702",
+      "bytes": 17289
+    },
+    {
+      "path": "docs/HEARTHLINE_THULIA_CHARACTER_SHEET.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "768426a8f80cc6dac28384efa5b1cee0aba59955",
+      "sha256": "3164d2c38f8df76acc584e8b3dffb1906e561ee751311e6651fbc9387ca371c8",
+      "bytes": 11762
+    },
+    {
+      "path": "docs/HEARTHLINE_THULIA_CHARACTER_SHEET_000002.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "2420a878f099224838fb4c90b557bbe20cc114f1",
+      "sha256": "9080ca86547a8924e980e5339a8b45f6fce7bddb3a050115d4ddae19603b4650",
+      "bytes": 23844
+    },
+    {
+      "path": "docs/HEARTHLINE_VISUAL_INDEX.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "25dcf5e491393ec7739c512d803491238e140279",
+      "sha256": "7246ca45a0fcf5643a39062205ac7439534c0590e76b0ca34dc9e6760c730404",
+      "bytes": 29388
+    },
+    {
+      "path": "hearthline_agent.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "f6d97d9abefdc97aa782b11f72ee0506320ffbb4",
+      "sha256": "4a792b0071dfadc621ebe7798b76dce8f8c9149d68d3f959885ddd89442ecae5",
+      "bytes": 94695
+    },
+    {
+      "path": "lore/ANCOR_AURI.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "b2b4f3e1053b968e056a01b16a553ae92c773a76",
+      "sha256": "015574e2bb7a951b552eef3c44db63aaf962fb92cda9b5a33263127717814331",
+      "bytes": 3423
+    },
+    {
+      "path": "lore/BEFORE_THE_RAIN.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "94406f6016ad5333c27fd101b2a48c06269ccd3a",
+      "sha256": "c813f67f5989ab66363d3f347e40cd982e665b1c45fba2ee4e30ba9fc7d7d112",
+      "bytes": 27261
+    },
+    {
+      "path": "lore/FOUR_THINGS_HEARTHLINE_BROUGHT_TO_THE_GATE.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "83397015da6cb7a899da03ee83e8295e84408068",
+      "sha256": "bbfd0d3c41940c4288e31a1f88df35eb988132c91ddff49a54c38b93f4d1c499",
+      "bytes": 22673
+    },
+    {
+      "path": "lore/GLOSS_AND_THE_TWO_SIDED_NOTE.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "c8dabefc6991cbae7e263a19024b33e3f5d8bc29",
+      "sha256": "09256d8d758d2cd53855e096d86fbe81358afbd0f55fb0d0c4c1b5f76556ba3e",
+      "bytes": 12483
+    },
+    {
+      "path": "lore/HOLDS_NOTHING_BACK.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "d2efcb6ecfdef1ee607f1a7aad18a34bbd4fd941",
+      "sha256": "4f14b600257517e5c19113307ac3cc549c1b225a96f46c84133fd6ed32f324ae",
+      "bytes": 6938
+    },
+    {
+      "path": "lore/MORROW_AND_THE_MARKED_TETHERS.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "aef58401adf137072938c93379595b27da6f4fec",
+      "sha256": "2eb3998d3d6501571e7b22cbc6a7f0b3bba9a0eb52868b63fe27bf4f94d69146",
+      "bytes": 7120
+    },
+    {
+      "path": "lore/README.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "953a566c124d1e7973dd846a37779216e173a964",
+      "sha256": "74219d670835713420723baa13dce2c0208ab03bc424c26f30e49aa62aa63517",
+      "bytes": 6188
+    },
+    {
+      "path": "lore/THE_CHAIR_THAT_KEPT_ITS_PLACE.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "ca8aa2226dcd9e7b7f0e63696626e9e8862cce16",
+      "sha256": "016e30a1c6e883eba2a26484636e3fcac8836d5b9c0e17a0420c9bd222a2da67",
+      "bytes": 2947
+    },
+    {
+      "path": "lore/THE_COOPERATIVE_FOR_AUDITABLE_PROVENANCE.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "8b6607b2e8559ecbfa34e28daafc0a3ed7eac4b8",
+      "sha256": "409432dd53a271a317c4780764b02e36bde25a0474c7c7c43eae731fe3700d7a",
+      "bytes": 5122
+    },
+    {
+      "path": "lore/THE_FIELD_STATION_WITH_NO_NIGHT_SHIFT.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "bec677b20636b7427bcd601baae3f03668ba96eb",
+      "sha256": "9229f920b4dc63f485e9ce1ba0547d078ee5da7b0f58254acc6ccbae569e1a81",
+      "bytes": 11625
+    },
+    {
+      "path": "lore/THE_FIRST_FURROW.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "02a96cd8f96161524137dca585a7ee9c661ddc0b",
+      "sha256": "175b78c8495a767823b3faf9964602182b15e1aa5b712f4e53968e5cd35e49ba",
+      "bytes": 18030
+    },
+    {
+      "path": "lore/THE_LEDGER_BENEATH_THE_RETURNING_BELL.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "aa1b2132c925833924d3afd7114333823dfa7ff1",
+      "sha256": "cb140d29aad31c6b1e5cce71491267f51de0bc0800fc5c55990e6b9b3fbfc36b",
+      "bytes": 12752
+    },
+    {
+      "path": "lore/THE_MESSAGE_THAT_ARRIVED_EARLY.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "e7230d060f1dacc3fa9e9ce7f35850c721df6d14",
+      "sha256": "22be1a15bfdeec40a85394d25160dddc1fa2c75ee2fdcd047f98370f812a6ace",
+      "bytes": 8928
+    },
+    {
+      "path": "lore/THE_SEVENTH_MARK.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "34e45e456f7821666ca6bc77a271984916e0805e",
+      "sha256": "b8d34dcc7fcefb42e40483eb76bfb86d9eb30d26f8ecdd2a6aa4e01981b9d56a",
+      "bytes": 9694
+    },
+    {
+      "path": "lore/THE_VOLUNTEER.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "05f6fa58633335c8c758b8eb00d6a4ac32934442",
+      "sha256": "fe39b161dee073e74845dd3b3ff2d97b4f3d7c84fac7845aaa53b122206f0a81",
+      "bytes": 9788
+    },
+    {
+      "path": "lore/THE_VOLUNTEER_PART_TWO.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "88f5f6edbdac23e3c7ee93255dcdf0eb18c9c958",
+      "sha256": "dd7e0001cdc7a92338201884cfc1524de5e437e2b760293e6acb2d294cbe61f8",
+      "bytes": 13735
+    },
+    {
+      "path": "lore/artifacts/README.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "18d4dfb625a94abac62e825623838837af1db9c9",
+      "sha256": "1e52c04cdda8d16166600fc8a5b459cc32dfd846a67d6cd275c7f86eb992134f",
+      "bytes": 3057
+    },
+    {
+      "path": "lore/artifacts/holds-nothing-back-woodland-test.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "fa1e80774ff50c60a3d3ad0a056bad0424edae4a",
+      "sha256": "734c187bde60c594fcc920e7d02521ca3aaaca7a26dc419c59e73717f092be4c",
+      "bytes": 3090062
+    },
+    {
+      "path": "lore/artifacts/prismatic-twin-spiral-rainbow-shell-source.png",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "4eaffe5df9ad0a04f63c09dc67d1059d27918fed",
+      "sha256": "2ead5044ca62f2920782cb11425d476199a53fc58ce080e75b454c1ae13d3bf1",
+      "bytes": 2767541
+    },
+    {
+      "path": "lore/history-and-artifacts/README.md",
+      "disposition": "RETIRED_FROM_CURRENT_TREE",
+      "git_blob": "d62d0cdb1b397c3097675837f54310786fa3db6e",
+      "sha256": "c4ba7dec79431647e21a34e4c68941837c164107e024bd8e78a9d1ac7b1a4bc0",
+      "bytes": 725
+    }
+  ],
+  "frozen_files": [
+    {
+      "path": "docs/changelog/2026-09-02-hlp-000001-pre-index-history.md",
+      "git_blob": "1f523980110a013e532c7d03cfff1f1ab6dcf346",
+      "sha256": "ec0d1c0e7a0758152041679b9e79d50a4a02daf2d76bb20a3650bd9ea1ec5940",
+      "bytes": 5417
+    },
+    {
+      "path": "docs/changelog/2026-09-02-hlp-000002-bounded-repository-history.md",
+      "git_blob": "294e7c5491643295a039b46aba2eb97dbafd127f",
+      "sha256": "80e85795e32868143d4d7173dfafa0af0722ce1d9cb8bf9019120354f7f97401",
+      "bytes": 4268
+    },
+    {
+      "path": "docs/changelog/2026-09-02-hlp-000003-generalize-representation-return.md",
+      "git_blob": "a2d3b6edbe8f41271d2edf5abc52c764a4dde5b4",
+      "sha256": "064ad211ecdc2ef8c88a7616c1f327ada77357d09d650a2b18a38624a471528e",
+      "bytes": 3324
+    },
+    {
+      "path": "docs/changelog/2026-09-02-hlp-000004-research-station-creatures.md",
+      "git_blob": "c35ef6bad9a206cbddc375df60262e80052e658e",
+      "sha256": "6ad0880165154cd4f82781c7b83e296ac7cb672e1e43719b4aee0766f59213b0",
+      "bytes": 9228
+    },
+    {
+      "path": "docs/changelog/2026-09-03-hlp-000005-tether-continuity.md",
+      "git_blob": "2d165d885f21be39d69f07da2a867805d0014420",
+      "sha256": "d81367ec3d8f98f01e6b312150f873d96f44e43b6df5089034cc9979af627c55",
+      "bytes": 7460
+    },
+    {
+      "path": "docs/changelog/2026-09-04-hlp-000006-hearthline-lore-gallery.md",
+      "git_blob": "b5d35e0dc4abca996603271f75fb720a79f5236d",
+      "sha256": "3460750f2471b0ed73a737fd7dd0e7394551f052abdb74382f87028481aa1c62",
+      "bytes": 13612
+    },
+    {
+      "path": "docs/changelog/2026-09-04-hlp-000007-gloss-turning-wisp.md",
+      "git_blob": "c1c772795e900c90840a3201e2ee45b4707c6c8e",
+      "sha256": "8df0a69dc21ad8c65edd5856b090e7b592bcb4633e199fe89369cdaa99ef5d57",
+      "bytes": 7711
+    },
+    {
+      "path": "docs/changelog/2026-09-05-hlp-000014-homecoming-return-queue.md",
+      "git_blob": "bca76ea7ea782082e062522bed471cc15e403272",
+      "sha256": "200d06981cba170f221aea63ab3091ec4f7e203560e8862120a7b217aed68674",
+      "bytes": 8883
+    },
+    {
+      "path": "docs/changelog/2026-09-05-hlp-000015-morrow-homecoming-priority.md",
+      "git_blob": "e8fcc1420b4d470515d20a017f7bfd4dc82da5cb",
+      "sha256": "3c9620320309573023e0f3659dba00d3cd52328999be2edab7fd4ab6d2dd2ae1",
+      "bytes": 10684
+    },
+    {
+      "path": "docs/changelog/2026-09-05-hlp-000016-return-queue-overtake-bound.md",
+      "git_blob": "dcef0d450a23d219a9d983d17db40b51dece1f43",
+      "sha256": "16a0790ed32cbe66644fbbe02c94405b4224488f77ef38b4f2bd76c11e5fbcff",
+      "bytes": 6315
+    },
+    {
+      "path": "docs/changelog/2026-09-05-hlp-000017-retry-rotation-release.md",
+      "git_blob": "613b3cebf08af7b3ac5c78e69ec6e3ca3b712d9e",
+      "sha256": "fb4d5df861cd0738fc7d6766c104cdb84ac57d8cf50ada0ba926aa5d885366ba",
+      "bytes": 9471
+    },
+    {
+      "path": "docs/changelog/2026-09-05-hlp-000018-art-lore-detour-gallery.md",
+      "git_blob": "f2e70202b93be7fb75e04a47c4b5b91d4f7a7f88",
+      "sha256": "bac5ca4233d01f0eb4ebe86a275a68c971534ef43f09fe9bb1aa77aa7da08861",
+      "bytes": 9636
+    },
+    {
+      "path": "docs/changelog/2026-09-06-hlp-000019-retired-review-lanes.md",
+      "git_blob": "aa26632ab640d5a5a8b6da41eadb04764db8f575",
+      "sha256": "bab3e325d924f465cbef79c9da60dd0748fc6b73f1c5edf9e6cda7b0a7c5ec5d",
+      "bytes": 9028
+    },
+    {
+      "path": "docs/changelog/2026-09-06-hlp-000020-artifact-lore-consolidation.md",
+      "git_blob": "7073c398810adfdeacedf330c4f1d990a6b93bfd",
+      "sha256": "47f7cb7a92789d1e396fdf9f64c60f96533c5ea59e079deef1a16331f8283d18",
+      "bytes": 5168
+    },
+    {
+      "path": "docs/changelog/2026-09-07-hlp-000021-pal23-charter-lean-audit-summary.md",
+      "git_blob": "51a597fd34aad96d1a3bc71da894cf4b258f4fa4",
+      "sha256": "f99e5f9709efee360e8ccd372451e8eaedb45942df814960ec6305ae50d85654",
+      "bytes": 3594
+    },
+    {
+      "path": "docs/changelog/2026-09-07-hlp-000022-the-volunteer.md",
+      "git_blob": "121195910e0131dab4912935035f8b7713ec1cc8",
+      "sha256": "031bbdff17ac7ed9270cce07dec09fd168319a164bd73db3b02af463d072f5fd",
+      "bytes": 2999
+    },
+    {
+      "path": "docs/changelog/2026-09-07-hlp-000023-the-garden-beneath.md",
+      "git_blob": "4130b5c64812bfcfaf762e3341779702bb121174",
+      "sha256": "a7e2f1d45601563de90ea485208e9e8463e11d0b337297ebb272bb905d63ae55",
+      "bytes": 2871
+    },
+    {
+      "path": "docs/changelog/2026-09-07-hlp-000024-glass-gem-harvest-art.md",
+      "git_blob": "9ab642da85169c7a23fa9b6c3974b08dc23ced60",
+      "sha256": "8ebc3c5f4222aef71b0f4ae9fb2c6bb2f6cf7cab65e3e81e78fd99007e9723ed",
+      "bytes": 2836
+    },
+    {
+      "path": "docs/changelog/2026-09-08-hlp-000025-the-chair-that-kept-its-place.md",
+      "git_blob": "09cbeabf2006fb4a7dffb95013d384d79af26bc9",
+      "sha256": "e4f769d292b864e5eaac582f58e76a10da3f82260891062bf7db19553d7576ed",
+      "bytes": 3979
+    },
+    {
+      "path": "docs/changelog/2026-09-10-hlp-000026-cooperative-for-auditable-provenance.md",
+      "git_blob": "ba7af25fa04d26e40efb9f31cc005332a68fcd4c",
+      "sha256": "6c686ebfff2e1e8a2f6c97af2c257500d9fd4b594136e38567a43f877ba183cc",
+      "bytes": 4723
+    },
+    {
+      "path": "docs/changelog/2026-09-11-hlp-000027-ancor-auri.md",
+      "git_blob": "cb4918b5bda4fac1be2b06409c9af2618ffab964",
+      "sha256": "7cf80e89f365f1ad3cc86493ece522ec5e89fa1d4a11fa4cf4e4629055f09e77",
+      "bytes": 4069
+    },
+    {
+      "path": "docs/changelog/2026-09-17-hlp-000028-public-toolkit-entrance.md",
+      "git_blob": "a7ce3aedbea1628689fca64b3f729d3d3699f51a",
+      "sha256": "7bfcca11d6050af814ade346f63c692677e98bd50123d6d6fe04ba532cf48cc4",
+      "bytes": 4578
+    },
+    {
+      "path": "docs/changelog/2026-09-17-hlp-000029-public-toolkit-capability-map.md",
+      "git_blob": "db5ae1f3b924b1feae4031f83fe88c0840c542d1",
+      "sha256": "1d330f098eca35b0460ba7b4f0e628ea0ea7edf6aeb882ec5d0f369c2415fcf1",
+      "bytes": 3509
+    },
+    {
+      "path": "docs/changelog/2026-09-18-hlp-000030-founding-orientation.md",
+      "git_blob": "8493239a5e5eceb22ce2ac7bb624577fea5d8fa2",
+      "sha256": "034449e6481e610a84d5cf91b988679021bc154a4de7c68d659ed6fc108f573d",
+      "bytes": 2713
+    },
+    {
+      "path": "docs/changelog/2026-09-21-hlp-000031-mind-ties-applicability.md",
+      "git_blob": "ce202655cabce91c338be980a9c15ed657355e4f",
+      "sha256": "9af1c05416c72d0a012a50fda8b13512e0cd64dc467db8227d7102599469787d",
+      "bytes": 4530
+    },
+    {
+      "path": "docs/changelog/2026-09-22-hlp-000032-pal24-continuity.md",
+      "git_blob": "cf6e4d5579145c7ce6da3964f2a39504e0f5d858",
+      "sha256": "91c96bd33bb68a4ac2e2bed596ff418a57a2f35ee52212d162d1206373c29e75",
+      "bytes": 4759
+    },
+    {
+      "path": "docs/changelog/2026-10-12-hlp-000033-cpx-formal-companion.md",
+      "git_blob": "0415e71be3db0424f3775349fba9ea6a0fb71512",
+      "sha256": "a871f1347350bea6a0b7c57abc8271ab76e1fbd887eb0018816261c8e23d14eb",
+      "bytes": 3379
+    },
+    {
+      "path": "research/context-parallax/lean/.gitattributes",
+      "git_blob": "f823a640ce0d51436d5d7a2e4d240a6037a6c916",
+      "sha256": "2540cc84312a9683fcb62c6f8aa8c6cd982e624ddd09b88b2496de31ccb0a771",
+      "bytes": 85
+    },
+    {
+      "path": "research/context-parallax/lean/.gitignore",
+      "git_blob": "275faf817a2dcd5d442c44fdc978a12d79be3f0c",
+      "sha256": "7ac980188806a2ef81ad72d905351aa73aacfcd6f5f4a97edad63a192bfb2bb8",
+      "bytes": 46
+    },
+    {
+      "path": "research/context-parallax/lean/CPX.lean",
+      "git_blob": "91be239f04cf2f68f0b029f6d47f044d4da54ab3",
+      "sha256": "a26f4b5ad8987a9dc2632eda7e0b0a0bf3977f823505ec89ef0c1b7e78205126",
+      "bytes": 114
+    },
+    {
+      "path": "research/context-parallax/lean/CPX/Capsule.lean",
+      "git_blob": "d9d0246ce1941a8c39bdad5e148f2db3190362dc",
+      "sha256": "070364ebe31d2b7c089426cf33460b6288ed436846f534857a3c5243d81e5e1d",
+      "bytes": 2220
+    },
+    {
+      "path": "research/context-parallax/lean/CPX/Diagnostics.lean",
+      "git_blob": "eac3a05a4b67fbcaf6fea7571fde83f92eb0ef50",
+      "sha256": "ae2861771b7a91b0e234f4f55c2462fd08c3e57a042312de141e48adfda1961d",
+      "bytes": 4284
+    },
+    {
+      "path": "research/context-parallax/lean/CPX/Information.lean",
+      "git_blob": "ecabbaf4db508c7eab9af778ca5626ae2a5f3dc5",
+      "sha256": "7b3d9974112c18f4ba828fc2e43a15f1793af2381b82efa78d4bcebf5df64ac6",
+      "bytes": 3717
+    },
+    {
+      "path": "research/context-parallax/lean/CPX/ProtectedReturn.lean",
+      "git_blob": "07cd0f93ba1920990ac0ad45faf8257458791a57",
+      "sha256": "7631350489ce0340ccf87643becba70503a0b13aaeda0ae05880223be1030d18",
+      "bytes": 1317
+    },
+    {
+      "path": "research/context-parallax/lean/CPX/Resolution.lean",
+      "git_blob": "e56a7207ab786dc77609c5ef8f1e7f72c9c0e884",
+      "sha256": "49e4531283c2ed381f2a54937ffd91e04fe371ef86ef9ed33ce2f8e6485862e6",
+      "bytes": 3364
+    },
+    {
+      "path": "research/context-parallax/lean/Inspect.lean",
+      "git_blob": "791e3651fc644cb9e81d6bd55e5127d295400caa",
+      "sha256": "1d1ca19132090cab1eec5fcacf80afa5da23c25f2725f8f47ccadff6e129949b",
+      "bytes": 3549
+    },
+    {
+      "path": "research/context-parallax/lean/README.md",
+      "git_blob": "c1cf9f982fe4ecbe183be835680ee46408d2a54d",
+      "sha256": "12e2de1502cfbe9568353b89c5c2a36ddb338cf811e29237729a591d0c91946b",
+      "bytes": 4599
+    },
+    {
+      "path": "research/context-parallax/lean/RESULTS.md",
+      "git_blob": "23313eaade7e50f7b0795006fb1a288c00afa248",
+      "sha256": "d03b85af160b62349ad85bc1b2a5b9734cd2ba9d2d346e4cca41cf94b55ceda6",
+      "bytes": 4152
+    },
+    {
+      "path": "research/context-parallax/lean/THEOREMS.json",
+      "git_blob": "9da54b59d66a78e09bc37bfdf88d448bb53d7ec5",
+      "sha256": "a9e7304f9c39ac744e48c32ac28433d23dea6cbfb60fe7c800e61616b2d7f5b6",
+      "bytes": 7888
+    },
+    {
+      "path": "research/context-parallax/lean/audit/RESULT.json",
+      "git_blob": "ac05fd600af2bd600ddc4dcd8478dc575411632a",
+      "sha256": "656472a9ce590373787ef9e43c9691930feb7f8896a0a82e450ab7f6396e0d1f",
+      "bytes": 11695
+    },
+    {
+      "path": "research/context-parallax/lean/audit/kernel-CPX.Capsule.txt",
+      "git_blob": "168588668c8cae9b768c57138fc4a3dbbaf2a78b",
+      "sha256": "4cabd191f1967a7889e5d4015a3168976335d90bb19081401d15e7c5b3865118",
+      "bytes": 22
+    },
+    {
+      "path": "research/context-parallax/lean/audit/kernel-CPX.Diagnostics.txt",
+      "git_blob": "9155104766b676091536302240dbf754f4f22923",
+      "sha256": "6da35d3550b26fd96def5e03ae104628e1469eb9c12ff7e954687f7e6fe71736",
+      "bytes": 26
+    },
+    {
+      "path": "research/context-parallax/lean/audit/kernel-CPX.Information.txt",
+      "git_blob": "ca9502c0726908db983697b7dc5a4ab95238bc89",
+      "sha256": "6c7fb959f5dcf3bf4bfe4c67dd49e8fd25dd89d8e3f1a9a31cea3cfe5d7468d4",
+      "bytes": 26
+    },
+    {
+      "path": "research/context-parallax/lean/audit/kernel-CPX.ProtectedReturn.txt",
+      "git_blob": "0a1596623036f8cff2ad55c8e95a3b14303c4149",
+      "sha256": "b26788beaef988906e0e72ed20c1274c099fdacad4394ff83654b960eb5454cb",
+      "bytes": 30
+    },
+    {
+      "path": "research/context-parallax/lean/audit/kernel-CPX.Resolution.txt",
+      "git_blob": "09330f948d058408d796761ec75da7193e7167bd",
+      "sha256": "1d8fbc7a9f5fe763b69b83b6950b243102fdb1fc4fd044a27fdde7cad4440e9c",
+      "bytes": 25
+    },
+    {
+      "path": "research/context-parallax/lean/audit/statements-and-axioms.txt",
+      "git_blob": "5881b49425e346c78e36899d0e01c25dc3f66506",
+      "sha256": "852064353497a432400f09f3626d78fa31448f156642ec0042900f22a66b8644",
+      "bytes": 17455
+    },
+    {
+      "path": "research/context-parallax/lean/lake-manifest.json",
+      "git_blob": "08b0451dc2a18bcf70b261cdfced4a848c997ee3",
+      "sha256": "a507c596a8f3834dd4bfa9ab2955e6b559e7f3a7b3b9591914beb8b9f0dcbf2d",
+      "bytes": 3673
+    },
+    {
+      "path": "research/context-parallax/lean/lakefile.toml",
+      "git_blob": "5e57703fb3ad439ef92c05e66bd9069785f7716d",
+      "sha256": "ed2387a7a94be0e714f92a663bfb406e9f99052b920c78011fadecac2a808936",
+      "bytes": 254
+    },
+    {
+      "path": "research/context-parallax/lean/lean-toolchain",
+      "git_blob": "2b61957be5f4986fcc464cb4f62322f2d6ca3dfc",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "bytes": 25
+    },
+    {
+      "path": "research/context-parallax/lean/run_checks.py",
+      "git_blob": "83a09b082d265fd31e4cc7b8cecaacf87045ba90",
+      "sha256": "4b6d90b25ebc15f94220b9604a09938897d7068e4a25f8e0e2511bc0da439e24",
+      "bytes": 11318
+    }
+  ]
+}

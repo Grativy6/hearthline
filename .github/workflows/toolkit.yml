@@ -7,6 +7,9 @@ on:
       - "tests/**"
       - "pyproject.toml"
       - "requirements.txt"
+      - "README.md"
+      - "tools/**"
+      - "docs/history/public-lab-split.json"
       - ".github/workflows/toolkit.yml"
   pull_request:
     paths:
@@ -14,6 +17,9 @@ on:
       - "tests/**"
       - "pyproject.toml"
       - "requirements.txt"
+      - "README.md"
+      - "tools/**"
+      - "docs/history/public-lab-split.json"
       - ".github/workflows/toolkit.yml"
 
 jobs:

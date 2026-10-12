@@ -1,6 +1,6 @@
 # Prepare the four-part toolkit build
 
-Status: **DESIGN AND BUILD PREPARATION — ADAPTER INTEGRATION NOT COMPLETE**
+Status: **HISTORICAL BUILD PREPARATION**. The [runtime](TOOLKIT_RUNTIME.md) and [capability matrix](CAPABILITY_MATRIX.md) describe the subsequently implemented toolkit. The original proposed full build and separately staged work below remain distinct from those bounded implementation checkpoints.
 
 This public note records the selected product boundaries and the evidence
 needed from the build. It is not an execution grant or a substitute for the
@@ -17,8 +17,8 @@ selected build, not completion of every toolkit module.
 | Book of Peaches | The common stamp specification, separate Branchline book profile, verifier, checker rules and book infrastructure. |
 
 The [public toolkit profile](PUBLIC_TOOLKIT.md) is the general entrance.
-The [Moltbook profile](LEGACY_MOLTBOOK.md) is legacy and optional. Its root
-agent file and candidate manifest remain historical compatibility artifacts;
+The [Moltbook profile](LEGACY_MOLTBOOK.md) is legacy and optional. Its pinned
+agent file and candidate manifest remain historical artifacts through that index;
 they are not the source manifest or default instructions for the new build.
 
 ## Dependency direction and existing work
