@@ -1,0 +1,275 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "source_version": "CPX v0.6",
+  "source_sections": [
+    3,
+    9
+  ],
+  "reserved_doi": "10.5281/zenodo.23306102",
+  "declarations": [
+    {
+      "name": "CPX.Capsule.decoder_iff",
+      "claim": "CPX06-C1",
+      "role": "source-facing target",
+      "file": "CPX/Capsule.lean",
+      "line": 23,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Capsule.collision_blocks_decoder",
+      "claim": "CPX06-C1",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Capsule.lean",
+      "line": 38,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Capsule.empty_attained_decoder_exists",
+      "claim": "CPX06-C1",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Capsule.lean",
+      "line": 50,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Capsule.no_total_empty_answer_decoder",
+      "claim": "CPX06-C1",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Capsule.lean",
+      "line": 58,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.ProtectedReturn.protected_return",
+      "claim": "CPX06-C2",
+      "role": "source-facing target",
+      "file": "CPX/ProtectedReturn.lean",
+      "line": 11,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.ProtectedReturn.same_answer_different_history",
+      "claim": "CPX06-C2",
+      "role": "boundary or exact fixture",
+      "file": "CPX/ProtectedReturn.lean",
+      "line": 18,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.ProtectedReturn.factorization_is_needed",
+      "claim": "CPX06-C2",
+      "role": "boundary or exact fixture",
+      "file": "CPX/ProtectedReturn.lean",
+      "line": 24,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.ProtectedReturn.projection_preservation_is_needed",
+      "claim": "CPX06-C2",
+      "role": "boundary or exact fixture",
+      "file": "CPX/ProtectedReturn.lean",
+      "line": 30,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Information.le_maximum",
+      "claim": "CPX06-C3",
+      "role": "helper",
+      "file": "CPX/Information.lean",
+      "line": 19,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Information.maximum_le",
+      "claim": "CPX06-C3",
+      "role": "helper",
+      "file": "CPX/Information.lean",
+      "line": 26,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Information.constant_policy_inclusion",
+      "claim": "CPX06-C3",
+      "role": "helper",
+      "file": "CPX/Information.lean",
+      "line": 49,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Information.free_optional_information",
+      "claim": "CPX06-C3",
+      "role": "source-facing target",
+      "file": "CPX/Information.lean",
+      "line": 58,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Information.zero_mass_signal_contributes_zero",
+      "claim": "CPX06-C3",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Information.lean",
+      "line": 66,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Information.single_action_no_gross_gain",
+      "claim": "CPX06-C3",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Information.lean",
+      "line": 72,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Information.compulsory_cost_can_hurt",
+      "claim": "CPX06-C3",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Information.lean",
+      "line": 86,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Diagnostics.distributions_valid",
+      "claim": "CPX06-C3",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Diagnostics.lean",
+      "line": 29,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Diagnostics.equal_accuracy",
+      "claim": "CPX06-C3",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Diagnostics.lean",
+      "line": 41,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Diagnostics.symmetric_upper_bound",
+      "claim": "CPX06-C3",
+      "role": "helper",
+      "file": "CPX/Diagnostics.lean",
+      "line": 44,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Diagnostics.constant_upper_bound",
+      "claim": "CPX06-C3",
+      "role": "helper",
+      "file": "CPX/Diagnostics.lean",
+      "line": 49,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Diagnostics.symmetric_best_value",
+      "claim": "CPX06-C3",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Diagnostics.lean",
+      "line": 54,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Diagnostics.constant_best_value",
+      "claim": "CPX06-C3",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Diagnostics.lean",
+      "line": 64,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Diagnostics.blind_values",
+      "claim": "CPX06-C3",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Diagnostics.lean",
+      "line": 74,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Diagnostics.unequal_gross_values",
+      "claim": "CPX06-C3",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Diagnostics.lean",
+      "line": 96,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Resolution.empty_not_settled",
+      "claim": "CPX06-C4",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Resolution.lean",
+      "line": 15,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Resolution.empty_agreement_is_vacuous",
+      "claim": "CPX06-C4",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Resolution.lean",
+      "line": 19,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Resolution.one_query_settled_another_open",
+      "claim": "CPX06-C4",
+      "role": "source-facing target",
+      "file": "CPX/Resolution.lean",
+      "line": 23,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Resolution.same_observation",
+      "claim": "CPX06-C4",
+      "role": "helper",
+      "file": "CPX/Resolution.lean",
+      "line": 50,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Resolution.observational_tables_agree",
+      "claim": "CPX06-C4",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Resolution.lean",
+      "line": 53,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Resolution.fair_observation_table",
+      "claim": "CPX06-C4",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Resolution.lean",
+      "line": 57,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Resolution.passive_sequences_agree",
+      "claim": "CPX06-C4",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Resolution.lean",
+      "line": 63,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Resolution.different_interventions",
+      "claim": "CPX06-C4",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Resolution.lean",
+      "line": 67,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Resolution.observation_query_settled",
+      "claim": "CPX06-C4",
+      "role": "boundary or exact fixture",
+      "file": "CPX/Resolution.lean",
+      "line": 71,
+      "status": "PREPARED_NOT_RUN"
+    },
+    {
+      "name": "CPX.Resolution.intervention_query_not_settled",
+      "claim": "CPX06-C4",
+      "role": "source-facing target",
+      "file": "CPX/Resolution.lean",
+      "line": 77,
+      "status": "PREPARED_NOT_RUN"
+    }
+  ]
+}

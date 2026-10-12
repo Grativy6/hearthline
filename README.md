@@ -59,6 +59,14 @@ conformance claims. Offline PEACHES preparation and verification belongs to
 the foundation/book integration path; no live key or canonical book is
 created here.
 
+## Formal checks
+
+The [Context Parallax Lean companion](research/context-parallax/lean/README.md)
+contains 33 checked declarations in five modules, scoped to four claim families.
+Its results retain failed attempts, source-to-formal self-review limits, exact
+dependencies, and Lean kernel replay observations. This is not verification of
+the entire manuscript or its empirical hypotheses.
+
 ## Scope boundary
 
 Repository files are candidate and provenance-bearing material. A commit,
@@ -92,12 +100,12 @@ for name and mark boundaries.
 <!-- latest-change:start -->
 ## Latest
 
-**HLP-000032 — PAL v2.4 recovery and resource checks**
+**HLP-000033 - Context Parallax formal companion**
 
-- Add a separately identified PAL v2.4 source profile for bounded continuation, source-path, and nested-resource review.
-- Preserve PAL v2.3 and historical PAL 2.2 records, source identities, and unresolved obligations.
-- Keep work recovery distinct from grant, resource, authority, audit, and trace renewal.
+- Share 33 checked declarations across four scoped claim families and five Lean modules.
+- Preserve exact proof bytes, axiom reports, kernel replay observations, and failed-attempt provenance.
+- Keep the source comparison identified as self-review and the wider manuscript outside the formal result.
 
-[Full change record](docs/changelog/2026-09-22-hlp-000032-pal24-continuity.md) ·
+[Full change record](docs/changelog/2026-10-12-hlp-000033-cpx-formal-companion.md) ·
 [All public changes](CHANGELOG.md)
 <!-- latest-change:end -->
