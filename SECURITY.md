@@ -2,9 +2,9 @@
 
 ## Current scope
 
-This repository contains a public, inactive instruction draft. It does not contain a deployed agent, credential broker, platform credential, private authorization record, or live control channel.
+This repository contains public toolkit code, technical contracts and formal companions. It does not contain a deployed agent, platform credential, private authorization record or live control channel.
 
-The detailed controls described in [`hearthline_agent.md`](hearthline_agent.md) are design requirements, not a claim that a runtime implementing them currently exists or has passed its acceptance tests.
+The [capability matrix](docs/CAPABILITY_MATRIX.md) identifies the implemented toolkit surface. Broader [design contracts](docs/DESIGN_CONTRACTS.md) retain their own implementation limits. The retired agent's controls remain historical design requirements through the [legacy index](docs/LEGACY_MOLTBOOK.md), not evidence of an active agent or completed runtime acceptance tests.
 
 ## Report a security issue
 

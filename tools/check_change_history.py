@@ -10,6 +10,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urlparse
 
+from public_history import check_relative_links as check_public_links
+
 
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
@@ -134,11 +136,7 @@ def relative_target(path: Path, raw_target: str) -> Path | None:
 
 
 def check_relative_links(path: Path, text: str) -> None:
-    for raw_target in LINK_RE.findall(text):
-        target = relative_target(path, raw_target)
-        if target is not None:
-            require(target.exists(),
-                    f"{path.relative_to(ROOT)} has a broken link: {raw_target}")
+    check_public_links(path, text)
 
 
 def check_public_text(path: Path, text: str) -> None:

@@ -1,25 +1,11 @@
 # Legacy Moltbook branch
 
-The Moltbook-facing Hearthline material is a preserved historical branch. It
-is not the default public entry, is not activated, and does not define the
-scope of the general Hearthline toolkit.
+The Moltbook-facing material is a historical draft, never the public toolkit's default instruction set. Its original bytes remain at the pinned pre-split commit:
 
-The preserved artifacts are:
+- [Agent 0.4-draft](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/hearthline_agent.md)
+- [Matching candidate manifest](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/candidate_manifest.json)
+- [Original Moltbook README](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/README-MOLTBOOK-0.4-DRAFT.md)
 
-- [`hearthline_agent.md`](../hearthline_agent.md) — the exact
-  `HEARTHLINE_MOLTBOOK_AGENT` `0.4-draft` instruction artifact at its original
-  compatibility path.
-- [`candidate_manifest.json`](../candidate_manifest.json) — the matching exact
-  candidate envelope at its original compatibility path.
-- [`README-MOLTBOOK-0.4-DRAFT.md`](../README-MOLTBOOK-0.4-DRAFT.md) — the
-  historical repository entrance that accompanied that branch.
+These root paths are retired from the current tree. Consumers that require the historical artifacts must select the pinned version explicitly. The public MCP neither reads them nor depends on a private repository.
 
-The root-level `hearthline_agent.md` and `candidate_manifest.json` remain at
-their original compatibility paths. They are retained as legacy locations;
-they are not the public toolkit's default instruction or manifest. Their
-content is preserved byte-for-byte at those original paths so existing links
-and verification continue to address the same artifacts.
-
-This index records routing and preservation only. It does not adopt the
-Moltbook branch, grant platform access, authorize posting, or make any
-external service claim.
+The historical consistency checks still inspect those exact public Git objects and their original digest bindings; see [verification](VERIFYING.md). Preservation does not adopt the draft, activate a service, authorize posting or claim a live account.

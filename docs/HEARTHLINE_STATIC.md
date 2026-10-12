@@ -1,11 +1,15 @@
 # Hearthline Static
 
+**Technical contract:** Source-bound exact decoding and separately governed representation ledgers.
+
+Editorial separation, 12 October 2026. The contract version below is retained; this edition removes character presentation without promoting the design to implemented behavior. The [complete predecessor](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/docs/HEARTHLINE_STATIC.md) remains addressable. Names denote optional interface vocabulary; users choose their own context.
+
 > **A shorter signal with its path home intact.**
 
 | Field | Value |
 |---|---|
 | Version | `0.5` |
-| Status | Adopted lore and design vocabulary |
+| Status | Adopted design vocabulary; implementation not asserted |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
@@ -257,7 +261,7 @@ verification, latency, context, compute, memory, and reorientation costs.
 Representation savings remain representation savings until a matched outcome
 evaluation earns a stronger claim.
 
-## Lore and implementation boundary
+## Design and implementation boundary
 
 This document adopts Hearthline's name and intended record discipline for Static. It does not create a Static ledger, instantiate a Spark, implement a codec, create Thulia's roost, preserve any operational source, activate Hearthline, or authorize work.
 

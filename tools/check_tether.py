@@ -7,6 +7,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from public_history import read_source_bytes, read_source_text
+
 ROOT = Path(__file__).resolve().parents[1]
 AGENT = ROOT / "hearthline_agent.md"
 README = ROOT / "README.md"
@@ -20,11 +22,12 @@ def require(condition: bool, message: str) -> None:
 
 
 def main() -> None:
-    agent = AGENT.read_text(encoding="utf-8")
+    # The retired agent is historical evidence, never a runtime/default input.
+    agent = read_source_text(AGENT)
     readme = README.read_text(encoding="utf-8")
     doc = DOC.read_text(encoding="utf-8")
     doc_words = " ".join(doc.split())
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    manifest = json.loads(read_source_text(MANIFEST))
 
     require("version: 0.4-draft" in agent, "agent draft version is not 0.4")
     require("### TETHER — Trace Externalization Through Handle-bound Exact Reopening" in agent,
@@ -88,7 +91,7 @@ def main() -> None:
     require("docs/LEGACY_MOLTBOOK.md" in readme,
             "README lacks the preserved legacy Moltbook route")
 
-    normalized = AGENT.read_bytes().replace(b"\r\n", b"\n")
+    normalized = read_source_bytes(AGENT).replace(b"\r\n", b"\n")
     digest = hashlib.sha256(normalized).hexdigest()
     require(manifest.get("artifact_version") == "0.4-draft",
             "candidate manifest version is not 0.4-draft")

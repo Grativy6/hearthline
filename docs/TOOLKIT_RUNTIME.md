@@ -1,5 +1,39 @@
 # Hearthline Toolkit Runtime
 
+## Install from public source
+
+Use Python 3.11 or 3.12. Clone this repository and create a virtual environment:
+
+```sh
+git clone https://github.com/Grativy6/hearthline.git
+cd hearthline
+python -m venv .venv
+```
+
+Activate it with `.venv\Scripts\Activate.ps1` in Windows PowerShell, or
+`source .venv/bin/activate` on Linux/macOS. Install the same public dependency
+revisions used by CI, followed by this package:
+
+```sh
+python -m pip install "git+https://github.com/Grativy6/book-of-peaches.git@c91ab35dcb6b594f91d59ebe08d45cad005d2c04" "git+https://github.com/Grativy6/seedpea-mcp-adapter.git@7381824e65d4cccb965793755e12e274804e04cb#subdirectory=packages/foundation" .
+```
+
+These commands need network access. The public dependency chain requires no
+private repository, second SeedPEA server, model download or provider account.
+For later reproducibility, retain the chosen Hearthline commit alongside the
+two dependency pins.
+
+Configure an MCP client to launch the virtual environment's `hearthline-mcp`
+executable with no arguments, or its Python executable with arguments
+`-m hearthline_mcp.server`. This is a stdio MCP server, not a chat interface.
+Select a writable synthetic/test storage root for a first check using
+`HEARTHLINE_STORE_ROOT`; persistent use should select its own storage root,
+`HEARTHLINE_STORE_NAMESPACE` and `HEARTHLINE_STORE_USER`. The default profile is
+`public`; `HEARTHLINE_INCLUDE_TEMPLATE` is unset/off by default. Stored files
+are not loaded as personal model context merely because they exist.
+
+## Runtime and evidence boundaries
+
 This package is the public Hearthline mechanism layer. A fresh server provides
 the configured model host with bounded, model-neutral operations for context
 orientation and compaction, typed observations and dependencies, TETHER

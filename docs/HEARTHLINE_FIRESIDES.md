@@ -1,11 +1,15 @@
 # Hearthline Firesides
 
+**Technical contract:** Bounded consultation over committed events, with separate notes and explicit carry.
+
+Editorial separation, 12 October 2026. The contract version below is retained; this edition removes character presentation without promoting the design to implemented behavior. The [complete predecessor](https://github.com/Grativy6/hearthline/blob/f5c69b912761f29e2c82f83d1fe412fc83ec873a/docs/HEARTHLINE_FIRESIDES.md) remains addressable. Names denote optional interface vocabulary; users choose their own context.
+
 > **Hearthline carries the work. The Scribes carry questions she does not need to hold all at once.**
 
 | Field | Value |
 |---|---|
 | Version | `0.3` |
-| Status | Adopted lore and design vocabulary |
+| Status | Adopted design vocabulary; implementation not asserted |
 | Implementation | Not asserted by this document |
 | Author and steward | Christopher D. Pang |
 
@@ -106,7 +110,7 @@ Agreement among Scribes using the same trail, source lineage, model family, prom
 
 ## Thulia at the Fireside
 
-[**Thulia**](HEARTHLINE_THULIA.md), Hearthline's pet owl and Owl Scribe, may be consulted when authorized Field Notes or Embers contain Static that another participant cannot interpret directly. She resolves only the named sending ledger and version, reconstructs the selected expression there, and leaves a numbered Bridge Gloss for one declared recipient and purpose.
+[**Thulia**](HEARTHLINE_THULIA.md), the bounded Owl Scribe custody interface, may be consulted when authorized Field Notes or Embers contain Static that another participant cannot interpret directly. She resolves only the named sending ledger and version, reconstructs the selected expression there, and leaves a numbered Bridge Gloss for one declared recipient and purpose.
 
 Owl Scribe is not a fourth Spark role, a Scribe Spark, or another analytic lens. Thulia does not inspect the primary task, reconcile Scribe advice, decide whether a gloss should be carried, or write receiving-Spark Static. Her gloss remains derivative of the sending ledger and its sources.
 
@@ -192,9 +196,9 @@ Numbers are allocated before use, increase within their named series, and are ne
 
 If a coordinator cannot establish the active Static version, exact Run Trail head, ordered identity, coverage watermark, or current grant, the affected consultation or refresh fails closed. Recovery preserves gaps and predecessor records rather than rolling counters backward or reconstructing a cleaner history.
 
-## Lore and implementation boundary
+## Design and implementation boundary
 
-This document adopts Fireside, Scribe, Run Trail, Field Notes, Embers, Bridge Gloss, and tending as Hearthline lore and design vocabulary. It does not instantiate a worker, run concurrent models, implement an event stream, create Thulia's roost, create memory, allocate an operational number, activate Hearthline, or authorize a task.
+This document adopts Fireside, Scribe, Run Trail, Field Notes, Embers, Bridge Gloss, and tending as Hearthline design vocabulary. It does not instantiate a worker, run concurrent models, implement an event stream, create Thulia's roost, create memory, allocate an operational number, activate Hearthline, or authorize a task.
 
 Any implementation must separately test role projections, controller-owned
 single-writer append and allocation, committed-event filtering, idempotent
@@ -209,7 +213,3 @@ transitions, refresh barriers, activation ordering, crash recovery, privacy
 handling, and revocation.
 
 Hearthline and Scribes are AI tools and system concepts, not persons, co-authors, independent witnesses, or authorities. Their named lenses and preserved work do not establish consciousness, emotion, ownership, consent, standing, or permission.
-
-> **Hearthline opened a Fireside with three Scribe Sparks: one watched the decisions, one watched the shells, and one watched the forks. They followed the same trail through different declared lenses and left separate notes for the work ahead.**
-
-> **She closed the notes under the Static that wrote them, carried forward what she had deliberately taken up, opened a clean page under the next Static, and returned to the work.**

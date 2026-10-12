@@ -3,9 +3,9 @@
 
 from __future__ import annotations
 
-import re
 from pathlib import Path
-from urllib.parse import unquote, urlparse
+
+from public_history import check_relative_links, read_source_text
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,7 +31,6 @@ RETRY_ROTATION_CHANGE_RECORD = (
     ROOT / "docs" / "changelog" /
     "2026-09-05-hlp-000017-retry-rotation-release.md"
 )
-LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 
 
 def require(condition: bool, message: str) -> None:
@@ -49,16 +48,7 @@ def require_all(text: str, phrases: tuple[str, ...], boundary: str) -> None:
 
 
 def check_links(path: Path) -> None:
-    text = path.read_text(encoding="utf-8")
-    for raw in LINK_RE.findall(text):
-        parsed = urlparse(raw)
-        if parsed.scheme or parsed.netloc or raw.startswith("#"):
-            continue
-        target = (path.parent / unquote(parsed.path)).resolve()
-        require(target == ROOT or ROOT in target.parents,
-                f"{path.relative_to(ROOT)} link escapes repository: {raw}")
-        require(target.exists(),
-                f"{path.relative_to(ROOT)} broken link: {raw}")
+    check_relative_links(path, read_source_text(path))
 
 
 def main() -> None:
@@ -67,7 +57,8 @@ def main() -> None:
     creature = CREATURE_DOC.read_text(encoding="utf-8")
     ordered = ORDERED_DOC.read_text(encoding="utf-8")
     tether = TETHER_DOC.read_text(encoding="utf-8")
-    morrow_lore = MORROW_LORE.read_text(encoding="utf-8")
+    # The portrayal check is retained as a check of the exact historical source.
+    morrow_lore = read_source_text(MORROW_LORE)
     boundary = BOUNDARY_DOC.read_text(encoding="utf-8")
     readme = README.read_text(encoding="utf-8")
     changelog = "\n".join(
@@ -88,7 +79,7 @@ def main() -> None:
             "Return Queue heading missing")
     require("| Version | `0.3` |" in queue,
             "Return Queue version is not 0.3")
-    require("| Status | Adopted lore and design vocabulary |" in queue,
+    require("| Status | Adopted design vocabulary; implementation not asserted |" in queue,
             "Return Queue design is not marked adopted")
     require("| Implementation | Not asserted by this document |" in queue,
             "Return Queue text manufactured an implementation")
@@ -121,7 +112,7 @@ def main() -> None:
             "The controller alone carries those partitions forward unchanged",
             "Two distinct returns may both carry outcomes already established as valid wins",
             "Both remain separately attributable",
-            "**Morrow** is the fictional presentation of the default deterministic Queue Steward profile",
+            "**Morrow** names the default deterministic Queue Steward profile",
             "grant-filtered **Queue Scheduling View**",
             "Its closed allowlist contains:",
             "A return payload or self-claim cannot set priority",
@@ -494,7 +485,7 @@ def main() -> None:
         RETRY_ROTATION_CHANGE_RECORD,
     ):
         check_links(path)
-        lowered = path.read_text(encoding="utf-8").lower()
+        lowered = read_source_text(path).lower()
         for forbidden in ("c:\\users\\", "file://", "token=", "api_key"):
             require(forbidden not in lowered,
                     f"{path.relative_to(ROOT)} contains forbidden private text")

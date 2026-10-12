@@ -9,6 +9,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from public_history import read_source_bytes
+
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "docs" / "changelog" / "branch-archive.json"
@@ -288,8 +290,8 @@ def check_pr4(lane: dict[str, Any]) -> None:
         source = ROOT / source_path
         canonical = ROOT / main_path
         require(not source.exists(), f"PR #4 duplicate was copied locally: {source_path}")
-        require(canonical.is_file(), f"PR #4 canonical duplicate is missing: {main_path}")
-        data = canonical.read_bytes()
+        # Retired art is checked against its exact pinned public Git object.
+        data = read_source_bytes(canonical)
         require(git_blob_oid(data) == blob, f"PR #4 canonical blob changed: {main_path}")
         require(hashlib.sha256(data).hexdigest() == digest,
                 f"PR #4 canonical digest changed: {main_path}")
@@ -306,8 +308,7 @@ def check_pr4(lane: dict[str, Any]) -> None:
         require(SHA256_RE.fullmatch(digest) is not None,
                 f"PR #4 variant digest is invalid: {path}")
         current = ROOT / path
-        require(current.is_file(), f"current successor path is missing: {path}")
-        require(git_blob_oid(current.read_bytes()) != source_blob,
+        require(git_blob_oid(read_source_bytes(current)) != source_blob,
                 f"PR #4 variant became current without a successor record: {path}")
     require(lane["delegated_history_manifest"] is None,
             "PR #4 unexpectedly delegates history")
