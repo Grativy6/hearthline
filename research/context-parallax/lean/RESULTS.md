@@ -25,7 +25,7 @@ The initial compilation stopped at a missing library instance for an empty finit
 
 All final proof modules compiled, but the report command rejected the unsupported display option `pp.width`. That failed receipt remains a failure. The reporting correction used `format.width` and normalized universe suffixes when comparing axiom names. Statement reporting and the first kernel replays then completed against the same unchanged compiled proof objects, within the final round's original 30-minute ceiling. No fourth proof-repair round or fresh proof compilation was used.
 
-The private research shelf retains every command, exit, failed output, source snapshot and the complete source-to-formal review. The public-ready files here omit the unpublished manuscript and private filesystem paths. This local package has not been pushed or published.
+The private research shelf retains every command, exit, failed output, source snapshot and the complete source-to-formal review. The repository companion omits the unpublished manuscript and private filesystem paths. Publication does not change the frozen audit: its `LOCAL_ONLY` publication field describes the completed local execution, before this repository copy was shared.
 
 ## Limits
 

@@ -16,6 +16,7 @@ paths, and the next cohort begins here.
 
 | ID | Date | Disposition | Summary | Full record |
 |---|---|---|---|---|
+| `HLP-000033` | 2026-10-12 | `FORMAL_COMPANION` | Share CPX v0.6 selected formal targets, exact proof sources and scoped Lean evidence. | [Record](docs/changelog/2026-10-12-hlp-000033-cpx-formal-companion.md) |
 | `HLP-000032` | 2026-09-22 | `MCP_CONTINUITY_SUCCESSOR` | Add PAL v2.4 work recovery and resource reviews while preserving earlier profiles, current-grant checks and append-only history. | [Record](docs/changelog/2026-09-22-hlp-000032-pal24-continuity.md) |
 | `HLP-000031` | 2026-09-21 | `MCP_CONTEXT_SUCCESSOR` | Register MIND/TIES references and separate preserved content from declared receiving-context applicability across correction and restart. | [Record](docs/changelog/2026-09-21-hlp-000031-mind-ties-applicability.md) |
 | `HLP-000030` | 2026-09-18 | `MCP_ORIENTATION_SUCCESSOR` | Carry Love; Seed, not Feed; Honest in MCP initialization instructions while preserving model-neutral tools and authority boundaries. | [Record](docs/changelog/2026-09-18-hlp-000030-founding-orientation.md) |

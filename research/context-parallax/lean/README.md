@@ -33,4 +33,4 @@ Kernel replay uses Lean's own checker and cached imported dependencies. It is no
 
 The model pilot, framing benefit, broader language-sustainability hypothesis, benevolence, private experience, and adequacy of a real-world model are outside these statements. Lean also cannot establish that a program's chosen utility accounts for everyone affected by it.
 
-The manuscript, private source bindings, work key and local execution history remain on the research shelf outside this repository folder. This local candidate has not been published. The reserved manuscript DOI is **10.5281/zenodo.23306102**; reservation does not imply publication.
+The manuscript, private source bindings, work key and local execution history remain on the research shelf outside this repository folder. Publication of this companion leaves the original local evidence intact: `LOCAL_ONLY` in the audit JSON describes the execution-time publication status, not a restriction on this repository copy. The reserved manuscript DOI is **10.5281/zenodo.23306102**; reservation does not imply publication.
