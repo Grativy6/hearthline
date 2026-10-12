@@ -1,0 +1,235 @@
+CPX.Capsule.decoder_iff.{u, v, w} {X : Type u} {C : Type v} {A : Type w} [Finite.{u + 1} X] (c : X → C) (a : X → A) :
+  Iff (∃ d, ∀ (x : X), @Eq.{w + 1} A (d (@CPX.Capsule.lift.{u, v} X C c x)) (a x))
+    (∀ (x y : X), @Eq.{v + 1} C (c x) (c y) → @Eq.{w + 1} A (a x) (a y))
+'CPX.Capsule.decoder_iff' depends on axioms: [Classical.choice.{u}]
+CPX.Capsule.collision_blocks_decoder :
+  Not (∃ d, ∀ (x : Bool), @Eq.{1} Bool (d (@CPX.Capsule.lift.{0, 0} Bool Unit (fun x => Unit.unit) x)) x)
+'CPX.Capsule.collision_blocks_decoder' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Capsule.empty_attained_decoder_exists :
+  ∃ d,
+    ∀ (x : Empty),
+      @Eq.{1} Empty (d (@CPX.Capsule.lift.{0, 0} Empty Unit CPX.Capsule.emptyCapsule x)) (CPX.Capsule.emptyAnswer x)
+'CPX.Capsule.empty_attained_decoder_exists' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Capsule.no_total_empty_answer_decoder : Not (Nonempty.{1} (Unit → Empty))
+'CPX.Capsule.no_total_empty_answer_decoder' does not depend on any axioms
+CPX.ProtectedReturn.protected_return.{u, v, w} {X : Type u} {C : Type v} {A : Type w} (P : X → C) (T : X → X)
+  (f : C → A) (q : X → A) (factor : ∀ (x : X), @Eq.{w + 1} A (q x) (f (P x)))
+  (preserve : ∀ (x : X), @Eq.{v + 1} C (P (T x)) (P x)) (x : X) : @Eq.{w + 1} A (q (T x)) (q x)
+'CPX.ProtectedReturn.protected_return' does not depend on any axioms
+CPX.ProtectedReturn.same_answer_different_history :
+  And
+    (@Eq.{1} Nat
+      (@Prod.fst.{0, 0} Nat Bool
+        (@Prod.mk.{0, 0} Nat Bool (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7))) Bool.false))
+      (@Prod.fst.{0, 0} Nat Bool
+        (@Prod.mk.{0, 0} Nat Bool (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7))) Bool.true)))
+    (@Ne.{1} (Prod.{0, 0} Nat Bool)
+      (@Prod.mk.{0, 0} Nat Bool (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7))) Bool.false)
+      (@Prod.mk.{0, 0} Nat Bool (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7))) Bool.true))
+'CPX.ProtectedReturn.same_answer_different_history' does not depend on any axioms
+CPX.ProtectedReturn.factorization_is_needed :
+  And (∀ (x : Bool), @Eq.{1} Unit ((fun x => Unit.unit) x.not) ((fun x => Unit.unit) x))
+    (@Ne.{1} Bool ((fun x => x) Bool.false.not) ((fun x => x) Bool.false))
+'CPX.ProtectedReturn.factorization_is_needed' does not depend on any axioms
+CPX.ProtectedReturn.projection_preservation_is_needed :
+  And (∀ (x : Bool), @Eq.{1} Bool ((fun x => x) x) ((fun x => x) ((fun x => x) x)))
+    (@Ne.{1} Bool ((fun x => x) Bool.false.not) ((fun x => x) Bool.false))
+'CPX.ProtectedReturn.projection_preservation_is_needed' does not depend on any axioms
+CPX.Information.le_maximum.{u_1} {D : Type u_1} [Fintype.{u_1} D] [Nonempty.{u_1 + 1} D] (v : D → Rat) (d : D) :
+  @LE.le.{0} Rat Rat.instLE (v d) (@CPX.Information.maximum.{u_1} D inst✝ inst✝¹ v)
+'CPX.Information.le_maximum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Information.maximum_le.{u_1} {D : Type u_1} [Fintype.{u_1} D] [Nonempty.{u_1 + 1} D] (v : D → Rat) (b : Rat)
+  (h : ∀ (d : D), @LE.le.{0} Rat Rat.instLE (v d) b) :
+  @LE.le.{0} Rat Rat.instLE (@CPX.Information.maximum.{u_1} D inst✝ inst✝¹ v) b
+'CPX.Information.maximum_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Information.constant_policy_inclusion.{u_1, u_2, u_3} {W : Type u_1} {S : Type u_2} {A : Type u_3} [Fintype.{u_1} W]
+  [Fintype.{u_2} S] [Fintype.{u_3} A] [Nonempty.{u_3 + 1} A] (mu : W → S → Rat) (utility : W → A → Rat) :
+  @LE.le.{0} Rat Rat.instLE (@CPX.Information.blind.{u_1, u_2, u_3} W S A inst✝ inst✝¹ inst✝² inst✝³ mu utility)
+    (@CPX.Information.informed.{u_1, u_2, u_3} W S A inst✝ inst✝¹ inst✝² inst✝³ mu utility)
+'CPX.Information.constant_policy_inclusion' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Information.free_optional_information.{u_1, u_2, u_3} {W : Type u_1} {S : Type u_2} {A : Type u_3} [Fintype.{u_1} W]
+  [Nonempty.{u_1 + 1} W] [Fintype.{u_2} S] [Nonempty.{u_2 + 1} S] [Fintype.{u_3} A] [Nonempty.{u_3 + 1} A]
+  (mu : W → S → Rat) (utility : W → A → Rat)
+  (_nonnegative :
+    ∀ (w : W) (s : S),
+      @LE.le.{0} Rat Rat.instLE (@OfNat.ofNat.{0} Rat (nat_lit 0) (@Rat.instOfNat (nat_lit 0))) (mu w s))
+  (_normalized : @Eq.{1} Rat (∑ w, ∑ s, mu w s) (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1)))) :
+  @LE.le.{0} Rat Rat.instLE (@CPX.Information.blind.{u_1, u_2, u_3} W S A inst✝ inst✝¹ inst✝² inst✝³ mu utility)
+    (@CPX.Information.informed.{u_1, u_2, u_3} W S A inst✝ inst✝¹ inst✝² inst✝³ mu utility)
+'CPX.Information.free_optional_information' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Information.zero_mass_signal_contributes_zero.{u_1, u_2, u_3} {W : Type u_1} {S : Type u_2} {A : Type u_3}
+  [Fintype.{u_1} W] (mu : W → S → Rat) (utility : W → A → Rat) (policy : S → A) (s : S)
+  (zeroMass : ∀ (w : W), @Eq.{1} Rat (mu w s) (@OfNat.ofNat.{0} Rat (nat_lit 0) (@Rat.instOfNat (nat_lit 0)))) :
+  @Eq.{1} Rat (∑ w, @HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul) (mu w s) (utility w (policy s)))
+    (@OfNat.ofNat.{0} Rat (nat_lit 0) (@Rat.instOfNat (nat_lit 0)))
+'CPX.Information.zero_mass_signal_contributes_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Information.single_action_no_gross_gain.{u_1, u_2, u_3} {W : Type u_1} {S : Type u_2} {A : Type u_3}
+  [Fintype.{u_1} W] [Fintype.{u_2} S] [Fintype.{u_3} A] [Nonempty.{u_3 + 1} A] [Subsingleton.{u_3 + 1} A]
+  (mu : W → S → Rat) (utility : W → A → Rat) :
+  @Eq.{1} Rat (@CPX.Information.informed.{u_1, u_2, u_3} W S A inst✝ inst✝¹ inst✝² inst✝³ mu utility)
+    (@CPX.Information.blind.{u_1, u_2, u_3} W S A inst✝ inst✝¹ inst✝² inst✝³ mu utility)
+'CPX.Information.single_action_no_gross_gain' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Information.compulsory_cost_can_hurt.{u_1, u_2, u_3} {W : Type u_1} {S : Type u_2} {A : Type u_3} [Fintype.{u_1} W]
+  [Fintype.{u_2} S] [Fintype.{u_3} A] [Nonempty.{u_3 + 1} A] [Subsingleton.{u_3 + 1} A] (mu : W → S → Rat)
+  (utility : W → A → Rat) (cost : Rat)
+  (positive : @LT.lt.{0} Rat Rat.instLT (@OfNat.ofNat.{0} Rat (nat_lit 0) (@Rat.instOfNat (nat_lit 0))) cost) :
+  @LT.lt.{0} Rat Rat.instLT
+    (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+      (@CPX.Information.informed.{u_1, u_2, u_3} W S A inst✝ inst✝¹ inst✝² inst✝³ mu utility) cost)
+    (@CPX.Information.blind.{u_1, u_2, u_3} W S A inst✝ inst✝¹ inst✝² inst✝³ mu utility)
+'CPX.Information.compulsory_cost_can_hurt' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Diagnostics.distributions_valid :
+  And
+    (∀ (w s : Bool),
+      @LE.le.{0} Rat Rat.instLE (@OfNat.ofNat.{0} Rat (nat_lit 0) (@Rat.instOfNat (nat_lit 0)))
+        (CPX.Diagnostics.symmetricMass w s))
+    (And
+      (∀ (w s : Bool),
+        @LE.le.{0} Rat Rat.instLE (@OfNat.ofNat.{0} Rat (nat_lit 0) (@Rat.instOfNat (nat_lit 0)))
+          (CPX.Diagnostics.constantMass w s))
+      (And
+        (@Eq.{1} Rat
+          (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+            (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+              (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+                (CPX.Diagnostics.symmetricMass Bool.false Bool.false)
+                (CPX.Diagnostics.symmetricMass Bool.false Bool.true))
+              (CPX.Diagnostics.symmetricMass Bool.true Bool.false))
+            (CPX.Diagnostics.symmetricMass Bool.true Bool.true))
+          (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1))))
+        (@Eq.{1} Rat
+          (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+            (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+              (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+                (CPX.Diagnostics.constantMass Bool.false Bool.false)
+                (CPX.Diagnostics.constantMass Bool.false Bool.true))
+              (CPX.Diagnostics.constantMass Bool.true Bool.false))
+            (CPX.Diagnostics.constantMass Bool.true Bool.true))
+          (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1))))))
+'CPX.Diagnostics.distributions_valid' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Diagnostics.equal_accuracy :
+  And
+    (@Eq.{1} Rat (CPX.Diagnostics.accuracy CPX.Diagnostics.symmetricMass)
+      (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+        (@OfNat.ofNat.{0} Rat (nat_lit 3) (@Rat.instOfNat (nat_lit 3)))
+        (@OfNat.ofNat.{0} Rat (nat_lit 4) (@Rat.instOfNat (nat_lit 4)))))
+    (@Eq.{1} Rat (CPX.Diagnostics.accuracy CPX.Diagnostics.constantMass)
+      (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+        (@OfNat.ofNat.{0} Rat (nat_lit 3) (@Rat.instOfNat (nat_lit 3)))
+        (@OfNat.ofNat.{0} Rat (nat_lit 4) (@Rat.instOfNat (nat_lit 4)))))
+'CPX.Diagnostics.equal_accuracy' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Diagnostics.symmetric_upper_bound (policy : Bool → Bool) :
+  @LE.le.{0} Rat Rat.instLE
+    (@CPX.Information.expected.{0, 0, 0} Bool Bool Bool Bool.fintype Bool.fintype CPX.Diagnostics.symmetricMass
+      CPX.Diagnostics.utility policy)
+    (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+      (@Neg.neg.{0} Rat Rat.instNeg (@OfNat.ofNat.{0} Rat (nat_lit 73) (@Rat.instOfNat (nat_lit 73))))
+      (@OfNat.ofNat.{0} Rat (nat_lit 80) (@Rat.instOfNat (nat_lit 80))))
+'CPX.Diagnostics.symmetric_upper_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Diagnostics.constant_upper_bound (policy : Bool → Bool) :
+  @LE.le.{0} Rat Rat.instLE
+    (@CPX.Information.expected.{0, 0, 0} Bool Bool Bool Bool.fintype Bool.fintype CPX.Diagnostics.constantMass
+      CPX.Diagnostics.utility policy)
+    (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+      (@Neg.neg.{0} Rat Rat.instNeg (@OfNat.ofNat.{0} Rat (nat_lit 11) (@Rat.instOfNat (nat_lit 11))))
+      (@OfNat.ofNat.{0} Rat (nat_lit 10) (@Rat.instOfNat (nat_lit 10))))
+'CPX.Diagnostics.constant_upper_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Diagnostics.symmetric_best_value :
+  @Eq.{1} Rat
+    (@CPX.Information.informed.{0, 0, 0} Bool Bool Bool Bool.fintype Bool.fintype Bool.fintype ⋯
+      CPX.Diagnostics.symmetricMass CPX.Diagnostics.utility)
+    (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+      (@Neg.neg.{0} Rat Rat.instNeg (@OfNat.ofNat.{0} Rat (nat_lit 73) (@Rat.instOfNat (nat_lit 73))))
+      (@OfNat.ofNat.{0} Rat (nat_lit 80) (@Rat.instOfNat (nat_lit 80))))
+'CPX.Diagnostics.symmetric_best_value' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Diagnostics.constant_best_value :
+  @Eq.{1} Rat
+    (@CPX.Information.informed.{0, 0, 0} Bool Bool Bool Bool.fintype Bool.fintype Bool.fintype ⋯
+      CPX.Diagnostics.constantMass CPX.Diagnostics.utility)
+    (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+      (@Neg.neg.{0} Rat Rat.instNeg (@OfNat.ofNat.{0} Rat (nat_lit 11) (@Rat.instOfNat (nat_lit 11))))
+      (@OfNat.ofNat.{0} Rat (nat_lit 10) (@Rat.instOfNat (nat_lit 10))))
+'CPX.Diagnostics.constant_best_value' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Diagnostics.blind_values :
+  And
+    (@Eq.{1} Rat
+      (@CPX.Information.blind.{0, 0, 0} Bool Bool Bool Bool.fintype Bool.fintype Bool.fintype ⋯
+        CPX.Diagnostics.symmetricMass CPX.Diagnostics.utility)
+      (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+        (@Neg.neg.{0} Rat Rat.instNeg (@OfNat.ofNat.{0} Rat (nat_lit 11) (@Rat.instOfNat (nat_lit 11))))
+        (@OfNat.ofNat.{0} Rat (nat_lit 10) (@Rat.instOfNat (nat_lit 10)))))
+    (@Eq.{1} Rat
+      (@CPX.Information.blind.{0, 0, 0} Bool Bool Bool Bool.fintype Bool.fintype Bool.fintype ⋯
+        CPX.Diagnostics.constantMass CPX.Diagnostics.utility)
+      (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+        (@Neg.neg.{0} Rat Rat.instNeg (@OfNat.ofNat.{0} Rat (nat_lit 11) (@Rat.instOfNat (nat_lit 11))))
+        (@OfNat.ofNat.{0} Rat (nat_lit 10) (@Rat.instOfNat (nat_lit 10)))))
+'CPX.Diagnostics.blind_values' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Diagnostics.unequal_gross_values :
+  And
+    (@Eq.{1} Rat
+      (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+        (@CPX.Information.informed.{0, 0, 0} Bool Bool Bool Bool.fintype Bool.fintype Bool.fintype ⋯
+          CPX.Diagnostics.symmetricMass CPX.Diagnostics.utility)
+        (@CPX.Information.blind.{0, 0, 0} Bool Bool Bool Bool.fintype Bool.fintype Bool.fintype ⋯
+          CPX.Diagnostics.symmetricMass CPX.Diagnostics.utility))
+      (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+        (@OfNat.ofNat.{0} Rat (nat_lit 3) (@Rat.instOfNat (nat_lit 3)))
+        (@OfNat.ofNat.{0} Rat (nat_lit 16) (@Rat.instOfNat (nat_lit 16)))))
+    (@Eq.{1} Rat
+      (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+        (@CPX.Information.informed.{0, 0, 0} Bool Bool Bool Bool.fintype Bool.fintype Bool.fintype ⋯
+          CPX.Diagnostics.constantMass CPX.Diagnostics.utility)
+        (@CPX.Information.blind.{0, 0, 0} Bool Bool Bool Bool.fintype Bool.fintype Bool.fintype ⋯
+          CPX.Diagnostics.constantMass CPX.Diagnostics.utility))
+      (@OfNat.ofNat.{0} Rat (nat_lit 0) (@Rat.instOfNat (nat_lit 0))))
+'CPX.Diagnostics.unequal_gross_values' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Resolution.empty_not_settled.{u_1, u_2} {W : Type u_1} {A : Type u_2} (query : W → A) :
+  Not
+    (@CPX.Resolution.Settled.{u_1, u_2} W A
+      (@EmptyCollection.emptyCollection.{u_1} (Set.{u_1} W) (@Set.instEmptyCollection.{u_1} W)) query)
+'CPX.Resolution.empty_not_settled' depends on axioms: [propext, Quot.sound.{u}]
+CPX.Resolution.empty_agreement_is_vacuous (w : Bool) :
+  @Membership.mem.{0, 0} Bool (Set.{0} Bool) (@Set.instMembership.{0} Bool)
+      (@EmptyCollection.emptyCollection.{0} (Set.{0} Bool) (@Set.instEmptyCollection.{0} Bool)) w →
+    @Eq.{1} Bool w Bool.false
+'CPX.Resolution.empty_agreement_is_vacuous' depends on axioms: [propext, Quot.sound.{u}]
+CPX.Resolution.one_query_settled_another_open :
+  And (@CPX.Resolution.Settled.{0, 0} Bool Unit (@Set.univ.{0} Bool) fun x => Unit.unit)
+    (Not (@CPX.Resolution.Settled.{0, 0} Bool Bool (@Set.univ.{0} Bool) fun w => w))
+'CPX.Resolution.one_query_settled_another_open' does not depend on any axioms
+CPX.Resolution.same_observation (u : Bool) :
+  @Eq.{1} (Prod.{0, 0} Bool Bool) (CPX.Resolution.observe Bool.true u) (CPX.Resolution.observe Bool.false u)
+'CPX.Resolution.same_observation' does not depend on any axioms
+CPX.Resolution.observational_tables_agree (c y : Bool) :
+  @Eq.{1} Rat (CPX.Resolution.fairJoint (CPX.Resolution.observe Bool.true) c y)
+    (CPX.Resolution.fairJoint (CPX.Resolution.observe Bool.false) c y)
+'CPX.Resolution.observational_tables_agree' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Resolution.fair_observation_table (world c y : Bool) :
+  @Eq.{1} Rat (CPX.Resolution.fairJoint (CPX.Resolution.observe world) c y)
+    (@ite.{1} Rat (@Eq.{1} Bool c y) (instDecidableEqBool c y)
+      (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+        (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1)))
+        (@OfNat.ofNat.{0} Rat (nat_lit 2) (@Rat.instOfNat (nat_lit 2))))
+      (@OfNat.ofNat.{0} Rat (nat_lit 0) (@Rat.instOfNat (nat_lit 0))))
+'CPX.Resolution.fair_observation_table' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Resolution.passive_sequences_agree (us : List.{0} Bool) :
+  @Eq.{1} (List.{0} (Prod.{0, 0} Bool Bool))
+    (@List.map.{0, 0} Bool (Prod.{0, 0} Bool Bool) (CPX.Resolution.observe Bool.true) us)
+    (@List.map.{0, 0} Bool (Prod.{0, 0} Bool Bool) (CPX.Resolution.observe Bool.false) us)
+'CPX.Resolution.passive_sequences_agree' depends on axioms: [Quot.sound.{u}]
+CPX.Resolution.different_interventions :
+  And
+    (@Eq.{1} Rat (CPX.Resolution.interventionProbability Bool.true)
+      (@OfNat.ofNat.{0} Rat (nat_lit 0) (@Rat.instOfNat (nat_lit 0))))
+    (@Eq.{1} Rat (CPX.Resolution.interventionProbability Bool.false)
+      (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+        (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1)))
+        (@OfNat.ofNat.{0} Rat (nat_lit 2) (@Rat.instOfNat (nat_lit 2)))))
+'CPX.Resolution.different_interventions' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Resolution.observation_query_settled :
+  @CPX.Resolution.Settled.{0, 0} Bool Rat (@Set.univ.{0} Bool) CPX.Resolution.agreementProbability
+'CPX.Resolution.observation_query_settled' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CPX.Resolution.intervention_query_not_settled :
+  Not (@CPX.Resolution.Settled.{0, 0} Bool Rat (@Set.univ.{0} Bool) CPX.Resolution.interventionProbability)
+'CPX.Resolution.intervention_query_not_settled' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

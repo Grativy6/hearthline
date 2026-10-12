@@ -52,18 +52,24 @@ theorem constant_upper_bound (policy : Bool → Bool) :
     norm_num [expected, Fintype.sum_bool, constantMass, utility, h0, h1]
 
 theorem symmetric_best_value : informed symmetricMass utility = -73 / 80 := by
+  letI : DecidableEq Bool := fun a b => Classical.propDecidable (a = b)
   apply le_antisymm
   · exact maximum_le _ _ symmetric_upper_bound
-  · have h := le_maximum (expected symmetricMass utility) (fun s : Bool => s)
-    norm_num [expected, Fintype.sum_bool, symmetricMass, utility] at h
-    exact h
+  · calc
+      -73 / 80 = expected symmetricMass utility (fun s : Bool => s) := by
+        norm_num [expected, Fintype.sum_bool, symmetricMass, utility]
+      _ ≤ informed symmetricMass utility :=
+        le_maximum (expected symmetricMass utility) (fun s : Bool => s)
 
 theorem constant_best_value : informed constantMass utility = -11 / 10 := by
+  letI : DecidableEq Bool := fun a b => Classical.propDecidable (a = b)
   apply le_antisymm
   · exact maximum_le _ _ constant_upper_bound
-  · have h := le_maximum (expected constantMass utility) (fun _ : Bool => false)
-    norm_num [expected, Fintype.sum_bool, constantMass, utility] at h
-    exact h
+  · calc
+      -11 / 10 = expected constantMass utility (fun _ : Bool => false) := by
+        norm_num [expected, Fintype.sum_bool, constantMass, utility]
+      _ ≤ informed constantMass utility :=
+        le_maximum (expected constantMass utility) (fun _ : Bool => false)
 
 theorem blind_values :
     blind symmetricMass utility = -11 / 10 ∧ blind constantMass utility = -11 / 10 := by
@@ -72,16 +78,20 @@ theorem blind_values :
     · apply maximum_le
       intro a
       cases a <;> norm_num [expected, Fintype.sum_bool, symmetricMass, utility]
-    · have h := le_maximum (fun a => expected symmetricMass utility (fun _ => a)) false
-      norm_num [expected, Fintype.sum_bool, symmetricMass, utility] at h
-      exact h
+    · calc
+        -11 / 10 = expected symmetricMass utility (fun _ : Bool => false) := by
+          norm_num [expected, Fintype.sum_bool, symmetricMass, utility]
+        _ ≤ blind symmetricMass utility :=
+          le_maximum (fun a => expected symmetricMass utility (fun _ => a)) false
   · apply le_antisymm
     · apply maximum_le
       intro a
       cases a <;> norm_num [expected, Fintype.sum_bool, constantMass, utility]
-    · have h := le_maximum (fun a => expected constantMass utility (fun _ => a)) false
-      norm_num [expected, Fintype.sum_bool, constantMass, utility] at h
-      exact h
+    · calc
+        -11 / 10 = expected constantMass utility (fun _ : Bool => false) := by
+          norm_num [expected, Fintype.sum_bool, constantMass, utility]
+        _ ≤ blind constantMass utility :=
+          le_maximum (fun a => expected constantMass utility (fun _ => a)) false
 
 theorem unequal_gross_values :
     informed symmetricMass utility - blind symmetricMass utility = 3 / 16 ∧

@@ -16,8 +16,8 @@ theorem protected_return {X : Type u} {C : Type v} {A : Type w}
   rw [factor (T x), preserve x, ← factor x]
 
 theorem same_answer_different_history :
-    (7, false : Nat × Bool).1 = (7, true : Nat × Bool).1 ∧
-      (7, false : Nat × Bool) ≠ (7, true : Nat × Bool) := by
+    ((7, false) : Nat × Bool).1 = ((7, true) : Nat × Bool).1 ∧
+      ((7, false) : Nat × Bool) ≠ ((7, true) : Nat × Bool) := by
   decide
 
 /-- Projection preservation alone need not preserve a query outside that projection. -/

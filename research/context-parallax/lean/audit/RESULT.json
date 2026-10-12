@@ -1,0 +1,357 @@
+{
+  "status": "PASS_SELECTED_FORMAL_TARGETS",
+  "date_local": "2026-10-11",
+  "timezone": "America/New_York",
+  "formal_completed_utc": "2026-10-12T02:59:10.625644+00:00",
+  "theorems": 33,
+  "claim_families": 4,
+  "kernel_modules": 5,
+  "manuscript_sha256": "ecc4d45107d20e7d148efeee26491f8310c897785575511fc32bd290ca8ce5dc",
+  "toolchain": "leanprover/lean4:v4.32.1",
+  "lean_version": "Lean (version 4.32.1, x86_64-w64-windows-gnu, commit f054605aea4b840552cca2e725580bffd1e1b704, Release)",
+  "dependency_revisions": {
+    "mathlib": "520045ab14e26149ee970e2e617ca04b09bde5d6",
+    "plausible": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "importGraph": "7e9612bf0b9ee66db3cb5b9988a35afc706f5a12",
+    "proofwidgets": "6e311e2a844da9b2cc3971187df2fe0066947b93",
+    "aesop": "a7dbf0c63b694e47f425f3dcddbc0e178bb432d3",
+    "Qq": "38d591e778f100aec9762bb582f9c7f55f50e9dc",
+    "batteries": "023ce7d62a0531e22a5331e20b587817a80d49ff",
+    "Cli": "88679d088c9720c27ebdf2ba4dafe17341747f94"
+  },
+  "tool_sha256": {
+    "lean": "c3f02a2b739078d1237af9feefd27ec85b943b56870234b42bc0111d6699d54d",
+    "leanchecker": "c0d4c83407947c26023f10e611e45eda1edbec358140e4217f1edda9aef35265"
+  },
+  "proof_source_sha256": {
+    "CPX/Capsule.lean": "070364ebe31d2b7c089426cf33460b6288ed436846f534857a3c5243d81e5e1d",
+    "CPX/Diagnostics.lean": "ae2861771b7a91b0e234f4f55c2462fd08c3e57a042312de141e48adfda1961d",
+    "CPX/Information.lean": "7b3d9974112c18f4ba828fc2e43a15f1793af2381b82efa78d4bcebf5df64ac6",
+    "CPX/ProtectedReturn.lean": "7631350489ce0340ccf87643becba70503a0b13aaeda0ae05880223be1030d18",
+    "CPX/Resolution.lean": "49e4531283c2ed381f2a54937ffd91e04fe371ef86ef9ed33ce2f8e6485862e6",
+    "CPX.lean": "a26f4b5ad8987a9dc2632eda7e0b0a0bf3977f823505ec89ef0c1b7e78205126"
+  },
+  "report_source_sha256": {
+    "Inspect.lean": "1d1ca19132090cab1eec5fcacf80afa5da23c25f2725f8f47ccadff6e129949b",
+    "THEOREMS.json": "a9e7304f9c39ac744e48c32ac28433d23dea6cbfb60fe7c800e61616b2d7f5b6",
+    "run_checks.py": "4b6d90b25ebc15f94220b9604a09938897d7068e4a25f8e0e2511bc0da439e24"
+  },
+  "compiled_sha256": {
+    "CPX.Capsule": "3c954b7e5866253527cdcc0957dc4744ee7ffd14fc0e45344217ab9dfd5173b7",
+    "CPX.ProtectedReturn": "fcf029c7e15c0484ea29db75cf28872d21700c8991c3185c2d101c549e4e2cdf",
+    "CPX.Information": "cf1a78f07fad75128b08089bb0ebd925c91aaf75317f9665fabe000860cb05ea",
+    "CPX.Diagnostics": "f5ca220d1f412c3938f5d82ef51e4ca0f5022411178f327216bc97e07f9134b0",
+    "CPX.Resolution": "12b89cca92c28c8c38d9a064bfd3f2862fb9c8b5025575acd1c5bc0f3bb9ef1b",
+    "CPX": "09a997aab0f8a22b8f907a2906a869253c6938d198725d1527da36b04caebc9a"
+  },
+  "axioms": {
+    "CPX.Capsule.decoder_iff": [
+      "Classical.choice"
+    ],
+    "CPX.Capsule.collision_blocks_decoder": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Capsule.empty_attained_decoder_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Capsule.no_total_empty_answer_decoder": [],
+    "CPX.ProtectedReturn.protected_return": [],
+    "CPX.ProtectedReturn.same_answer_different_history": [],
+    "CPX.ProtectedReturn.factorization_is_needed": [],
+    "CPX.ProtectedReturn.projection_preservation_is_needed": [],
+    "CPX.Information.le_maximum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Information.maximum_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Information.constant_policy_inclusion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Information.free_optional_information": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Information.zero_mass_signal_contributes_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Information.single_action_no_gross_gain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Information.compulsory_cost_can_hurt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Diagnostics.distributions_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Diagnostics.equal_accuracy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Diagnostics.symmetric_upper_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Diagnostics.constant_upper_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Diagnostics.symmetric_best_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Diagnostics.constant_best_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Diagnostics.blind_values": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Diagnostics.unequal_gross_values": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Resolution.empty_not_settled": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Resolution.empty_agreement_is_vacuous": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Resolution.one_query_settled_another_open": [],
+    "CPX.Resolution.same_observation": [],
+    "CPX.Resolution.observational_tables_agree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Resolution.fair_observation_table": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Resolution.passive_sequences_agree": [
+      "Quot.sound"
+    ],
+    "CPX.Resolution.different_interventions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Resolution.observation_query_settled": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CPX.Resolution.intervention_query_not_settled": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "raw_axioms": {
+    "CPX.Capsule.decoder_iff": [
+      "Classical.choice.{u}"
+    ],
+    "CPX.Capsule.collision_blocks_decoder": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Capsule.empty_attained_decoder_exists": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Capsule.no_total_empty_answer_decoder": [],
+    "CPX.ProtectedReturn.protected_return": [],
+    "CPX.ProtectedReturn.same_answer_different_history": [],
+    "CPX.ProtectedReturn.factorization_is_needed": [],
+    "CPX.ProtectedReturn.projection_preservation_is_needed": [],
+    "CPX.Information.le_maximum": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Information.maximum_le": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Information.constant_policy_inclusion": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Information.free_optional_information": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Information.zero_mass_signal_contributes_zero": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Information.single_action_no_gross_gain": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Information.compulsory_cost_can_hurt": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Diagnostics.distributions_valid": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Diagnostics.equal_accuracy": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Diagnostics.symmetric_upper_bound": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Diagnostics.constant_upper_bound": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Diagnostics.symmetric_best_value": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Diagnostics.constant_best_value": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Diagnostics.blind_values": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Diagnostics.unequal_gross_values": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Resolution.empty_not_settled": [
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Resolution.empty_agreement_is_vacuous": [
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Resolution.one_query_settled_another_open": [],
+    "CPX.Resolution.same_observation": [],
+    "CPX.Resolution.observational_tables_agree": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Resolution.fair_observation_table": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Resolution.passive_sequences_agree": [
+      "Quot.sound.{u}"
+    ],
+    "CPX.Resolution.different_interventions": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Resolution.observation_query_settled": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ],
+    "CPX.Resolution.intervention_query_not_settled": [
+      "Classical.choice.{u}",
+      "Quot.sound.{u}",
+      "propext"
+    ]
+  },
+  "report_exits": [
+    {
+      "label": "statements-and-axioms",
+      "exit_code": 0,
+      "stdout_sha256": "852064353497a432400f09f3626d78fa31448f156642ec0042900f22a66b8644",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "kernel-CPX.Capsule",
+      "exit_code": 0,
+      "stdout_sha256": "4cabd191f1967a7889e5d4015a3168976335d90bb19081401d15e7c5b3865118",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "kernel-CPX.ProtectedReturn",
+      "exit_code": 0,
+      "stdout_sha256": "b26788beaef988906e0e72ed20c1274c099fdacad4394ff83654b960eb5454cb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "kernel-CPX.Information",
+      "exit_code": 0,
+      "stdout_sha256": "6c7fb959f5dcf3bf4bfe4c67dd49e8fd25dd89d8e3f1a9a31cea3cfe5d7468d4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "kernel-CPX.Diagnostics",
+      "exit_code": 0,
+      "stdout_sha256": "6da35d3550b26fd96def5e03ae104628e1469eb9c12ff7e954687f7e6fe71736",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "kernel-CPX.Resolution",
+      "exit_code": 0,
+      "stdout_sha256": "1d8fbc7a9f5fe763b69b83b6950b243102fdb1fc4fd044a27fdde7cad4440e9c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "assurance": "Lean's own kernel; cached imported dependencies trusted; source fidelity reviewed separately.",
+  "source_review": "SELF_REVIEW_PASSED_FOR_SCOPED_CLAIM_CARDS",
+  "publication": "LOCAL_ONLY",
+  "proof_repair_rounds_used": 2,
+  "final_round_seconds_including_diagnostics_and_reporting_repair": 443.209977
+}

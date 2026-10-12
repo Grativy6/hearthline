@@ -41,13 +41,15 @@ noncomputable def blind {W S A : Type*} [Fintype W] [Fintype S]
   maximum (fun a => expected mu utility (fun _ => a))
 
 noncomputable def informed {W S A : Type*} [Fintype W] [Fintype S]
-    [Fintype A] [Nonempty A] (mu : W → S → ℚ) (utility : W → A → ℚ) : ℚ :=
-  maximum (expected mu utility)
+    [Fintype A] [Nonempty A] (mu : W → S → ℚ) (utility : W → A → ℚ) : ℚ := by
+  classical
+  exact maximum (expected mu utility)
 
 /-- The stronger algebraic inclusion lemma does not require probabilistic masses. -/
 theorem constant_policy_inclusion {W S A : Type*} [Fintype W] [Fintype S]
     [Fintype A] [Nonempty A] (mu : W → S → ℚ) (utility : W → A → ℚ) :
     blind mu utility ≤ informed mu utility := by
+  classical
   apply maximum_le
   intro a
   exact le_maximum (expected mu utility) (fun _ => a)

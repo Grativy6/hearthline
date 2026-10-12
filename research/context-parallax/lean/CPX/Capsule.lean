@@ -1,6 +1,7 @@
 import Mathlib.Data.Set.Function
 import Mathlib.Data.Finite.Defs
 import Mathlib.Data.Fintype.Basic
+import Mathlib.Data.Fintype.EquivFin
 
 /-!
 CPX v0.6, section 3, claim CPX06-C1. Candidate source, PREPARED_NOT_RUN.

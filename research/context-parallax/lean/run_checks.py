@@ -197,12 +197,17 @@ def run(args):
                     "-o", target, relative.with_suffix(".lean")])
         text = command("statements-and-axioms", [binaries["lean"], "-R", ROOT, "-M", "4096", "Inspect.lean"])
         rows = re.findall(r"'([^']+)' (?:does not depend on any axioms|depends on axioms:\s*\[(.*?)\])", text, re.S)
-        axioms = {n: sorted(a.strip() for a in raw.split(",") if a.strip()) for n, raw in rows}
+        raw_axioms = {n: sorted(a.strip() for a in raw.split(",") if a.strip()) for n, raw in rows}
+        # pp.universes prints e.g. Classical.choice.{u}; preserve that output and
+        # compare the declaration name, not its universe instantiation.
+        axioms = {n: sorted(re.sub(r"\.\{[^{}]*\}$", "", a) for a in values)
+                  for n, values in raw_axioms.items()}
         if len(rows) != len(names) or set(axioms) != set(names):
             raise ValueError("Missing or duplicate axiom output")
         if any(set(values) - ALLOWED_AXIOMS for values in axioms.values()):
             raise ValueError("Unexpected axiom dependency")
         receipt["axioms"] = axioms
+        receipt["raw_axioms"] = raw_axioms
         for module in MODULES[:-1]:
             output = command("kernel-" + module, [binaries["leanchecker"], "--verbose", module])
             if not re.search(r"^replaying " + re.escape(module) + r"$", output, re.M):

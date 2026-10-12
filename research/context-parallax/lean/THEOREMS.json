@@ -12,7 +12,7 @@
       "claim": "CPX06-C1",
       "role": "source-facing target",
       "file": "CPX/Capsule.lean",
-      "line": 22,
+      "line": 23,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -20,7 +20,7 @@
       "claim": "CPX06-C1",
       "role": "boundary or exact fixture",
       "file": "CPX/Capsule.lean",
-      "line": 37,
+      "line": 38,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -28,7 +28,7 @@
       "claim": "CPX06-C1",
       "role": "boundary or exact fixture",
       "file": "CPX/Capsule.lean",
-      "line": 49,
+      "line": 50,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -36,7 +36,7 @@
       "claim": "CPX06-C1",
       "role": "boundary or exact fixture",
       "file": "CPX/Capsule.lean",
-      "line": 57,
+      "line": 58,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -92,7 +92,7 @@
       "claim": "CPX06-C3",
       "role": "helper",
       "file": "CPX/Information.lean",
-      "line": 48,
+      "line": 49,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -100,7 +100,7 @@
       "claim": "CPX06-C3",
       "role": "source-facing target",
       "file": "CPX/Information.lean",
-      "line": 56,
+      "line": 58,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -108,7 +108,7 @@
       "claim": "CPX06-C3",
       "role": "boundary or exact fixture",
       "file": "CPX/Information.lean",
-      "line": 64,
+      "line": 66,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -116,7 +116,7 @@
       "claim": "CPX06-C3",
       "role": "boundary or exact fixture",
       "file": "CPX/Information.lean",
-      "line": 70,
+      "line": 72,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -124,7 +124,7 @@
       "claim": "CPX06-C3",
       "role": "boundary or exact fixture",
       "file": "CPX/Information.lean",
-      "line": 84,
+      "line": 86,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -172,7 +172,7 @@
       "claim": "CPX06-C3",
       "role": "boundary or exact fixture",
       "file": "CPX/Diagnostics.lean",
-      "line": 61,
+      "line": 64,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -180,7 +180,7 @@
       "claim": "CPX06-C3",
       "role": "boundary or exact fixture",
       "file": "CPX/Diagnostics.lean",
-      "line": 68,
+      "line": 74,
       "status": "PREPARED_NOT_RUN"
     },
     {
@@ -188,7 +188,7 @@
       "claim": "CPX06-C3",
       "role": "boundary or exact fixture",
       "file": "CPX/Diagnostics.lean",
-      "line": 86,
+      "line": 96,
       "status": "PREPARED_NOT_RUN"
     },
     {
